@@ -8,7 +8,7 @@ public class BasicEnemyMovement : MonoBehaviour
     
     [SerializeField] private float movementSpeed;
     [SerializeField] direction actualDirection;
-    [SerializeField] private int maxDistance;
+    [SerializeField] private float maxDistance;
 
     // Start is called before the first frame update
     void Start()
