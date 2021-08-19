@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicEnemyMovement : MonoBehaviour
+public class BasicEnemyMovement : MonoBehaviour, IHitable
 {
     enum direction {right, left };
     
@@ -45,5 +45,9 @@ public class BasicEnemyMovement : MonoBehaviour
                 actualDirection = direction.right;
             }
         }
+    }
+    public void OnHit()
+    {
+        Destroy(gameObject);
     }
 }

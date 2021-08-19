@@ -26,7 +26,7 @@ public class WeaponsController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
             if (hit.collider != null)
             {
-                Debug.Log("hit");
+                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             }
         }
     }
