@@ -1,25 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponsController : MonoBehaviour
 {
     [SerializeField] int ammo;
     [SerializeField] int maxAmmo;
     Camera mainCamera;
+    public static Action<float> UpdateUIAmmo;
+    public static Action ResetUIAmmo;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
     }
-
     // Update is called once per frame
     void Update()
     {
         Shot();
         Reload();
     }
-
     void Shot()
     {
         if (Input.GetMouseButtonDown(0) && ammo>0)
@@ -32,14 +34,15 @@ public class WeaponsController : MonoBehaviour
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             }
             ammo--;
+            UpdateUIAmmo?.Invoke(maxAmmo);
         }
     }
-
     void Reload()
     {
         if(ammo == 0 && Input.GetKeyDown(KeyCode.R))
         {
             ammo = maxAmmo;
+            ResetUIAmmo?.Invoke();
         }
     }
 }
