@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class WeaponsController : MonoBehaviour
 {
@@ -33,8 +30,6 @@ public class WeaponsController : MonoBehaviour
             
             if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
             {
-                Debug.Log("hit.transform.gameObject.layer " + hit.transform.gameObject.layer);
-                Debug.Log("targetLayer " + targetLayer);
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             }
             ammo--;
