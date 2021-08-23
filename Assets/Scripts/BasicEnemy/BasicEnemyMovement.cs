@@ -16,7 +16,7 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
         maxDistance = Mathf.Abs(maxDistance);
         if(actualDirection == direction.right)
         {
-            transform.position = new Vector3(maxDistance * -1, 0,0);
+            transform.position = new Vector3(maxDistance * -1, transform.position.y, 0);
         }
     }
 
@@ -27,7 +27,7 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
         {
             if(transform.position.x <maxDistance)
             {
-                transform.position = new Vector3(transform.position.x + (movementSpeed * Time.deltaTime), transform.position.y, 0);
+                transform.position = new Vector3(transform.position.x + (movementSpeed * Time.deltaTime), transform.position.y, transform.position.z);
             }
             else
             {
@@ -38,7 +38,7 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
         {
             if (transform.position.x > maxDistance*-1)
             {
-                transform.position = new Vector3(transform.position.x - (movementSpeed * Time.deltaTime), transform.position.y, 0);
+                transform.position = new Vector3(transform.position.x - (movementSpeed * Time.deltaTime), transform.position.y, transform.position.z);
             }
             else
             {

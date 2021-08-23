@@ -8,6 +8,7 @@ public class WeaponsController : MonoBehaviour
 {
     [SerializeField] int ammo;
     [SerializeField] int maxAmmo;
+    [SerializeField] int targetLayer;
     Camera mainCamera;
     public static Action<float> UpdateUIAmmo;
     public static Action ResetUIAmmo;
@@ -29,8 +30,11 @@ public class WeaponsController : MonoBehaviour
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-            if (hit.collider != null)
+            
+            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
             {
+                Debug.Log("hit.transform.gameObject.layer " + hit.transform.gameObject.layer);
+                Debug.Log("targetLayer " + targetLayer);
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             }
             ammo--;
