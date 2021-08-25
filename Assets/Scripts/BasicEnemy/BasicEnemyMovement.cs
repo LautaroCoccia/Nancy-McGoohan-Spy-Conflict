@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BasicEnemyMovement : MonoBehaviour, IHitable
 {
-    enum direction {right, left };
-    
+    enum direction {right, left, up };
+    [SerializeField] private int score;
     [SerializeField] private float movementSpeed;
-    [SerializeField] direction actualDirection;
     [SerializeField] private float maxDistance;
+    [SerializeField] private float timeToHide;
+    [SerializeField] direction actualDirection;
 
     // Start is called before the first frame update
     void Start()

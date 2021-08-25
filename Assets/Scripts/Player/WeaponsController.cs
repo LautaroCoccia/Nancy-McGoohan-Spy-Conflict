@@ -6,6 +6,8 @@ public class WeaponsController : MonoBehaviour
     [SerializeField] int ammo;
     [SerializeField] int maxAmmo;
     [SerializeField] int targetLayer;
+    [SerializeField] float fireRate;
+    float fireTime;
     Camera mainCamera;
     public static Action<float> UpdateUIAmmo;
     public static Action ResetUIAmmo;
@@ -19,10 +21,11 @@ public class WeaponsController : MonoBehaviour
     {
         Shot();
         Reload();
+        fireTime += Time.deltaTime;
     }
     void Shot()
     {
-        if (Input.GetMouseButtonDown(0) && ammo>0)
+        if (Input.GetMouseButton(0)  && ammo>0 && fireTime >=fireRate)
         {
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
@@ -33,6 +36,7 @@ public class WeaponsController : MonoBehaviour
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             }
             ammo--;
+            fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
         }
     }
