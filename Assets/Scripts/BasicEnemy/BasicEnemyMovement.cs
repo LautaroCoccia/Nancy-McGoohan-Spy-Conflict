@@ -10,23 +10,47 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
     [SerializeField] private float maxDistance;
     [SerializeField] private float timeToHide;
     [SerializeField] direction actualDirection;
-
+    float actualTime = 0;
+    Vector3 startPosition;
     // Start is called before the first frame update
     void Start()
     {
-        maxDistance = Mathf.Abs(maxDistance);
-        if(actualDirection == direction.right)
-        {
-            transform.position = new Vector3(maxDistance * -1, transform.position.y, transform.position.z);
-        }
+        //startPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(actualDirection == direction.right)
+        if(actualTime < timeToHide)
         {
-            if(transform.position.x <maxDistance)
+            actualTime += Time.deltaTime;
+        }
+        else
+        {
+            EnemyMovement();
+        }
+    }
+    public int OnHit()
+    {
+        Destroy(gameObject);
+        return score;
+    }
+    void EnemyMovement()
+    {
+    }
+
+    void BasicStart()
+    {
+        if (actualDirection == direction.right)
+        {
+            transform.position = new Vector3(maxDistance * -1, transform.position.y, transform.position.z);
+        }
+    }
+    void BasicMovement()
+    {
+        if (actualDirection == direction.right)
+        {
+            if (transform.position.x < maxDistance)
             {
                 transform.position = new Vector3(transform.position.x + (movementSpeed * Time.deltaTime), transform.position.y, transform.position.z);
             }
@@ -37,7 +61,7 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
         }
         else if (actualDirection == direction.left)
         {
-            if (transform.position.x > maxDistance*-1)
+            if (transform.position.x > maxDistance * -1)
             {
                 transform.position = new Vector3(transform.position.x - (movementSpeed * Time.deltaTime), transform.position.y, transform.position.z);
             }
@@ -46,9 +70,5 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
                 actualDirection = direction.right;
             }
         }
-    }
-    public void OnHit()
-    {
-        Destroy(gameObject);
     }
 }

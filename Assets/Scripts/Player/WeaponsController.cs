@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class WeaponsController : MonoBehaviour
 {
+    [SerializeField] int score;
     [SerializeField] int ammo;
     [SerializeField] int maxAmmo;
     [SerializeField] int targetLayer;
@@ -11,6 +12,7 @@ public class WeaponsController : MonoBehaviour
     Camera mainCamera;
     public static Action<float> UpdateUIAmmo;
     public static Action ResetUIAmmo;
+    public static Action<int> UpdateUIScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class WeaponsController : MonoBehaviour
     }
     void Shot()
     {
-        if (Input.GetMouseButton(0)  && ammo>0 && fireTime >=fireRate)
+        if (Input.GetMouseButton(0) && ammo > 0 && fireTime >= fireRate)
         {
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
@@ -33,7 +35,8 @@ public class WeaponsController : MonoBehaviour
             
             if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
             {
-                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+                score += hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+                UpdateUIScore?.Invoke(score);
             }
             ammo--;
             fireTime = 0;
