@@ -10,9 +10,9 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        WeaponsController.UpdateUIAmmo += UpdateAmmo;
-        WeaponsController.ResetUIAmmo += ResetAmmo;
-        WeaponsController.UpdateUIScore += UpdateScore;
+        Weapon.UpdateUIAmmo += UpdateAmmo;
+        Weapon.ResetUIAmmo += ResetAmmo;
+        Weapon.UpdateUIScore += UpdateScore;
     }
     // Update is called once per frame
     void Update()
@@ -34,8 +34,8 @@ public class UIManager : MonoBehaviour
     }
     private void OnDisable()
     {
-        WeaponsController.UpdateUIAmmo -= UpdateAmmo;
-        WeaponsController.ResetUIAmmo -= ResetAmmo;
-        WeaponsController.UpdateUIScore -= UpdateScore;
+        Weapon.UpdateUIAmmo -= UpdateAmmo;
+        Weapon.ResetUIAmmo -= ResetAmmo;
+        Weapon.UpdateUIScore -= UpdateScore;
     }
 }
