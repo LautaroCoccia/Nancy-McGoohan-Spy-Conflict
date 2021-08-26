@@ -7,7 +7,7 @@ public class WeaponsController : MonoBehaviour
 {
     
     [SerializeField] List<GameObject> weapons;
-
+    public static Action<int> UpdateUIAmmoImage;
     int actualWeapon;
 
     // Start is called before the first frame update
@@ -42,5 +42,6 @@ public class WeaponsController : MonoBehaviour
                 weapons[i].SetActive(true);
             }
         }
+        UpdateUIAmmoImage?.Invoke(actualWeapon);
     }
 }
