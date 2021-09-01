@@ -17,7 +17,6 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
     {
         //startPosition = transform.position;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +36,7 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
     }
     void EnemyMovement()
     {
+        
     }
 
     void BasicStart()

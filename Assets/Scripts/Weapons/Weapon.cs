@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] int killCounter;
     int score;
     public int ammo;
     public int maxAmmo;
@@ -16,10 +17,12 @@ public class Weapon : MonoBehaviour
     public static Action<float> UpdateUIAmmo;
     public static Action ResetUIAmmo;
     public static Action<int> UpdateUIScore;
+    public static Action<int> UpdateUIKillCounter;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
+        killCounter = 0;
     }
     // Update is called once per frame
     void Update()
@@ -34,8 +37,10 @@ public class Weapon : MonoBehaviour
 
         if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
         {
+            killCounter++;
             score += hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             UpdateUIScore?.Invoke(score);
+            UpdateUIKillCounter?.Invoke(killCounter);
         }
         ammo--;
         fireTime = 0;
@@ -48,9 +53,5 @@ public class Weapon : MonoBehaviour
             ammo = maxAmmo;
             ResetUIAmmo?.Invoke();
         }
-    }
-    private void OnEnable()
-    {
-        UpdateUIAmmo?.Invoke(maxAmmo);
     }
 }

@@ -6,8 +6,12 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI UIScoreNum;
+    [SerializeField] TextMeshProUGUI UICounterNum;
+    [SerializeField] GameObject winScreen;
+    [SerializeField] GameObject loseScreen;
     [SerializeField] List<Image> UIAmmo;
     [SerializeField] List<GameObject> goAmmo;
+    [SerializeField] float timeToLose = 10;
     int activeWeapon;
     // Start is called before the first frame update
     void Start()
@@ -16,12 +20,21 @@ public class UIManager : MonoBehaviour
         Weapon.UpdateUIAmmo += UpdateAmmo;
         Weapon.ResetUIAmmo += ResetAmmo;
         Weapon.UpdateUIScore += UpdateScore;
+        Weapon.UpdateUIKillCounter += UpdateKillCounter;
         WeaponsController.UpdateUIAmmoImage += UpdateAmmoImage;
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if(timeToLose>0)
+        {
+            timeToLose -= Time.deltaTime;
+        }
+        else
+        {
+            loseScreen.SetActive(true);
+
+        }
     }
     void UpdateAmmo(float actualAmmo)
     {
@@ -51,11 +64,21 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+    void UpdateKillCounter(int killCounter)
+    {
+        UICounterNum.text = killCounter.ToString();
+        if(killCounter == 1)
+        {
+            winScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
     private void OnDisable()
     {
         Weapon.UpdateUIAmmo -= UpdateAmmo;
         Weapon.ResetUIAmmo -= ResetAmmo;
         Weapon.UpdateUIScore -= UpdateScore;
+        Weapon.UpdateUIKillCounter -= UpdateKillCounter;
         WeaponsController.UpdateUIAmmoImage -= UpdateAmmoImage;
     }
 }

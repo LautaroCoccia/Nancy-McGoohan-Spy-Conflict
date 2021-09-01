@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class WeaponsController : MonoBehaviour
 {
-    
     [SerializeField] List<GameObject> weapons;
     public static Action<int> UpdateUIAmmoImage;
     int actualWeapon;
@@ -27,7 +26,6 @@ public class WeaponsController : MonoBehaviour
             SelectWeapon(1);
         }
     }
-
     void SelectWeapon(int newValue)
     {
         actualWeapon = newValue;
