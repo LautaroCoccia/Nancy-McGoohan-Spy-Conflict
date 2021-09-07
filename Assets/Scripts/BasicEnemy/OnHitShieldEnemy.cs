@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnHitShieldEnemy : MonoBehaviour, IHitable
 {
     [SerializeField] int score;
+    [SerializeField] int lives = 2;
     SpriteRenderer sr;
     Color col;
     enum States
@@ -31,14 +32,16 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
 
     public int OnHit()
     {
-        switch(enemyState)
+        switch (enemyState)
         {
             case States.shield:
                 sr.color = col;
+                Debug.Log("SHIELD");
                 enemyState = States.notShield;
                 return 25;
                 break;
             case States.notShield:
+                Debug.Log("NOT SHIELD");
                 Destroy(gameObject);
                 return score;
                 break;
