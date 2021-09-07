@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject loseScreen;
     [SerializeField] List<Image> UIAmmo;
     [SerializeField] List<GameObject> goAmmo;
-    [SerializeField] float timeToLose = 10;
+    [SerializeField] float timeToLose = 20;
     int activeWeapon;
     // Start is called before the first frame update
     void Start()
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
     void UpdateKillCounter(int killCounter)
     {
         UICounterNum.text = killCounter.ToString();
-        if(killCounter == 1)
+        if(killCounter == 5)
         {
             winScreen.SetActive(true);
             Time.timeScale = 0;

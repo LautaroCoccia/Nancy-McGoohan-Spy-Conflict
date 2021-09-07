@@ -35,12 +35,32 @@ public class Weapon : MonoBehaviour
         Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
 
-        if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
+        if (hit.collider != null && hit.transform.gameObject.layer == targetLayer && hit.transform.tag != "EnemyShield")
         {
             killCounter++;
             score += hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             UpdateUIScore?.Invoke(score);
             UpdateUIKillCounter?.Invoke(killCounter);
+        }
+        ammo--;
+        fireTime = 0;
+        UpdateUIAmmo?.Invoke(maxAmmo);
+    }
+    public void ShotShotgun()
+    {
+        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
+
+        if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
+        {
+            if(hit.transform.gameObject.GetComponent<IHitable>().OnHit() != 25)
+            {
+                killCounter++;
+                UpdateUIKillCounter?.Invoke(killCounter);
+            }
+            score += hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+            UpdateUIScore?.Invoke(score);
         }
         ammo--;
         fireTime = 0;

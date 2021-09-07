@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class EnemyFSM : MonoBehaviour, IHitable
+public class EnemyFSM : MonoBehaviour
 {
     [SerializeField] List<Transform> barrelPositions;
     [SerializeField] float timeMaxTime;
-    [SerializeField] int score;
     float time;
     Vector3 nextPos;
     Vector3 startPos;
@@ -49,11 +48,5 @@ public class EnemyFSM : MonoBehaviour, IHitable
         nextPos = new Vector3(barrelPositions[transformIndex].position.x,
                               barrelPositions[transformIndex].position.y,
                               transform.position.z);
-    }
-
-    public int OnHit()
-    {
-        Destroy(gameObject);
-        return score;
     }
 }

@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float maxTimeToSpawn;
     [SerializeField] float actualTime;
     [SerializeField] float timeToSpawn;
-    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] List<GameObject> enemyPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
-        GameObject newEnemy = Instantiate(enemyPrefab);
+        GameObject newEnemy = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Count)]);
         newEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, newEnemy.transform.position.z);
         newEnemy.gameObject.GetComponent<EnemyFSM>().SetObstaclesList(barrelPositions);
         enemiesAlive++;

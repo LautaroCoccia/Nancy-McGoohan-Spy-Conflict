@@ -92,10 +92,10 @@ GameObject:
   - component: {fileID: 2874970030317744459}
   - component: {fileID: 8773767922973273442}
   - component: {fileID: 2149584061558018804}
-  - component: {fileID: -6423393353931640929}
+  - component: {fileID: 1748382237787767059}
   m_Layer: 8
-  m_Name: EnemyTest
-  m_TagString: Untagged
+  m_Name: EnemyTestShield
+  m_TagString: EnemyShield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   timeMaxTime: 1
---- !u!114 &-6423393353931640929
+--- !u!114 &1748382237787767059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7500391456599187859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73b519f28e7c7642b6526e947c60365, type: 3}
+  m_Script: {fileID: 11500000, guid: a5ce6c4db80aaf54fa9c4965c7c99dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 150

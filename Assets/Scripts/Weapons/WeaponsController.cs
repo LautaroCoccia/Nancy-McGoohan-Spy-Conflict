@@ -25,6 +25,10 @@ public class WeaponsController : MonoBehaviour
         {
             SelectWeapon(1);
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != 2)
+        {
+            SelectWeapon(2);
+        }
     }
     void SelectWeapon(int newValue)
     {
