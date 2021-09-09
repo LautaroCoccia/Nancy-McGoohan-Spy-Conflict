@@ -39,15 +39,15 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
                 Debug.Log("SHIELD");
                 enemyState = States.notShield;
                 return 25;
-                break;
+               // break;
             case States.notShield:
                 Debug.Log("NOT SHIELD");
                 Destroy(gameObject);
                 return score;
-                break;
+               // break;
             default:
                 return score;
-            break;
+            //break;
         }
     }
 }
