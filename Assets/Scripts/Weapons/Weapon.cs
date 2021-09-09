@@ -54,12 +54,13 @@ public class Weapon : MonoBehaviour
 
         if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
         {
-            if(hit.transform.gameObject.GetComponent<IHitable>().OnHit() != 25)
+            int newScore = hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+            if (newScore != 25)
             {
                 killCounter++;
                 UpdateUIKillCounter?.Invoke(killCounter);
             }
-            score += hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+            score += newScore;
             UpdateUIScore?.Invoke(score);
         }
         ammo--;

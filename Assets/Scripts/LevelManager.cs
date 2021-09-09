@@ -31,4 +31,8 @@ public class LevelManager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    public void AddScore(int addScore)
+    {
+        score += addScore;
+    }
 }
