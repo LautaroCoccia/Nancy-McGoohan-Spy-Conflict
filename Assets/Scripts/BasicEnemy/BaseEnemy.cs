@@ -74,6 +74,7 @@ public class BaseEnemy : StateEnemy
     }
     protected override void Uncover()
     {
+
         state = State.shoot;
     }
     protected override void Shoot()
@@ -83,6 +84,7 @@ public class BaseEnemy : StateEnemy
     }
     protected override void Cover()
     {
+
         state = State.choice;
     }
 }

@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ChangeLayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject CurrentLayer;
+    [SerializeField] GameObject NextLayer;
+    public void Change()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        CurrentLayer.SetActive(false);
+        NextLayer.SetActive(true);
     }
 }
