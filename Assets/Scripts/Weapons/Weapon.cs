@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] int killCounter;
-    int score;
     public int ammo;
     public int maxAmmo;
     public int targetLayer;
@@ -14,58 +12,82 @@ public class Weapon : MonoBehaviour
     public float fireTime;
     public Camera mainCamera;
 
-    public static Action<float> UpdateUIAmmo;
     public static Action ResetUIAmmo;
-    public static Action<int> UpdateUIScore;
-    public static Action<int> UpdateUIKillCounter;
+    public static Action<float> UpdateUIAmmo;
+    public static Action<int> UpdateUICrosshair;
+
+    enum WeaponStates
+    {
+        Idle,
+        Shoot,
+        OutOfAmmo
+    }
+    WeaponStates weaponStates;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        killCounter = 0;
+        weaponStates = WeaponStates.Idle;
+        UpdateUICrosshair?.Invoke((int)(weaponStates));
     }
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
     public void Shot()
     {
-        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-
-        if (hit.collider != null && hit.transform.gameObject.layer == targetLayer && hit.transform.tag != "EnemyShield")
+        if(ammo > 0)
         {
-            killCounter++;
-            score += hit.transform.gameObject.GetComponent<IHitable>().OnHit();
-            UpdateUIScore?.Invoke(score);
-            UpdateUIKillCounter?.Invoke(killCounter);
+            weaponStates = WeaponStates.Shoot;
+            UpdateUICrosshair?.Invoke((int)(weaponStates));
+            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
+
+            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer && hit.transform.tag != "EnemyShield")
+            {
+                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+            }
+            ammo--;
+            fireTime = 0;
+            UpdateUIAmmo?.Invoke(maxAmmo);
+
+            weaponStates = WeaponStates.Idle;
+            UpdateUICrosshair?.Invoke((int)(weaponStates));
         }
-        ammo--;
-        fireTime = 0;
-        UpdateUIAmmo?.Invoke(maxAmmo);
+        else
+        {
+            weaponStates = WeaponStates.OutOfAmmo;
+            UpdateUICrosshair?.Invoke((int)(weaponStates));
+        }
     }
     public void ShotShotgun()
     {
-        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-
-        if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
+        if (ammo > 0)
         {
-            int newScore = hit.transform.gameObject.GetComponent<IHitable>().OnHit();
-            if (newScore != 25)
+            weaponStates = WeaponStates.Shoot;
+            UpdateUICrosshair?.Invoke((int)(weaponStates));
+
+            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
+
+            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
             {
-                killCounter++;
-                UpdateUIKillCounter?.Invoke(killCounter);
+                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
             }
-            score += newScore;
-            UpdateUIScore?.Invoke(score);
+            ammo--;
+            fireTime = 0;
+            UpdateUIAmmo?.Invoke(maxAmmo);
+
+            weaponStates = WeaponStates.Idle;
+            UpdateUICrosshair?.Invoke((int)(weaponStates));
         }
-        ammo--;
-        fireTime = 0;
-        UpdateUIAmmo?.Invoke(maxAmmo);
+        else
+        {
+            weaponStates = WeaponStates.OutOfAmmo;
+            UpdateUICrosshair?.Invoke((int)(weaponStates));
+        }
     }
     public void Reload()
     {
@@ -73,6 +95,7 @@ public class Weapon : MonoBehaviour
         {
             ammo = maxAmmo;
             ResetUIAmmo?.Invoke();
+            UpdateUICrosshair?.Invoke((int)(weaponStates));
         }
     }
 }

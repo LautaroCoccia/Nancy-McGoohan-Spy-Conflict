@@ -2,18 +2,36 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] int score;
+    [SerializeField] int killCounter;
     [SerializeField] float timer;
+    public static Action<int> UpdateUIScore;
+    public static Action<int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
+
+    private static LevelManager instanceLevelManager;
+    public static LevelManager Get()
+    {
+        return instanceLevelManager;
+    }
+    private void Awake()
+    {
+        if(instanceLevelManager == null)
+        {
+            instanceLevelManager = this;
+        }
+        else if(instanceLevelManager != this)
+        {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -24,7 +42,8 @@ public class LevelManager : MonoBehaviour
 
         if(timer >0)
         {
-            timer -= Time.deltaTime;
+            timer -= 1* Time.deltaTime;
+            UpdateUITimer?.Invoke(timer);
         }
         else
         {
@@ -34,5 +53,11 @@ public class LevelManager : MonoBehaviour
     public void AddScore(int addScore)
     {
         score += addScore;
+        UpdateUIScore?.Invoke(score);
+    }
+    public void AddKill()
+    {
+        killCounter++;
+        UpdateUIKillCounter?.Invoke(killCounter);
     }
 }
