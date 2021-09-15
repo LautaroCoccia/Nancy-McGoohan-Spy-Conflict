@@ -7,10 +7,12 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI UIScoreNum;
     [SerializeField] TextMeshProUGUI UICounterNum;
+    [SerializeField] TextMeshProUGUI UITimer;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
     [SerializeField] List<Image> UIAmmo;
     [SerializeField] List<GameObject> goAmmo;
+    [SerializeField] List<Image> UICrosshair;
     [SerializeField] float timeToLose = 20;
     int activeWeapon;
     // Start is called before the first frame update
@@ -19,8 +21,9 @@ public class UIManager : MonoBehaviour
         activeWeapon = 0;
         Weapon.UpdateUIAmmo += UpdateAmmo;
         Weapon.ResetUIAmmo += ResetAmmo;
-        Weapon.UpdateUIScore += UpdateScore;
-        Weapon.UpdateUIKillCounter += UpdateKillCounter;
+        LevelManager.UpdateUIScore += UpdateScore;
+        LevelManager.UpdateUIKillCounter += UpdateKillCounter;
+        LevelManager.UpdateUITimer += UpdateTimer;
         WeaponsController.UpdateUIAmmoImage += UpdateAmmoImage;
     }
     // Update is called once per frame
@@ -73,12 +76,17 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    void UpdateTimer(float timer)
+    {
+        UITimer.text = Mathf.Round(timer).ToString();
+    }
     private void OnDisable()
     {
-        Weapon.UpdateUIAmmo -= UpdateAmmo;
-        Weapon.ResetUIAmmo -= ResetAmmo;
-        Weapon.UpdateUIScore -= UpdateScore;
-        Weapon.UpdateUIKillCounter -= UpdateKillCounter;
         WeaponsController.UpdateUIAmmoImage -= UpdateAmmoImage;
+        LevelManager.UpdateUITimer -= UpdateTimer;
+        LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
+        LevelManager.UpdateUIScore -= UpdateScore;
+        Weapon.ResetUIAmmo -= ResetAmmo;
+        Weapon.UpdateUIAmmo -= UpdateAmmo;
     }
 }

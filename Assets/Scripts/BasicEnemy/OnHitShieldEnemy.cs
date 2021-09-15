@@ -5,6 +5,8 @@ using UnityEngine;
 public class OnHitShieldEnemy : MonoBehaviour, IHitable
 {
     [SerializeField] int score;
+    [SerializeField] int lives;
+    LevelManager lvlManager = LevelManager.Get();
     SpriteRenderer sr;
     Color col;
     enum States
@@ -16,6 +18,7 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
     // Start is called before the first frame update
     void Start()
     {
+        lives = 2;
         sr = gameObject.GetComponentInChildren<SpriteRenderer>();
         col = sr.color;
         sr.color = Color.white; 
@@ -29,21 +32,23 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
 
     }
 
-    public int OnHit()
+    public void OnHit()
     {
-        switch(enemyState)
+        switch (enemyState)
         {
             case States.shield:
                 sr.color = col;
+                lives--;
+                lvlManager.AddScore(25);
                 enemyState = States.notShield;
-                return 25;
                 break;
             case States.notShield:
+                lives--;
+                lvlManager.AddScore(score);
+                lvlManager.AddKill();
                 Destroy(gameObject);
-                return score;
                 break;
             default:
-                return score;
             break;
         }
     }
