@@ -993,6 +993,7 @@ MonoBehaviour:
   targetLayer: 8
   fireRate: 0.25
   fireTime: 0.25
+  reloadTime: 0.5
   mainCamera: {fileID: 0}
 --- !u!1 &457425403
 GameObject:
@@ -3556,6 +3557,7 @@ MonoBehaviour:
   targetLayer: 8
   fireRate: 0.15
   fireTime: 0
+  reloadTime: 0.15
   mainCamera: {fileID: 0}
 --- !u!4 &1978653744
 Transform:
@@ -3619,4 +3621,5 @@ MonoBehaviour:
   targetLayer: 8
   fireRate: 0.25
   fireTime: 0.25
+  reloadTime: 0.75
   mainCamera: {fileID: 0}

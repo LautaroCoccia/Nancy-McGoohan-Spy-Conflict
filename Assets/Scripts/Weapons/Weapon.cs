@@ -10,12 +10,14 @@ public class Weapon : MonoBehaviour
     public int targetLayer;
     public float fireRate;
     public float fireTime;
+    public float reloadTime;
     public Camera mainCamera;
 
     public static Action ResetUIAmmo;
     public static Action<float> UpdateUIAmmo;
     public static Action<int> UpdateUICrosshair;
 
+    float actualTimeToReload = 0;
     enum WeaponStates
     {
         Idle,
@@ -93,9 +95,15 @@ public class Weapon : MonoBehaviour
     {
         if (ammo == 0 && Input.GetKeyDown(KeyCode.R))
         {
-            ammo = maxAmmo;
-            ResetUIAmmo?.Invoke();
-            UpdateUICrosshair?.Invoke((int)(weaponStates));
+            StartCoroutine(Reloading());
+            
         }
+    }
+    IEnumerator Reloading()
+    {
+        yield return new WaitForSeconds(reloadTime);
+        ammo = maxAmmo;
+        ResetUIAmmo?.Invoke();
+        UpdateUICrosshair?.Invoke((int)(weaponStates));
     }
 }
