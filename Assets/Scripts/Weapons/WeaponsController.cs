@@ -5,34 +5,41 @@ using UnityEngine;
 
 public class WeaponsController : MonoBehaviour
 {
+    public enum WeaponType
+    {
+        Gun,
+        SubmachineGun,
+        Shotgun
+    }
+
     [SerializeField] List<GameObject> weapons;
-    public static Action<int> UpdateUIAmmoImage;
+    public static Action<WeaponType> OnWeaponChanged;
     int actualWeapon;
 
     // Start is called before the first frame update
     void Start()
     {
-        SelectWeapon(0);
+        SelectWeapon(WeaponType.Gun);
     }
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != 0)
         {
-            SelectWeapon(0);
+            SelectWeapon(WeaponType.Gun);
         }
         else if(Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != 1)
         {
-            SelectWeapon(1);
+            SelectWeapon(WeaponType.SubmachineGun);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != 2)
         {
-            SelectWeapon(2);
+            SelectWeapon(WeaponType.Shotgun);
         }
     }
-    void SelectWeapon(int newValue)
+    void SelectWeapon(WeaponType newValue)
     {
-        actualWeapon = newValue;
+        actualWeapon = (int) newValue;
         for (int i = 0; i < weapons.Count; i++)
         {
             if (weapons[actualWeapon] != weapons[i])
@@ -44,6 +51,6 @@ public class WeaponsController : MonoBehaviour
                 weapons[i].SetActive(true);
             }
         }
-        UpdateUIAmmoImage?.Invoke(actualWeapon);
+        OnWeaponChanged?.Invoke(newValue);
     }
 }

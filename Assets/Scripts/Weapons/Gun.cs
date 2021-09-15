@@ -13,7 +13,7 @@ public class Gun : Weapon
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && ammo > 0 && fireTime >= fireRate)
+        if (Input.GetMouseButtonDown(0) && fireTime >= fireRate)
         {
             Shot();
         }

@@ -486,6 +486,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041fb17fa07352749badf240883de82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crossHairs:
+  - weaponType: 0
+    normal: {fileID: -5223985732606196404, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+    enemyHit: {fileID: -3035636441622940609, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+    outOfAmmo: {fileID: 1299032748324021171, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+  - weaponType: 1
+    normal: {fileID: -5177147730234805438, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+    enemyHit: {fileID: -1444657788469183850, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+    outOfAmmo: {fileID: 1791743744374233796, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+  - weaponType: 2
+    normal: {fileID: -1839940172439810605, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+    enemyHit: {fileID: 7837862717091328307, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+    outOfAmmo: {fileID: -1819603803435824184, guid: 879f7c3577895e149b5a67ef766102ff,
+      type: 3}
+  currentCrosshair:
+    weaponType: 0
+    normal: {fileID: 0}
+    enemyHit: {fileID: 0}
+    outOfAmmo: {fileID: 0}
+  crosshairImage: {fileID: 1203408465}
   UIScoreNum: {fileID: 787532651}
   UICounterNum: {fileID: 515245489}
   UITimer: {fileID: 1040036076}
@@ -1550,12 +1578,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694394550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7640201, y: 1.0553532, z: 0.8470968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.76400757, y: 1.0553741, z: 0.8470967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773620282
 GameObject:
@@ -2223,7 +2251,7 @@ Transform:
   - {fileID: 1387040967}
   - {fileID: 1269965479}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995422245
 GameObject:
