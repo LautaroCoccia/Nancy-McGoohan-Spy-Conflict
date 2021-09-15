@@ -26,12 +26,6 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnHit()
     {
         switch (enemyState)
@@ -49,7 +43,7 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
                 Destroy(gameObject);
                 break;
             default:
-            break;
+                break;
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] List<Transform> barrelPositions;
+    [SerializeField] List<Transform> barrelPositions; //TODO informacion del nivel, LevelManager
     [SerializeField] static int enemiesAlive;
     [SerializeField] int maxEnemiesAlive;
     [SerializeField] float minTimeToSpawn;

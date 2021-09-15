@@ -1,10 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class UIManager : MonoBehaviour
 {
+    [Serializable]
+    public class CrosshairByWeapon
+    {
+        public WeaponsController.WeaponType weaponType;
+        public Sprite normal;
+        public Sprite enemyHit;
+        public Sprite outOfAmmo;
+    }
+
+    public List<CrosshairByWeapon> crossHairs;
+
+    public CrosshairByWeapon currentCrosshair;
+
+    [SerializeField] Image crosshairImage;
+
     [SerializeField] TextMeshProUGUI UIScoreNum;
     [SerializeField] TextMeshProUGUI UICounterNum;
     [SerializeField] TextMeshProUGUI UITimer;
@@ -21,10 +37,13 @@ public class UIManager : MonoBehaviour
         activeWeapon = 0;
         Weapon.UpdateUIAmmo += UpdateAmmo;
         Weapon.ResetUIAmmo += ResetAmmo;
+        Weapon.OutOfAmmoCrosshair += OnOutOfAmmo;
+        Weapon.HitCrosshair += OnEnemyHit;
+        Weapon.NormalCrosshair += OnNormal;
         LevelManager.UpdateUIScore += UpdateScore;
         LevelManager.UpdateUIKillCounter += UpdateKillCounter;
         LevelManager.UpdateUITimer += UpdateTimer;
-        WeaponsController.UpdateUIAmmoImage += UpdateAmmoImage;
+        WeaponsController.OnWeaponChanged += WeaponChanged;
     }
     // Update is called once per frame
     void Update()
@@ -52,9 +71,18 @@ public class UIManager : MonoBehaviour
     {
         UIAmmo[activeWeapon].fillAmount = 1;
     }
-    void UpdateAmmoImage(int newValue)
+    void WeaponChanged(WeaponsController.WeaponType newValue)
     {
-        activeWeapon = newValue;
+        for (int i = 0; i < crossHairs.Count; i++)
+        {
+            if (newValue == crossHairs[i].weaponType)
+                currentCrosshair = crossHairs[i];
+                
+        }
+
+        crosshairImage.sprite = currentCrosshair.normal;
+
+        activeWeapon = (int) newValue;
         for (int i = 0; i < goAmmo.Count; i++)
         {
             if (goAmmo[activeWeapon] != goAmmo[i])
@@ -67,6 +95,22 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+    void OnEnemyHit()
+    {
+        crosshairImage.sprite = currentCrosshair.enemyHit;
+    }
+
+    void OnOutOfAmmo()
+    {
+        crosshairImage.sprite = currentCrosshair.outOfAmmo;
+    }
+
+    void OnNormal()
+    {
+        crosshairImage.sprite = currentCrosshair.normal;
+    }
+
     void UpdateKillCounter(int killCounter)
     {
         UICounterNum.text = killCounter.ToString();
@@ -82,11 +126,14 @@ public class UIManager : MonoBehaviour
     }
     private void OnDisable()
     {
-        WeaponsController.UpdateUIAmmoImage -= UpdateAmmoImage;
+        WeaponsController.OnWeaponChanged -= WeaponChanged;
         LevelManager.UpdateUITimer -= UpdateTimer;
         LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
         LevelManager.UpdateUIScore -= UpdateScore;
         Weapon.ResetUIAmmo -= ResetAmmo;
         Weapon.UpdateUIAmmo -= UpdateAmmo;
+        Weapon.NormalCrosshair -= OnNormal;
+        Weapon.OutOfAmmoCrosshair -= OnOutOfAmmo;
+        Weapon.HitCrosshair -= OnEnemyHit;
     }
 }
