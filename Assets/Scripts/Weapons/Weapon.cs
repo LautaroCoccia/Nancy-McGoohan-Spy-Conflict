@@ -17,7 +17,6 @@ public class Weapon : MonoBehaviour
     public static Action<float> UpdateUIAmmo;
     public static Action<int> UpdateUICrosshair;
 
-    float actualTimeToReload = 0;
     enum WeaponStates
     {
         Idle,
@@ -93,7 +92,7 @@ public class Weapon : MonoBehaviour
     }
     public void Reload()
     {
-        if (ammo == 0 && Input.GetKeyDown(KeyCode.R))
+        if (ammo != maxAmmo && Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(Reloading());
             
