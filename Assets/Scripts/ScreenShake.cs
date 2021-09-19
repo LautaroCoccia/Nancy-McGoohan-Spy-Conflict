@@ -4,24 +4,18 @@ using UnityEngine;
 using System;
 public class ScreenShake : MonoBehaviour
 {
-    [SerializeField] float time = 0;
+    [SerializeField] float time = 0.1f;
     [SerializeField] float actualTime = 0;
-    [SerializeField] float shakeAmount = 0.7f;
+    [SerializeField] float shakeAmount = 0.1f;
     [SerializeField] float decreaseFactor = 1;
     Vector3 startPos;
+    LevelManager lvlManager;
     // Start is called before the first frame update
     void Start()
     {
         startPos = gameObject.transform.position;
     }
-    private void Update()
-    {
-        if(Input.GetKey(KeyCode.Space))
-        {
-            Shake();
-        }
-    }
-    void Shake()
+    public void Shake()
     {
         StartCoroutine(Shaker());
     }

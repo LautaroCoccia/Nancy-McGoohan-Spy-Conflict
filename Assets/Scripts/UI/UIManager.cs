@@ -24,12 +24,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI UIScoreNum;
     [SerializeField] TextMeshProUGUI UICounterNum;
     [SerializeField] TextMeshProUGUI UITimer;
+    [SerializeField] Image UIHealth;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
     [SerializeField] List<Image> UIAmmo;
     [SerializeField] List<GameObject> goAmmo;
     [SerializeField] List<Image> UICrosshair;
-    [SerializeField] float timeToLose = 20;
     int activeWeapon;
     // Start is called before the first frame update
     void Start()
@@ -43,21 +43,12 @@ public class UIManager : MonoBehaviour
         LevelManager.UpdateUIScore += UpdateScore;
         LevelManager.UpdateUIKillCounter += UpdateKillCounter;
         LevelManager.UpdateUITimer += UpdateTimer;
+        LevelManager.UpdateUIHealth += UpdateHealth;
+        LevelManager.LoseCondition += Lose;
         WeaponsController.OnWeaponChanged += WeaponChanged;
     }
     // Update is called once per frame
-    void Update()
-    {
-        if(timeToLose>0)
-        {
-            timeToLose -= Time.deltaTime;
-        }
-        else
-        {
-            loseScreen.SetActive(true);
-
-        }
-    }
+    
     void UpdateAmmo(float actualAmmo)
     {
         float ammo = 1 / actualAmmo;
@@ -105,7 +96,6 @@ public class UIManager : MonoBehaviour
     {
         crosshairImage.sprite = currentCrosshair.outOfAmmo;
     }
-
     void OnNormal()
     {
         crosshairImage.sprite = currentCrosshair.normal;
@@ -124,9 +114,19 @@ public class UIManager : MonoBehaviour
     {
         UITimer.text = Mathf.Round(timer).ToString();
     }
+    void UpdateHealth(int health)
+    {
+        UIHealth.fillAmount =  ((float)health) / 100;
+    }
+    void Lose()
+    {
+        loseScreen.SetActive(true);
+    }
     private void OnDisable()
     {
         WeaponsController.OnWeaponChanged -= WeaponChanged;
+        LevelManager.LoseCondition -= Lose;
+        LevelManager.UpdateUIHealth -= UpdateHealth;
         LevelManager.UpdateUITimer -= UpdateTimer;
         LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
         LevelManager.UpdateUIScore -= UpdateScore;
