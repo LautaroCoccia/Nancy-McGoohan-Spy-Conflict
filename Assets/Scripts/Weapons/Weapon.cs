@@ -5,74 +5,88 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] int killCounter;
-    int score;
     public int ammo;
     public int maxAmmo;
     public int targetLayer;
     public float fireRate;
     public float fireTime;
+    public float reloadTime;
     public Camera mainCamera;
 
-    public static Action<float> UpdateUIAmmo;
     public static Action ResetUIAmmo;
-    public static Action<int> UpdateUIScore;
-    public static Action<int> UpdateUIKillCounter;
+    public static Action<float> UpdateUIAmmo;
+    public static Action NormalCrosshair;
+    public static Action HitCrosshair;
+    public static Action OutOfAmmoCrosshair;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        killCounter = 0;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void Shot()
     {
-        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-
-        if (hit.collider != null && hit.transform.gameObject.layer == targetLayer && hit.transform.tag != "EnemyShield")
+        if(ammo > 0)
         {
-            killCounter++;
-            score += hit.transform.gameObject.GetComponent<IHitable>().OnHit();
-            UpdateUIScore?.Invoke(score);
-            UpdateUIKillCounter?.Invoke(killCounter);
+            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
+
+            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer && hit.transform.tag != "EnemyShield")
+            {
+                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+                HitCrosshair?.Invoke();
+                StartCoroutine(HitShoot());
+            }
+            ammo--;
+            fireTime = 0;
+            UpdateUIAmmo?.Invoke(maxAmmo);
         }
-        ammo--;
-        fireTime = 0;
-        UpdateUIAmmo?.Invoke(maxAmmo);
+        else
+        {
+            OutOfAmmoCrosshair?.Invoke();
+        }
     }
     public void ShotShotgun()
     {
-        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-
-        if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
+        if (ammo > 0)
         {
-            int newScore = hit.transform.gameObject.GetComponent<IHitable>().OnHit();
-            if (newScore != 25)
+            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
+
+            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
             {
-                killCounter++;
-                UpdateUIKillCounter?.Invoke(killCounter);
+                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+                HitCrosshair?.Invoke();
+                StartCoroutine(HitShoot());
             }
-            score += newScore;
-            UpdateUIScore?.Invoke(score);
+            ammo--;
+            fireTime = 0;
+            UpdateUIAmmo?.Invoke(maxAmmo);
         }
-        ammo--;
-        fireTime = 0;
-        UpdateUIAmmo?.Invoke(maxAmmo);
+        else
+        {
+            OutOfAmmoCrosshair?.Invoke();
+        }
     }
     public void Reload()
     {
-        if (ammo == 0 && Input.GetKeyDown(KeyCode.R))
+        if (ammo < maxAmmo && Input.GetKeyDown(KeyCode.R))
         {
-            ammo = maxAmmo;
-            ResetUIAmmo?.Invoke();
+            OutOfAmmoCrosshair?.Invoke();
+            StartCoroutine(Reloading());
         }
+    }
+    IEnumerator Reloading()
+    {
+        yield return new WaitForSeconds(reloadTime);
+        ammo = maxAmmo;
+        ResetUIAmmo?.Invoke();
+        NormalCrosshair?.Invoke();
+    }
+    IEnumerator HitShoot()
+    {
+        yield return new WaitForSeconds(0.1f);
+        NormalCrosshair?.Invoke();
     }
 }

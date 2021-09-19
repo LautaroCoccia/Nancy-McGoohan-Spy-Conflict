@@ -5,21 +5,12 @@ using UnityEngine;
 public class OnHitBasicEnemy : MonoBehaviour, IHitable
 {
     [SerializeField] int score;
-    // Start is called before the first frame update
-    void Start()
+    LevelManager lvlManager = LevelManager.Get();
+    public void OnHit()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public int OnHit()
-    {
+        lvlManager.AddScore(score);
+        lvlManager.AddKill();
         Destroy(gameObject);
-        return score;
     }
+
 }

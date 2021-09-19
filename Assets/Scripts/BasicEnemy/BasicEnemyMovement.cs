@@ -29,10 +29,9 @@ public class BasicEnemyMovement : MonoBehaviour, IHitable
             EnemyMovement();
         }
     }
-    public int OnHit()
+    public void OnHit()
     {
         Destroy(gameObject);
-        return score;
     }
     void EnemyMovement()
     {
