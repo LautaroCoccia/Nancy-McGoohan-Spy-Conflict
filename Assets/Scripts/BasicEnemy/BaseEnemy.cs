@@ -9,6 +9,7 @@ public class BaseEnemy : StateEnemy
     Vector3 nextPos;
     Vector3 startPos;
     int transformIndex;
+    float speed = 6.0f;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -53,7 +54,8 @@ public class BaseEnemy : StateEnemy
     {
         if (time < 1 && startPos != nextPos)
         {
-            time += Time.deltaTime / timeMaxTime;
+            //time +=  Time.deltaTime / timeMaxTime;
+            time = speed * Time.deltaTime;
         }
         else
         {
@@ -70,7 +72,8 @@ public class BaseEnemy : StateEnemy
             time = 0;
             state = State.choice;
         }
-        transform.position = Vector3.Lerp(startPos, new Vector3(nextPos.x, nextPos.y, transform.position.z), time);
+        //transform.position = Vector3.Lerp(startPos, new Vector3(nextPos.x, nextPos.y, transform.position.z), time);
+        transform.position = Vector3.MoveTowards(transform.position, nextPos,time);
     }
     protected override void Uncover()
     {
