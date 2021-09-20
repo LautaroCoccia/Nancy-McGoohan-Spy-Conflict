@@ -71,7 +71,7 @@ public class Weapon : MonoBehaviour
     }
     public void Reload()
     {
-        if (ammo < maxAmmo && Input.GetKeyDown(KeyCode.R))
+        if (ammo < maxAmmo && Input.GetKeyDown(KeyCode.R) && !PauseMenu.GetPause())
         {
             OutOfAmmoCrosshair?.Invoke();
             StartCoroutine(Reloading());

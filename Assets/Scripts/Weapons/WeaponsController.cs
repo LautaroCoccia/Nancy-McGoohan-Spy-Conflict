@@ -24,17 +24,20 @@ public class WeaponsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != 0)
+        if (!PauseMenu.GetPause())
         {
-            SelectWeapon(WeaponType.Gun);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != 1)
-        {
-            SelectWeapon(WeaponType.SubmachineGun);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != 2)
-        {
-            SelectWeapon(WeaponType.Shotgun);
+            if (Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != 0)
+            {
+                SelectWeapon(WeaponType.Gun);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != 1)
+            {
+                SelectWeapon(WeaponType.SubmachineGun);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != 2)
+            {
+                SelectWeapon(WeaponType.Shotgun);
+            }
         }
     }
     void SelectWeapon(WeaponType newValue)

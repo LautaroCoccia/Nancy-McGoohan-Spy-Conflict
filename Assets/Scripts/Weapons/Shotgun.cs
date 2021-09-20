@@ -13,14 +13,17 @@ public class Shotgun : Weapon
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && fireTime >= fireRate)
+        if (!PauseMenu.GetPause())
         {
-            ShotShotgun();
-        }
-        Reload();
-        if (fireTime < fireRate)
-        {
-            fireTime += Time.deltaTime;
+            if (Input.GetMouseButtonDown(0) && fireTime >= fireRate)
+            {
+                ShotShotgun();
+            }
+            Reload();
+            if (fireTime < fireRate)
+            {
+                fireTime += Time.deltaTime;
+            }
         }
     }
 }

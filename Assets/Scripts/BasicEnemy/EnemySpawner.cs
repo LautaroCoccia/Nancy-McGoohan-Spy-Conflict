@@ -35,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
     {
         GameObject newEnemy = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Count)]);
         newEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, newEnemy.transform.position.z);
-        newEnemy.gameObject.GetComponent<EnemyFSM>().SetObstaclesList(barrelPositions);
+        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(barrelPositions);
         enemiesAlive++;
     }
 }

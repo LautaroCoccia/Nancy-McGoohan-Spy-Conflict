@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffd6ca210aa0494d84f402c9ec76a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choisingTime: 3
+  probToShoot: 18
   barrelPositions:
   - {fileID: 0}
   - {fileID: 0}
