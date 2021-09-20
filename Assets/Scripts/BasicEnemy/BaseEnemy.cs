@@ -82,4 +82,8 @@ public class BaseEnemy : StateEnemy
 
         state = State.choice;
     }
+    protected override void SpecialAction()
+    {
+
+    }
 }

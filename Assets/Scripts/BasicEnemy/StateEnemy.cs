@@ -10,7 +10,8 @@ public abstract class StateEnemy : MonoBehaviour
         Cover,
         uncover,
         move,
-        shoot
+        shoot,
+        specialAction
     }
     protected State state;
     protected bool choising = false;
@@ -39,6 +40,8 @@ public abstract class StateEnemy : MonoBehaviour
             case State.shoot:
                 Shoot();
                 break;
+            case State.specialAction:
+                break;
         }
     }
 
@@ -47,4 +50,5 @@ public abstract class StateEnemy : MonoBehaviour
     protected abstract void Uncover();
     protected abstract void Move();
     protected abstract void Shoot();
+    protected abstract void SpecialAction();
 }
