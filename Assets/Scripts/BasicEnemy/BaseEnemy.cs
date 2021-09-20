@@ -53,7 +53,6 @@ public class BaseEnemy : StateEnemy
     {
         if(transform.position == nextPos)
         {
-            Debug.Log("startPos == nextPos");
             startPos = nextPos;
             Vector3 aux;
             do
