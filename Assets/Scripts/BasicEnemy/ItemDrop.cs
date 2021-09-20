@@ -5,9 +5,10 @@ using UnityEngine;
 public class ItemDrop : MonoBehaviour
 {
     [SerializeField] GameObject item;
-    private void OnDisable()
+    public void Drop()
     {
-        item.transform.SetParent(null);
         item.SetActive(true);
+        item.transform.SetParent(null);
+
     }
 }

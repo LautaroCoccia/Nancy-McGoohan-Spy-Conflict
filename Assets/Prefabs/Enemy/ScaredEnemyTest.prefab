@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 423270635615350420}
   - component: {fileID: 6627221763778851517}
   - component: {fileID: 4606878079687494955}
-  - component: {fileID: 351761956874743872}
-  - component: {fileID: 6399636662585350341}
+  - component: {fileID: 3518662543235037800}
+  - component: {fileID: 2836398668476613177}
   m_Layer: 8
   m_Name: ScaredEnemyTest
   m_TagString: Untagged
@@ -83,20 +83,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   timeMaxTime: 1
---- !u!114 &351761956874743872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5344803187573882444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73b519f28e7c7642b6526e947c60365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 100
---- !u!114 &6399636662585350341
+--- !u!114 &3518662543235037800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +96,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 3466512408757485316}
+--- !u!114 &2836398668476613177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344803187573882444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8199d3315191cd44ba52f7bb1489368b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 10
 --- !u!1 &7840294399970098416
 GameObject:
   m_ObjectHideFlags: 0

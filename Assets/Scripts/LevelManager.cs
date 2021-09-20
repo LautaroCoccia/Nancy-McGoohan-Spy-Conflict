@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] int score;
+    int maxHealth;
     [SerializeField] int health;
     [SerializeField] int killCounter;
     [SerializeField] float timer;
@@ -21,7 +22,8 @@ public class LevelManager : MonoBehaviour
     }
     private void Awake()
     {
-        if(instanceLevelManager == null)
+        maxHealth = health;
+        if (instanceLevelManager == null)
         {
             instanceLevelManager = this;
         }
@@ -35,6 +37,14 @@ public class LevelManager : MonoBehaviour
         shaker = Camera.main.GetComponent<ScreenShake>();
     }
     // Update is called once per frame
+    private void OnEnable()
+    {
+        ItemHeal.OnHealPlayer+= HealPlayer;
+    }
+    private void OnDisable()
+    {
+        ItemHeal.OnHealPlayer -= HealPlayer;
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -76,5 +86,11 @@ public class LevelManager : MonoBehaviour
             LoseCondition?.Invoke();
             Time.timeScale = 0;
         }
+    }
+    public void HealPlayer(int heal)
+    {
+        health += heal;
+        if (maxHealth < health) health = maxHealth;
+        UpdateUIHealth?.Invoke(health);
     }
 }
