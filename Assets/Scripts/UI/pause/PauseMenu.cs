@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour
     {
         PlayerPause.onPauseCall += Pause;
     }
-    void Pause()
+    public void Pause()
     {
         if (!isPaused)
         {

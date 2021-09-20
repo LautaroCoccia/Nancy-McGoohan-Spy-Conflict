@@ -7,7 +7,15 @@ public class ChangeLayer : MonoBehaviour
     [SerializeField] GameObject NextLayer;
     public void Change()
     {
-        CurrentLayer.SetActive(false);
+        PopDown();
+        PopUp();
+    }
+    public void PopUp()
+    {
         NextLayer.SetActive(true);
+    }
+    public void PopDown()
+    {
+        CurrentLayer.SetActive(false);
     }
 }
