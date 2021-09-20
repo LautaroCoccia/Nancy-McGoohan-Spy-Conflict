@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choisingTime: 3
-  probToShoot: 0
+  probToShoot: 18
   barrelPositions:
   - {fileID: 0}
   - {fileID: 0}

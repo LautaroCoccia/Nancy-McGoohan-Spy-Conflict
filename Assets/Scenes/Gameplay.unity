@@ -334,6 +334,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 7500391456599187859, guid: 97f521d9eb3ab7547a771b5bb00879c2, type: 3}
   - {fileID: 7500391456599187859, guid: be12351d1eae8d74db48dfeec0ac5ee4, type: 3}
+  - {fileID: 5344803187573882444, guid: 61f77e1d389aa1d4eaf995fb9119405a, type: 3}
 --- !u!1 &158627288
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +347,7 @@ GameObject:
   - component: {fileID: 158627291}
   - component: {fileID: 158627290}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Win
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1283,7 +1284,7 @@ GameObject:
   - component: {fileID: 397247820}
   - component: {fileID: 397247819}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Loss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5242,6 +5243,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 7500391456599187859, guid: 97f521d9eb3ab7547a771b5bb00879c2, type: 3}
   - {fileID: 7500391456599187859, guid: be12351d1eae8d74db48dfeec0ac5ee4, type: 3}
+  - {fileID: 5344803187573882444, guid: 61f77e1d389aa1d4eaf995fb9119405a, type: 3}
 --- !u!1 &1632725291
 GameObject:
   m_ObjectHideFlags: 0

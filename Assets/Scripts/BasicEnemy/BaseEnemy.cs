@@ -5,7 +5,6 @@ public class BaseEnemy : StateEnemy
 {
     [SerializeField] List<Transform> barrelPositions;
     [SerializeField] float timeMaxTime;
-    float time;
     Vector3 nextPos;
     Vector3 startPos;
     int transformIndex;
@@ -52,13 +51,9 @@ public class BaseEnemy : StateEnemy
     
     protected override void Move()
     {
-        if (time < 1 && startPos != nextPos)
+        if(transform.position == nextPos)
         {
-            //time +=  Time.deltaTime / timeMaxTime;
-            time = speed * Time.deltaTime;
-        }
-        else
-        {
+            Debug.Log("startPos == nextPos");
             startPos = nextPos;
             Vector3 aux;
             do
@@ -69,11 +64,9 @@ public class BaseEnemy : StateEnemy
                               transform.position.z);
             } while (aux == nextPos);
             nextPos = aux;
-            time = 0;
             state = State.choice;
         }
-        //transform.position = Vector3.Lerp(startPos, new Vector3(nextPos.x, nextPos.y, transform.position.z), time);
-        transform.position = Vector3.MoveTowards(transform.position, nextPos,time);
+        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
     }
     protected override void Uncover()
     {
