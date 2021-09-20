@@ -12,6 +12,10 @@ public class WeaponsController : MonoBehaviour
         Shotgun
     }
 
+    public KeyCode selectWeapon1;
+    public KeyCode selectWeapon2;
+    public KeyCode selectWeapon3;
+
     [SerializeField] List<GameObject> weapons;
     public static Action<WeaponType> OnWeaponChanged;
     int actualWeapon;
@@ -38,6 +42,14 @@ public class WeaponsController : MonoBehaviour
             {
                 SelectWeapon(WeaponType.Shotgun);
             }
+        }
+        else if(Input.GetKeyDown(selectWeapon2) && actualWeapon != 1)
+        {
+            SelectWeapon(WeaponType.SubmachineGun);
+        }
+        else if (Input.GetKeyDown(selectWeapon3) && actualWeapon != 2)
+        {
+            SelectWeapon(WeaponType.Shotgun);
         }
     }
     void SelectWeapon(WeaponType newValue)

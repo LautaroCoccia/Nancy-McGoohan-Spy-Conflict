@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
     public static Action<float> UpdateUITimer;
     public static Action<int> UpdateUIHealth;
     public static Action LoseCondition;
+
     private static LevelManager instanceLevelManager;
     public static LevelManager Get()
     {

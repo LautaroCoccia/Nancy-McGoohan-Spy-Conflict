@@ -15,7 +15,6 @@ public class BaseEnemy : StateEnemy
     {
         base.Start();
     }
-
     // Update is called once per frame
     protected override void Update()
     {
