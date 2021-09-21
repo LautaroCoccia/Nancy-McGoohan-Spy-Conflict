@@ -6,7 +6,6 @@ public class BaseEnemy : StateEnemy
     [SerializeField] List<Transform> barrelPositions;
     [SerializeField] float timeMaxTime;
     Vector3 nextPos;
-    Vector3 startPos;
     int transformIndex;
     float speed = 6.0f;
 
@@ -25,8 +24,7 @@ public class BaseEnemy : StateEnemy
     public void SetObstaclesList(List<Transform> obstacles)
     {
         barrelPositions = obstacles;
-        transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
-        startPos = transform.position;
+        transformIndex = Random.Range(0, barrelPositions.Count);
         nextPos = new Vector3(barrelPositions[transformIndex].position.x,
                               barrelPositions[transformIndex].position.y,
                               transform.position.z);
@@ -53,11 +51,10 @@ public class BaseEnemy : StateEnemy
     {
         if(transform.position == nextPos)
         {
-            startPos = nextPos;
             Vector3 aux;
             do
             {
-                transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
+                transformIndex = Random.Range(0, barrelPositions.Count);
                 aux = new Vector3(barrelPositions[transformIndex].position.x,
                                   barrelPositions[transformIndex].position.y,
                               transform.position.z);
