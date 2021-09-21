@@ -154,14 +154,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choisingTime: 3
-  probToShoot: 18
+  probToShoot: 50
+  timeMaxTime: 1
   barrelPositions:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  timeMaxTime: 1
 --- !u!114 &1748382237787767059
 MonoBehaviour:
   m_ObjectHideFlags: 0

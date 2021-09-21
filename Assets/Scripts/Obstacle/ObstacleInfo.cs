@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class ObstacleInfo : MonoBehaviour
 {
-    Transform coverPosition;
-    [SerializeField] Transform[] shootPosition;
-    public Vector3 GetCoverPosition => coverPosition.position;
-    public int GetShootPositionLength => shootPosition.Length;
+    public Transform coverPosition;
+    public List<Transform> shootPosition;
     private void Start()
     {
         coverPosition = GetComponent<Transform>();
-    }
-
-    public Vector3 GetShootPosition(int index)
-    {
-        return shootPosition[index].position;
     }
 }

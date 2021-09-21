@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BaseEnemy : StateEnemy
 {
-    [SerializeField] List<ObstacleInfo> barrelPositions;
     [SerializeField] float timeMaxTime;
+    [SerializeField] List<ObstacleInfo> barrelPositions;
     Vector3 nextPos;
+    Vector3 actualCover;
     int transformIndex;
     float speed = 6.0f;
 
@@ -20,14 +21,6 @@ public class BaseEnemy : StateEnemy
     {
         base.Update();
         
-    }
-    public void SetObstaclesList(List<ObstacleInfo> obstacles)
-    {
-        barrelPositions = obstacles;
-        transformIndex = Random.Range(0, barrelPositions.Count);
-        nextPos = new Vector3(barrelPositions[transformIndex].GetCoverPosition.x,
-                              barrelPositions[transformIndex].GetCoverPosition.y,
-                              transform.position.z);
     }
     protected override IEnumerator Choice()
     {
@@ -45,42 +38,87 @@ public class BaseEnemy : StateEnemy
         }
         choising = false;
     }
-    
-    
+    public void SetObstaclesList(List<ObstacleInfo> obstacles)
+    {
+        barrelPositions = obstacles;
+        transformIndex = Random.Range(0, barrelPositions.Count);
+        nextPos = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
+                              barrelPositions[transformIndex].coverPosition.position.y,
+                              transform.position.z);
+        actualCover = nextPos;
+    }
     protected override void Move()
     {
-        if(transform.position == nextPos)
+        if (transform.position == nextPos)
         {
-            Vector3 aux;
-            do
+            switch(state)
             {
-                transformIndex = Random.Range(0, barrelPositions.Count);
-                aux = new Vector3(barrelPositions[transformIndex].GetCoverPosition.x,
-                                  barrelPositions[transformIndex].GetCoverPosition.y,
-                              transform.position.z);
-            } while (aux == nextPos);
-            nextPos = aux;
-            state = State.choice;
+                case State.move:
+                    SelectCoverPosition(barrelPositions);
+                    state = State.choice;
+                    break;
+
+                case State.uncover:
+                    SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
+                    state = State.shoot;
+                    break;
+                case State.Cover:
+                    SelectActualCoverPosition();
+                    state = State.choice;
+                    break;
+            }
         }
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
     }
     protected override void Uncover()
     {
-
-        state = State.shoot;
+        Move();
     }
     protected override void Shoot()
     {
+        
+
+
+
 
         state = State.Cover;
     }
     protected override void Cover()
     {
-
-        state = State.choice;
+        Move();
     }
     protected override void SpecialAction()
     {
 
+    }
+    protected void SelectCoverPosition(List<ObstacleInfo> positions)
+    {
+        Vector3 aux;
+        do
+        {
+            transformIndex = Random.Range(0, barrelPositions.Count);
+            aux = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
+                              barrelPositions[transformIndex].coverPosition.position.y,
+                          transform.position.z);
+        } while (aux == nextPos);
+        nextPos = aux;
+        actualCover = aux;
+    }
+    protected void SelectUncoverPosition(List<Transform> position)
+    {
+        Vector3 aux;
+        int index = 0;
+        do
+        {
+            index = Random.Range(0, position.Count);
+            aux = new Vector3(position[index].position.x,
+                              position[index].position.y,
+                          transform.position.z);
+        } while (aux == nextPos);
+        nextPos = aux;
+    }
+    protected void SelectActualCoverPosition()
+    {
+        nextPos = actualCover;
     }
 }
