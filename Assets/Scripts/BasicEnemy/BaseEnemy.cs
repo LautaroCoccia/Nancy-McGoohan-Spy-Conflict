@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BaseEnemy : StateEnemy
 {
-    [SerializeField] List<Transform> barrelPositions;
+    [SerializeField] List<ObstacleInfo> barrelPositions;
     [SerializeField] float timeMaxTime;
     Vector3 nextPos;
     int transformIndex;
@@ -21,12 +21,12 @@ public class BaseEnemy : StateEnemy
         base.Update();
         
     }
-    public void SetObstaclesList(List<Transform> obstacles)
+    public void SetObstaclesList(List<ObstacleInfo> obstacles)
     {
         barrelPositions = obstacles;
         transformIndex = Random.Range(0, barrelPositions.Count);
-        nextPos = new Vector3(barrelPositions[transformIndex].position.x,
-                              barrelPositions[transformIndex].position.y,
+        nextPos = new Vector3(barrelPositions[transformIndex].GetCoverPosition.x,
+                              barrelPositions[transformIndex].GetCoverPosition.y,
                               transform.position.z);
     }
     protected override IEnumerator Choice()
@@ -55,8 +55,8 @@ public class BaseEnemy : StateEnemy
             do
             {
                 transformIndex = Random.Range(0, barrelPositions.Count);
-                aux = new Vector3(barrelPositions[transformIndex].position.x,
-                                  barrelPositions[transformIndex].position.y,
+                aux = new Vector3(barrelPositions[transformIndex].GetCoverPosition.x,
+                                  barrelPositions[transformIndex].GetCoverPosition.y,
                               transform.position.z);
             } while (aux == nextPos);
             nextPos = aux;
