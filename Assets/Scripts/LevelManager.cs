@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] int score;
@@ -30,7 +31,7 @@ public class LevelManager : MonoBehaviour
         }
         else if(instanceLevelManager != this)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Gameplay");
         }
     }
     private void Start()
@@ -41,10 +42,12 @@ public class LevelManager : MonoBehaviour
     private void OnEnable()
     {
         ItemHeal.OnHealPlayer+= HealPlayer;
+        BaseEnemy.OnHitPlayer += OnHitPlayer;
     }
     private void OnDisable()
     {
         ItemHeal.OnHealPlayer -= HealPlayer;
+        BaseEnemy.OnHitPlayer -= OnHitPlayer;
     }
     void Update()
     {

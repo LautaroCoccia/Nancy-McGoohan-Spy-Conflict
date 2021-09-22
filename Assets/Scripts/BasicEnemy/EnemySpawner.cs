@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] List<Transform> barrelPositions; //TODO informacion del nivel, LevelManager
+    [SerializeField] List<ObstacleInfo> barrelPositions; //TODO informacion del nivel, LevelManager
     [SerializeField] static int enemiesAlive;
     [SerializeField] int maxEnemiesAlive;
     [SerializeField] float minTimeToSpawn;
@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
         {
             actualTime += Time.deltaTime;
         }
-        if(actualTime >= timeToSpawn)
+        if(actualTime >= timeToSpawn && enemiesAlive < maxEnemiesAlive)
         {
             actualTime = 0;
             timeToSpawn = Random.Range(minTimeToSpawn, maxTimeToSpawn);
