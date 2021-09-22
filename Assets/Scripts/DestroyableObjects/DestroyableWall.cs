@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosiveBarrel : BaseDestroyableObject, IHitable
+public class DestroyableWall : BaseDestroyableObject, IHitable
 {
-    [SerializeField] GameObject explotionPrefab;
     public void OnHit()
     {
         lives--;
         lvlManager.AddScore(score);
         if (lives == 0)
         {
-            GameObject obj = Instantiate(explotionPrefab);
-            obj.transform.position = transform.position;
             Destroy(gameObject);
         }
     }
