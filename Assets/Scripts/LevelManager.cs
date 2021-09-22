@@ -40,10 +40,12 @@ public class LevelManager : MonoBehaviour
     private void OnEnable()
     {
         ItemHeal.OnHealPlayer+= HealPlayer;
+        BaseEnemy.OnHitPlayer += OnHitPlayer;
     }
     private void OnDisable()
     {
         ItemHeal.OnHealPlayer -= HealPlayer;
+        BaseEnemy.OnHitPlayer -= OnHitPlayer;
     }
     void Update()
     {

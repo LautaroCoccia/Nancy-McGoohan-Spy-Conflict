@@ -9,11 +9,14 @@ public class BaseEnemy : StateEnemy
     [SerializeField] float timeWaitAndCover;
     [SerializeField] SpriteRenderer flashInWeapon;
     [SerializeField] float timeMaxTime;
+    [SerializeField] int damage;
+    [SerializeField] [Range(0, 100)] protected int probToHit = 0;
     [SerializeField] List<ObstacleInfo> barrelPositions;
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
     float speed = 6.0f;
+    public static Action<int> OnHitPlayer;
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -73,7 +76,13 @@ public class BaseEnemy : StateEnemy
         flashInWeapon.enabled = true;
         yield return new WaitForSeconds(timeWaitEndShoot);
         
+        if (UnityEngine.Random.Range(0, 101) < probToHit)
+        {
+                OnHitPlayer?.Invoke(damage);
+        }
+        flashInWeapon.enabled = false;
         yield return new WaitForSeconds(timeWaitAndCover);
+        shooting = false;
         state = State.Cover;
 
     }
