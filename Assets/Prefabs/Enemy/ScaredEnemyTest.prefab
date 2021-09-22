@@ -75,7 +75,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choisingTime: 3
-  probToShoot: 50
+  probToShoot: 0
+  timeToWaitAndShoot: 100
+  timeWaitEndShoot: 0
+  timeWaitAndCover: 0
+  flashInWeapon: {fileID: 0}
   timeMaxTime: 1
   barrelPositions:
   - {fileID: 0}
@@ -178,7 +182,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: cdf96d8d61fd62443abca7ab2cb1173e, type: 3}
   m_Color: {r: 0.81960785, g: 0.5200227, b: 0, a: 1}
   m_FlipX: 0
@@ -260,6 +264,11 @@ PrefabInstance:
     - target: {fileID: 868761605467073079, guid: a2f345178aff6724aa66761b878e9c86,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421856987947458995, guid: a2f345178aff6724aa66761b878e9c86,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
