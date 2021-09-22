@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
         {
             actualTime += Time.deltaTime;
         }
-        if(actualTime >= timeToSpawn)
+        if(actualTime >= timeToSpawn && enemiesAlive < maxEnemiesAlive)
         {
             actualTime = 0;
             timeToSpawn = Random.Range(minTimeToSpawn, maxTimeToSpawn);
