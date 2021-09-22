@@ -18,12 +18,13 @@ public class Weapon : MonoBehaviour
     public static Action NormalCrosshair;
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
+
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
     }
-    public void Shot()
+    public void Shoot()
     {
         if(ammo > 0)
         {
@@ -71,7 +72,7 @@ public class Weapon : MonoBehaviour
     }
     public void Reload()
     {
-        if (ammo < maxAmmo && Input.GetKeyDown(KeyCode.R))
+        if (ammo < maxAmmo && Input.GetKeyDown(KeyCode.R) && !PauseMenu.GetPause())
         {
             OutOfAmmoCrosshair?.Invoke();
             StartCoroutine(Reloading());

@@ -13,14 +13,17 @@ public class SubmachineGun : Weapon
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && fireTime >= fireRate)
+        if (!PauseMenu.GetPause())
         {
-            Shot();
-        }
-        Reload();
-        if (fireTime < fireRate)
-        {
-            fireTime += Time.deltaTime;
+            if (Input.GetMouseButton(0) && fireTime >= fireRate)
+            {
+            Shoot();
+            }
+            Reload();
+            if (fireTime < fireRate)
+            {
+                fireTime += Time.deltaTime;
+            }
         }
     }
 }
