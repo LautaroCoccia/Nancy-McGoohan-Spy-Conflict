@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
         }
         else if(instanceLevelManager != this)
         {
-            SceneManager.LoadScene("Gameplay");
+            Destroy(gameObject);
         }
     }
     private void Start()
@@ -67,7 +67,7 @@ public class LevelManager : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            OnHitPlayer(10);
+            SceneManager.LoadScene("Gameplay");
         }
     }
     public void AddScore(int addScore)
