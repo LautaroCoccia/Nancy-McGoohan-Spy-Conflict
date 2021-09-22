@@ -17,7 +17,7 @@ public class Gun : Weapon
         {
             if (Input.GetMouseButtonDown(0) && fireTime >= fireRate)
             {
-                Shot();
+            Shoot();
             }
             Reload();
             if (fireTime < fireRate)
