@@ -15,6 +15,8 @@ public abstract class StateEnemy : MonoBehaviour
     }
     protected State state;
     protected bool choising = false;
+    protected bool shooting = false;
+    protected bool endAction = false;
     [SerializeField] protected float choisingTime = 0.0f;
     [SerializeField][Range(0,100)] protected int probToShoot = 0;
     protected virtual void Start()
@@ -38,7 +40,7 @@ public abstract class StateEnemy : MonoBehaviour
                 Move();
                 break;
             case State.shoot:
-                Shoot();
+                if (!shooting) { StartCoroutine(Shoot()); shooting = true; }
                 break;
             case State.specialAction:
                 break;
@@ -49,6 +51,6 @@ public abstract class StateEnemy : MonoBehaviour
     protected abstract void Cover();
     protected abstract void Uncover();
     protected abstract void Move();
-    protected abstract void Shoot();
+    protected abstract IEnumerator Shoot();
     protected abstract void SpecialAction();
 }

@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 public class BaseEnemy : StateEnemy
 {
+    [SerializeField] float timeToWaitAndShoot;
+    [SerializeField] float timeWaitEndShoot;
+    [SerializeField] float timeWaitAndCover;
+    [SerializeField] SpriteRenderer flashInWeapon;
     [SerializeField] float timeMaxTime;
     [SerializeField] List<ObstacleInfo> barrelPositions;
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
     float speed = 6.0f;
-
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -27,13 +31,15 @@ public class BaseEnemy : StateEnemy
         choising = true;
         yield return new WaitForSeconds(choisingTime);
 
-        switch(Random.Range(0,101))
+        switch(UnityEngine.Random.Range(0,101))
         {
             case int n when n >= probToShoot:
                 state = State.move;
+                SelectCoverPosition(barrelPositions);
                 break;
             case int n when n < probToShoot:
                 state = State.uncover;
+                SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
                 break;
         }
         choising = false;
@@ -41,50 +47,39 @@ public class BaseEnemy : StateEnemy
     public void SetObstaclesList(List<ObstacleInfo> obstacles)
     {
         barrelPositions = obstacles;
-        transformIndex = Random.Range(0, barrelPositions.Count);
+        transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
         nextPos = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
                               barrelPositions[transformIndex].coverPosition.position.y,
                               transform.position.z);
         actualCover = nextPos;
     }
+
+
+    
     protected override void Move()
     {
-        if (transform.position == nextPos)
-        {
-            switch(state)
-            {
-                case State.move:
-                    SelectCoverPosition(barrelPositions);
-                    state = State.choice;
-                    break;
+         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+        if (transform.position == nextPos && state != State.uncover) state = State.choice;
 
-                case State.uncover:
-                    SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
-                    state = State.shoot;
-                    break;
-                case State.Cover:
-                    SelectActualCoverPosition();
-                    state = State.choice;
-                    break;
-            }
-        }
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
     }
     protected override void Uncover()
     {
         Move();
+        if(transform.position == nextPos) state = State.shoot;
     }
-    protected override void Shoot()
+    protected override IEnumerator Shoot()
     {
+        yield return new WaitForSeconds(timeToWaitAndShoot);
+        flashInWeapon.enabled = true;
+        yield return new WaitForSeconds(timeWaitEndShoot);
         
-
-
-
-
+        yield return new WaitForSeconds(timeWaitAndCover);
         state = State.Cover;
+
     }
     protected override void Cover()
     {
+        SelectActualCoverPosition();
         Move();
     }
     protected override void SpecialAction()
@@ -96,7 +91,7 @@ public class BaseEnemy : StateEnemy
         Vector3 aux;
         do
         {
-            transformIndex = Random.Range(0, barrelPositions.Count);
+            transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
             aux = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
                               barrelPositions[transformIndex].coverPosition.position.y,
                           transform.position.z);
@@ -110,7 +105,7 @@ public class BaseEnemy : StateEnemy
         int index = 0;
         do
         {
-            index = Random.Range(0, position.Count);
+            index = UnityEngine.Random.Range(0, position.Count);
             aux = new Vector3(position[index].position.x,
                               position[index].position.y,
                           transform.position.z);
