@@ -81,6 +81,8 @@ MonoBehaviour:
   timeWaitAndCover: 0
   flashInWeapon: {fileID: 0}
   timeMaxTime: 1
+  damage: 0
+  probToHit: 0
   barrelPositions:
   - {fileID: 0}
   - {fileID: 0}
@@ -219,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 27257214389379087, guid: a2f345178aff6724aa66761b878e9c86,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 27257214389379087, guid: a2f345178aff6724aa66761b878e9c86,
         type: 3}
@@ -269,7 +271,7 @@ PrefabInstance:
     - target: {fileID: 7421856987947458995, guid: a2f345178aff6724aa66761b878e9c86,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2f345178aff6724aa66761b878e9c86, type: 3}
