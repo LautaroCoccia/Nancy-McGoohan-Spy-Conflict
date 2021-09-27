@@ -605,6 +605,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a465672f7fe2649b7d1656b5266c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Info: probNormalSpawn + probShieldSpawn + probScaredSpawn = 100%, dont need sum
+    100 points
+  probNormalSpawn: 45
+  probShieldSpawn: 40
+  probScaredSpawn: 20
   barrelPositions:
   - {fileID: 284512193}
   - {fileID: 290501286}
@@ -4590,6 +4595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a465672f7fe2649b7d1656b5266c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Info: probNormalSpawn + probShieldSpawn + probScaredSpawn = 100%, dont need sum
+    100 points
+  probNormalSpawn: 45
+  probShieldSpawn: 40
+  probScaredSpawn: 20
   barrelPositions:
   - {fileID: 284512193}
   - {fileID: 290501286}
