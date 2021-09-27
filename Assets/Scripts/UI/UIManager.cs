@@ -31,6 +31,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> goAmmo;
     [SerializeField] List<Image> UICrosshair;
     int activeWeapon;
+    float timeToChange = 2.0f;
+    [SerializeField] MenuManager mySceneChanger;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -120,6 +122,7 @@ public class UIManager : MonoBehaviour
         {
             winScreen.SetActive(true);
             Time.timeScale = 0;
+            StartCoroutine(ChangeToMenu());
         }
     }
     void UpdateTimer(float timer)
@@ -134,6 +137,11 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 0;
         loseScreen.SetActive(true);
+        StartCoroutine(ChangeToMenu());
     }
-    
+    IEnumerator ChangeToMenu()
+    {
+        yield return new WaitForSecondsRealtime(timeToChange);
+        mySceneChanger.ChangeScene();
+    }
 }

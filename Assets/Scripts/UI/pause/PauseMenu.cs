@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     private void OnEnable()
     {
         isPaused = false;
+        Time.timeScale = 1.0f;
         PlayerPause.onPauseCall += Pause;
     }
     private void OnDisable()
