@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<Image> UICrosshair;
     int activeWeapon;
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         activeWeapon = 0;
         Weapon.UpdateUIAmmo += UpdateAmmo;
@@ -47,8 +47,20 @@ public class UIManager : MonoBehaviour
         LevelManager.LoseCondition += Lose;
         WeaponsController.OnWeaponChanged += WeaponChanged;
     }
-    // Update is called once per frame
-    
+    private void OnDisable()
+    {
+        Weapon.UpdateUIAmmo -= UpdateAmmo;
+        Weapon.ResetUIAmmo -= ResetAmmo;
+        Weapon.OutOfAmmoCrosshair -= OnOutOfAmmo;
+        Weapon.HitCrosshair -= OnEnemyHit;
+        Weapon.NormalCrosshair -= OnNormal;
+        LevelManager.UpdateUIScore -= UpdateScore;
+        LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
+        LevelManager.UpdateUITimer -= UpdateTimer;
+        LevelManager.UpdateUIHealth -= UpdateHealth;
+        LevelManager.LoseCondition -= Lose;
+        WeaponsController.OnWeaponChanged -= WeaponChanged;
+    }
     void UpdateAmmo(float actualAmmo)
     {
         float ammo = 1 / actualAmmo;
@@ -120,20 +132,8 @@ public class UIManager : MonoBehaviour
     }
     void Lose()
     {
+        Time.timeScale = 0;
         loseScreen.SetActive(true);
     }
-    private void OnDisable()
-    {
-        WeaponsController.OnWeaponChanged -= WeaponChanged;
-        LevelManager.LoseCondition -= Lose;
-        LevelManager.UpdateUIHealth -= UpdateHealth;
-        LevelManager.UpdateUITimer -= UpdateTimer;
-        LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
-        LevelManager.UpdateUIScore -= UpdateScore;
-        Weapon.ResetUIAmmo -= ResetAmmo;
-        Weapon.UpdateUIAmmo -= UpdateAmmo;
-        Weapon.NormalCrosshair -= OnNormal;
-        Weapon.OutOfAmmoCrosshair -= OnOutOfAmmo;
-        Weapon.HitCrosshair -= OnEnemyHit;
-    }
+    
 }

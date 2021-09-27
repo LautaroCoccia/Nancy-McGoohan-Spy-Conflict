@@ -63,7 +63,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             UpdateUITimer?.Invoke(timer);
-            Time.timeScale = 0;
+            LoseCondition?.Invoke();
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -88,7 +88,6 @@ public class LevelManager : MonoBehaviour
         if (health <= 0)
         {
             LoseCondition?.Invoke();
-            Time.timeScale = 0;
         }
     }
     public void HealPlayer(int heal)
