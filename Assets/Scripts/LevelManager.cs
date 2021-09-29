@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
         }
         else if(instanceLevelManager != this)
         {
-            SceneManager.LoadScene("Gameplay");
+            Destroy(gameObject);
         }
     }
     private void Start()
@@ -51,11 +51,6 @@ public class LevelManager : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -63,11 +58,11 @@ public class LevelManager : MonoBehaviour
         else
         {
             UpdateUITimer?.Invoke(timer);
-            Time.timeScale = 0;
+            LoseCondition?.Invoke();
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            OnHitPlayer(10);
+            SceneManager.LoadScene("Gameplay");
         }
     }
     public void AddScore(int addScore)
@@ -88,7 +83,6 @@ public class LevelManager : MonoBehaviour
         if (health <= 0)
         {
             LoseCondition?.Invoke();
-            Time.timeScale = 0;
         }
     }
     public void HealPlayer(int heal)

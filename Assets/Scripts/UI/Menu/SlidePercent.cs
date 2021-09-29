@@ -13,6 +13,6 @@ public class SlidePercent : MonoBehaviour
     }
     public void Change()
     {
-         text.text = mySlide.value.ToString();
+         text.text = mySlide.value.ToString() + "%";
     }
 }

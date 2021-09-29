@@ -31,8 +31,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> goAmmo;
     [SerializeField] List<Image> UICrosshair;
     int activeWeapon;
+    float timeToChange = 2.0f;
+    [SerializeField] MenuManager mySceneChanger;
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         activeWeapon = 0;
         Weapon.UpdateUIAmmo += UpdateAmmo;
@@ -47,8 +49,20 @@ public class UIManager : MonoBehaviour
         LevelManager.LoseCondition += Lose;
         WeaponsController.OnWeaponChanged += WeaponChanged;
     }
-    // Update is called once per frame
-    
+    private void OnDisable()
+    {
+        Weapon.UpdateUIAmmo -= UpdateAmmo;
+        Weapon.ResetUIAmmo -= ResetAmmo;
+        Weapon.OutOfAmmoCrosshair -= OnOutOfAmmo;
+        Weapon.HitCrosshair -= OnEnemyHit;
+        Weapon.NormalCrosshair -= OnNormal;
+        LevelManager.UpdateUIScore -= UpdateScore;
+        LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
+        LevelManager.UpdateUITimer -= UpdateTimer;
+        LevelManager.UpdateUIHealth -= UpdateHealth;
+        LevelManager.LoseCondition -= Lose;
+        WeaponsController.OnWeaponChanged -= WeaponChanged;
+    }
     void UpdateAmmo(float actualAmmo)
     {
         float ammo = 1 / actualAmmo;
@@ -108,6 +122,7 @@ public class UIManager : MonoBehaviour
         {
             winScreen.SetActive(true);
             Time.timeScale = 0;
+            StartCoroutine(ChangeToMenu());
         }
     }
     void UpdateTimer(float timer)
@@ -120,20 +135,13 @@ public class UIManager : MonoBehaviour
     }
     void Lose()
     {
+        Time.timeScale = 0;
         loseScreen.SetActive(true);
+        StartCoroutine(ChangeToMenu());
     }
-    private void OnDisable()
+    IEnumerator ChangeToMenu()
     {
-        WeaponsController.OnWeaponChanged -= WeaponChanged;
-        LevelManager.LoseCondition -= Lose;
-        LevelManager.UpdateUIHealth -= UpdateHealth;
-        LevelManager.UpdateUITimer -= UpdateTimer;
-        LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
-        LevelManager.UpdateUIScore -= UpdateScore;
-        Weapon.ResetUIAmmo -= ResetAmmo;
-        Weapon.UpdateUIAmmo -= UpdateAmmo;
-        Weapon.NormalCrosshair -= OnNormal;
-        Weapon.OutOfAmmoCrosshair -= OnOutOfAmmo;
-        Weapon.HitCrosshair -= OnEnemyHit;
+        yield return new WaitForSecondsRealtime(timeToChange);
+        mySceneChanger.ChangeScene();
     }
 }

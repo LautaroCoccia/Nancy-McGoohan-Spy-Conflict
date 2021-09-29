@@ -15,7 +15,7 @@ public class BaseEnemy : StateEnemy
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
-    float speed = 6.0f;
+    float speed = 4.7f;
     public static Action<int> OnHitPlayer;
     // Start is called before the first frame update
     protected override void Start()
