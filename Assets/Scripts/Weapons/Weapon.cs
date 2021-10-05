@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
 
+    [SerializeField] GameObject bulletHoles;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,11 @@ public class Weapon : MonoBehaviour
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
                 HitCrosshair?.Invoke();
                 StartCoroutine(HitShoot());
+            }
+            else
+            {
+                GameObject obj = Instantiate(bulletHoles);
+                obj.transform.position = mousePosition2D;
             }
             ammo--;
             fireTime = 0;

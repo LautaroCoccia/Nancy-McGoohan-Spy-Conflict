@@ -117,8 +117,8 @@ public class UIManager : MonoBehaviour
 
     void UpdateKillCounter(int killCounter)
     {
-        UICounterNum.text = killCounter.ToString();
-        if(killCounter == 5)
+        UICounterNum.text = killCounter.ToString() + "/10";
+        if(killCounter == 10)
         {
             winScreen.SetActive(true);
             Time.timeScale = 0;
