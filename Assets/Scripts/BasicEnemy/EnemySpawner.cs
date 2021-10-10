@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEditor;
 public class EnemySpawner : MonoBehaviour
@@ -8,7 +9,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int probShieldSpawn; // no necesitan sumar 100 en conjunto.
     [SerializeField] int probScaredSpawn;
 
-    [SerializeField] List<ObstacleInfo> barrelPositions; //TODO informacion del nivel, LevelManager
     [SerializeField] static int enemiesAlive;
     [SerializeField] int maxEnemiesAlive;
     [SerializeField] float minTimeToSpawn;
@@ -16,6 +16,15 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float actualTime;
     [SerializeField] float timeToSpawn;
     [SerializeField] List<GameObject> enemyPrefab;
+
+    //public static Action<List<ObstacleInfo>> GetOsbstaclesInfoAction;
+    public delegate List<ObstacleInfo> GetOsbstaclesInfoAction();
+    public static GetOsbstaclesInfoAction getOsbstaclesInfoAction;
+
+    private void OnEnable()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +40,13 @@ public class EnemySpawner : MonoBehaviour
         if(actualTime >= timeToSpawn && enemiesAlive < maxEnemiesAlive)
         {
             actualTime = 0;
-            timeToSpawn = Random.Range(minTimeToSpawn, maxTimeToSpawn);
+            timeToSpawn = UnityEngine.Random.Range(minTimeToSpawn, maxTimeToSpawn);
             SpawnEnemy();
         }
     }
     void SpawnEnemy()
     {
-        int aux = Random.Range(0, probNormalSpawn + probShieldSpawn + probScaredSpawn);
+        int aux = UnityEngine.Random.Range(0, probNormalSpawn + probShieldSpawn + probScaredSpawn);
         switch (aux)
         {
             case int _ when aux < probNormalSpawn:
@@ -54,7 +63,18 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject newEnemy = Instantiate(enemyPrefab[aux]);
         newEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, newEnemy.transform.position.z);
-        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(barrelPositions);
+        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles());
         enemiesAlive++;
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
+    List<ObstacleInfo> GetObstacles()
+    {
+        //return GetOsbstaclesInfoAction?.Invoke();
+        return getOsbstaclesInfoAction();
     }
 }

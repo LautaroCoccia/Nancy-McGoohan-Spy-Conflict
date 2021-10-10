@@ -27,7 +27,7 @@ public class Weapon : MonoBehaviour
     }
     public void Shoot()
     {
-        if(ammo > 0)
+        if (ammo > 0)
         {
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
@@ -43,14 +43,20 @@ public class Weapon : MonoBehaviour
             {
                 GameObject obj = Instantiate(bulletHoles);
                 obj.transform.position = mousePosition2D;
+
+                //Se ve HORRIBLE ESTO
+                SpriteRenderer Sr;
+                Sr = obj.GetComponent<SpriteRenderer>();
+                Sr.sortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
+                Sr.sortingOrder++;
             }
-            ammo--;
             fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
-        }
-        else
-        {
-            OutOfAmmoCrosshair?.Invoke();
+            ammo--;
+            if(ammo <= 0)
+            {
+                OutOfAmmoCrosshair?.Invoke();
+            }
         }
     }
     public void ShotShotgun()
@@ -66,14 +72,27 @@ public class Weapon : MonoBehaviour
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
                 HitCrosshair?.Invoke();
                 StartCoroutine(HitShoot());
+
             }
-            ammo--;
+            else
+            {
+                GameObject obj = Instantiate(bulletHoles);
+                obj.transform.position = mousePosition2D;
+
+                //Se ve HORRIBLE ESTO
+                SpriteRenderer Sr;
+                Sr = obj.GetComponent<SpriteRenderer>();
+                Sr.sortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
+                Sr.sortingOrder++;
+            }
             fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
-        }
-        else
-        {
-            OutOfAmmoCrosshair?.Invoke();
+            
+            ammo--;
+            if(ammo <= 0)
+            {
+                OutOfAmmoCrosshair?.Invoke();
+            }
         }
     }
     public void Reload()

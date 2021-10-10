@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class DestroyableWallStatesController : MonoBehaviour
 {
     [SerializeField] List<GameObject> wallStates;
-
+    public static Action<Transform> DeleteFromObjectList;
     int index = 0;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class DestroyableWallStatesController : MonoBehaviour
         }
         else
         {
+            DeleteFromObjectList?.Invoke(transform);
             Destroy(gameObject);
         }
        

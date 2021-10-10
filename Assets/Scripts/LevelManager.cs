@@ -10,7 +10,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int health;
     [SerializeField] int killCounter;
     [SerializeField] float timer;
+    [SerializeField] List<ObstacleInfo> barrelPositions;
+    
     ScreenShake shaker;
+
     public static Action<int> UpdateUIScore;
     public static Action<int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
@@ -43,11 +46,15 @@ public class LevelManager : MonoBehaviour
     {
         ItemHeal.OnHealPlayer+= HealPlayer;
         BaseEnemy.OnHitPlayer += OnHitPlayer;
+        EnemySpawner.getOsbstaclesInfoAction += GetObstacles;
+        DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
     }
     private void OnDisable()
     {
         ItemHeal.OnHealPlayer -= HealPlayer;
         BaseEnemy.OnHitPlayer -= OnHitPlayer;
+        EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
+        DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
     }
     void Update()
     {
@@ -90,5 +97,19 @@ public class LevelManager : MonoBehaviour
         health += heal;
         if (maxHealth < health) health = maxHealth;
         UpdateUIHealth?.Invoke(health);
+    }
+    void DeleteObjectFromList(Transform transform)
+    {
+        for (int i = 0; i < barrelPositions.Count; i++)
+        {
+            if (barrelPositions[i].transform == transform)
+            {
+                barrelPositions.RemoveAt(i);
+            }    
+        }
+    }
+    List<ObstacleInfo> GetObstacles()
+    {
+        return barrelPositions;
     }
 }

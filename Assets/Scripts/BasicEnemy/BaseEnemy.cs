@@ -12,11 +12,14 @@ public class BaseEnemy : StateEnemy
     [SerializeField] int damage;
     [SerializeField] [Range(0, 100)] protected int probToHit = 0;
     [SerializeField] List<ObstacleInfo> barrelPositions;
+
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
     float speed = 4.7f;
     public static Action<int> OnHitPlayer;
+
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -100,6 +103,11 @@ public class BaseEnemy : StateEnemy
         do
         {
             transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
+            if(barrelPositions[transformIndex] == null)
+            {
+                barrelPositions.RemoveAt(transformIndex);
+                transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
+            }
             aux = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
                               barrelPositions[transformIndex].coverPosition.position.y,
                           transform.position.z);
@@ -114,9 +122,18 @@ public class BaseEnemy : StateEnemy
         do
         {
             index = UnityEngine.Random.Range(0, position.Count);
-            aux = new Vector3(position[index].position.x,
+            if(position[index] == null)
+            {
+                aux = Vector3.zero;
+                state = State.move;
+            }
+            else
+            {
+                aux = new Vector3(position[index].position.x,
                               position[index].position.y,
                           transform.position.z);
+            }
+            
         } while (aux == nextPos);
         nextPos = aux;
     }
