@@ -16,9 +16,11 @@ public class BaseEnemy : StateEnemy
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
-    float speed = 4.7f;
+    public const float speed = 4.7f;
     public static Action<int> OnHitPlayer;
 
+    [Space(15)]
+    [SerializeField] BasicSpecial specialSkill;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -29,22 +31,28 @@ public class BaseEnemy : StateEnemy
     protected override void Update()
     {
         base.Update();
-        
     }
     protected override IEnumerator Choice()
     {
         choising = true;
         yield return new WaitForSeconds(choisingTime);
-
+        if(switchTimerVsProbSpecial)
+        {
+            timerToSpecial += Time.deltaTime;
+            if (timerToSpecial >= timerToWaitSpecial) state = State.specialAction;
+        }
         switch(UnityEngine.Random.Range(0,101))
         {
-            case int n when n >= probToShoot:
+            case int n when n >= (probToSpecial + probToSpecial):
                 state = State.move;
                 SelectCoverPosition(barrelPositions);
                 break;
             case int n when n < probToShoot:
                 state = State.uncover;
                 SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
+                break;
+            case int n when n < (probToShoot + probToSpecial) && !switchTimerVsProbSpecial && probToSpecial!=0:
+                state = State.specialAction;
                 break;
         }
         choising = false;
@@ -95,7 +103,17 @@ public class BaseEnemy : StateEnemy
     }
     protected override void SpecialAction()
     {
-
+        if (specialSkill != null)
+        {
+            if(specialSkill.Skill())
+            {
+                state = State.choice;
+            }
+        }
+        else
+        {
+            state = State.choice;
+        }
     }
     protected void SelectCoverPosition(List<ObstacleInfo> positions)
     {

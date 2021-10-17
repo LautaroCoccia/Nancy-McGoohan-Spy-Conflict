@@ -17,13 +17,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float timeToSpawn;
     [SerializeField] List<GameObject> enemyPrefab;
 
-    //public static Action<List<ObstacleInfo>> GetOsbstaclesInfoAction;
     public delegate List<ObstacleInfo> GetOsbstaclesInfoAction();
     public static GetOsbstaclesInfoAction getOsbstaclesInfoAction;
 
+    const int normalEnemy = 0;
+    const int shieldEnemy = 1;
+    const int scaredEnemy = 2;
+    public static Action specialSet;
     private void OnEnable()
     {
-        
+    }
+    private void OnDisable()
+    {
     }
     // Start is called before the first frame update
     void Start()
@@ -50,31 +55,27 @@ public class EnemySpawner : MonoBehaviour
         switch (aux)
         {
             case int _ when aux < probNormalSpawn:
-                aux = 0;
+                aux = normalEnemy;
                 break;
             case int _ when aux >= probNormalSpawn && aux < probNormalSpawn + probShieldSpawn:
-                aux = 1;
+                aux = shieldEnemy;
                 break;
             case int _ when aux >= probNormalSpawn + probShieldSpawn &&
             aux < probNormalSpawn + probShieldSpawn + probScaredSpawn:
-                aux = 2;
+                aux = scaredEnemy;
                 break;
         }
 
         GameObject newEnemy = Instantiate(enemyPrefab[aux]);
         newEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, newEnemy.transform.position.z);
         newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles());
-        enemiesAlive++;
-    }
-
-    private void OnDisable()
-    {
         
+        enemiesAlive++;
+
     }
 
     List<ObstacleInfo> GetObstacles()
     {
-        //return GetOsbstaclesInfoAction?.Invoke();
-        return getOsbstaclesInfoAction();
+        return getOsbstaclesInfoAction?.Invoke();
     }
 }

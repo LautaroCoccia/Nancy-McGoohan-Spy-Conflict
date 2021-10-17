@@ -21,6 +21,8 @@ public class LevelManager : MonoBehaviour
     public static Action LoseCondition;
 
     private static LevelManager instanceLevelManager;
+
+    [SerializeField] List<Transform> scapePoints;
     public static LevelManager Get()
     {
         return instanceLevelManager;
@@ -48,6 +50,7 @@ public class LevelManager : MonoBehaviour
         BaseEnemy.OnHitPlayer += OnHitPlayer;
         EnemySpawner.getOsbstaclesInfoAction += GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
+        ScaredSpecial.scapePointsGetter += GetScapePoints;
     }
     private void OnDisable()
     {
@@ -55,6 +58,7 @@ public class LevelManager : MonoBehaviour
         BaseEnemy.OnHitPlayer -= OnHitPlayer;
         EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
+        ScaredSpecial.scapePointsGetter -= GetScapePoints;
     }
     void Update()
     {
@@ -111,5 +115,9 @@ public class LevelManager : MonoBehaviour
     List<ObstacleInfo> GetObstacles()
     {
         return barrelPositions;
+    }
+    List<Transform> GetScapePoints()
+    {
+        return scapePoints;
     }
 }

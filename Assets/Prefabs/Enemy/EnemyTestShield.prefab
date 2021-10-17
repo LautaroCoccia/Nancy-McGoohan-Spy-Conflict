@@ -237,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choisingTime: 3
   probToShoot: 25
+  probToSpecial: 0
   timeToWaitAndShoot: 3
   timeWaitEndShoot: 2
   timeWaitAndCover: 1
@@ -250,6 +251,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  specialSkill: {fileID: 0}
 --- !u!114 &1748382237787767059
 MonoBehaviour:
   m_ObjectHideFlags: 0
