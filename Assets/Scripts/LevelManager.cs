@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] string testLoadLevel;
     [SerializeField] int score;
     int maxHealth;
     [SerializeField] int health;
@@ -73,7 +74,7 @@ public class LevelManager : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("Gameplay");
+            SceneManager.LoadScene(testLoadLevel);
         }
     }
     public void AddScore(int addScore)
