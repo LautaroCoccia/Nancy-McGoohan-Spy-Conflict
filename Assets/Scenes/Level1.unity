@@ -2744,7 +2744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ae02e03b84f24e8146d43cc89bb7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testLoadLevel: Level2
+  testLoadLevel: Level1
   score: 0
   health: 3
   killCounter: 0
