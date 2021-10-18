@@ -92,30 +92,6 @@ TextureImporter:
   - first:
       213: 4790517898627314495
     second: Webley_Rec_TileMap_29
-  - first:
-      213: 4481326534924484728
-    second: Webley_Rec_TileMap_30
-  - first:
-      213: -3217130173255379400
-    second: Webley_Rec_TileMap_31
-  - first:
-      213: 3054628070414873400
-    second: Webley_Rec_TileMap_32
-  - first:
-      213: 5204141497723199671
-    second: Webley_Rec_TileMap_33
-  - first:
-      213: -4470000551266685920
-    second: Webley_Rec_TileMap_34
-  - first:
-      213: 6774116991817693678
-    second: Webley_Rec_TileMap_35
-  - first:
-      213: -504167549634670690
-    second: Webley_Rec_TileMap_36
-  - first:
-      213: -2805833829595860129
-    second: Webley_Rec_TileMap_37
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -228,10 +204,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_0
       rect:
         serializedVersion: 2
-        x: 116
-        y: 1681
-        width: 236
-        height: 126
+        x: 43
+        y: 1404
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +225,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_1
       rect:
         serializedVersion: 2
-        x: 645
-        y: 1680
-        width: 230
-        height: 138
+        x: 529
+        y: 1404
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,10 +246,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_2
       rect:
         serializedVersion: 2
-        x: 1150
-        y: 1680
-        width: 224
-        height: 149
+        x: 1015
+        y: 1404
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +267,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_3
       rect:
         serializedVersion: 2
-        x: 1644
-        y: 1679
-        width: 217
-        height: 160
+        x: 1501
+        y: 1404
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,10 +288,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_4
       rect:
         serializedVersion: 2
-        x: 2140
-        y: 1679
-        width: 208
-        height: 172
+        x: 1987
+        y: 1404
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,10 +309,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_5
       rect:
         serializedVersion: 2
-        x: 2646
-        y: 1677
-        width: 199
-        height: 184
+        x: 2473
+        y: 1404
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,10 +330,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_6
       rect:
         serializedVersion: 2
-        x: 151
-        y: 1301
-        width: 192
-        height: 194
+        x: 43
+        y: 1076
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,10 +351,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_7
       rect:
         serializedVersion: 2
-        x: 683
-        y: 1301
-        width: 192
-        height: 194
+        x: 529
+        y: 1076
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,10 +372,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_8
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 1302
-        width: 192
-        height: 194
+        x: 1015
+        y: 1076
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,10 +393,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_9
       rect:
         serializedVersion: 2
-        x: 1669
-        y: 1301
-        width: 192
-        height: 194
+        x: 1501
+        y: 1076
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,10 +414,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_10
       rect:
         serializedVersion: 2
-        x: 2157
-        y: 1283
-        width: 192
-        height: 213
+        x: 1987
+        y: 1076
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,10 +435,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_11
       rect:
         serializedVersion: 2
-        x: 2653
-        y: 1255
-        width: 192
-        height: 241
+        x: 2473
+        y: 1076
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +456,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_12
       rect:
         serializedVersion: 2
-        x: 151
-        y: 911
-        width: 192
-        height: 195
+        x: 43
+        y: 748
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -501,10 +477,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_13
       rect:
         serializedVersion: 2
-        x: 683
-        y: 911
-        width: 192
-        height: 195
+        x: 529
+        y: 748
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -522,10 +498,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_14
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 911
-        width: 192
-        height: 195
+        x: 1015
+        y: 748
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,10 +519,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_15
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 1013
-        width: 35
-        height: 31
+        x: 1501
+        y: 748
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,10 +540,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_16
       rect:
         serializedVersion: 2
-        x: 1669
-        y: 911
-        width: 192
-        height: 195
+        x: 1987
+        y: 748
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -585,10 +561,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_17
       rect:
         serializedVersion: 2
-        x: 1874
-        y: 1034
-        width: 37
-        height: 29
+        x: 2473
+        y: 748
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -606,10 +582,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_18
       rect:
         serializedVersion: 2
-        x: 2157
-        y: 911
-        width: 192
-        height: 195
+        x: 43
+        y: 420
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,10 +603,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_19
       rect:
         serializedVersion: 2
-        x: 2340
-        y: 1041
-        width: 39
-        height: 32
+        x: 529
+        y: 420
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -648,10 +624,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_20
       rect:
         serializedVersion: 2
-        x: 2653
-        y: 911
-        width: 192
-        height: 195
+        x: 1015
+        y: 420
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -669,10 +645,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_21
       rect:
         serializedVersion: 2
-        x: 2820
-        y: 1041
-        width: 38
-        height: 35
+        x: 1501
+        y: 420
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -690,10 +666,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_22
       rect:
         serializedVersion: 2
-        x: 921
-        y: 982
-        width: 39
-        height: 31
+        x: 1987
+        y: 420
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +687,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_23
       rect:
         serializedVersion: 2
-        x: 275
-        y: 831
-        width: 24
-        height: 55
+        x: 2473
+        y: 420
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -732,10 +708,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_24
       rect:
         serializedVersion: 2
-        x: 299
-        y: 831
-        width: 16
-        height: 61
+        x: 43
+        y: 92
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -753,10 +729,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_25
       rect:
         serializedVersion: 2
-        x: 315
-        y: 837
-        width: 22
-        height: 52
+        x: 529
+        y: 92
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,10 +750,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_26
       rect:
         serializedVersion: 2
-        x: 151
-        y: 522
-        width: 192
-        height: 191
+        x: 1015
+        y: 92
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -795,10 +771,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_27
       rect:
         serializedVersion: 2
-        x: 682
-        y: 522
-        width: 192
-        height: 191
+        x: 1501
+        y: 92
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -816,10 +792,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_28
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 522
-        width: 191
-        height: 193
+        x: 1987
+        y: 92
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -837,10 +813,10 @@ TextureImporter:
       name: Webley_Rec_TileMap_29
       rect:
         serializedVersion: 2
-        x: 1668
-        y: 522
-        width: 191
-        height: 191
+        x: 2473
+        y: 92
+        width: 471
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,174 +826,6 @@ TextureImporter:
       bones: []
       spriteID: f33f4d5c5a65b7240800000000000000
       internalID: 4790517898627314495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_30
-      rect:
-        serializedVersion: 2
-        x: 2154
-        y: 522
-        width: 192
-        height: 193
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 870c4bc8dbed03e30800000000000000
-      internalID: 4481326534924484728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_31
-      rect:
-        serializedVersion: 2
-        x: 2643
-        y: 522
-        width: 199
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8361cea07257a53d0800000000000000
-      internalID: -3217130173255379400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_32
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 146
-        width: 206
-        height: 176
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 833f302cb08346a20800000000000000
-      internalID: 3054628070414873400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_33
-      rect:
-        serializedVersion: 2
-        x: 656
-        y: 146
-        width: 214
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b029a49e13d83840800000000000000
-      internalID: 5204141497723199671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_34
-      rect:
-        serializedVersion: 2
-        x: 1150
-        y: 147
-        width: 220
-        height: 158
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02ce2f38e2e57f1c0800000000000000
-      internalID: -4470000551266685920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_35
-      rect:
-        serializedVersion: 2
-        x: 1644
-        y: 148
-        width: 226
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee93b34638f720e50800000000000000
-      internalID: 6774116991817693678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_36
-      rect:
-        serializedVersion: 2
-        x: 2135
-        y: 148
-        width: 232
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9f0fb8e846d009f0800000000000000
-      internalID: -504167549634670690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Webley_Rec_TileMap_37
-      rect:
-        serializedVersion: 2
-        x: 2631
-        y: 150
-        width: 236
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f533a287ffcaf09d0800000000000000
-      internalID: -2805833829595860129
       vertices: []
       indices: 
       edges: []
