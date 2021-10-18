@@ -238,12 +238,14 @@ MonoBehaviour:
   choisingTime: 3
   probToShoot: 25
   probToSpecial: 0
+  switchTimerVsProbSpecial: 0
+  timerToWaitSpecial: 3
   timeToWaitAndShoot: 3
   timeWaitEndShoot: 2
   timeWaitAndCover: 1
   flashInWeapon: {fileID: 4211012051401535701}
   timeMaxTime: 1
-  damage: 15
+  damage: 1
   probToHit: 50
   barrelPositions:
   - {fileID: 0}

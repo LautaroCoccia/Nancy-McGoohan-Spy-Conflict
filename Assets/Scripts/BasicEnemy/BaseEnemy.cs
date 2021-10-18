@@ -43,7 +43,7 @@ public class BaseEnemy : StateEnemy
         }
         switch(UnityEngine.Random.Range(0,101))
         {
-            case int n when n >= (probToSpecial + probToSpecial):
+            case int n when n >= (probToShoot + probToSpecial):
                 state = State.move;
                 SelectCoverPosition(barrelPositions);
                 break;
@@ -51,7 +51,8 @@ public class BaseEnemy : StateEnemy
                 state = State.uncover;
                 SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
                 break;
-            case int n when n < (probToShoot + probToSpecial) && !switchTimerVsProbSpecial && probToSpecial!=0:
+            case int n when n < (probToShoot + probToSpecial) && n> probToShoot
+            && !switchTimerVsProbSpecial && probToSpecial!=0:
                 state = State.specialAction;
                 break;
         }

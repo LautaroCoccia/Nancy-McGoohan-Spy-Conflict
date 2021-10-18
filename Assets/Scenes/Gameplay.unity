@@ -638,7 +638,7 @@ MonoBehaviour:
   probNormalSpawn: 45
   probShieldSpawn: 40
   probScaredSpawn: 20
-  maxEnemiesAlive: 10
+  maxEnemiesAlive: 1
   minTimeToSpawn: 3
   maxTimeToSpawn: 12
   actualTime: 10
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   targetLayer: 8
   fireRate: 0.25
   fireTime: 0.25
-  reloadTime: 0.5
+  reloadTime: 1.5
   mainCamera: {fileID: 0}
   bulletHoles: {fileID: 562357829}
 --- !u!1 &457425403
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  health: 100
+  health: 3
   killCounter: 0
   timer: 60
   barrelPositions:
@@ -6453,7 +6453,7 @@ MonoBehaviour:
   targetLayer: 8
   fireRate: 0.15
   fireTime: 0
-  reloadTime: 0.15
+  reloadTime: 0.5
   mainCamera: {fileID: 0}
   bulletHoles: {fileID: 562357829}
 --- !u!4 &1978653744
@@ -6797,6 +6797,6 @@ MonoBehaviour:
   targetLayer: 8
   fireRate: 0.25
   fireTime: 0.25
-  reloadTime: 0.75
+  reloadTime: 0.25
   mainCamera: {fileID: 0}
   bulletHoles: {fileID: 562357829}

@@ -10,10 +10,12 @@ public class ScreenShake : MonoBehaviour
     [SerializeField] float decreaseFactor = 1;
     Vector3 startPos;
     LevelManager lvlManager;
+    public static bool isShaking;
     // Start is called before the first frame update
     void Start()
     {
         startPos = gameObject.transform.position;
+        isShaking = false;
     }
     public void Shake()
     {
@@ -22,7 +24,8 @@ public class ScreenShake : MonoBehaviour
     IEnumerator Shaker()
     {
         actualTime = time;
-        while(actualTime >0)
+        isShaking = true;
+        while (actualTime >0)
         {
             transform.position = UnityEngine.Random.insideUnitSphere * shakeAmount;
             transform.position = new Vector3(transform.position.x, transform.position.y, startPos.z);
@@ -31,5 +34,6 @@ public class ScreenShake : MonoBehaviour
         }
         actualTime = 0;
         transform.position = startPos;
+        isShaking = false;
     }
 }

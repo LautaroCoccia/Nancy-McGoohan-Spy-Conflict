@@ -237,12 +237,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choisingTime: 3
   probToShoot: 25
+  probToSpecial: 0
+  switchTimerVsProbSpecial: 0
+  timerToWaitSpecial: 3
   timeToWaitAndShoot: 3
   timeWaitEndShoot: 2
   timeWaitAndCover: 1
   flashInWeapon: {fileID: 1688867770458838312}
   timeMaxTime: 1
-  damage: 25
+  damage: 1
   probToHit: 50
   barrelPositions:
   - {fileID: 0}
@@ -250,6 +253,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  specialSkill: {fileID: 0}
 --- !u!114 &-6423393353931640929
 MonoBehaviour:
   m_ObjectHideFlags: 0

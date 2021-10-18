@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     public static Action<int> UpdateUIScore;
     public static Action<int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
-    public static Action<int> UpdateUIHealth;
+    public static Action<int,int> UpdateUIHealth;
     public static Action LoseCondition;
 
     private static LevelManager instanceLevelManager;
@@ -89,7 +89,7 @@ public class LevelManager : MonoBehaviour
     public void OnHitPlayer(int damage)
     {
         health -= damage;
-        UpdateUIHealth?.Invoke(health);
+        UpdateUIHealth?.Invoke(health,maxHealth);
         shaker.Shake();
         if (health <= 0)
         {
@@ -100,7 +100,7 @@ public class LevelManager : MonoBehaviour
     {
         health += heal;
         if (maxHealth < health) health = maxHealth;
-        UpdateUIHealth?.Invoke(health);
+        UpdateUIHealth?.Invoke(health,maxHealth);
     }
     void DeleteObjectFromList(Transform transform)
     {

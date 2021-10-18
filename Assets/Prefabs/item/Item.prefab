@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
-  healPower: 20
+  healPower: 2
 --- !u!61 &2067989017955015692
 BoxCollider2D:
   m_ObjectHideFlags: 0

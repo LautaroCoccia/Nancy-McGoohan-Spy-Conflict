@@ -129,18 +129,19 @@ public class UIManager : MonoBehaviour
     {
         UITimer.text = Mathf.Round(timer).ToString();
     }
-    void UpdateHealth(int health)
+    void UpdateHealth(int health,int maxHealth)
     {
-        UIHealth.fillAmount =  ((float)health) / 100;
+        UIHealth.fillAmount =  ((float)health) / maxHealth;
     }
     void Lose()
     {
-        Time.timeScale = 0;
-        loseScreen.SetActive(true);
         StartCoroutine(ChangeToMenu());
     }
     IEnumerator ChangeToMenu()
     {
+        yield return new WaitUntil(() => !ScreenShake.isShaking);
+        Time.timeScale = 0;
+        loseScreen.SetActive(true);
         yield return new WaitForSecondsRealtime(timeToChange);
         mySceneChanger.ChangeScene();
     }
