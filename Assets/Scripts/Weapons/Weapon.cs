@@ -47,7 +47,7 @@ public class Weapon : MonoBehaviour
                 //Se ve HORRIBLE ESTO
                 SpriteRenderer Sr;
                 Sr = obj.GetComponent<SpriteRenderer>();
-                Sr.sortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
+                Sr.sortingOrder = hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder;
                 Sr.sortingOrder++;
             }
             fireTime = 0;
