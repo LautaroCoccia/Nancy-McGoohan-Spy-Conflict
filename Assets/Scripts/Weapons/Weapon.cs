@@ -106,10 +106,12 @@ public class Weapon : MonoBehaviour
     }
     IEnumerator Reloading()
     {
+        isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         ammo = maxAmmo;
         ResetUIAmmo?.Invoke();
         NormalCrosshair?.Invoke();
+        isReloading = false;
     }
     IEnumerator HitShoot()
     {
