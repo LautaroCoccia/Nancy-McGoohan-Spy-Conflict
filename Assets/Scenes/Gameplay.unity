@@ -2767,7 +2767,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletholeprefab: {fileID: 562357829}
-  listSize: 300
+  listSize: 5
+  bulletholesList: []
 --- !u!114 &709086304
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -35,7 +35,7 @@ public class BulleholePooler : MonoBehaviour
         bulletholesList[nextToSet].transform.position = position;
         bulletholesList[nextToSet].gameObject.GetComponent<SpriteRenderer>().sortingOrder = Slayer;
 
-        if (nextToSet < bulletholesList.Count)
+        if (nextToSet < bulletholesList.Count - 1)
             nextToSet++;
         else
             nextToSet = 0;
