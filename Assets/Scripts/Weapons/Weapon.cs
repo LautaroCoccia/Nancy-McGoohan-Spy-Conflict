@@ -18,15 +18,17 @@ public class Weapon : MonoBehaviour
     public static Action NormalCrosshair;
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
-
+    protected bool isReloading;
+    [SerializeField] GameObject bulletHoles;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
+        isReloading = false;
     }
     public void Shoot()
     {
-        if(ammo > 0)
+        if (ammo > 0)
         {
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
@@ -38,13 +40,24 @@ public class Weapon : MonoBehaviour
                 HitCrosshair?.Invoke();
                 StartCoroutine(HitShoot());
             }
-            ammo--;
+            else
+            {
+                GameObject obj = Instantiate(bulletHoles);
+                obj.transform.position = mousePosition2D;
+
+                //Se ve HORRIBLE ESTO
+                SpriteRenderer Sr;
+                Sr = obj.GetComponent<SpriteRenderer>();
+                Sr.sortingOrder = hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder;
+                Sr.sortingOrder++;
+            }
             fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
-        }
-        else
-        {
-            OutOfAmmoCrosshair?.Invoke();
+            ammo--;
+            if(ammo <= 0)
+            {
+                OutOfAmmoCrosshair?.Invoke();
+            }
         }
     }
     public void ShotShotgun()
@@ -60,14 +73,27 @@ public class Weapon : MonoBehaviour
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
                 HitCrosshair?.Invoke();
                 StartCoroutine(HitShoot());
+
             }
-            ammo--;
+            else
+            {
+                GameObject obj = Instantiate(bulletHoles);
+                obj.transform.position = mousePosition2D;
+
+                //Se ve HORRIBLE ESTO
+                SpriteRenderer Sr;
+                Sr = obj.GetComponent<SpriteRenderer>();
+                Sr.sortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
+                Sr.sortingOrder++;
+            }
             fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
-        }
-        else
-        {
-            OutOfAmmoCrosshair?.Invoke();
+            
+            ammo--;
+            if(ammo <= 0)
+            {
+                OutOfAmmoCrosshair?.Invoke();
+            }
         }
     }
     public void Reload()
@@ -80,10 +106,12 @@ public class Weapon : MonoBehaviour
     }
     IEnumerator Reloading()
     {
+        isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         ammo = maxAmmo;
         ResetUIAmmo?.Invoke();
         NormalCrosshair?.Invoke();
+        isReloading = false;
     }
     IEnumerator HitShoot()
     {

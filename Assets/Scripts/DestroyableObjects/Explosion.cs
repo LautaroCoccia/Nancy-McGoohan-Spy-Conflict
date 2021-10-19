@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    float initialTime;
     [SerializeField] float explosionTIme = 0.25f;
+    [SerializeField] List<Sprite> explosionSprites;
+    [SerializeField] SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        initialTime = explosionTIme;
+        spriteRenderer.sprite = explosionSprites[0];
     }
 
     // Update is called once per frame
@@ -17,14 +21,21 @@ public class Explosion : MonoBehaviour
         if(explosionTIme>0)
         {
             explosionTIme -= Time.deltaTime;
+            if(initialTime/2 > explosionTIme)
+            {
+                spriteRenderer.sprite = explosionSprites[1];
+            }
         }
         else
         {
             Destroy(gameObject);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        Debug.Log("asdasdasd");
         collision.gameObject.GetComponent<IHitable>().OnHit();
+
     }
 }

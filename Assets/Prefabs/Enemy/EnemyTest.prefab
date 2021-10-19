@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: cdf96d8d61fd62443abca7ab2cb1173e, type: 3}
   m_Color: {r: 0.3529412, g: 0.8117648, b: 0.43137258, a: 1}
   m_FlipX: 0
@@ -237,12 +237,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choisingTime: 3
   probToShoot: 25
+  probToSpecial: 0
+  switchTimerVsProbSpecial: 0
+  timerToWaitSpecial: 3
   timeToWaitAndShoot: 3
   timeWaitEndShoot: 2
   timeWaitAndCover: 1
   flashInWeapon: {fileID: 1688867770458838312}
   timeMaxTime: 1
-  damage: 25
+  damage: 1
   probToHit: 50
   barrelPositions:
   - {fileID: 0}
@@ -250,6 +253,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  specialSkill: {fileID: 0}
 --- !u!114 &-6423393353931640929
 MonoBehaviour:
   m_ObjectHideFlags: 0

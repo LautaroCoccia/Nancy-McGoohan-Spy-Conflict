@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4606878079687494955}
   - component: {fileID: 3518662543235037800}
   - component: {fileID: 2836398668476613177}
+  - component: {fileID: 1680928960468761819}
   m_Layer: 8
   m_Name: ScaredEnemyTest
   m_TagString: Untagged
@@ -76,6 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choisingTime: 3
   probToShoot: 0
+  probToSpecial: 24
+  switchTimerVsProbSpecial: 0
+  timerToWaitSpecial: 30
   timeToWaitAndShoot: 100
   timeWaitEndShoot: 0
   timeWaitAndCover: 0
@@ -89,6 +93,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  specialSkill: {fileID: 1680928960468761819}
 --- !u!114 &3518662543235037800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +120,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 10
+--- !u!114 &1680928960468761819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344803187573882444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534105276f361d74998b844aaa9b6ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7840294399970098416
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +201,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: cdf96d8d61fd62443abca7ab2cb1173e, type: 3}
   m_Color: {r: 0.81960785, g: 0.5200227, b: 0, a: 1}
   m_FlipX: 0

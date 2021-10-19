@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEditor;
 public class EnemySpawner : MonoBehaviour
@@ -8,7 +9,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int probShieldSpawn; // no necesitan sumar 100 en conjunto.
     [SerializeField] int probScaredSpawn;
 
-    [SerializeField] List<ObstacleInfo> barrelPositions; //TODO informacion del nivel, LevelManager
     [SerializeField] static int enemiesAlive;
     [SerializeField] int maxEnemiesAlive;
     [SerializeField] float minTimeToSpawn;
@@ -16,6 +16,20 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float actualTime;
     [SerializeField] float timeToSpawn;
     [SerializeField] List<GameObject> enemyPrefab;
+
+    public delegate List<ObstacleInfo> GetOsbstaclesInfoAction();
+    public static GetOsbstaclesInfoAction getOsbstaclesInfoAction;
+
+    const int normalEnemy = 0;
+    const int shieldEnemy = 1;
+    const int scaredEnemy = 2;
+    public static Action specialSet;
+    private void OnEnable()
+    {
+    }
+    private void OnDisable()
+    {
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,30 +45,37 @@ public class EnemySpawner : MonoBehaviour
         if(actualTime >= timeToSpawn && enemiesAlive < maxEnemiesAlive)
         {
             actualTime = 0;
-            timeToSpawn = Random.Range(minTimeToSpawn, maxTimeToSpawn);
+            timeToSpawn = UnityEngine.Random.Range(minTimeToSpawn, maxTimeToSpawn);
             SpawnEnemy();
         }
     }
     void SpawnEnemy()
     {
-        int aux = Random.Range(0, probNormalSpawn + probShieldSpawn + probScaredSpawn);
+        int aux = UnityEngine.Random.Range(0, probNormalSpawn + probShieldSpawn + probScaredSpawn);
         switch (aux)
         {
             case int _ when aux < probNormalSpawn:
-                aux = 0;
+                aux = normalEnemy;
                 break;
             case int _ when aux >= probNormalSpawn && aux < probNormalSpawn + probShieldSpawn:
-                aux = 1;
+                aux = shieldEnemy;
                 break;
             case int _ when aux >= probNormalSpawn + probShieldSpawn &&
             aux < probNormalSpawn + probShieldSpawn + probScaredSpawn:
-                aux = 2;
+                aux = scaredEnemy;
                 break;
         }
 
         GameObject newEnemy = Instantiate(enemyPrefab[aux]);
         newEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, newEnemy.transform.position.z);
-        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(barrelPositions);
+        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles());
+        
         enemiesAlive++;
+
+    }
+
+    List<ObstacleInfo> GetObstacles()
+    {
+        return getOsbstaclesInfoAction?.Invoke();
     }
 }

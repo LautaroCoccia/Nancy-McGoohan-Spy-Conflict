@@ -19,4 +19,5 @@ public class OnHitScaredEnemy : MonoBehaviour,IHitable
         lvlManager.AddKill();
         Destroy(gameObject);
     }
+    
 }
