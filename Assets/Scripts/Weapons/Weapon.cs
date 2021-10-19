@@ -18,12 +18,13 @@ public class Weapon : MonoBehaviour
     public static Action NormalCrosshair;
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
-
+    protected bool isReloading;
     [SerializeField] GameObject bulletHoles;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
+        isReloading = false;
     }
     public void Shoot()
     {
