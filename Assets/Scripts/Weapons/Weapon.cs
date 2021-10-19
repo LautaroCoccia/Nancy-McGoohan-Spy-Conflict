@@ -18,8 +18,8 @@ public class Weapon : MonoBehaviour
     public static Action NormalCrosshair;
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
-    protected bool isReloading;
     public static Action<Vector2, int> SetBulletholes;
+    protected bool isReloading;
     // Start is called before the first frame update
     void Start()
     {

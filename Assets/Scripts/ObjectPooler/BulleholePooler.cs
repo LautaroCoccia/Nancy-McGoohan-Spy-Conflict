@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BulleholePooler : MonoBehaviour
 {
-    [SerializeField] GameObject bulletholeprefab;
     [SerializeField] int listSize = 30;
+    [SerializeField] GameObject bulletholeprefab;
+    [SerializeField] GameObject bulletholesParent;
     [SerializeField] List<GameObject> bulletholesList;
     int nextToSet = 0;
 
@@ -23,7 +24,9 @@ public class BulleholePooler : MonoBehaviour
         bulletholesList.Capacity = listSize;
         for (int i = 0; i < listSize; i++)
         {
+            
             GameObject obj = Instantiate(bulletholeprefab);
+            obj.transform.SetParent(bulletholesParent.transform);
             bulletholesList.Add(obj);
         }
     }
