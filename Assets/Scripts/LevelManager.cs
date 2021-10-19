@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] string testLoadLevel;
     [SerializeField] int score;
     int maxHealth;
     [SerializeField] int health;
@@ -17,10 +18,12 @@ public class LevelManager : MonoBehaviour
     public static Action<int> UpdateUIScore;
     public static Action<int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
-    public static Action<int> UpdateUIHealth;
+    public static Action<int,int> UpdateUIHealth;
     public static Action LoseCondition;
 
     private static LevelManager instanceLevelManager;
+
+    [SerializeField] List<Transform> scapePoints;
     public static LevelManager Get()
     {
         return instanceLevelManager;
@@ -48,6 +51,7 @@ public class LevelManager : MonoBehaviour
         BaseEnemy.OnHitPlayer += OnHitPlayer;
         EnemySpawner.getOsbstaclesInfoAction += GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
+        ScaredSpecial.scapePointsGetter += GetScapePoints;
     }
     private void OnDisable()
     {
@@ -55,6 +59,7 @@ public class LevelManager : MonoBehaviour
         BaseEnemy.OnHitPlayer -= OnHitPlayer;
         EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
+        ScaredSpecial.scapePointsGetter -= GetScapePoints;
     }
     void Update()
     {
@@ -69,7 +74,7 @@ public class LevelManager : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("Gameplay");
+            SceneManager.LoadScene(testLoadLevel);
         }
     }
     public void AddScore(int addScore)
@@ -85,7 +90,7 @@ public class LevelManager : MonoBehaviour
     public void OnHitPlayer(int damage)
     {
         health -= damage;
-        UpdateUIHealth?.Invoke(health);
+        UpdateUIHealth?.Invoke(health,maxHealth);
         shaker.Shake();
         if (health <= 0)
         {
@@ -96,7 +101,7 @@ public class LevelManager : MonoBehaviour
     {
         health += heal;
         if (maxHealth < health) health = maxHealth;
-        UpdateUIHealth?.Invoke(health);
+        UpdateUIHealth?.Invoke(health,maxHealth);
     }
     void DeleteObjectFromList(Transform transform)
     {
@@ -111,5 +116,9 @@ public class LevelManager : MonoBehaviour
     List<ObstacleInfo> GetObstacles()
     {
         return barrelPositions;
+    }
+    List<Transform> GetScapePoints()
+    {
+        return scapePoints;
     }
 }

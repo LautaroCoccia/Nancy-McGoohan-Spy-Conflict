@@ -18,12 +18,13 @@ public class Weapon : MonoBehaviour
     public static Action NormalCrosshair;
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
-
+    protected bool isReloading;
     public static Action<Vector2, int> SetBulletholes;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
+        isReloading = false;
     }
     public void Shoot()
     {
@@ -92,10 +93,12 @@ public class Weapon : MonoBehaviour
     }
     IEnumerator Reloading()
     {
+        isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         ammo = maxAmmo;
         ResetUIAmmo?.Invoke();
         NormalCrosshair?.Invoke();
+        isReloading = false;
     }
     IEnumerator HitShoot()
     {

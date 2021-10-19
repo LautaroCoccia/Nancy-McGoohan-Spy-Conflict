@@ -12,13 +12,16 @@ public class BaseEnemy : StateEnemy
     [SerializeField] int damage;
     [SerializeField] [Range(0, 100)] protected int probToHit = 0;
     [SerializeField] List<ObstacleInfo> barrelPositions;
+    const float positionCorrectionForSorting = 0.2f;
 
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
-    float speed = 4.7f;
+    public const float speed = 4.7f;
     public static Action<int> OnHitPlayer;
 
+    [Space(15)]
+    [SerializeField] BasicSpecial specialSkill;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -29,22 +32,29 @@ public class BaseEnemy : StateEnemy
     protected override void Update()
     {
         base.Update();
-        
     }
     protected override IEnumerator Choice()
     {
         choising = true;
         yield return new WaitForSeconds(choisingTime);
-
+        if(switchTimerVsProbSpecial)
+        {
+            timerToSpecial += Time.deltaTime;
+            if (timerToSpecial >= timerToWaitSpecial) state = State.specialAction;
+        }
         switch(UnityEngine.Random.Range(0,101))
         {
-            case int n when n >= probToShoot:
+            case int n when n >= (probToShoot + probToSpecial):
                 state = State.move;
                 SelectCoverPosition(barrelPositions);
                 break;
             case int n when n < probToShoot:
                 state = State.uncover;
                 SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
+                break;
+            case int n when n < (probToShoot + probToSpecial) && n> probToShoot
+            && !switchTimerVsProbSpecial && probToSpecial!=0:
+                state = State.specialAction;
                 break;
         }
         choising = false;
@@ -54,7 +64,7 @@ public class BaseEnemy : StateEnemy
         barrelPositions = obstacles;
         transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
         nextPos = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y,
+                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
                               transform.position.z);
         actualCover = nextPos;
     }
@@ -95,7 +105,17 @@ public class BaseEnemy : StateEnemy
     }
     protected override void SpecialAction()
     {
-
+        if (specialSkill != null)
+        {
+            if(specialSkill.Skill())
+            {
+                state = State.choice;
+            }
+        }
+        else
+        {
+            state = State.choice;
+        }
     }
     protected void SelectCoverPosition(List<ObstacleInfo> positions)
     {
@@ -109,7 +129,7 @@ public class BaseEnemy : StateEnemy
                 transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
             }
             aux = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y,
+                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
                           transform.position.z);
         } while (aux == nextPos);
         nextPos = aux;
@@ -130,7 +150,7 @@ public class BaseEnemy : StateEnemy
             else
             {
                 aux = new Vector3(position[index].position.x,
-                              position[index].position.y,
+                              position[index].position.y + positionCorrectionForSorting,
                           transform.position.z);
             }
             

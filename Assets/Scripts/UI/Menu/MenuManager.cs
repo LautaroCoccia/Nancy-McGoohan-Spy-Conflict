@@ -9,6 +9,12 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(nextScene);
     }
+    public void ChangeSceneAsync()
+    {
+        LoadAsync.nextScene = nextScene;
+        LoadAsync.fromScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("Load",LoadSceneMode.Additive);
+    }
     public void Quit()
     {
         Application.Quit();

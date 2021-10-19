@@ -18,7 +18,6 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
     // Start is called before the first frame update
     void Start()
     {
-        lives = 2;
         sr = gameObject.GetComponentInChildren<SpriteRenderer>();
         col = sr.color;
         sr.color = Color.white; 
@@ -31,7 +30,8 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
         switch (enemyState)
         {
             case States.shield:
-                sr.color = col;
+                //sr.color = col;
+                sr.color = Color.red;
                 lives--;
                 lvlManager.AddScore(25);
                 enemyState = States.notShield;
