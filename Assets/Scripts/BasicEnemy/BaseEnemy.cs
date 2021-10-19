@@ -12,6 +12,7 @@ public class BaseEnemy : StateEnemy
     [SerializeField] int damage;
     [SerializeField] [Range(0, 100)] protected int probToHit = 0;
     [SerializeField] List<ObstacleInfo> barrelPositions;
+    const float positionCorrectionForSorting = 0.2f;
 
     Vector3 nextPos;
     Vector3 actualCover;
@@ -63,7 +64,7 @@ public class BaseEnemy : StateEnemy
         barrelPositions = obstacles;
         transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
         nextPos = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y,
+                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
                               transform.position.z);
         actualCover = nextPos;
     }
@@ -128,7 +129,7 @@ public class BaseEnemy : StateEnemy
                 transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
             }
             aux = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y,
+                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
                           transform.position.z);
         } while (aux == nextPos);
         nextPos = aux;
@@ -149,7 +150,7 @@ public class BaseEnemy : StateEnemy
             else
             {
                 aux = new Vector3(position[index].position.x,
-                              position[index].position.y,
+                              position[index].position.y + positionCorrectionForSorting,
                           transform.position.z);
             }
             
