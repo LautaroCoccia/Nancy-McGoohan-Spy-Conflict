@@ -19,7 +19,7 @@ public class Weapon : MonoBehaviour
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
 
-    [SerializeField] GameObject bulletHoles;
+    public static Action<Vector2, int> SetBulletholes;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,14 +41,8 @@ public class Weapon : MonoBehaviour
             }
             else
             {
-                GameObject obj = Instantiate(bulletHoles);
-                obj.transform.position = mousePosition2D;
+                SetBulletholes?.Invoke(mousePosition2D, hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder);
 
-                //Se ve HORRIBLE ESTO
-                SpriteRenderer Sr;
-                Sr = obj.GetComponent<SpriteRenderer>();
-                Sr.sortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
-                Sr.sortingOrder++;
             }
             fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
@@ -76,14 +70,7 @@ public class Weapon : MonoBehaviour
             }
             else
             {
-                GameObject obj = Instantiate(bulletHoles);
-                obj.transform.position = mousePosition2D;
-
-                //Se ve HORRIBLE ESTO
-                SpriteRenderer Sr;
-                Sr = obj.GetComponent<SpriteRenderer>();
-                Sr.sortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
-                Sr.sortingOrder++;
+                SetBulletholes?.Invoke(mousePosition2D, hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder);
             }
             fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
