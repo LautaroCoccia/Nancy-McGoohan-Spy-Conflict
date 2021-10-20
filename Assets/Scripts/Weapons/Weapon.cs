@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
     public static Action<Vector2, int> SetBulletholes;
+    public static Action<bool> ResetMultiplier;
     protected bool isReloading;
     // Start is called before the first frame update
     void Start()
@@ -34,48 +35,19 @@ public class Weapon : MonoBehaviour
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
 
-            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer && hit.transform.tag != "EnemyShield")
-            {
-                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
-                HitCrosshair?.Invoke();
-                StartCoroutine(HitShoot());
-            }
-            else
-            {
-                SetBulletholes?.Invoke(mousePosition2D, hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder);
-
-            }
-            fireTime = 0;
-            UpdateUIAmmo?.Invoke(maxAmmo);
-            ammo--;
-            if(ammo <= 0)
-            {
-                OutOfAmmoCrosshair?.Invoke();
-            }
-        }
-    }
-    public void ShotShotgun()
-    {
-        if (ammo > 0)
-        {
-            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-
             if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
             {
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit();
                 HitCrosshair?.Invoke();
                 StartCoroutine(HitShoot());
-
             }
             else
             {
                 SetBulletholes?.Invoke(mousePosition2D, hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder);
+                ResetMultiplier?.Invoke(false);
             }
             fireTime = 0;
             UpdateUIAmmo?.Invoke(maxAmmo);
-            
             ammo--;
             if(ammo <= 0)
             {

@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
     public static Action<int> UpdateUIScore;
     public static Action<int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
+    public static Action<int> UpdateUICombo;
     public static Action<int,int> UpdateUIHealth;
     public static Action LoseCondition;
 
@@ -136,5 +137,6 @@ public class LevelManager : MonoBehaviour
         {
             multiplier = 1;
         }
+        UpdateUICombo?.Invoke(multiplier);
     }
 }
