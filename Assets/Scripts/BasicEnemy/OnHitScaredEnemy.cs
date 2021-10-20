@@ -15,8 +15,8 @@ public class OnHitScaredEnemy : MonoBehaviour,IHitable
     public void OnHit()
     {
         itemDrop.Drop();
-        lvlManager.AddScore(score);
         lvlManager.AddKill();
+        lvlManager.AddScore(score);
         Destroy(gameObject);
     }
     
