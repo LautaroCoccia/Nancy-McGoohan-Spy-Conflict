@@ -71,10 +71,10 @@ public class LevelManager : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime;
+            UpdateUITimer?.Invoke(timer);
         }
         else
         {
-            UpdateUITimer?.Invoke(timer);
             LoseCondition?.Invoke();
         }
         if(Input.GetKeyDown(KeyCode.Space))
