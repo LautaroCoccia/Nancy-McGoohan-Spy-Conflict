@@ -30,7 +30,7 @@ public class WeaponsController : MonoBehaviour
     {
         if (!PauseMenu.GetPause())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != 0)
+            if (Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != (int)WeaponType.Gun)
             {
                 SelectWeapon(WeaponType.Gun);
             }
@@ -67,5 +67,9 @@ public class WeaponsController : MonoBehaviour
             }
         }
         OnWeaponChanged?.Invoke(newValue);
+    }
+    public int GetActualWeapon()
+    {
+        return actualWeapon;
     }
 }

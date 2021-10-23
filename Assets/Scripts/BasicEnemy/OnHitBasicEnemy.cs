@@ -8,8 +8,8 @@ public class OnHitBasicEnemy : MonoBehaviour, IHitable
     LevelManager lvlManager = LevelManager.Get();
     public void OnHit()
     {
-        lvlManager.AddScore(score);
         lvlManager.AddKill();
+        lvlManager.AddScore(score);
         Destroy(gameObject);
     }
 

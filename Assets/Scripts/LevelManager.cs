@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
+    int maxHealth;
     [SerializeField] string testLoadLevel;
     [SerializeField] int score;
-    int maxHealth;
+    [SerializeField] int multiplier = 1;
+    [SerializeField] int maxMultiplier = 5;
     [SerializeField] int health;
     [SerializeField] int killCounter;
     [SerializeField] float timer;
@@ -18,6 +20,7 @@ public class LevelManager : MonoBehaviour
     public static Action<int> UpdateUIScore;
     public static Action<int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
+    public static Action<int> UpdateUICombo;
     public static Action<int,int> UpdateUIHealth;
     public static Action LoseCondition;
 
@@ -52,6 +55,7 @@ public class LevelManager : MonoBehaviour
         EnemySpawner.getOsbstaclesInfoAction += GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter += GetScapePoints;
+        Weapon.ResetMultiplier += UpdateMultiplier;
     }
     private void OnDisable()
     {
@@ -60,6 +64,7 @@ public class LevelManager : MonoBehaviour
         EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter -= GetScapePoints;
+        Weapon.ResetMultiplier -= UpdateMultiplier;
     }
     void Update()
     {
@@ -79,13 +84,14 @@ public class LevelManager : MonoBehaviour
     }
     public void AddScore(int addScore)
     {
-        score += addScore;
+        score += addScore * multiplier;
         UpdateUIScore?.Invoke(score);
     }
     public void AddKill()
     {
         killCounter++;
         UpdateUIKillCounter?.Invoke(killCounter);
+        UpdateMultiplier(true);
     }
     public void OnHitPlayer(int damage)
     {
@@ -120,5 +126,17 @@ public class LevelManager : MonoBehaviour
     List<Transform> GetScapePoints()
     {
         return scapePoints;
+    }
+    void UpdateMultiplier(bool hit)
+    {
+        if(hit & killCounter % 2 == 0 )
+        {
+            multiplier++;
+        }
+        else if(!hit)
+        {
+            multiplier = 1;
+        }
+        UpdateUICombo?.Invoke(multiplier);
     }
 }
