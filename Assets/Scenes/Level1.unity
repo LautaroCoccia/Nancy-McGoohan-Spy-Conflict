@@ -1756,6 +1756,7 @@ MonoBehaviour:
   fireTime: 0.25
   reloadTime: 1.5
   mainCamera: {fileID: 0}
+  damageType: 1
 --- !u!1 &457425403
 GameObject:
   m_ObjectHideFlags: 0
@@ -6478,6 +6479,7 @@ MonoBehaviour:
   fireTime: 0
   reloadTime: 0.5
   mainCamera: {fileID: 0}
+  damageType: 0
 --- !u!4 &1978653744
 Transform:
   m_ObjectHideFlags: 0
@@ -6990,3 +6992,4 @@ MonoBehaviour:
   fireTime: 0.25
   reloadTime: 0.25
   mainCamera: {fileID: 0}
+  damageType: 0

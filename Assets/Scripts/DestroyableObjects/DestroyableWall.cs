@@ -7,7 +7,7 @@ public class DestroyableWall : BaseDestroyableObject, IHitable
 {
     [SerializeField] GameObject nextState;
     public static Action setNewWallState;
-    public void OnHit()
+    public void OnHit(int typeOfDamage)
     {
         lives--;
         lvlManager.AddScore(score);

@@ -129,7 +129,7 @@ public class LevelManager : MonoBehaviour
     }
     void UpdateMultiplier(bool hit)
     {
-        if(hit & killCounter % 2 == 0 )
+        if(hit & killCounter % 2 == 0 && multiplier <= maxMultiplier)
         {
             multiplier++;
         }

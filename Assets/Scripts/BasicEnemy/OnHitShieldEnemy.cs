@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class OnHitShieldEnemy : MonoBehaviour, IHitable
+public class OnHitShieldEnemy : TypeOfDamage, IHitable
 {
     [SerializeField] int score;
     [SerializeField] int lives;
@@ -24,15 +24,18 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
         sr.color = Color.white; 
         enemyState = States.shield;
     }
-    public void OnHit()
+    public void OnHit(int typeOfDamage)
     {
         switch (enemyState)
         {
             case States.shield:
+                if(typeOfDamage == (int)DamageType.strong)
+                {
                     sr.color = Color.red;
                     lives--;
                     lvlManager.AddScore(25);
                     enemyState = States.notShield;
+                }
                 break;
             case States.notShield:
                 lives--;
