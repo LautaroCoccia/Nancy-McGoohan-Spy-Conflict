@@ -71,10 +71,10 @@ public class LevelManager : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime;
+            UpdateUITimer?.Invoke(timer);
         }
         else
         {
-            UpdateUITimer?.Invoke(timer);
             LoseCondition?.Invoke();
         }
         if(Input.GetKeyDown(KeyCode.Space))
@@ -129,7 +129,7 @@ public class LevelManager : MonoBehaviour
     }
     void UpdateMultiplier(bool hit)
     {
-        if(hit & killCounter % 2 == 0 )
+        if(hit & killCounter % 2 == 0 && multiplier <= maxMultiplier)
         {
             multiplier++;
         }

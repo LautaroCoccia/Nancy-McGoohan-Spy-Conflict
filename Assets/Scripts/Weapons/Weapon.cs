@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Weapon : TypeOfDamage
 {
+
     public int ammo;
     public int maxAmmo;
     public int targetLayer;
@@ -27,7 +28,7 @@ public class Weapon : MonoBehaviour
         mainCamera = Camera.main;
         isReloading = false;
     }
-    public void Shoot()
+    public void Shoot(int typeOfDamage)
     {
         if (ammo > 0)
         {
@@ -37,7 +38,7 @@ public class Weapon : MonoBehaviour
 
             if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
             {
-                hit.transform.gameObject.GetComponent<IHitable>().OnHit();
+                hit.transform.gameObject.GetComponent<IHitable>().OnHit(typeOfDamage);
                 HitCrosshair?.Invoke();
                 StartCoroutine(HitShoot());
             }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gun : Weapon
 {
+    [SerializeField] DamageType damageType;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class Gun : Weapon
         {
             if (Input.GetMouseButtonDown(0) && fireTime >= fireRate && !isReloading)
             {
-            Shoot();
+            Shoot((int)(damageType));
             }
             Reload();
             if (fireTime < fireRate)

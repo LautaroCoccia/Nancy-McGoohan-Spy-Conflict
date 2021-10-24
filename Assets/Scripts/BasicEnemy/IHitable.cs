@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IHitable
+public interface IHitable 
 {
-    void OnHit();
+    void OnHit(int typeOfDamage);
 }
