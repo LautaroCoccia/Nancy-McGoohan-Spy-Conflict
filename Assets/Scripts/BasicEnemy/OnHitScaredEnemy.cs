@@ -12,7 +12,7 @@ public class OnHitScaredEnemy : TypeOfDamage, IHitable
     {
         itemDrop = GetComponent<ItemDrop>();
     }
-    public void OnHit(int typeOfDamage)
+    public void OnHit(TypeOfDamage.DamageType typeOfDamage)
     {
         itemDrop.Drop();
         lvlManager.AddKill();

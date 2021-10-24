@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TypeOfDamage : MonoBehaviour
 {
-    protected enum DamageType
+    public enum DamageType
     {
         normal,
         strong

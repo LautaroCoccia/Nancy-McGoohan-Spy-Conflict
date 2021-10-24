@@ -6,7 +6,7 @@ public class OnHitBasicEnemy : MonoBehaviour, IHitable
 {
     [SerializeField] int score;
     LevelManager lvlManager = LevelManager.Get();
-    public void OnHit(int typeOfDamage)
+    public void OnHit(TypeOfDamage.DamageType typeOfDamage)
     {
         lvlManager.AddKill();
         lvlManager.AddScore(score);

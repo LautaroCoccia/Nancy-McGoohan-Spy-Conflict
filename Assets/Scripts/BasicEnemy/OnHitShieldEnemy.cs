@@ -24,12 +24,12 @@ public class OnHitShieldEnemy : TypeOfDamage, IHitable
         sr.color = Color.white; 
         enemyState = States.shield;
     }
-    public void OnHit(int typeOfDamage)
+    public void OnHit(DamageType typeOfDamage)
     {
         switch (enemyState)
         {
             case States.shield:
-                if(typeOfDamage == (int)DamageType.strong)
+                if(typeOfDamage == DamageType.strong)
                 {
                     sr.color = Color.red;
                     lives--;

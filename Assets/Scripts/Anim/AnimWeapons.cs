@@ -5,13 +5,10 @@ using System;
 public class AnimWeapons : MonoBehaviour
 {
     [SerializeField] Animator myAnim;
-    public static Action<WeaponType> OnSetNewWeapon;
+    public static Action<WeaponsController.WeaponType> OnSetNewWeapon;
     public static Action<bool> OnSetReloadMode;
     public static Action OnStartAnim;
-    public enum WeaponType
-    {
-        Gun, Submachinegun, Shotgun
-    }
+
     private void OnEnable()
     {
         OnSetNewWeapon += SetNewWeapon;
@@ -26,11 +23,11 @@ public class AnimWeapons : MonoBehaviour
     }
     void Start()
     {
-        SetNewWeapon(WeaponType.Gun);
+        SetNewWeapon(WeaponsController.WeaponType.Gun);
         SetReloadMode(false);
     }
 
-    public void SetNewWeapon(WeaponType wt)
+    public void SetNewWeapon(WeaponsController.WeaponType wt)
     {
         myAnim.SetInteger("WeaponType", (int)wt);
     }

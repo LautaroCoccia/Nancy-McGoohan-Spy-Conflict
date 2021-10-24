@@ -28,7 +28,7 @@ public class Weapon : TypeOfDamage
         mainCamera = Camera.main;
         isReloading = false;
     }
-    public void Shoot(int typeOfDamage)
+    public void Shoot(TypeOfDamage.DamageType typeOfDamage)
     {
         if (ammo > 0)
         {

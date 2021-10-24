@@ -18,7 +18,7 @@ public class SubmachineGun : Weapon
         {
             if (Input.GetMouseButton(0) && fireTime >= fireRate && !isReloading)
             {
-            Shoot((int)(damageType));
+            Shoot(damageType);
             }
             Reload();
             if (fireTime < fireRate)

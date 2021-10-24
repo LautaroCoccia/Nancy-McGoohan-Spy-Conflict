@@ -35,6 +35,6 @@ public class Explosion : TypeOfDamage
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<IHitable>().OnHit((int)(damageType));
+        collision.gameObject.GetComponent<IHitable>().OnHit(damageType);
     }
 }

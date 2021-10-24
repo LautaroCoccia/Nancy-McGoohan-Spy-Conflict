@@ -18,7 +18,7 @@ public class Shotgun : Weapon
         {
             if (Input.GetMouseButtonDown(0) && fireTime >= fireRate && !isReloading)
             {
-                Shoot((int)(damageType));
+                Shoot(damageType);
             }
             Reload();
             if (fireTime < fireRate)
