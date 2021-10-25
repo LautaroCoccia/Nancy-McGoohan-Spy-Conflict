@@ -1,61 +1,67 @@
 fileFormatVersion: 2
-guid: 8024c2b951f295441bc3bf7cf881d036
+guid: 691c90ff98afe7c4c9fa0163e37acc5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5164344911358061912
-    second: ShootAnims_Weapons_Tilemap_0
+      213: 2643802450781301813
+    second: Thompson_Rec_TileMap_0
   - first:
-      213: -3972695116472604940
-    second: ShootAnims_Weapons_Tilemap_1
+      213: -1681977703031459981
+    second: Thompson_Rec_TileMap_1
   - first:
-      213: 7156788529966269282
-    second: ShootAnims_Weapons_Tilemap_2
+      213: -2289686848596946334
+    second: Thompson_Rec_TileMap_2
   - first:
-      213: -4541350145809530060
-    second: ShootAnims_Weapons_Tilemap_3
+      213: 199271771661245457
+    second: Thompson_Rec_TileMap_3
   - first:
-      213: 6231799962514825256
-    second: ShootAnims_Weapons_Tilemap_4
+      213: -6210290683229830893
+    second: Thompson_Rec_TileMap_4
   - first:
-      213: 8644784466830096529
-    second: ShootAnims_Weapons_Tilemap_5
+      213: 3637348238418605549
+    second: Thompson_Rec_TileMap_5
   - first:
-      213: 2628992845826050234
-    second: ShootAnims_Weapons_Tilemap_6
+      213: -313340018486890159
+    second: Thompson_Rec_TileMap_6
   - first:
-      213: 4819564580737174559
-    second: ShootAnims_Weapons_Tilemap_7
+      213: -8516808509468959547
+    second: Thompson_Rec_TileMap_7
   - first:
-      213: 6293853008211166818
-    second: ShootAnims_Weapons_Tilemap_8
+      213: 7266655452820305946
+    second: Thompson_Rec_TileMap_8
   - first:
-      213: 639684949026836220
-    second: ShootAnims_Weapons_Tilemap_9
+      213: -511055409117737017
+    second: Thompson_Rec_TileMap_9
   - first:
-      213: 3184469560968525509
-    second: ShootAnims_Weapons_Tilemap_10
+      213: -3727796631082485951
+    second: Thompson_Rec_TileMap_10
   - first:
-      213: 6147289054360489886
-    second: ShootAnims_Weapons_Tilemap_11
+      213: 430099327690228065
+    second: Thompson_Rec_TileMap_11
   - first:
-      213: 5591465767911660434
-    second: ShootAnims_Weapons_Tilemap_12
+      213: 3655037332630790510
+    second: Thompson_Rec_TileMap_12
   - first:
-      213: 558318329128273458
-    second: ShootAnims_Weapons_Tilemap_13
+      213: -329816740198216581
+    second: Thompson_Rec_TileMap_13
   - first:
-      213: -3349615592039608768
-    second: ShootAnims_Weapons_Tilemap_14
+      213: -5607670490614913310
+    second: Thompson_Rec_TileMap_14
   - first:
-      213: 5467919326404398891
-    second: ShootAnims_Weapons_Tilemap_15
+      213: -1893147163946583467
+    second: Thompson_Rec_TileMap_15
   - first:
-      213: 4323694463791064813
-    second: ShootAnims_Weapons_Tilemap_16
+      213: 2837895147146010393
+    second: Thompson_Rec_TileMap_16
   - first:
-      213: -3706145284381303631
-    second: ShootAnims_Weapons_Tilemap_17
+      213: -1783851178079628300
+    second: Thompson_Rec_TileMap_17
+  - first:
+      213: -7793429167672389312
+    second: Thompson_Rec_TileMap_18
+  - first:
+      213: 5093110988788199718
+    second: Thompson_Rec_TileMap_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,379 +171,421 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_0
+      name: Thompson_Rec_TileMap_0
       rect:
         serializedVersion: 2
-        x: 55
-        y: 832
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5308849, y: 0.5902624}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a218ec3aaf8458b0800000000000000
-      internalID: -5164344911358061912
+      spriteID: 53c602f425ca0b420800000000000000
+      internalID: 2643802450781301813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_1
+      name: Thompson_Rec_TileMap_1
       rect:
         serializedVersion: 2
-        x: 545
-        y: 832
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.53672, y: 0.60992944}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f6a8bdf6d62ed8c0800000000000000
-      internalID: -3972695116472604940
+      spriteID: 37faeaac03a68a8e0800000000000000
+      internalID: -1681977703031459981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_2
+      name: Thompson_Rec_TileMap_2
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 832
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5425902, y: 0.62932533}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 263ca3def35025360800000000000000
-      internalID: 7156788529966269282
+      spriteID: 262de7641f56930e0800000000000000
+      internalID: -2289686848596946334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_3
+      name: Thompson_Rec_TileMap_3
       rect:
         serializedVersion: 2
-        x: 1525
-        y: 832
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.55103, y: 0.649084}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 433ca5e7a12e9f0c0800000000000000
-      internalID: -4541350145809530060
+      spriteID: 11c91abde94f3c200800000000000000
+      internalID: 199271771661245457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_4
+      name: Thompson_Rec_TileMap_4
       rect:
         serializedVersion: 2
-        x: 2015
-        y: 832
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1972
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5567694, y: 0.6685171}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8202df46c0dcb7650800000000000000
-      internalID: 6231799962514825256
+      spriteID: 3110b22f68d90d9a0800000000000000
+      internalID: -6210290683229830893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_5
+      name: Thompson_Rec_TileMap_5
       rect:
         serializedVersion: 2
-        x: 2505
-        y: 832
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5573982, y: 0.6675356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 198f839aba178f770800000000000000
-      internalID: 8644784466830096529
+      spriteID: de5755b83f47a7230800000000000000
+      internalID: 3637348238418605549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_6
+      name: Thompson_Rec_TileMap_6
       rect:
         serializedVersion: 2
-        x: 55
-        y: 472
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5553, y: 0.6677159}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab84184701f0c7420800000000000000
-      internalID: 2628992845826050234
+      spriteID: 151bc20d9eac6abf0800000000000000
+      internalID: -313340018486890159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_7
+      name: Thompson_Rec_TileMap_7
       rect:
         serializedVersion: 2
-        x: 545
-        y: 472
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5558445, y: 0.6676936}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1cc4e6737882e240800000000000000
-      internalID: 4819564580737174559
+      spriteID: 5cc141dd8c73ec980800000000000000
+      internalID: -8516808509468959547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_8
+      name: Thompson_Rec_TileMap_8
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 472
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 773
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5563349, y: 0.6676936}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26643f6f6f1485750800000000000000
-      internalID: 6293853008211166818
+      spriteID: a18728a42a858d460800000000000000
+      internalID: 7266655452820305946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_9
+      name: Thompson_Rec_TileMap_9
       rect:
         serializedVersion: 2
-        x: 1525
-        y: 472
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1972
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.55687505, y: 0.66765386}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfe88ea621e90e800800000000000000
-      internalID: 639684949026836220
+      spriteID: 7cfcef620dd58e8f0800000000000000
+      internalID: -511055409117737017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_10
+      name: Thompson_Rec_TileMap_10
       rect:
         serializedVersion: 2
-        x: 2015
-        y: 472
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5547015, y: 0.6590458}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6b2939132813c20800000000000000
-      internalID: 3184469560968525509
+      spriteID: 1473e69f6b4344cc0800000000000000
+      internalID: -3727796631082485951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_11
+      name: Thompson_Rec_TileMap_11
       rect:
         serializedVersion: 2
-        x: 2505
-        y: 472
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5526292, y: 0.6511822}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9fcdc043de8f4550800000000000000
-      internalID: 6147289054360489886
+      spriteID: 1614c1d4f0508f500800000000000000
+      internalID: 430099327690228065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_12
+      name: Thompson_Rec_TileMap_12
       rect:
         serializedVersion: 2
-        x: 55
-        y: 112
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.54797107, y: 0.6472708}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29b9126bd70e89d40800000000000000
-      internalID: 5591465767911660434
+      spriteID: e61ef3cb61d49b230800000000000000
+      internalID: 3655037332630790510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_13
+      name: Thompson_Rec_TileMap_13
       rect:
         serializedVersion: 2
-        x: 545
-        y: 112
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5458254, y: 0.6356285}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 236c74fef8b8fb700800000000000000
-      internalID: 558318329128273458
+      spriteID: b7c02871c614c6bf0800000000000000
+      internalID: -329816740198216581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_14
+      name: Thompson_Rec_TileMap_14
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 112
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1972
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5436376, y: 0.6313817}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04e8e56bd56c381d0800000000000000
-      internalID: -3349615592039608768
+      spriteID: 2e62575466d8d22b0800000000000000
+      internalID: -5607670490614913310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_15
+      name: Thompson_Rec_TileMap_15
       rect:
         serializedVersion: 2
-        x: 1525
-        y: 112
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.54147184, y: 0.6226681}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2fc3d638a3f1eb40800000000000000
-      internalID: 5467919326404398891
+      spriteID: 55afc694fa03ab5e0800000000000000
+      internalID: -1893147163946583467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_16
+      name: Thompson_Rec_TileMap_16
       rect:
         serializedVersion: 2
-        x: 2015
-        y: 112
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5395293, y: 0.61509025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de6e697f439d00c30800000000000000
-      internalID: 4323694463791064813
+      spriteID: 91f517bb99a326720800000000000000
+      internalID: 2837895147146010393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAnims_Weapons_Tilemap_17
+      name: Thompson_Rec_TileMap_17
       rect:
         serializedVersion: 2
-        x: 2505
-        y: 112
-        width: 460
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5374462, y: 0.6068091}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bc9676ff70219cc0800000000000000
-      internalID: -3706145284381303631
+      spriteID: 4f3d6660ecc7e37e0800000000000000
+      internalID: -1783851178079628300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thompson_Rec_TileMap_18
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.535277, y: 0.59924364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04118be967d28d390800000000000000
+      internalID: -7793429167672389312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thompson_Rec_TileMap_19
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5306912, y: 0.5913463}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621fb58b57d5ea640800000000000000
+      internalID: 5093110988788199718
       vertices: []
       indices: 
       edges: []

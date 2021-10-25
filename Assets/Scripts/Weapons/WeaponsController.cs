@@ -35,12 +35,12 @@ public class WeaponsController : MonoBehaviour
                 SelectWeapon(WeaponType.Gun);
                 AnimWeapons.OnSetNewWeapon(WeaponType.Gun);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != WeaponType.Gun)
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != WeaponType.SubmachineGun)
             {
                 SelectWeapon(WeaponType.SubmachineGun);
                 AnimWeapons.OnSetNewWeapon(WeaponType.SubmachineGun);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != WeaponType.Gun)
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != WeaponType.Shotgun)
             {
                 SelectWeapon(WeaponType.Shotgun);
                 AnimWeapons.OnSetNewWeapon(WeaponType.Shotgun);

@@ -30,8 +30,9 @@ public class Weapon : TypeOfDamage
     }
     public void Shoot(TypeOfDamage.DamageType typeOfDamage)
     {
-        if (ammo > 0)
+        if (ammo > 0 && !isReloading)
         {
+            //AnimWeapons.OnStartAnim();
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
@@ -68,7 +69,7 @@ public class Weapon : TypeOfDamage
     {
         isReloading = true;
         AnimWeapons.OnSetReloadMode?.Invoke(true);
-        AnimWeapons.OnStartAnim?.Invoke();
+        //AnimWeapons.OnStartAnim?.Invoke();
         yield return new WaitForSeconds(reloadTime);
         ammo = maxAmmo;
         ResetUIAmmo?.Invoke();
