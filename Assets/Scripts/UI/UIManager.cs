@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI UIScoreNum;
     [SerializeField] TextMeshProUGUI UICounterNum;
     [SerializeField] TextMeshProUGUI UITimer;
+    [SerializeField] TextMeshProUGUI UICombo;
     [SerializeField] Image UIHealth;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
@@ -45,6 +46,7 @@ public class UIManager : MonoBehaviour
         LevelManager.UpdateUIScore += UpdateScore;
         LevelManager.UpdateUIKillCounter += UpdateKillCounter;
         LevelManager.UpdateUITimer += UpdateTimer;
+        LevelManager.UpdateUICombo += UpdateCombo;
         LevelManager.UpdateUIHealth += UpdateHealth;
         LevelManager.LoseCondition += Lose;
         WeaponsController.OnWeaponChanged += WeaponChanged;
@@ -59,6 +61,7 @@ public class UIManager : MonoBehaviour
         LevelManager.UpdateUIScore -= UpdateScore;
         LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
         LevelManager.UpdateUITimer -= UpdateTimer;
+        LevelManager.UpdateUICombo -= UpdateCombo;
         LevelManager.UpdateUIHealth -= UpdateHealth;
         LevelManager.LoseCondition -= Lose;
         WeaponsController.OnWeaponChanged -= WeaponChanged;
@@ -128,6 +131,10 @@ public class UIManager : MonoBehaviour
     void UpdateTimer(float timer)
     {
         UITimer.text = Mathf.Round(timer).ToString();
+    }
+    void UpdateCombo(int combo)
+    {
+        UICombo.text = combo.ToString();
     }
     void UpdateHealth(int health,int maxHealth)
     {

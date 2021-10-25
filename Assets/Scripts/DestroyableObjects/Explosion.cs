@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class Explosion : TypeOfDamage
 {
+    [SerializeField] DamageType damageType;
     float initialTime;
     [SerializeField] float explosionTIme = 0.25f;
     [SerializeField] List<Sprite> explosionSprites;
     [SerializeField] SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +35,6 @@ public class Explosion : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        Debug.Log("asdasdasd");
-        collision.gameObject.GetComponent<IHitable>().OnHit();
-
+        collision.gameObject.GetComponent<IHitable>().OnHit(damageType);
     }
 }

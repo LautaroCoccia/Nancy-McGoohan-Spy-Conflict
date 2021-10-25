@@ -18,7 +18,7 @@ public class WeaponsController : MonoBehaviour
 
     [SerializeField] List<GameObject> weapons;
     public static Action<WeaponType> OnWeaponChanged;
-    int actualWeapon;
+    WeaponType actualWeapon;
 
     // Start is called before the first frame update
     void Start()
@@ -30,34 +30,29 @@ public class WeaponsController : MonoBehaviour
     {
         if (!PauseMenu.GetPause())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != 0)
+            if (Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != WeaponType.Gun)
             {
                 SelectWeapon(WeaponType.Gun);
+                AnimWeapons.OnSetNewWeapon(WeaponType.Gun);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != 1)
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != WeaponType.SubmachineGun)
             {
                 SelectWeapon(WeaponType.SubmachineGun);
+                AnimWeapons.OnSetNewWeapon(WeaponType.SubmachineGun);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != 2)
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != WeaponType.Shotgun)
             {
                 SelectWeapon(WeaponType.Shotgun);
+                AnimWeapons.OnSetNewWeapon(WeaponType.Shotgun);
             }
-        }
-        else if(Input.GetKeyDown(selectWeapon2) && actualWeapon != 1)
-        {
-            SelectWeapon(WeaponType.SubmachineGun);
-        }
-        else if (Input.GetKeyDown(selectWeapon3) && actualWeapon != 2)
-        {
-            SelectWeapon(WeaponType.Shotgun);
         }
     }
     void SelectWeapon(WeaponType newValue)
     {
-        actualWeapon = (int) newValue;
+        actualWeapon = newValue;
         for (int i = 0; i < weapons.Count; i++)
         {
-            if (weapons[actualWeapon] != weapons[i])
+            if (weapons[(int)actualWeapon] != weapons[i])
             {
                 weapons[i].SetActive(false);
             }
@@ -67,5 +62,9 @@ public class WeaponsController : MonoBehaviour
             }
         }
         OnWeaponChanged?.Invoke(newValue);
+    }
+    public WeaponType GetActualWeapon()
+    {
+        return actualWeapon;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(ItemDrop))]
-public class OnHitScaredEnemy : MonoBehaviour,IHitable
+public class OnHitScaredEnemy : TypeOfDamage, IHitable
 {
     ItemDrop itemDrop;
     [SerializeField] int score;
@@ -12,11 +12,11 @@ public class OnHitScaredEnemy : MonoBehaviour,IHitable
     {
         itemDrop = GetComponent<ItemDrop>();
     }
-    public void OnHit()
+    public void OnHit(TypeOfDamage.DamageType typeOfDamage)
     {
         itemDrop.Drop();
-        lvlManager.AddScore(score);
         lvlManager.AddKill();
+        lvlManager.AddScore(score);
         Destroy(gameObject);
     }
     

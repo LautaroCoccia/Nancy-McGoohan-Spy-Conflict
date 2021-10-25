@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class OnHitShieldEnemy : MonoBehaviour, IHitable
+using System;
+public class OnHitShieldEnemy : TypeOfDamage, IHitable
 {
     [SerializeField] int score;
     [SerializeField] int lives;
+    public static Action CanDamage; 
     LevelManager lvlManager = LevelManager.Get();
     SpriteRenderer sr;
     Color col;
@@ -22,24 +23,24 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
         col = sr.color;
         sr.color = Color.white; 
         enemyState = States.shield;
-
     }
-
-    public void OnHit()
+    public void OnHit(DamageType typeOfDamage)
     {
         switch (enemyState)
         {
             case States.shield:
-                //sr.color = col;
-                sr.color = Color.red;
-                lives--;
-                lvlManager.AddScore(25);
-                enemyState = States.notShield;
+                if(typeOfDamage == DamageType.strong)
+                {
+                    sr.color = Color.red;
+                    lives--;
+                    lvlManager.AddScore(25);
+                    enemyState = States.notShield;
+                }
                 break;
             case States.notShield:
                 lives--;
-                lvlManager.AddScore(score);
                 lvlManager.AddKill();
+                lvlManager.AddScore(score);
                 Destroy(gameObject);
                 break;
             default:
