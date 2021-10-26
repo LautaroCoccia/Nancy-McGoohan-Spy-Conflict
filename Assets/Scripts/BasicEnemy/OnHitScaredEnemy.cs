@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(ItemDrop))]
 public class OnHitScaredEnemy : TypeOfDamage, IHitable
 {
+    [SerializeField] BaseEnemy baseEnemy;
     ItemDrop itemDrop;
     [SerializeField] int score;
     LevelManager lvlManager = LevelManager.Get();
@@ -14,6 +15,7 @@ public class OnHitScaredEnemy : TypeOfDamage, IHitable
     }
     public void OnHit(int typeOfDamage)
     {
+        baseEnemy.InstanciateBlood();
         itemDrop.Drop();
         lvlManager.AddKill();
         lvlManager.AddScore(score);

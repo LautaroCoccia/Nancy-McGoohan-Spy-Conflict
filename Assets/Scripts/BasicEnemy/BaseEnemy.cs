@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 public class BaseEnemy : StateEnemy
 {
+    [SerializeField] GameObject bloodParticleSystem;
     [SerializeField] float timeToWaitAndShoot;
     [SerializeField] float timeWaitEndShoot;
     [SerializeField] float timeWaitAndCover;
@@ -160,5 +161,10 @@ public class BaseEnemy : StateEnemy
     protected void SelectActualCoverPosition()
     {
         nextPos = actualCover;
+    }
+
+    public void InstanciateBlood()
+    {
+        Instantiate(bloodParticleSystem, transform.position, Quaternion.identity);
     }
 }

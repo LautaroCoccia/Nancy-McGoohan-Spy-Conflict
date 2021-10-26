@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 public class OnHitShieldEnemy : TypeOfDamage, IHitable
 {
+    [SerializeField] BaseEnemy baseEnemy;
     [SerializeField] int score;
     [SerializeField] int lives;
     public static Action CanDamage; 
@@ -39,6 +40,7 @@ public class OnHitShieldEnemy : TypeOfDamage, IHitable
                 break;
             case States.notShield:
                 lives--;
+                baseEnemy.InstanciateBlood();
                 lvlManager.AddKill();
                 lvlManager.AddScore(score);
                 Destroy(gameObject);
