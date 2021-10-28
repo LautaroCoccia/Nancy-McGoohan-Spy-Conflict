@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2535202750890733225}
   - component: {fileID: 9003924717481932632}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_Size: {x: 1.04, y: 0.87}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7444531154038628865
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6491201250507320986}
   - component: {fileID: 6626797910959387075}
   - component: {fileID: 504675077527364787}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Explosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
