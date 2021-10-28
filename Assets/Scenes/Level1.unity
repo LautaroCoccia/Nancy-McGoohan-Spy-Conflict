@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 315972}
   - component: {fileID: 315971}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: UITopLeftCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 172101834}
   - component: {fileID: 172101833}
   m_Layer: 5
-  m_Name: GameObject (4)
+  m_Name: UIBottomLeftCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3267,7 +3267,7 @@ GameObject:
   - component: {fileID: 827602797}
   - component: {fileID: 827602796}
   m_Layer: 5
-  m_Name: GameObject (6)
+  m_Name: UIRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3638,7 +3638,7 @@ GameObject:
   - component: {fileID: 904234780}
   - component: {fileID: 904234779}
   m_Layer: 5
-  m_Name: GameObject (7)
+  m_Name: UILeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3788,7 +3788,7 @@ GameObject:
   - component: {fileID: 937137112}
   - component: {fileID: 937137111}
   m_Layer: 5
-  m_Name: GameObject (3)
+  m_Name: UIBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5595,7 +5595,7 @@ GameObject:
   - component: {fileID: 1527968665}
   - component: {fileID: 1527968664}
   m_Layer: 5
-  m_Name: GameObject (2)
+  m_Name: UITop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6278,7 +6278,7 @@ GameObject:
   - component: {fileID: 1808887651}
   - component: {fileID: 1808887650}
   m_Layer: 5
-  m_Name: GameObject (5)
+  m_Name: UIBottomRightCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6353,7 +6353,7 @@ GameObject:
   - component: {fileID: 1838283516}
   - component: {fileID: 1838283515}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: UITopRightCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
