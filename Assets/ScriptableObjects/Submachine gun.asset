@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91ee8b3a7fb93664f97c174b273f42b9, type: 3}
-  m_Name: New Weapon
+  m_Name: Submachine gun
   m_EditorClassIdentifier: 
-  weaponName: 
-  ammo: 0
-  maxAmmo: 0
-  targetLayer: 0
-  fireRate: 0
+  weaponName: Submachine gun
+  ammo: 30
+  maxAmmo: 30
+  targetLayer: 8
+  fireRate: 0.15
   fireTime: 0
-  reloadTime: 0
+  reloadTime: 1
   mainCamera: {fileID: 0}

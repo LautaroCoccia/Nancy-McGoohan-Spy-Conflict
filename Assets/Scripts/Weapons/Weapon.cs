@@ -22,6 +22,12 @@ public class Weapon : ScriptableObject
     public static Action OutOfAmmoCrosshair;
     public static Action<Vector2, int> SetBulletholes;
     public static Action<bool> ResetMultiplier;
+    public enum DamageInfo
+    {
+        normal,
+        strong
+    }
+    public DamageInfo damageInfo;
     protected bool isReloading;
    
     // Start is called before the first frame update

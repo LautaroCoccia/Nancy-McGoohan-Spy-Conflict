@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ee8b3a7fb93664f97c174b273f42b9, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  weaponName: 
-  ammo: 0
-  maxAmmo: 0
-  targetLayer: 0
-  fireRate: 0
-  fireTime: 0
-  reloadTime: 0
+  weaponName: Shotgun
+  ammo: 2
+  maxAmmo: 2
+  targetLayer: 8
+  fireRate: 0.25
+  fireTime: 0.25
+  reloadTime: 1.5
   mainCamera: {fileID: 0}
