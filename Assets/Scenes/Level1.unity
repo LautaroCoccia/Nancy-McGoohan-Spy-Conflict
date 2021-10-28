@@ -3012,7 +3012,6 @@ GameObject:
   m_Component:
   - component: {fileID: 709086302}
   - component: {fileID: 709086305}
-  - component: {fileID: 709086304}
   - component: {fileID: 709086303}
   m_Layer: 0
   m_Name: Weapons
@@ -3055,19 +3054,6 @@ MonoBehaviour:
     type: 3}
   bulletholesParent: {fileID: 1464763483}
   bulletholesList: []
---- !u!114 &709086304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709086301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 974d7d9c6000ff3469749f0f84538cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 1203408463}
 --- !u!114 &709086305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4949,6 +4935,7 @@ GameObject:
   - component: {fileID: 1203408464}
   - component: {fileID: 1203408466}
   - component: {fileID: 1203408465}
+  - component: {fileID: 1203408467}
   m_Layer: 2
   m_Name: UICrosshair
   m_TagString: Untagged
@@ -5012,6 +4999,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203408463}
   m_CullTransparentMesh: 0
+--- !u!114 &1203408467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203408463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974d7d9c6000ff3469749f0f84538cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 1203408463}
 --- !u!1 &1242175053
 GameObject:
   m_ObjectHideFlags: 0
