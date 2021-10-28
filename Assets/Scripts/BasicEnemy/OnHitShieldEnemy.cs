@@ -11,42 +11,29 @@ public class OnHitShieldEnemy : TypeOfDamage, IHitable
     LevelManager lvlManager = LevelManager.Get();
     SpriteRenderer sr;
     Color col;
-    enum States
-    {
-        shield,
-        notShield
-    }
-    States enemyState;
+    
+    bool enemyState = false;
     // Start is called before the first frame update
     void Start()
     {
         sr = gameObject.GetComponentInChildren<SpriteRenderer>();
         col = sr.color;
         sr.color = Color.white; 
-        enemyState = States.shield;
     }
     public void OnHit(int typeOfDamage)
     {
-        switch (enemyState)
+        if(typeOfDamage == (int)DamageType.strong && !enemyState)
         {
-            case States.shield:
-                if(typeOfDamage == (int)DamageType.strong)
-                {
-                    sr.color = Color.red;
-                    lives--;
-                    lvlManager.AddScore(25);
-                    enemyState = States.notShield;
-                }
-                break;
-            case States.notShield:
-                lives--;
-                baseEnemy.InstanciateBlood();
-                lvlManager.AddKill();
-                lvlManager.AddScore(score);
-                Destroy(gameObject);
-                break;
-            default:
-                break;
+            sr.color = Color.red;
+            lvlManager.AddScore(25);
+            enemyState = true;
+        }
+        else
+        {
+            baseEnemy.InstanciateBlood();
+            lvlManager.AddKill();
+            lvlManager.AddScore(score);
+            Destroy(gameObject);
         }
     }
 }
