@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class Weapon : TypeOfDamage
+[CreateAssetMenu(fileName = "New Weapon",menuName = "Weapon")]
+public class Weapon : ScriptableObject
 {
-
+    public string weaponName;
     public int ammo;
     public int maxAmmo;
     public int targetLayer;
@@ -22,8 +23,9 @@ public class Weapon : TypeOfDamage
     public static Action<Vector2, int> SetBulletholes;
     public static Action<bool> ResetMultiplier;
     protected bool isReloading;
+   
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         mainCamera = Camera.main;
         isReloading = false;
@@ -77,5 +79,5 @@ public class Weapon : TypeOfDamage
     {
         yield return new WaitForSeconds(0.1f);
         NormalCrosshair?.Invoke();
-    }
+    }*/
 }
