@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : TypeOfDamage
+public class Explosion : MonoBehaviour
 {
     float initialTime;
     [SerializeField] float explosionTIme = 0.25f;

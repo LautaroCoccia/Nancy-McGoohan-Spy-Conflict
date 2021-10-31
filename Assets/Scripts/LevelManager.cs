@@ -56,6 +56,16 @@ public class LevelManager : MonoBehaviour
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter += GetScapePoints;
         Weapon.ResetMultiplier += UpdateMultiplier;
+
+        OnHitShieldEnemy.OnTakeDamage += AddScore;
+        OnHitShieldEnemy.OnKill += AddKill;
+        OnHitScaredEnemy.OnTakeDamage += AddScore;
+        OnHitScaredEnemy.OnKill += AddKill;
+        OnHitBasicEnemy.OnTakeDamage += AddScore;
+        OnHitBasicEnemy.OnKill += AddKill;
+
+        DestroyableWall.OnTakeDamage += AddScore;
+        ExplosiveBarrel.OnTakeDamage += AddScore;
     }
     private void OnDisable()
     {
@@ -65,6 +75,16 @@ public class LevelManager : MonoBehaviour
         DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter -= GetScapePoints;
         Weapon.ResetMultiplier -= UpdateMultiplier;
+
+        OnHitBasicEnemy.OnKill -= AddKill;
+        OnHitBasicEnemy.OnTakeDamage -= AddScore;
+        OnHitScaredEnemy.OnKill -= AddKill;
+        OnHitScaredEnemy.OnTakeDamage -= AddScore;
+        OnHitShieldEnemy.OnKill -= AddKill;
+        OnHitShieldEnemy.OnTakeDamage -= AddScore;
+
+        ExplosiveBarrel.OnTakeDamage -= AddScore;
+        DestroyableWall.OnTakeDamage -= AddScore;
     }
     void Update()
     {

@@ -7,8 +7,9 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
     [SerializeField] BaseEnemy baseEnemy;
     [SerializeField] int score;
     [SerializeField] int lives;
-    public static Action CanDamage; 
-    LevelManager lvlManager = LevelManager.Get();
+    public static Action CanDamage;
+    public static Action<int> OnTakeDamage;
+    public static Action OnKill;
     SpriteRenderer sr;
     Color col;
     
@@ -25,14 +26,14 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
         if(damageInfo == Weapon.DamageInfo.strong && !enemyState)
         {
             sr.color = Color.red;
-            lvlManager.AddScore(25);
+            OnTakeDamage?.Invoke(25);
             enemyState = true;
         }
         else
         {
             baseEnemy.InstanciateBlood();
-            lvlManager.AddKill();
-            lvlManager.AddScore(score);
+            OnTakeDamage?.Invoke(score);
+            OnKill();
             Destroy(gameObject);
         }
     }

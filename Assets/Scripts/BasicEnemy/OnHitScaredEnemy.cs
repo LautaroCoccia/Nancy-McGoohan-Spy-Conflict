@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 [RequireComponent(typeof(ItemDrop))]
-public class OnHitScaredEnemy : TypeOfDamage, IHitable
+public class OnHitScaredEnemy : MonoBehaviour , IHitable
 {
     [SerializeField] BaseEnemy baseEnemy;
     ItemDrop itemDrop;
     [SerializeField] int score;
-    LevelManager lvlManager = LevelManager.Get();
+    public static Action<int> OnTakeDamage;
+    public static Action OnKill;
     private void Start()
     {
         itemDrop = GetComponent<ItemDrop>();
@@ -17,8 +18,8 @@ public class OnHitScaredEnemy : TypeOfDamage, IHitable
     {
         baseEnemy.InstanciateBlood();
         itemDrop.Drop();
-        lvlManager.AddKill();
-        lvlManager.AddScore(score);
+        OnTakeDamage?.Invoke(score);
+        OnKill();
         Destroy(gameObject);
     }
     
