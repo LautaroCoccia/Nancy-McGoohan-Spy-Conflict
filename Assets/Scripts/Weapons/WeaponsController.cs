@@ -54,7 +54,7 @@ public class WeaponsController : MonoBehaviour
 
         if(weapon[actualWeapon].GetShootingMode())
         {
-            TryShoot((int)weapon[actualWeapon].damageInfo);
+            TryShoot(weapon[actualWeapon].damageInfo);
         }
 
 
@@ -63,7 +63,7 @@ public class WeaponsController : MonoBehaviour
             TryReload();
         }
     }
-    public void TryShoot(int typeOfDamage)
+    public void TryShoot(Weapon.DamageInfo damageInfo)
     {
         if (weapon[actualWeapon].ammo > 0)
         {
@@ -73,7 +73,7 @@ public class WeaponsController : MonoBehaviour
 
             if (hit.collider != null && hit.transform.gameObject.layer == weapon[actualWeapon].targetLayer)
             {
-                hit.transform.gameObject.GetComponent<IHitable>().OnHit(typeOfDamage);
+                hit.transform.gameObject.GetComponent<IHitable>().OnHit(damageInfo);
                 weapon[actualWeapon].SetHitCrosshair();
                 StartCoroutine(HitShoot());
             }

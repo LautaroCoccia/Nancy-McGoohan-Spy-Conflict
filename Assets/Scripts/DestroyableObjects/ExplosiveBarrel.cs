@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExplosiveBarrel : BaseDestroyableObject, IHitable
 {
     [SerializeField] GameObject explotionPrefab;
-    public void OnHit(int typeOfDamage)
+    public void OnHit(Weapon.DamageInfo damageInfo)
     {
         lives--;
         lvlManager.AddScore(score);

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IHitable 
 {
-    void OnHit(int typeOfDamage);
+    void OnHit(Weapon.DamageInfo damageInfo);
 }

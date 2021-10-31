@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Explosion : TypeOfDamage
 {
-    [SerializeField] DamageType damageType;
     float initialTime;
     [SerializeField] float explosionTIme = 0.25f;
     [SerializeField] List<Sprite> explosionSprites;
@@ -35,6 +34,6 @@ public class Explosion : TypeOfDamage
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<IHitable>().OnHit((int)(damageType));
+        collision.gameObject.GetComponent<IHitable>().OnHit(Weapon.DamageInfo.strong);
     }
 }

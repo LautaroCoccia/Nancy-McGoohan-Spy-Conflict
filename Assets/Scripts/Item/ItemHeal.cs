@@ -6,7 +6,7 @@ public class ItemHeal : BasicItem
 {
     [SerializeField] int healPower;
     public static Action<int> OnHealPlayer;
-    public override void OnHit(int typeOfDamage)
+    public override void OnHit(Weapon.DamageInfo damageInfo)
     { 
         OnHealPlayer?.Invoke(healPower);
         Destroy(gameObject);

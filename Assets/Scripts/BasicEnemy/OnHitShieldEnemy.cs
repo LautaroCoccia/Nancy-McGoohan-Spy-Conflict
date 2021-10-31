@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class OnHitShieldEnemy : TypeOfDamage, IHitable
+public class OnHitShieldEnemy : MonoBehaviour, IHitable
 {
     [SerializeField] BaseEnemy baseEnemy;
     [SerializeField] int score;
@@ -18,11 +18,11 @@ public class OnHitShieldEnemy : TypeOfDamage, IHitable
     {
         sr = gameObject.GetComponentInChildren<SpriteRenderer>();
         col = sr.color;
-        sr.color = Color.white; 
+        sr.color = Color.blue; 
     }
-    public void OnHit(int typeOfDamage)
+    public void OnHit(Weapon.DamageInfo damageInfo)
     {
-        if(typeOfDamage == (int)DamageType.strong && !enemyState)
+        if(damageInfo == Weapon.DamageInfo.strong && !enemyState)
         {
             sr.color = Color.red;
             lvlManager.AddScore(25);

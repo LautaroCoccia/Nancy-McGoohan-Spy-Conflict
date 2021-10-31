@@ -13,7 +13,7 @@ public class OnHitScaredEnemy : TypeOfDamage, IHitable
     {
         itemDrop = GetComponent<ItemDrop>();
     }
-    public void OnHit(int typeOfDamage)
+    public void OnHit(Weapon.DamageInfo damageInfo)
     {
         baseEnemy.InstanciateBlood();
         itemDrop.Drop();
