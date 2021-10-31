@@ -20,3 +20,9 @@ MonoBehaviour:
   fireTime: 0
   reloadTime: 1
   mainCamera: {fileID: 0}
+  BulletHolePrefab: {fileID: 9050445857129939108, guid: 94672b56e30616940b38e434d44cfb6e,
+    type: 3}
+  BulletHoleParent: {fileID: 0}
+  damageInfo: 0
+  shootingMode: 1
+  isReloading: 0

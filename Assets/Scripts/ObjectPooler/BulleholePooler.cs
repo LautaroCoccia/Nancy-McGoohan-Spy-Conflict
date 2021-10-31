@@ -12,11 +12,11 @@ public class BulleholePooler : MonoBehaviour
 
     private void OnEnable()
     {
-        Weapon.SetBulletholes += SetPosAndLayer;
+        //Weapon.SetBulletholes += SetPosAndLayer;
     }
     private void OnDisable()
     {
-        Weapon.SetBulletholes -= SetPosAndLayer;
+        //Weapon.SetBulletholes -= SetPosAndLayer;
     }
     // Start is called before the first frame update
     void Start()
@@ -25,9 +25,9 @@ public class BulleholePooler : MonoBehaviour
         for (int i = 0; i < listSize; i++)
         {
             
-            GameObject obj = Instantiate(bulletholeprefab);
-            obj.transform.SetParent(bulletholesParent.transform);
-            bulletholesList.Add(obj);
+            //GameObject obj = Instantiate(bulletholeprefab);
+            //obj.transform.SetParent(bulletholesParent.transform);
+            //bulletholesList.Add(obj);
         }
     }
 

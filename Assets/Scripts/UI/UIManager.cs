@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         activeWeapon = 0;
-        Weapon.UpdateUIAmmo += UpdateAmmo;
+        Weapon.OnAmmoChange += UpdateAmmo;
         Weapon.ResetUIAmmo += ResetAmmo;
         Weapon.OutOfAmmoCrosshair += OnOutOfAmmo;
         Weapon.HitCrosshair += OnEnemyHit;
@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
     }
     private void OnDisable()
     {
-        Weapon.UpdateUIAmmo -= UpdateAmmo;
+        Weapon.OnAmmoChange -= UpdateAmmo;
         Weapon.ResetUIAmmo -= ResetAmmo;
         Weapon.OutOfAmmoCrosshair -= OnOutOfAmmo;
         Weapon.HitCrosshair -= OnEnemyHit;
