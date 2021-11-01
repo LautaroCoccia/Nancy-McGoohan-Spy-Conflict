@@ -9,7 +9,6 @@ public class ScreenShake : MonoBehaviour
     [SerializeField] float shakeAmount = 0.1f;
     [SerializeField] float decreaseFactor = 1;
     Vector3 startPos;
-    LevelManager lvlManager;
     public static bool isShaking;
     // Start is called before the first frame update
     void Start()

@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2535202750890733225}
   - component: {fileID: 9003924717481932632}
-  m_Layer: 0
+  - component: {fileID: 3005021049339098158}
+  m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c99ed3e1685d4874f9c14bbae2cd9e7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d44b02bfd0004e344ba7ec28aa141987, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,6 +82,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3005021049339098158
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494940516857014983}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b2faf3f2c1c5bb40b1bb2c02c385276, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7444531154038628865
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +112,8 @@ GameObject:
   - component: {fileID: 6491201250507320986}
   - component: {fileID: 6626797910959387075}
   - component: {fileID: 504675077527364787}
-  m_Layer: 0
+  - component: {fileID: 4938646683158506548}
+  m_Layer: 2
   m_Name: Explosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 7444531154038628865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.47, y: -2.53, z: 0.014442444}
-  m_LocalScale: {x: 2.8803601, y: 2.8803601, z: 2.8803601}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2535202750890733225}
   m_Father: {fileID: 0}
@@ -126,10 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e33ce5852ee5354aa11bb2750c405b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageType: 1
-  explosionTIme: 0.25
+  explosionTIme: 0.3
   explosionSprites:
-  - {fileID: 21300000, guid: c99ed3e1685d4874f9c14bbae2cd9e7c, type: 3}
+  - {fileID: 21300000, guid: d44b02bfd0004e344ba7ec28aa141987, type: 3}
   - {fileID: 21300000, guid: f47df797a12b3b24793877fd876070bc, type: 3}
   spriteRenderer: {fileID: 9003924717481932632}
 --- !u!61 &504675077527364787
@@ -158,3 +178,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!95 &4938646683158506548
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444531154038628865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b2faf3f2c1c5bb40b1bb2c02c385276, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

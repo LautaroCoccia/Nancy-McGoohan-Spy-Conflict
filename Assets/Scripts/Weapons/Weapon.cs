@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class Weapon : TypeOfDamage
+[CreateAssetMenu(fileName = "New Weapon",menuName = "Weapon")]
+public class Weapon : ScriptableObject
 {
-
+    public string weaponName;
     public int ammo;
     public int maxAmmo;
     public int targetLayer;
@@ -13,73 +14,79 @@ public class Weapon : TypeOfDamage
     public float fireTime;
     public float reloadTime;
     public Camera mainCamera;
+    public GameObject BulletHolePrefab;
 
     public static Action ResetUIAmmo;
-    public static Action<float> UpdateUIAmmo;
+    public static Action<float> OnAmmoChange;
     public static Action NormalCrosshair;
     public static Action HitCrosshair;
     public static Action OutOfAmmoCrosshair;
-    public static Action<Vector2, int> SetBulletholes;
+    //public static Action<Vector2, int> SetBulletholes;
     public static Action<bool> ResetMultiplier;
-    protected bool isReloading;
+    public enum DamageInfo
+    {
+        normal,
+        strong
+    }
+    public DamageInfo damageInfo;
+    public enum ShootingMode
+    {
+        semiautomatic,
+        automatic
+    }
+    public ShootingMode shootingMode;
+
+    public bool isReloading;
+   
     // Start is called before the first frame update
-    void Start()
+    public void InitWeapon()
     {
         mainCamera = Camera.main;
         isReloading = false;
+        SetNormalCrosshair();
     }
-    public void Shoot(TypeOfDamage.DamageType typeOfDamage)
-    {
-        if (ammo > 0 && !isReloading)
-        {
-            //AnimWeapons.OnStartAnim();
-            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
 
-            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer)
-            {
-                hit.transform.gameObject.GetComponent<IHitable>().OnHit(typeOfDamage);
-                HitCrosshair?.Invoke();
-                StartCoroutine(HitShoot());
-            }
-            else
-            {
-                SetBulletholes?.Invoke(mousePosition2D, hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder);
-                ResetMultiplier?.Invoke(false);
-            }
-            fireTime = 0;
-            UpdateUIAmmo?.Invoke(maxAmmo);
-            ammo--;
-            if(ammo <= 0)
-            {
-                OutOfAmmoCrosshair?.Invoke();
-            }
-        }
-    }
-    public void Reload()
+    public bool GetShootingMode()
     {
-        if (ammo < maxAmmo && Input.GetKeyDown(KeyCode.R) && !PauseMenu.GetPause())
+        switch (shootingMode)
         {
-            OutOfAmmoCrosshair?.Invoke();
-            StartCoroutine(Reloading());
+            case ShootingMode.semiautomatic:
+                if (Input.GetMouseButtonDown(0) && fireTime >= fireRate)
+                    return true;
+                else
+                    return false;
+            case ShootingMode.automatic:
+                if (Input.GetMouseButton(0) && fireTime >= fireRate)
+                    return true;
+                else
+                    return false;
+            default:
+                return false;
         }
     }
-    IEnumerator Reloading()
+
+    public void ResetAmmo()
     {
-        isReloading = true;
-        AnimWeapons.OnSetReloadMode?.Invoke(true);
-        //AnimWeapons.OnStartAnim?.Invoke();
-        yield return new WaitForSeconds(reloadTime);
-        ammo = maxAmmo;
         ResetUIAmmo?.Invoke();
-        NormalCrosshair?.Invoke();
-        isReloading = false;
-        AnimWeapons.OnSetReloadMode?.Invoke(false);
     }
-    IEnumerator HitShoot()
+    public void UpdateAmmo()
     {
-        yield return new WaitForSeconds(0.1f);
+        OnAmmoChange?.Invoke(maxAmmo);
+    }
+    public void SetNormalCrosshair()
+    {
         NormalCrosshair?.Invoke();
+    }
+    public void SetHitCrosshair()
+    {
+        HitCrosshair?.Invoke();
+    }
+    public void SetOutOfAmmoCrosshair()
+    {
+        OutOfAmmoCrosshair?.Invoke();
+    }
+    public void SetMultiplier(bool isActive)
+    {
+        ResetMultiplier?.Invoke(isActive);
     }
 }

@@ -2,31 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : TypeOfDamage
+public class Explosion : MonoBehaviour
 {
-    [SerializeField] DamageType damageType;
     float initialTime;
-    [SerializeField] float explosionTIme = 0.25f;
-    [SerializeField] List<Sprite> explosionSprites;
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] float explosionTime = 0.25f;
 
     // Start is called before the first frame update
     void Start()
     {
-        initialTime = explosionTIme;
-        spriteRenderer.sprite = explosionSprites[0];
+        initialTime = explosionTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(explosionTIme>0)
+        if(explosionTime>0)
         {
-            explosionTIme -= Time.deltaTime;
-            if(initialTime/2 > explosionTIme)
-            {
-                spriteRenderer.sprite = explosionSprites[1];
-            }
+            explosionTime -= Time.deltaTime;
         }
         else
         {
@@ -35,6 +27,6 @@ public class Explosion : TypeOfDamage
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<IHitable>().OnHit(damageType);
+        collision.gameObject.GetComponent<IHitable>().OnHit(Weapon.DamageInfo.strong);
     }
 }

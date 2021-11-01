@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class OnHitBasicEnemy : MonoBehaviour, IHitable
 {
+    [SerializeField] BaseEnemy baseEnemy;
     [SerializeField] int score;
-    LevelManager lvlManager = LevelManager.Get();
-    public void OnHit(TypeOfDamage.DamageType typeOfDamage)
+    public static Action<int> OnTakeDamage;
+    public static Action OnKill;
+    public void OnHit(Weapon.DamageInfo damageInfo)
     {
-        lvlManager.AddKill();
-        lvlManager.AddScore(score);
+        baseEnemy.InstanciateBlood();
+        OnTakeDamage?.Invoke(score);
+        OnKill();
         Destroy(gameObject);
     }
 

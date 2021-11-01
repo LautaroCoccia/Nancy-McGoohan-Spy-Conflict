@@ -4,10 +4,12 @@ using UnityEngine;
 using System;
 public class BaseEnemy : StateEnemy
 {
+    [SerializeField] GameObject bloodParticleSystem;
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRenderer flashInWeapon;
     [SerializeField] float timeToWaitAndShoot;
     [SerializeField] float timeWaitEndShoot;
     [SerializeField] float timeWaitAndCover;
-    [SerializeField] SpriteRenderer flashInWeapon;
     [SerializeField] float timeMaxTime;
     [SerializeField] int damage;
     [SerializeField] [Range(0, 100)] protected int probToHit = 0;
@@ -17,7 +19,7 @@ public class BaseEnemy : StateEnemy
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
-    public const float speed = 4.7f;
+    public float speed = 4.7f;
     public static Action<int> OnHitPlayer;
 
     [Space(15)]
@@ -26,6 +28,7 @@ public class BaseEnemy : StateEnemy
     // Start is called before the first frame update
     protected override void Start()
     {
+        animator.SetBool("IsMoving", true);
         base.Start();
     }
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class BaseEnemy : StateEnemy
     }
     protected override IEnumerator Choice()
     {
+        animator.SetBool("IsMoving", false);
         choising = true;
         yield return new WaitForSeconds(choisingTime);
         if(switchTimerVsProbSpecial)
@@ -47,14 +51,17 @@ public class BaseEnemy : StateEnemy
             case int n when n >= (probToShoot + probToSpecial):
                 state = State.move;
                 SelectCoverPosition(barrelPositions);
+                animator.SetBool("IsMoving", true);
                 break;
             case int n when n < probToShoot:
                 state = State.uncover;
                 SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
+                animator.SetBool("IsMoving", true);
                 break;
             case int n when n < (probToShoot + probToSpecial) && n> probToShoot
             && !switchTimerVsProbSpecial && probToSpecial!=0:
                 state = State.specialAction;
+                animator.SetBool("IsMoving", true);
                 break;
         }
         choising = false;
@@ -63,8 +70,8 @@ public class BaseEnemy : StateEnemy
     {
         barrelPositions = obstacles;
         transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
-        nextPos = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
+        nextPos = new Vector3(barrelPositions[transformIndex].transform.position.x,
+                              barrelPositions[transformIndex].transform.position.y + positionCorrectionForSorting,
                               transform.position.z);
         actualCover = nextPos;
     }
@@ -84,6 +91,7 @@ public class BaseEnemy : StateEnemy
     }
     protected override IEnumerator Shoot()
     {
+        animator.SetBool("IsMoving", false);
         yield return new WaitForSeconds(timeToWaitAndShoot);
         flashInWeapon.enabled = true;
         yield return new WaitForSeconds(timeWaitEndShoot);
@@ -96,6 +104,8 @@ public class BaseEnemy : StateEnemy
         yield return new WaitForSeconds(timeWaitAndCover);
         shooting = false;
         state = State.Cover;
+        animator.SetBool("IsMoving", true);
+
 
     }
     protected override void Cover()
@@ -128,8 +138,8 @@ public class BaseEnemy : StateEnemy
                 barrelPositions.RemoveAt(transformIndex);
                 transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
             }
-            aux = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
+            aux = new Vector3(barrelPositions[transformIndex].transform.position.x,
+                              barrelPositions[transformIndex].transform.position.y + positionCorrectionForSorting,
                           transform.position.z);
         } while (aux == nextPos);
         nextPos = aux;
@@ -160,5 +170,10 @@ public class BaseEnemy : StateEnemy
     protected void SelectActualCoverPosition()
     {
         nextPos = actualCover;
+    }
+
+    public void InstanciateBlood()
+    {
+        Instantiate(bloodParticleSystem, transform.position, Quaternion.identity);
     }
 }

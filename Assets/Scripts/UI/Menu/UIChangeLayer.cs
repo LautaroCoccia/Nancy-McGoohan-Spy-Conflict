@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class ChangeLayer : MonoBehaviour
+public class UIChangeLayer : MonoBehaviour
 {
     [SerializeField] GameObject CurrentLayer;
     [SerializeField] GameObject NextLayer;

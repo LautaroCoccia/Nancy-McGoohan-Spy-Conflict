@@ -18,7 +18,7 @@ public abstract class BasicItem : MonoBehaviour,IHitable
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, posZ);
     }
-    public abstract void OnHit(TypeOfDamage.DamageType typeOfDamage);
+    public abstract void OnHit(Weapon.DamageInfo damageInfo);
 
     IEnumerator DestroyTimer()
     {

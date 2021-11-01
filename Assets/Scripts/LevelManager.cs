@@ -56,15 +56,35 @@ public class LevelManager : MonoBehaviour
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter += GetScapePoints;
         Weapon.ResetMultiplier += UpdateMultiplier;
+
+        OnHitShieldEnemy.OnTakeDamage += AddScore;
+        OnHitShieldEnemy.OnKill += AddKill;
+        OnHitScaredEnemy.OnTakeDamage += AddScore;
+        OnHitScaredEnemy.OnKill += AddKill;
+        OnHitBasicEnemy.OnTakeDamage += AddScore;
+        OnHitBasicEnemy.OnKill += AddKill;
+
+        DestroyableWall.OnTakeDamage += AddScore;
+        ExplosiveBarrel.OnTakeDamage += AddScore;
     }
     private void OnDisable()
     {
-        ItemHeal.OnHealPlayer -= HealPlayer;
-        BaseEnemy.OnHitPlayer -= OnHitPlayer;
-        EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
-        DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
-        ScaredSpecial.scapePointsGetter -= GetScapePoints;
+        ExplosiveBarrel.OnTakeDamage -= AddScore;
+        DestroyableWall.OnTakeDamage -= AddScore;
+
+        OnHitBasicEnemy.OnKill -= AddKill;
+        OnHitBasicEnemy.OnTakeDamage -= AddScore;
+        OnHitScaredEnemy.OnKill -= AddKill;
+        OnHitScaredEnemy.OnTakeDamage -= AddScore;
+        OnHitShieldEnemy.OnKill -= AddKill;
+        OnHitShieldEnemy.OnTakeDamage -= AddScore;
+
         Weapon.ResetMultiplier -= UpdateMultiplier;
+        ScaredSpecial.scapePointsGetter -= GetScapePoints;
+        DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
+        EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
+        BaseEnemy.OnHitPlayer -= OnHitPlayer;
+        ItemHeal.OnHealPlayer -= HealPlayer;
     }
     void Update()
     {

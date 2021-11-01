@@ -8,9 +8,11 @@ public class ScaredSpecial : BasicSpecial
     public delegate List<Transform> GetScapePoints();
     public static GetScapePoints scapePointsGetter;
     Vector3 aux;
+    float speed;
     private void Awake()
     {
         SetScapePoints(scapePointsGetter?.Invoke());
+        speed = GetComponent<BaseEnemy>().speed;
     }
     public override bool Skill()
     {
@@ -39,7 +41,7 @@ public class ScaredSpecial : BasicSpecial
         while (inProgress)
         {
             yield return null;
-            transform.position = Vector3.MoveTowards(transform.position, aux, BaseEnemy.speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, aux, speed * Time.deltaTime);
             if (transform.position == aux) inProgress = false;
         }
         Destroy(transform.gameObject);

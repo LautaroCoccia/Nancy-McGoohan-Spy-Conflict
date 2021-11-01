@@ -1,0 +1,462 @@
+fileFormatVersion: 2
+guid: 696fd7c57c9bcea449417405b3bae907
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4544414251147312667
+    second: Marco Tilemap_0
+  - first:
+      213: -6702296669960067549
+    second: Marco Tilemap_1
+  - first:
+      213: -8478876993078865349
+    second: Marco Tilemap_2
+  - first:
+      213: -5831500682902033160
+    second: Marco Tilemap_3
+  - first:
+      213: -1661600370677593685
+    second: Marco Tilemap_4
+  - first:
+      213: -5442632507001137280
+    second: Marco Tilemap_5
+  - first:
+      213: 352813707159047085
+    second: Marco Tilemap_6
+  - first:
+      213: 9198503438271122543
+    second: Marco Tilemap_7
+  - first:
+      213: -175120647014492995
+    second: Marco Tilemap_8
+  - first:
+      213: -2733762748281986822
+    second: Marco Tilemap_9
+  - first:
+      213: 4552723685510374439
+    second: Marco Tilemap_10
+  - first:
+      213: -267619745943189040
+    second: Marco Tilemap_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Marco Tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 821
+        width: 144
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ebbdf1fa0011f30800000000000000
+      internalID: 4544414251147312667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 832
+        width: 502
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3262fbf50b8acf2a0800000000000000
+      internalID: -6702296669960067549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 832
+        width: 624
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b325d4d3c4af45a80800000000000000
+      internalID: -8478876993078865349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 633
+        width: 159
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc2d288609521fa0800000000000000
+      internalID: -5831500682902033160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 102
+        width: 126
+        height: 642
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9ca13344fc0f8e0800000000000000
+      internalID: -1661600370677593685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 549
+        width: 144
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08714393292e774b0800000000000000
+      internalID: -5442632507001137280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 537
+        width: 491
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab8a17823275e400800000000000000
+      internalID: 352813707159047085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 179
+        width: 134
+        height: 642
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c0c5f2426a7af70800000000000000
+      internalID: 9198503438271122543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_8
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 286
+        width: 503
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db45dd903b8d19df0800000000000000
+      internalID: -175120647014492995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_9
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 309
+        width: 159
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0e478b349bf0ad0800000000000000
+      internalID: -2733762748281986822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_10
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 53
+        width: 624
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7246a5312168e2f30800000000000000
+      internalID: 4552723685510374439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco Tilemap_11
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 53
+        width: 490
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d90d2c4249394cf0800000000000000
+      internalID: -267619745943189040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -469, y: -281}
+      - {x: -469, y: -487}
+      - {x: -467, y: -489}
+      - {x: 159, y: -489}
+      - {x: 159, y: -281}
+    - - {x: 232, y: -281}
+      - {x: 232, y: -489}
+      - {x: 724, y: -489}
+      - {x: 726, y: -487}
+      - {x: 726, y: -281}
+    - - {x: -912, y: 206}
+      - {x: -912, y: -440}
+      - {x: -783, y: -440}
+      - {x: -782, y: -439}
+      - {x: -782, y: 206}
+    - - {x: 793, y: 283}
+      - {x: 792, y: 281}
+      - {x: 792, y: -363}
+      - {x: 930, y: -363}
+      - {x: 930, y: 283}
+    - - {x: -744, y: -48}
+      - {x: -744, y: -256}
+      - {x: -237, y: -256}
+      - {x: -237, y: -48}
+    - - {x: 563, y: -233}
+      - {x: 726, y: -233}
+      - {x: 726, y: -1}
+      - {x: 587, y: -1}
+      - {x: 563, y: -22}
+    - - {x: -48, y: 184}
+      - {x: -48, y: -5}
+      - {x: 447, y: -5}
+      - {x: 447, y: 183}
+      - {x: 446, y: 184}
+    - - {x: -716, y: 239}
+      - {x: -716, y: 7}
+      - {x: -569, y: 7}
+      - {x: -568, y: 9}
+      - {x: -568, y: 212}
+      - {x: -588, y: 239}
+    - - {x: 554, y: 305}
+      - {x: 554, y: 114}
+      - {x: 582, y: 91}
+      - {x: 717, y: 91}
+      - {x: 717, y: 305}
+    - - {x: -930, y: 493}
+      - {x: -930, y: 279}
+      - {x: -797, y: 279}
+      - {x: -782, y: 292}
+      - {x: -782, y: 493}
+    - - {x: -744, y: 481}
+      - {x: -744, y: 290}
+      - {x: -238, y: 290}
+      - {x: -238, y: 481}
+    - - {x: -147, y: 480}
+      - {x: -147, y: 290}
+      - {x: 481, y: 290}
+      - {x: 481, y: 480}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
