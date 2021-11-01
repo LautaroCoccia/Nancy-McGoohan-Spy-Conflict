@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class SlidePercent : MonoBehaviour
+public class UISlidePercent : MonoBehaviour
 {
     [SerializeField] Slider mySlide;
     [SerializeField] TMP_Text text;

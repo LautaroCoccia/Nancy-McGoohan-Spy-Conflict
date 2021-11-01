@@ -19,7 +19,7 @@ public class BaseEnemy : StateEnemy
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
-    public const float speed = 4.7f;
+    public float speed = 4.7f;
     public static Action<int> OnHitPlayer;
 
     [Space(15)]
@@ -70,8 +70,8 @@ public class BaseEnemy : StateEnemy
     {
         barrelPositions = obstacles;
         transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
-        nextPos = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
+        nextPos = new Vector3(barrelPositions[transformIndex].transform.position.x,
+                              barrelPositions[transformIndex].transform.position.y + positionCorrectionForSorting,
                               transform.position.z);
         actualCover = nextPos;
     }
@@ -138,8 +138,8 @@ public class BaseEnemy : StateEnemy
                 barrelPositions.RemoveAt(transformIndex);
                 transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
             }
-            aux = new Vector3(barrelPositions[transformIndex].coverPosition.position.x,
-                              barrelPositions[transformIndex].coverPosition.position.y + positionCorrectionForSorting,
+            aux = new Vector3(barrelPositions[transformIndex].transform.position.x,
+                              barrelPositions[transformIndex].transform.position.y + positionCorrectionForSorting,
                           transform.position.z);
         } while (aux == nextPos);
         nextPos = aux;
