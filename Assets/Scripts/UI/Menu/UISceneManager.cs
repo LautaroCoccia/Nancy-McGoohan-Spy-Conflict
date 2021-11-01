@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class MenuManager : MonoBehaviour
+public class UISceneManager : MonoBehaviour
 {
     [SerializeField] string nextScene;
     public void ChangeScene()

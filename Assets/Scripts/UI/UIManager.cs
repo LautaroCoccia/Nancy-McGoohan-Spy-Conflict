@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<Image> UICrosshair;
     int activeWeapon;
     float timeToChange = 2.0f;
-    [SerializeField] MenuManager mySceneChanger;
+    [SerializeField] UISceneManager mySceneChanger;
     // Start is called before the first frame update
     private void OnEnable()
     {
