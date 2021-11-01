@@ -401,7 +401,7 @@ RectTransform:
   - {fileID: 1873186839}
   - {fileID: 592677192}
   m_Father: {fileID: 261053841}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -848,7 +848,7 @@ RectTransform:
   - {fileID: 1242175054}
   - {fileID: 995422246}
   m_Father: {fileID: 261053841}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -888,9 +888,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1980645459}
+  - {fileID: 246090289}
   - {fileID: 63341598}
   - {fileID: 1778311795}
-  - {fileID: 246090289}
   - {fileID: 39532685}
   - {fileID: 871953229}
   - {fileID: 1139950455}
@@ -5042,6 +5042,36 @@ Transform:
   m_Father: {fileID: 1036799997}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1464763483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464763484}
+  m_Layer: 0
+  m_Name: BulletholesParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464763484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464763483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3978143, y: -0.3149071, z: -4.678031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522784084
 GameObject:
   m_ObjectHideFlags: 0
@@ -5776,7 +5806,7 @@ RectTransform:
   - {fileID: 369214527}
   - {fileID: 353962676}
   m_Father: {fileID: 261053841}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
