@@ -676,7 +676,7 @@ MonoBehaviour:
   probScaredSpawn: 7
   maxEnemiesAlive: 1
   minTimeToSpawn: 3
-  maxTimeToSpawn: 12
+  maxTimeToSpawn: 8
   actualTime: 10
   timeToSpawn: 10
   enemyPrefab:
@@ -3096,7 +3096,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3313,7 +3313,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -8069092904478221970, guid: 75f15c17460a4ae48a5dcb15c663e834,
     type: 3}
   m_Color: {r: 1, g: 0.05751381, b: 0, a: 1}
@@ -3794,7 +3794,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -8069092904478221970, guid: 75f15c17460a4ae48a5dcb15c663e834,
     type: 3}
   m_Color: {r: 1, g: 0.05751381, b: 0, a: 1}
@@ -4383,7 +4383,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -8069092904478221970, guid: 75f15c17460a4ae48a5dcb15c663e834,
     type: 3}
   m_Color: {r: 1, g: 0.05751381, b: 0, a: 1}
@@ -5101,7 +5101,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5217,7 +5217,7 @@ MonoBehaviour:
   probScaredSpawn: 7
   maxEnemiesAlive: 10
   minTimeToSpawn: 3
-  maxTimeToSpawn: 12
+  maxTimeToSpawn: 8
   actualTime: 10
   timeToSpawn: 10
   enemyPrefab:

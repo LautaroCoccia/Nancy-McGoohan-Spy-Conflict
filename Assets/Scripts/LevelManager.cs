@@ -117,7 +117,13 @@ public class LevelManager : MonoBehaviour
     {
         health -= damage;
         UpdateUIHealth?.Invoke(health,maxHealth);
+        StartCoroutine(WaitForShakeToLoss());
+
+    }
+    IEnumerator WaitForShakeToLoss()
+    {
         shaker.Shake();
+        yield return new WaitUntil(() => !ScreenShake.isShaking);
         if (health <= 0)
         {
             LoseCondition?.Invoke();
