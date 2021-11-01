@@ -113,6 +113,8 @@ public class WeaponsController : MonoBehaviour
     IEnumerator Reloading()
     {
         weapon[actualWeapon].isReloading = true;
+        AnimWeapons.OnSetReloadMode?.Invoke(true);
+        //AnimWeapons.OnStartAnim?.Invoke();
         yield return new WaitForSeconds(weapon[actualWeapon].reloadTime);
         weapon[actualWeapon].ammo = weapon[actualWeapon].maxAmmo;
         //ResetUIAmmo?.Invoke();
@@ -120,6 +122,8 @@ public class WeaponsController : MonoBehaviour
         //NormalCrosshair?.Invoke();
         weapon[actualWeapon].SetNormalCrosshair();
         weapon[actualWeapon].isReloading = false;
+        AnimWeapons.OnSetReloadMode?.Invoke(false);
+
     }
     IEnumerator HitShoot()
     {
@@ -143,8 +147,8 @@ public class WeaponsController : MonoBehaviour
         //}
         OnWeaponChanged?.Invoke(newValue);
     }
-    public int GetActualWeapon()
+    public WeaponType GetActualWeapon()
     {
-        return actualWeapon;
+        return (WeaponType)actualWeapon;
     }
 }

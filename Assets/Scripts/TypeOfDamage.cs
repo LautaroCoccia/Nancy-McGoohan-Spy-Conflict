@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class TypeOfDamage : MonoBehaviour
 {
+    public enum DamageType
+    {
+        normal,
+        strong
+    }
     
 }

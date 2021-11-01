@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7717f2450ae37548bd3775962b71314
+guid: 691c90ff98afe7c4c9fa0163e37acc5b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -62,48 +62,6 @@ TextureImporter:
   - first:
       213: 5093110988788199718
     second: Thompson_Rec_TileMap_19
-  - first:
-      213: 7852763948752232935
-    second: Thompson_Rec_TileMap_20
-  - first:
-      213: 7459002580510017377
-    second: Thompson_Rec_TileMap_21
-  - first:
-      213: 8327275610070582690
-    second: Thompson_Rec_TileMap_22
-  - first:
-      213: 1547370448472108237
-    second: Thompson_Rec_TileMap_23
-  - first:
-      213: 6563869326666301697
-    second: Thompson_Rec_TileMap_24
-  - first:
-      213: -1003866478302326706
-    second: Thompson_Rec_TileMap_25
-  - first:
-      213: -7777177954738562156
-    second: Thompson_Rec_TileMap_26
-  - first:
-      213: -7557167384670632299
-    second: Thompson_Rec_TileMap_27
-  - first:
-      213: 4700405552845728055
-    second: Thompson_Rec_TileMap_28
-  - first:
-      213: -8839335221597199608
-    second: Thompson_Rec_TileMap_29
-  - first:
-      213: 147551640001675889
-    second: Thompson_Rec_TileMap_30
-  - first:
-      213: -7839403724024504171
-    second: Thompson_Rec_TileMap_31
-  - first:
-      213: 4688636975927817346
-    second: Thompson_Rec_TileMap_32
-  - first:
-      213: -5729867903951865777
-    second: Thompson_Rec_TileMap_33
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -216,12 +174,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1236
-        width: 381
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5308849, y: 0.5902624}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,12 +195,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_1
       rect:
         serializedVersion: 2
-        x: 578
-        y: 1238
-        width: 381
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.53672, y: 0.60992944}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -258,12 +216,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_2
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 1241
-        width: 379
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5425902, y: 0.62932533}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,12 +237,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_3
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 1225
-        width: 377
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.55103, y: 0.649084}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,12 +258,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_4
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 1235
-        width: 374
-        height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1972
+        y: 1101
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5567694, y: 0.6685171}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -321,12 +279,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_5
       rect:
         serializedVersion: 2
-        x: 2234
-        y: 1208
-        width: 29
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5573982, y: 0.6675356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -342,12 +300,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_6
       rect:
         serializedVersion: 2
-        x: 86
-        y: 896
-        width: 373
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5553, y: 0.6677159}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -363,12 +321,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_7
       rect:
         serializedVersion: 2
-        x: 238
-        y: 847
-        width: 27
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5558445, y: 0.6676936}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -384,12 +342,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_8
       rect:
         serializedVersion: 2
-        x: 586
-        y: 896
-        width: 373
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 773
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5563349, y: 0.6676936}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -405,12 +363,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_9
       rect:
         serializedVersion: 2
-        x: 737
-        y: 827
-        width: 26
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1972
+        y: 774
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.55687505, y: 0.66765386}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -426,12 +384,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_10
       rect:
         serializedVersion: 2
-        x: 1085
-        y: 896
-        width: 374
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5547015, y: 0.6590458}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -447,12 +405,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_11
       rect:
         serializedVersion: 2
-        x: 1237
-        y: 806
-        width: 24
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5526292, y: 0.6511822}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -468,12 +426,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_12
       rect:
         serializedVersion: 2
-        x: 1588
-        y: 896
-        width: 372
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.54797107, y: 0.6472708}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -489,12 +447,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_13
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 896
-        width: 374
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5458254, y: 0.6356285}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -510,12 +468,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_14
       rect:
         serializedVersion: 2
-        x: 2139
-        y: 847
-        width: 61
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1972
+        y: 447
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5436376, y: 0.6313817}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -531,12 +489,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_15
       rect:
         serializedVersion: 2
-        x: 1734
-        y: 787
-        width: 23
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.54147184, y: 0.6226681}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -552,12 +510,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_16
       rect:
         serializedVersion: 2
-        x: 85
-        y: 515
-        width: 374
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 517
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5395293, y: 0.61509025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -573,12 +531,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_17
       rect:
         serializedVersion: 2
-        x: 150
-        y: 470
-        width: 60
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1002
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5374462, y: 0.6068091}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -594,12 +552,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_18
       rect:
         serializedVersion: 2
-        x: 582
-        y: 516
-        width: 375
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.535277, y: 0.59924364}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -615,12 +573,12 @@ TextureImporter:
       name: Thompson_Rec_TileMap_19
       rect:
         serializedVersion: 2
-        x: 659
-        y: 475
-        width: 58
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1972
+        y: 120
+        width: 476
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5306912, y: 0.5913463}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -628,300 +586,6 @@ TextureImporter:
       bones: []
       spriteID: 621fb58b57d5ea640800000000000000
       internalID: 5093110988788199718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_20
-      rect:
-        serializedVersion: 2
-        x: 1082
-        y: 517
-        width: 376
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e1ee56a43f9afc60800000000000000
-      internalID: 7852763948752232935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_21
-      rect:
-        serializedVersion: 2
-        x: 1171
-        y: 480
-        width: 56
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1678506d353b38760800000000000000
-      internalID: 7459002580510017377
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_22
-      rect:
-        serializedVersion: 2
-        x: 1583
-        y: 519
-        width: 377
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a5080d2c0d609370800000000000000
-      internalID: 8327275610070582690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_23
-      rect:
-        serializedVersion: 2
-        x: 1684
-        y: 484
-        width: 54
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcced1d793d597510800000000000000
-      internalID: 1547370448472108237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_24
-      rect:
-        serializedVersion: 2
-        x: 2077
-        y: 520
-        width: 379
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1010700306c871b50800000000000000
-      internalID: 6563869326666301697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_25
-      rect:
-        serializedVersion: 2
-        x: 2189
-        y: 489
-        width: 50
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e401ed6b1cc8112f0800000000000000
-      internalID: -1003866478302326706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_26
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 136
-        width: 379
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49b1fccfad9e11490800000000000000
-      internalID: -7777177954738562156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_27
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 106
-        width: 44
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5960a80ad4c8f1790800000000000000
-      internalID: -7557167384670632299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_28
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 137
-        width: 381
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 739a4ad42f13b3140800000000000000
-      internalID: 4700405552845728055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_29
-      rect:
-        serializedVersion: 2
-        x: 710
-        y: 110
-        width: 38
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 803a912e27f545580800000000000000
-      internalID: -8839335221597199608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_30
-      rect:
-        serializedVersion: 2
-        x: 1075
-        y: 139
-        width: 383
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17283505f653c0200800000000000000
-      internalID: 147551640001675889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_31
-      rect:
-        serializedVersion: 2
-        x: 1220
-        y: 115
-        width: 32
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59025a219d7d43390800000000000000
-      internalID: -7839403724024504171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_32
-      rect:
-        serializedVersion: 2
-        x: 1578
-        y: 119
-        width: 382
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28470f6fc72611140800000000000000
-      internalID: 4688636975927817346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thompson_Rec_TileMap_33
-      rect:
-        serializedVersion: 2
-        x: 2075
-        y: 127
-        width: 381
-        height: 119
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f48790fdf7b6b70b0800000000000000
-      internalID: -5729867903951865777
       vertices: []
       indices: 
       edges: []
