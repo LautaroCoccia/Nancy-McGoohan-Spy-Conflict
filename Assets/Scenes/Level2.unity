@@ -270,7 +270,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 62592052}
-  - component: {fileID: 62592051}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -278,26 +277,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &62592051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62592050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fafd8b3cf6a808d419d807b2d8b94cd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: 6
-  maxAmmo: 6
-  targetLayer: 8
-  fireRate: 0.25
-  fireTime: 0.25
-  reloadTime: 0.25
-  mainCamera: {fileID: 0}
-  bulletHoles: {fileID: 576134815}
 --- !u!4 &62592052
 Transform:
   m_ObjectHideFlags: 0
@@ -656,6 +635,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124663195}
   m_CullTransparentMesh: 0
+--- !u!1 &145321568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145321570}
+  - component: {fileID: 145321569}
+  - component: {fileID: 145321571}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &145321569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145321568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e355cc61ab642a1458ac8d11fc7554b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: a06981f2d39717d46b653bb400d222af,
+    type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &145321570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145321568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145321571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145321568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2566b3ad15fd75b458244bb8de8c5a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &150483092
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 1321266112}
   - {fileID: 1835346606}
@@ -864,7 +924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 959361837}
   - {fileID: 1100958219}
@@ -991,8 +1050,9 @@ GameObject:
   m_Component:
   - component: {fileID: 256938922}
   - component: {fileID: 256938921}
-  - component: {fileID: 256938920}
   - component: {fileID: 256938919}
+  - component: {fileID: 256938923}
+  - component: {fileID: 256938920}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1016,14 +1076,20 @@ MonoBehaviour:
   actualTime: 0
   shakeAmount: 0.1
   decreaseFactor: 1
---- !u!81 &256938920
-AudioListener:
+--- !u!114 &256938920
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256938918}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b447eb5c30cc84d93fe4d67a07eae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!20 &256938921
 Camera:
   m_ObjectHideFlags: 0
@@ -1081,6 +1147,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256938923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256938918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9c3c0325b3a8a488b0ea8e2c61e542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &268153751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1291,7 @@ MonoBehaviour:
   UIScoreNum: {fileID: 1048124871}
   UICounterNum: {fileID: 1541573148}
   UITimer: {fileID: 101244663}
+  UICombo: {fileID: 0}
   UIHealth: {fileID: 1942284633}
   winScreen: {fileID: 294837578}
   loseScreen: {fileID: 597468182}
@@ -1848,7 +1937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 302569239}
   - {fileID: 1960380674}
@@ -2702,7 +2790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d479eb8c2b86c44972013c011cb659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
   lives: 1
   score: 25
   nextState: {fileID: 0}
@@ -2962,7 +3049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d479eb8c2b86c44972013c011cb659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
   lives: 1
   score: 50
   nextState: {fileID: 0}
@@ -3119,7 +3205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d479eb8c2b86c44972013c011cb659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
   lives: 3
   score: 25
   nextState: {fileID: 0}
@@ -3135,7 +3220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d479eb8c2b86c44972013c011cb659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
   lives: 1
   score: 25
   nextState: {fileID: 0}
@@ -3356,7 +3440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 1668596417}
   - {fileID: 290240371}
@@ -3791,7 +3874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 922458520}
   shootPosition:
   - {fileID: 703914460}
   - {fileID: 2037318640}
@@ -4576,7 +4658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d898fc0247ccb294ba4752b3fbe1760a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
   lives: 1
   score: 25
   explotionPrefab: {fileID: 7444531154038628865, guid: 35043246ad874624ca266923f4065dc2,
@@ -5304,10 +5385,7 @@ MonoBehaviour:
   selectWeapon1: 0
   selectWeapon2: 0
   selectWeapon3: 0
-  weapons:
-  - {fileID: 62592050}
-  - {fileID: 2058571470}
-  - {fileID: 1912779641}
+  weapon: []
 --- !u!4 &1616994531
 Transform:
   m_ObjectHideFlags: 0
@@ -5444,7 +5522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d898fc0247ccb294ba4752b3fbe1760a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
   lives: 1
   score: 25
   explotionPrefab: {fileID: 7444531154038628865, guid: 35043246ad874624ca266923f4065dc2,
@@ -6116,6 +6193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testLoadLevel: Level2
   score: 0
+  multiplier: 1
+  maxMultiplier: 5
   health: 3
   killCounter: 0
   timer: 60
@@ -6151,7 +6230,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1912779643}
-  - component: {fileID: 1912779642}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -6159,26 +6237,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1912779642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912779641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85bec5aad343c334590ad3e2b2f6448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: 2
-  maxAmmo: 2
-  targetLayer: 8
-  fireRate: 0.25
-  fireTime: 0.25
-  reloadTime: 1.5
-  mainCamera: {fileID: 0}
-  bulletHoles: {fileID: 576134815}
 --- !u!4 &1912779643
 Transform:
   m_ObjectHideFlags: 0
@@ -6238,7 +6296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d898fc0247ccb294ba4752b3fbe1760a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
   lives: 1
   score: 25
   explotionPrefab: {fileID: 7444531154038628865, guid: 35043246ad874624ca266923f4065dc2,
@@ -6614,7 +6671,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058571472}
-  - component: {fileID: 2058571471}
   m_Layer: 0
   m_Name: SubmachineGun
   m_TagString: Untagged
@@ -6622,26 +6678,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2058571471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058571470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 145ec262544645d4398c82c7ad7a7438, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: 30
-  maxAmmo: 30
-  targetLayer: 8
-  fireRate: 0.15
-  fireTime: 0
-  reloadTime: 0.5
-  mainCamera: {fileID: 0}
-  bulletHoles: {fileID: 576134815}
 --- !u!4 &2058571472
 Transform:
   m_ObjectHideFlags: 0
@@ -6704,7 +6740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 150483093}
   - {fileID: 1702876055}
