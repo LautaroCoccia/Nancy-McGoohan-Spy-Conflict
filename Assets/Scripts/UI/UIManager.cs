@@ -120,13 +120,10 @@ public class UIManager : MonoBehaviour
 
     void UpdateKillCounter(int killCounter)
     {
-        Debug.Log("Count");
         UICounterNum.text = killCounter.ToString() + "/10";
         if(killCounter == 10)
         {
-            Debug.Log("win");
             winScreen.SetActive(true);
-            Time.timeScale = 0;
             StartCoroutine(ChangeToMenu());
         }
     }
@@ -144,13 +141,11 @@ public class UIManager : MonoBehaviour
     }
     void Lose()
     {
+        loseScreen.SetActive(true);
         StartCoroutine(ChangeToMenu());
     }
     IEnumerator ChangeToMenu()
     {
-        yield return new WaitUntil(() => !ScreenShake.isShaking);
-        Time.timeScale = 0;
-        loseScreen.SetActive(true);
         yield return new WaitForSecondsRealtime(timeToChange);
         mySceneChanger.ChangeScene();
     }
