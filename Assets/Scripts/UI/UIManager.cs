@@ -120,9 +120,11 @@ public class UIManager : MonoBehaviour
 
     void UpdateKillCounter(int killCounter)
     {
+        Debug.Log("Count");
         UICounterNum.text = killCounter.ToString() + "/10";
         if(killCounter == 10)
         {
+            Debug.Log("win");
             winScreen.SetActive(true);
             Time.timeScale = 0;
             StartCoroutine(ChangeToMenu());

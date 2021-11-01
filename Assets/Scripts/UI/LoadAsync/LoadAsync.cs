@@ -20,21 +20,24 @@ public class LoadAsync : MonoBehaviour
     }
     public IEnumerator Start()
     {
+        Time.timeScale = 1.0f;
         yield return SceneManager.UnloadSceneAsync(fromScene);
-
         buttonInput = false;
         slider.value = 0.0f;
         bar.SetActive(true);
         yield return new WaitForSeconds(waitToAppearBar);
+        Debug.Log("nextScene");
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
         asyncLoad.allowSceneActivation = false;
-        while (asyncLoad.progress >= barProgressFix)
+        while (asyncLoad.progress < barProgressFix)
         {
+            Debug.Log(asyncLoad.progress);
             slider.value = asyncLoad.progress;
             yield return null;
         }
         slider.value = 1.0f;
         yield return new WaitForSeconds(waitToAppearButton);
+        Debug.Log("bar false");
         bar.SetActive(false);
         button.SetActive(true);
         yield return null;
