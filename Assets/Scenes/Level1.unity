@@ -869,6 +869,7 @@ GameObject:
   - component: {fileID: 261053845}
   - component: {fileID: 261053846}
   - component: {fileID: 261053842}
+  - component: {fileID: 261053847}
   m_Layer: 5
   m_Name: UIHUD
   m_TagString: Untagged
@@ -1033,6 +1034,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &261053847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261053840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca95b7c40382d8d4985d8049156b16bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAnim: {fileID: 261053846}
 --- !u!1 &270141518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,7 +1691,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391362624}
-  - component: {fileID: 391362623}
   m_Layer: 0
   m_Name: AnimController
   m_TagString: Untagged
@@ -1685,19 +1698,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &391362623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391362622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca95b7c40382d8d4985d8049156b16bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAnim: {fileID: 261053846}
 --- !u!4 &391362624
 Transform:
   m_ObjectHideFlags: 0
