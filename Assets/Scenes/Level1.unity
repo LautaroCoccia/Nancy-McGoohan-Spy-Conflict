@@ -672,8 +672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   probNormalSpawn: 45
-  probShieldSpawn: 40
-  probScaredSpawn: 20
+  probShieldSpawn: 25
+  probScaredSpawn: 7
   maxEnemiesAlive: 1
   minTimeToSpawn: 3
   maxTimeToSpawn: 12
@@ -1291,7 +1291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 1988879240}
   - {fileID: 2029043069}
@@ -1421,7 +1420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 312573447}
   - {fileID: 546561912}
@@ -2352,7 +2350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 1018097238}
   - {fileID: 908758105}
@@ -2629,7 +2626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 692029672}
   shootPosition:
   - {fileID: 504340048}
   - {fileID: 97005517}
@@ -3587,7 +3583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 1703160924}
   - {fileID: 1636517084}
@@ -3983,7 +3978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91673df8a84808499344870d03ed816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coverPosition: {fileID: 0}
   shootPosition:
   - {fileID: 1151793744}
   - {fileID: 65824777}
@@ -5219,8 +5213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   probNormalSpawn: 45
-  probShieldSpawn: 40
-  probScaredSpawn: 20
+  probShieldSpawn: 25
+  probScaredSpawn: 7
   maxEnemiesAlive: 10
   minTimeToSpawn: 3
   maxTimeToSpawn: 12
