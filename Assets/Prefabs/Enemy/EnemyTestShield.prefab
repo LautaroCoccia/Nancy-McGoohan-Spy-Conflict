@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6568890998708135797}
   - component: {fileID: 4596329777047800025}
+  - component: {fileID: 409537970059967260}
   m_Layer: 0
   m_Name: BasicEnemySprite
   m_TagString: Untagged
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &409537970059967260
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5689280340984390447}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 184c63e8d98fc4641acd9905527ebc3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6493707894418369012
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,10 +262,11 @@ MonoBehaviour:
   timerToWaitSpecial: 3
   bloodParticleSystem: {fileID: 4852197840641742319, guid: e0b4d6227e46a3548a1e560ea270f687,
     type: 3}
+  animator: {fileID: 409537970059967260}
+  flashInWeapon: {fileID: 4211012051401535701}
   timeToWaitAndShoot: 3
   timeWaitEndShoot: 2
   timeWaitAndCover: 1
-  flashInWeapon: {fileID: 4211012051401535701}
   timeMaxTime: 1
   damage: 1
   probToHit: 50

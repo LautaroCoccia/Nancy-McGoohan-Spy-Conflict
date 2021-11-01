@@ -69,12 +69,8 @@ public class LevelManager : MonoBehaviour
     }
     private void OnDisable()
     {
-        ItemHeal.OnHealPlayer -= HealPlayer;
-        BaseEnemy.OnHitPlayer -= OnHitPlayer;
-        EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
-        DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
-        ScaredSpecial.scapePointsGetter -= GetScapePoints;
-        Weapon.ResetMultiplier -= UpdateMultiplier;
+        ExplosiveBarrel.OnTakeDamage -= AddScore;
+        DestroyableWall.OnTakeDamage -= AddScore;
 
         OnHitBasicEnemy.OnKill -= AddKill;
         OnHitBasicEnemy.OnTakeDamage -= AddScore;
@@ -83,8 +79,12 @@ public class LevelManager : MonoBehaviour
         OnHitShieldEnemy.OnKill -= AddKill;
         OnHitShieldEnemy.OnTakeDamage -= AddScore;
 
-        ExplosiveBarrel.OnTakeDamage -= AddScore;
-        DestroyableWall.OnTakeDamage -= AddScore;
+        Weapon.ResetMultiplier -= UpdateMultiplier;
+        ScaredSpecial.scapePointsGetter -= GetScapePoints;
+        DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
+        EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
+        BaseEnemy.OnHitPlayer -= OnHitPlayer;
+        ItemHeal.OnHealPlayer -= HealPlayer;
     }
     void Update()
     {

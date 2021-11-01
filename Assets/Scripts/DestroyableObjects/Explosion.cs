@@ -5,27 +5,20 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     float initialTime;
-    [SerializeField] float explosionTIme = 0.25f;
-    [SerializeField] List<Sprite> explosionSprites;
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] float explosionTime = 0.25f;
 
     // Start is called before the first frame update
     void Start()
     {
-        initialTime = explosionTIme;
-        spriteRenderer.sprite = explosionSprites[0];
+        initialTime = explosionTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(explosionTIme>0)
+        if(explosionTime>0)
         {
-            explosionTIme -= Time.deltaTime;
-            if(initialTime/2 > explosionTIme)
-            {
-                spriteRenderer.sprite = explosionSprites[1];
-            }
+            explosionTime -= Time.deltaTime;
         }
         else
         {

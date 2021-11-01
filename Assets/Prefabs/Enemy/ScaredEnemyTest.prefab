@@ -82,10 +82,11 @@ MonoBehaviour:
   timerToWaitSpecial: 30
   bloodParticleSystem: {fileID: 4852197840641742319, guid: e0b4d6227e46a3548a1e560ea270f687,
     type: 3}
+  animator: {fileID: 4501079326137381653}
+  flashInWeapon: {fileID: 0}
   timeToWaitAndShoot: 100
   timeWaitEndShoot: 0
   timeWaitAndCover: 0
-  flashInWeapon: {fileID: 0}
   timeMaxTime: 1
   damage: 0
   probToHit: 0
@@ -145,6 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8724409173825894570}
   - component: {fileID: 2158141146766989062}
+  - component: {fileID: 4501079326137381653}
   m_Layer: 0
   m_Name: BasicEnemySprite
   m_TagString: Untagged
@@ -216,6 +218,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4501079326137381653
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7840294399970098416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 184c63e8d98fc4641acd9905527ebc3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4329631292353533235
 PrefabInstance:
   m_ObjectHideFlags: 0
