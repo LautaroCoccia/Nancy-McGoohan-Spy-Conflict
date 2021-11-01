@@ -19,7 +19,7 @@ public class BaseEnemy : StateEnemy
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
-    public const float speed = 4.7f;
+    public float speed = 4.7f;
     public static Action<int> OnHitPlayer;
 
     [Space(15)]
