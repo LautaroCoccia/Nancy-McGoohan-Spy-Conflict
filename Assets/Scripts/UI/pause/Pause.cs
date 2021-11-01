@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PauseMenu : MonoBehaviour
+public class Pause : MonoBehaviour
 {
     static bool isPaused;
     public GameObject pauseLayer;
@@ -9,13 +9,13 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1.0f;
-        PlayerPause.onPauseCall += Pause;
+        PlayerPause.onPauseCall += PuaseChange;
     }
     private void OnDisable()
     {
-        PlayerPause.onPauseCall -= Pause;
+        PlayerPause.onPauseCall -= PuaseChange;
     }
-    public void Pause()
+    public void PuaseChange()
     {
         if (!isPaused)
         {
