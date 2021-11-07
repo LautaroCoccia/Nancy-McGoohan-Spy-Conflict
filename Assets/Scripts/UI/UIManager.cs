@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
         LevelManager.UpdateUITimer += UpdateTimer;
         LevelManager.UpdateUICombo += UpdateCombo;
         LevelManager.UpdateUIHealth += UpdateHealth;
+        LevelManager.OnWinCondition += Win;
         LevelManager.LoseCondition += Lose;
         WeaponsController.OnWeaponChanged += WeaponChanged;
     }
@@ -64,6 +65,7 @@ public class UIManager : MonoBehaviour
         LevelManager.UpdateUICombo -= UpdateCombo;
         LevelManager.UpdateUIHealth -= UpdateHealth;
         LevelManager.LoseCondition -= Lose;
+        LevelManager.OnWinCondition -= Win;
         WeaponsController.OnWeaponChanged -= WeaponChanged;
     }
     void UpdateAmmo(float actualAmmo)
@@ -118,14 +120,9 @@ public class UIManager : MonoBehaviour
         crosshairImage.sprite = currentCrosshair.normal;
     }
 
-    void UpdateKillCounter(int killCounter)
+    void UpdateKillCounter(int killCounter, int killTarget)
     {
-        UICounterNum.text = killCounter.ToString() + "/10";
-        if(killCounter == 10)
-        {
-            winScreen.SetActive(true);
-            StartCoroutine(ChangeToMenu());
-        }
+        UICounterNum.text = killCounter.ToString() + "/" + killTarget;
     }
     void UpdateTimer(float timer)
     {
@@ -142,6 +139,11 @@ public class UIManager : MonoBehaviour
     void Lose()
     {
         loseScreen.SetActive(true);
+        StartCoroutine(ChangeToMenu());
+    }
+    void Win()
+    {
+        winScreen.SetActive(true);
         StartCoroutine(ChangeToMenu());
     }
     IEnumerator ChangeToMenu()

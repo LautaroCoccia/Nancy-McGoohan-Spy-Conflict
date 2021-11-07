@@ -12,23 +12,26 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     [SerializeField] int maxMultiplier = 5;
     [SerializeField] int health;
     [SerializeField] int killCounter;
+    [SerializeField] int targetToKill = 10;
     [SerializeField] float timer;
     [SerializeField] List<ObstacleInfo> barrelPositions;
     
     ScreenShake shaker;
 
     public static Action<int> UpdateUIScore;
-    public static Action<int> UpdateUIKillCounter;
+    public static Action<int,int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
     public static Action<int> UpdateUICombo;
     public static Action<int,int> UpdateUIHealth;
     public static Action LoseCondition;
+    public static Action OnWinCondition;
 
     [SerializeField] List<Transform> scapePoints;
  
     private void Start()
     {
         shaker = Camera.main.GetComponent<ScreenShake>();
+        UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
     }
     // Update is called once per frame
     private void OnEnable()
@@ -41,11 +44,11 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         Weapon.ResetMultiplier += UpdateMultiplier;
 
         OnHitShieldEnemy.OnTakeDamage += AddScore;
-        OnHitShieldEnemy.OnKill += AddKill;
+        OnHitShieldEnemy.OnKill += OnEnemyKill;
         OnHitScaredEnemy.OnTakeDamage += AddScore;
-        OnHitScaredEnemy.OnKill += AddKill;
+        OnHitScaredEnemy.OnKill += OnEnemyKill;
         OnHitBasicEnemy.OnTakeDamage += AddScore;
-        OnHitBasicEnemy.OnKill += AddKill;
+        OnHitBasicEnemy.OnKill += OnEnemyKill;
 
         DestroyableWall.OnTakeDamage += AddScore;
         ExplosiveBarrel.OnTakeDamage += AddScore;
@@ -55,11 +58,11 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         ExplosiveBarrel.OnTakeDamage -= AddScore;
         DestroyableWall.OnTakeDamage -= AddScore;
 
-        OnHitBasicEnemy.OnKill -= AddKill;
+        OnHitBasicEnemy.OnKill -= OnEnemyKill;
         OnHitBasicEnemy.OnTakeDamage -= AddScore;
-        OnHitScaredEnemy.OnKill -= AddKill;
+        OnHitScaredEnemy.OnKill -= OnEnemyKill;
         OnHitScaredEnemy.OnTakeDamage -= AddScore;
-        OnHitShieldEnemy.OnKill -= AddKill;
+        OnHitShieldEnemy.OnKill -= OnEnemyKill;
         OnHitShieldEnemy.OnTakeDamage -= AddScore;
 
         Weapon.ResetMultiplier -= UpdateMultiplier;
@@ -90,11 +93,15 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         score += addScore * multiplier;
         UpdateUIScore?.Invoke(score);
     }
-    public void AddKill()
+    public void OnEnemyKill()
     {
         killCounter++;
-        UpdateUIKillCounter?.Invoke(killCounter);
+        UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateMultiplier(true);
+        if(killCounter == targetToKill)
+        {
+            OnWinCondition?.Invoke();
+        }
     }
     public void OnHitPlayer(int damage)
     {

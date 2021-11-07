@@ -2694,6 +2694,7 @@ MonoBehaviour:
   maxMultiplier: 5
   health: 3
   killCounter: 0
+  targetToKill: 5
   timer: 60
   barrelPositions:
   - {fileID: 284512193}
