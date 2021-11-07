@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class LevelManager : MonoBehaviour
+public class LevelManager : MonoBehaviourSingleton<LevelManager>
 {
     int maxHealth;
     [SerializeField] string testLoadLevel;
@@ -24,25 +24,8 @@ public class LevelManager : MonoBehaviour
     public static Action<int,int> UpdateUIHealth;
     public static Action LoseCondition;
 
-    private static LevelManager instanceLevelManager;
-
     [SerializeField] List<Transform> scapePoints;
-    public static LevelManager Get()
-    {
-        return instanceLevelManager;
-    }
-    private void Awake()
-    {
-        maxHealth = health;
-        if (instanceLevelManager == null)
-        {
-            instanceLevelManager = this;
-        }
-        else if(instanceLevelManager != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+ 
     private void Start()
     {
         shaker = Camera.main.GetComponent<ScreenShake>();
