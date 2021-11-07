@@ -127,7 +127,7 @@ public class WeaponsController : MonoBehaviour
     }
     IEnumerator HitShoot()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         //NormalCrosshair?.Invoke();
         weapon[actualWeapon].SetNormalCrosshair();
     }
