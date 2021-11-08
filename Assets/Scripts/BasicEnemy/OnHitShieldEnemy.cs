@@ -29,7 +29,7 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
             OnTakeDamage?.Invoke(25);
             enemyState = true;
         }
-        else
+        else if(enemyState)
         {
             baseEnemy.InstanciateBlood();
             OnTakeDamage?.Invoke(score);

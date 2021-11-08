@@ -13,12 +13,6 @@ public class DestroyableWallStatesController : MonoBehaviour
     {
         DestroyableWall.setNewWallState += SetActiveWallState;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void SetActiveWallState()
     {
         wallStates[index].SetActive(false);
