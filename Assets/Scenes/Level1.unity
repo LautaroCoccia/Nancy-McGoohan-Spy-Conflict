@@ -2692,9 +2692,10 @@ MonoBehaviour:
   score: 0
   multiplier: 1
   maxMultiplier: 5
+  maxHealth: 5
   health: 3
   killCounter: 0
-  targetToKill: 5
+  targetToKill: 10
   timer: 60
   barrelPositions:
   - {fileID: 284512193}
