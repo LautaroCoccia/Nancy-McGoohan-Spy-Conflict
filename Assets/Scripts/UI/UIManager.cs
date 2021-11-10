@@ -134,7 +134,7 @@ public class UIManager : MonoBehaviour
     }
     void UpdateHealth(int health,int maxHealth)
     {
-        UIHealth.fillAmount =  ((float)health) / maxHealth;
+        UIHealth.fillAmount =  ((float)health) / (float)maxHealth;
     }
     void Lose()
     {

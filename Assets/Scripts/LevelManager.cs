@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviourSingleton<LevelManager>
 {
-    int maxHealth;
     [SerializeField] string testLoadLevel;
     [SerializeField] int score;
     [SerializeField] int multiplier = 1;
     [SerializeField] int maxMultiplier = 5;
+    [SerializeField]int maxHealth = 5;
     [SerializeField] int health;
     [SerializeField] int killCounter;
     [SerializeField] int targetToKill = 10;
@@ -32,6 +32,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     {
         shaker = Camera.main.GetComponent<ScreenShake>();
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
+        UpdateUIHealth?.Invoke(health,maxHealth);
     }
     // Update is called once per frame
     private void OnEnable()
