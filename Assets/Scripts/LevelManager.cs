@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class LevelManager : MonoBehaviourSingleton<LevelManager>
+public class LevelManager :  MonoBehaviour
 {
     [SerializeField] string testLoadLevel;
-    [SerializeField] int score;
+    
+    [SerializeField] int health = 3;
+    [SerializeField] int maxHealth = 5;
+    [SerializeField] float timer = 60;
+
     [SerializeField] int multiplier = 1;
     [SerializeField] int maxMultiplier = 5;
-    [SerializeField]int maxHealth = 5;
-    [SerializeField] int health;
     [SerializeField] int killCounter;
     [SerializeField] int targetToKill = 10;
-    [SerializeField] float timer;
+
     [SerializeField] List<ObstacleInfo> barrelPositions;
     
     ScreenShake shaker;
 
-    public static Action<int> UpdateUIScore;
+    
     public static Action<int,int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
     public static Action<int> UpdateUICombo;
@@ -26,6 +28,8 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     public static Action LoseCondition;
     public static Action OnWinCondition;
 
+    public static Action<int> OnAddScore;
+    public static Action<int> OnResetScore;
     [SerializeField] List<Transform> scapePoints;
  
     private void Start()
@@ -33,6 +37,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         shaker = Camera.main.GetComponent<ScreenShake>();
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateUIHealth?.Invoke(health,maxHealth);
+        OnResetScore?.Invoke(0);
     }
     // Update is called once per frame
     private void OnEnable()
@@ -91,8 +96,9 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     }
     public void AddScore(int addScore)
     {
-        score += addScore * multiplier;
-        UpdateUIScore?.Invoke(score);
+
+        //score += addScore * multiplier;
+        OnAddScore?.Invoke(addScore * multiplier);
     }
     public void OnEnemyKill()
     {
