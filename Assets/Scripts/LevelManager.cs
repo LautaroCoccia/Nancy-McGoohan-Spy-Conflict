@@ -8,7 +8,7 @@ public class LevelManager :  MonoBehaviour
     [SerializeField] string testLoadLevel;
     
     [SerializeField] int health = 3;
-    [SerializeField] int maxHealth = 5;
+    [SerializeField] int maxHealth = 3;
     [SerializeField] float timer = 60;
 
     [SerializeField] int multiplier = 1;

@@ -2734,7 +2734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testLoadLevel: Level1
   health: 3
-  maxHealth: 5
+  maxHealth: 3
   timer: 60
   multiplier: 1
   maxMultiplier: 5
