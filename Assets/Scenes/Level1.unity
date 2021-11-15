@@ -2776,6 +2776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseLayer: {fileID: 1925266307}
+  popUp:
+  - {fileID: 1954241765}
 --- !u!1 &700636240
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,7 +5382,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 694394553}
         m_MethodName: PuaseChange
         m_Mode: 1
         m_Arguments:
