@@ -5,6 +5,7 @@ public class Pause : MonoBehaviour
 {
     static bool isPaused;
     public GameObject pauseLayer;
+    public GameObject[] popUp;
     private void OnEnable()
     {
         isPaused = false;
@@ -28,6 +29,10 @@ public class Pause : MonoBehaviour
             pauseLayer.SetActive(false);
             Time.timeScale = 1.0f;
             isPaused = false;
+            foreach(GameObject a in popUp)
+            {
+                a.SetActive(false);
+            }
         }
     }
     public static bool GetPause()
