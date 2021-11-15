@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
         Weapon.OutOfAmmoCrosshair += OnOutOfAmmo;
         Weapon.HitCrosshair += OnEnemyHit;
         Weapon.NormalCrosshair += OnNormal;
-        LevelManager.UpdateUIScore += UpdateScore;
+        ScoreManager.UpdateUIScore += UpdateScore;
         LevelManager.UpdateUIKillCounter += UpdateKillCounter;
         LevelManager.UpdateUITimer += UpdateTimer;
         LevelManager.UpdateUICombo += UpdateCombo;
@@ -59,7 +59,7 @@ public class UIManager : MonoBehaviour
         Weapon.OutOfAmmoCrosshair -= OnOutOfAmmo;
         Weapon.HitCrosshair -= OnEnemyHit;
         Weapon.NormalCrosshair -= OnNormal;
-        LevelManager.UpdateUIScore -= UpdateScore;
+        ScoreManager.UpdateUIScore -= UpdateScore;
         LevelManager.UpdateUIKillCounter -= UpdateKillCounter;
         LevelManager.UpdateUITimer -= UpdateTimer;
         LevelManager.UpdateUICombo -= UpdateCombo;
@@ -134,7 +134,7 @@ public class UIManager : MonoBehaviour
     }
     void UpdateHealth(int health,int maxHealth)
     {
-        UIHealth.fillAmount =  ((float)health) / maxHealth;
+        UIHealth.fillAmount =  ((float)health) / (float)maxHealth;
     }
     void Lose()
     {
