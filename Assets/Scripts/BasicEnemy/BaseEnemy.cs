@@ -15,7 +15,7 @@ public class BaseEnemy : StateEnemy
     [SerializeField] [Range(0, 100)] protected int probToHit = 0;
     [SerializeField] List<ObstacleInfo> barrelPositions;
     const float positionCorrectionForSorting = 0.2f;
-
+    Transform actualCoverTransform;
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
@@ -35,6 +35,7 @@ public class BaseEnemy : StateEnemy
     protected override void Update()
     {
         base.Update();
+        LostCover();
     }
     protected override IEnumerator Choice()
     {
@@ -49,14 +50,15 @@ public class BaseEnemy : StateEnemy
         switch(UnityEngine.Random.Range(0,101))
         {
             case int n when n >= (probToShoot + probToSpecial):
-                state = State.move;
-                SelectCoverPosition(barrelPositions);
-                animator.SetBool("IsMoving", true);
+                SelectCoverAndMove();
                 break;
             case int n when n < probToShoot:
-                state = State.uncover;
-                SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
-                animator.SetBool("IsMoving", true);
+                if (actualCoverTransform)
+                {
+                    state = State.uncover;
+                    SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
+                    animator.SetBool("IsMoving", true);
+                }
                 break;
             case int n when n < (probToShoot + probToSpecial) && n> probToShoot
             && !switchTimerVsProbSpecial && probToSpecial!=0:
@@ -66,6 +68,21 @@ public class BaseEnemy : StateEnemy
         }
         choising = false;
     }
+    void SelectCoverAndMove()
+    {
+        state = State.move;
+        SelectCoverPosition(barrelPositions);
+        animator.SetBool("IsMoving", true);
+    }
+    void LostCover()
+    {
+        if (!actualCoverTransform)
+        {
+            StopCoroutine(Choice());
+            choising = false;
+            SelectCoverAndMove();
+        }
+    }
     public void SetObstaclesList(List<ObstacleInfo> obstacles)
     {
         barrelPositions = obstacles;
@@ -74,6 +91,7 @@ public class BaseEnemy : StateEnemy
                               barrelPositions[transformIndex].transform.position.y + positionCorrectionForSorting,
                               transform.position.z);
         actualCover = nextPos;
+        actualCoverTransform = barrelPositions[transformIndex].transform;
     }
 
 
@@ -115,7 +133,7 @@ public class BaseEnemy : StateEnemy
     }
     protected override void SpecialAction()
     {
-        if (specialSkill != null)
+        if (!specialSkill)
         {
             if(specialSkill.Skill())
             {
@@ -144,6 +162,7 @@ public class BaseEnemy : StateEnemy
         } while (aux == nextPos);
         nextPos = aux;
         actualCover = aux;
+        actualCoverTransform = barrelPositions[transformIndex].transform;
     }
     protected void SelectUncoverPosition(List<Transform> position)
     {
