@@ -31,7 +31,8 @@ public class LevelManager :  MonoBehaviour
     public static Action<int> OnAddScore;
     public static Action<int> OnResetScore;
     [SerializeField] List<Transform> scapePoints;
- 
+    [SerializeField] List<Transform> IntermediatePoints;
+
     private void Start()
     {
         shaker = Camera.main.GetComponent<ScreenShake>();
@@ -45,6 +46,7 @@ public class LevelManager :  MonoBehaviour
         ItemHeal.OnHealPlayer+= HealPlayer;
         BaseEnemy.OnHitPlayer += OnHitPlayer;
         EnemySpawner.getOsbstaclesInfoAction += GetObstacles;
+        EnemySpawner.getIntermediatePointAction += GetIntermediatePoints;
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter += GetScapePoints;
         Weapon.ResetMultiplier += UpdateMultiplier;
@@ -75,6 +77,7 @@ public class LevelManager :  MonoBehaviour
         ScaredSpecial.scapePointsGetter -= GetScapePoints;
         DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
         EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
+        EnemySpawner.getIntermediatePointAction -= GetIntermediatePoints;
         BaseEnemy.OnHitPlayer -= OnHitPlayer;
         ItemHeal.OnHealPlayer -= HealPlayer;
     }
@@ -149,6 +152,10 @@ public class LevelManager :  MonoBehaviour
     List<Transform> GetScapePoints()
     {
         return scapePoints;
+    }
+    List<Transform> GetIntermediatePoints()
+    {
+        return IntermediatePoints;
     }
     void UpdateMultiplier(bool hit)
     {

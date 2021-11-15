@@ -19,17 +19,14 @@ public class EnemySpawner : MonoBehaviour
 
     public delegate List<ObstacleInfo> GetOsbstaclesInfoAction();
     public static GetOsbstaclesInfoAction getOsbstaclesInfoAction;
+    public delegate List<Transform> GetIntermediatePointAction();
+    public static GetIntermediatePointAction getIntermediatePointAction;
 
     const int normalEnemy = 0;
     const int shieldEnemy = 1;
     const int scaredEnemy = 2;
     public static Action specialSet;
-    private void OnEnable()
-    {
-    }
-    private void OnDisable()
-    {
-    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject newEnemy = Instantiate(enemyPrefab[aux]);
         newEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, newEnemy.transform.position.z);
-        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles());
+        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles(),GetIntermediatePoints());
         
         enemiesAlive++;
 
@@ -78,4 +75,9 @@ public class EnemySpawner : MonoBehaviour
     {
         return getOsbstaclesInfoAction?.Invoke();
     }
+    List<Transform> GetIntermediatePoints()
+    {
+        return getIntermediatePointAction?.Invoke();
+    }
+    
 }

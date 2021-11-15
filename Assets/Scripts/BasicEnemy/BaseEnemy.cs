@@ -14,8 +14,11 @@ public class BaseEnemy : StateEnemy
     [SerializeField] int damage;
     [SerializeField] [Range(0, 100)] protected int probToHit = 0;
     [SerializeField] List<ObstacleInfo> barrelPositions;
-    const float positionCorrectionForSorting = 0.2f;
+    [SerializeField] List<Transform> intermediateSpots;
+    const float positionCorrectionForSorting = 0.7f;
     Transform actualCoverTransform;
+    Vector3 intermediatePosition;
+    bool intermediateMove;
     Vector3 nextPos;
     Vector3 actualCover;
     int transformIndex;
@@ -30,6 +33,7 @@ public class BaseEnemy : StateEnemy
     {
         animator.SetBool("IsMoving", true);
         base.Start();
+        intermediateMove = false;
     }
     // Update is called once per frame
     protected override void Update()
@@ -83,13 +87,14 @@ public class BaseEnemy : StateEnemy
             SelectCoverAndMove();
         }
     }
-    public void SetObstaclesList(List<ObstacleInfo> obstacles)
+    public void SetObstaclesList(List<ObstacleInfo> obstacles,List<Transform> intermediatesSpotL)
     {
+        intermediateSpots = intermediatesSpotL;
         barrelPositions = obstacles;
         transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
         nextPos = new Vector3(barrelPositions[transformIndex].transform.position.x,
-                              barrelPositions[transformIndex].transform.position.y + positionCorrectionForSorting,
-                              transform.position.z);
+                              barrelPositions[transformIndex].transform.position.y ,
+                              barrelPositions[transformIndex].transform.position.z + positionCorrectionForSorting);
         actualCover = nextPos;
         actualCoverTransform = barrelPositions[transformIndex].transform;
     }
@@ -98,14 +103,51 @@ public class BaseEnemy : StateEnemy
     
     protected override void Move()
     {
-         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-        if (transform.position == nextPos && state != State.uncover) state = State.choice;
+       
+
+        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+        if (transform.position == nextPos && !intermediateMove)
+        {
+            state = State.choice;
+        }
+        else if(transform.position == nextPos && intermediateMove)
+        {
+            SelectIntermediate();
+        }
+
+    }
+    void SelectIntermediate()
+    {
+        Vector3 aux;
+        if (intermediateMove)
+        {
+            aux = intermediatePosition;
+            intermediatePosition = nextPos;
+            nextPos = aux;
+            intermediateMove = false;
+        }
+
+        foreach (Transform a in intermediateSpots)
+        {
+            if (Vector3.Distance(intermediatePosition, transform.position) >= Vector3.Distance(a.position, transform.position) &&
+                Vector3.Distance(nextPos,transform.position) >= Vector3.Distance(a.position,nextPos) && intermediatePosition != transform.position)
+            {
+                intermediatePosition = a.position;
+                intermediateMove = true;
+            }
+        }
+        if (intermediateMove)
+        {
+            aux = intermediatePosition;
+            intermediatePosition = nextPos;
+            nextPos = aux;
+        }
 
     }
     protected override void Uncover()
     {
-        Move();
-        if(transform.position == nextPos) state = State.shoot;
+        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+        if (transform.position == nextPos) state = State.shoot;
     }
     protected override IEnumerator Shoot()
     {
@@ -157,11 +199,12 @@ public class BaseEnemy : StateEnemy
                 transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
             }
             aux = new Vector3(barrelPositions[transformIndex].transform.position.x,
-                              barrelPositions[transformIndex].transform.position.y + positionCorrectionForSorting,
-                          transform.position.z);
+                              barrelPositions[transformIndex].transform.position.y ,
+                          barrelPositions[transformIndex].transform.position.z + positionCorrectionForSorting);
         } while (aux == nextPos);
         nextPos = aux;
         actualCover = aux;
+        SelectIntermediate();
         actualCoverTransform = barrelPositions[transformIndex].transform;
     }
     protected void SelectUncoverPosition(List<Transform> position)
