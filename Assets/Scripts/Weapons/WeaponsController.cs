@@ -35,32 +35,36 @@ public class WeaponsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(weapon[actualWeapon].fireTime < weapon[actualWeapon].fireRate)
+        if (!Pause.GetPause())
         {
-            weapon[actualWeapon].fireTime += Time.deltaTime;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != (int)WeaponType.Gun)
-        {
-            SelectWeapon(WeaponType.Gun);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != (int)WeaponType.SubmachineGun)
-        {
-            SelectWeapon(WeaponType.SubmachineGun);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != (int)WeaponType.Shotgun)
-        {
-            SelectWeapon(WeaponType.Shotgun);
-        }
 
-        if(weapon[actualWeapon].GetShootingMode())
-        {
-            TryShoot(weapon[actualWeapon].damageInfo);
-        }
+            if (weapon[actualWeapon].fireTime < weapon[actualWeapon].fireRate)
+            {
+                weapon[actualWeapon].fireTime += Time.deltaTime;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha1) && actualWeapon != (int)WeaponType.Gun)
+            {
+                SelectWeapon(WeaponType.Gun);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && actualWeapon != (int)WeaponType.SubmachineGun)
+            {
+                SelectWeapon(WeaponType.SubmachineGun);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && actualWeapon != (int)WeaponType.Shotgun)
+            {
+                SelectWeapon(WeaponType.Shotgun);
+            }
+
+            if (weapon[actualWeapon].GetShootingMode())
+            {
+                TryShoot(weapon[actualWeapon].damageInfo);
+            }
 
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            TryReload();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                TryReload();
+            }
         }
     }
     public void TryShoot(Weapon.DamageInfo damageInfo)
