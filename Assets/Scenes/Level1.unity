@@ -794,7 +794,7 @@ MonoBehaviour:
   probNormalSpawn: 45
   probShieldSpawn: 25
   probScaredSpawn: 7
-  maxEnemiesAlive: 1
+  maxEnemiesAlive: 10
   minTimeToSpawn: 3
   maxTimeToSpawn: 8
   actualTime: 10
@@ -5853,7 +5853,7 @@ MonoBehaviour:
   probNormalSpawn: 45
   probShieldSpawn: 25
   probScaredSpawn: 7
-  maxEnemiesAlive: 0
+  maxEnemiesAlive: 10
   minTimeToSpawn: 3
   maxTimeToSpawn: 8
   actualTime: 10
