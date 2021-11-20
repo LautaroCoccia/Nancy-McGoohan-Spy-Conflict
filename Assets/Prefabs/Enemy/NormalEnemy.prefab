@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 8773767922973273442}
   - component: {fileID: 2149584061558018804}
   - component: {fileID: -6423393353931640929}
+  - component: {fileID: 3790528284968251243}
   m_Layer: 8
   m_Name: EnemyTest
   m_TagString: Untagged
@@ -276,6 +277,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  intermediateSpots: []
   speed: 4.7
   specialSkill: {fileID: 0}
 --- !u!114 &-6423393353931640929
@@ -292,3 +294,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseEnemy: {fileID: 2149584061558018804}
   score: 100
+--- !u!50 &3790528284968251243
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500391456599187859}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

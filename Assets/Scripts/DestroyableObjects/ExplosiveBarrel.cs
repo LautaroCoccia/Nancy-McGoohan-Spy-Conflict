@@ -13,7 +13,7 @@ public class ExplosiveBarrel : BaseDestroyableObject, IHitable
         OnTakeDamage?.Invoke(score);
         if (lives == 0)
         {
-            GameObject obj = Instantiate(explotionPrefab);
+            GameObject obj = Instantiate(explotionPrefab,null);
             obj.transform.position = transform.position;
             Destroy(gameObject);
         }

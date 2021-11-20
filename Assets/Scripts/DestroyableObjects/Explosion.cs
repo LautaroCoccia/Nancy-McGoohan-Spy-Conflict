@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    float initialTime;
+    [SerializeField] bool destroy;
     [SerializeField] float explosionTime = 0.25f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        initialTime = explosionTime;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if(explosionTime>0)
+        if(destroy)
         {
             explosionTime -= Time.deltaTime;
+            if(explosionTime <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.gameObject.GetComponent<IHitable>().OnHit(Weapon.DamageInfo.strong);
     }
+    
 }
