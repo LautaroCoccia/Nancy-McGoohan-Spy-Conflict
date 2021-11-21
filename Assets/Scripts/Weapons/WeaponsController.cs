@@ -19,6 +19,9 @@ public class WeaponsController : MonoBehaviour
     [SerializeField] List<Weapon> weapon;
     
     public static Action<WeaponType> OnWeaponChanged;
+    public static Action<bool> OnSetReloadMode;
+    public static Action OnStartAnim;
+
     int actualWeapon = 0;
 
     // Start is called before the first frame update
@@ -117,8 +120,8 @@ public class WeaponsController : MonoBehaviour
     IEnumerator Reloading()
     {
         weapon[actualWeapon].isReloading = true;
-        AnimWeapons.OnSetReloadMode?.Invoke(true);
-        //AnimWeapons.OnStartAnim?.Invoke();
+        OnSetReloadMode?.Invoke(true);
+        OnStartAnim?.Invoke();
         yield return new WaitForSeconds(weapon[actualWeapon].reloadTime);
         weapon[actualWeapon].ammo = weapon[actualWeapon].maxAmmo;
         //ResetUIAmmo?.Invoke();
@@ -126,7 +129,7 @@ public class WeaponsController : MonoBehaviour
         //NormalCrosshair?.Invoke();
         weapon[actualWeapon].SetNormalCrosshair();
         weapon[actualWeapon].isReloading = false;
-        AnimWeapons.OnSetReloadMode?.Invoke(false);
+        OnSetReloadMode?.Invoke(false);
 
     }
     IEnumerator HitShoot()
