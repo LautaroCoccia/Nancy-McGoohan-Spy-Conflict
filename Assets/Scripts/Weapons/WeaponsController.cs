@@ -74,6 +74,7 @@ public class WeaponsController : MonoBehaviour
     {
         if (weapon[actualWeapon].ammo > 0)
         {
+            OnStartAnim?.Invoke();
             Vector3 mousePosition = weapon[actualWeapon].mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
