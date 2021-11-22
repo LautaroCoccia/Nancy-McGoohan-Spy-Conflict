@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1680928960468761819}
   - component: {fileID: 6752595413804420260}
   m_Layer: 8
-  m_Name: ScaredEnemyTest
+  m_Name: ScaredEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,12 +231,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: d94e2746c99989e45859265439c65f94, type: 3}
+  m_Sprite: {fileID: 6895495282096838205, guid: c84418b950e61d34bb87cdd81ec9f012,
+    type: 3}
   m_Color: {r: 0.81960785, g: 0.5200227, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.79, y: 2.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -250,7 +251,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7840294399970098416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 184c63e8d98fc4641acd9905527ebc3d, type: 2}
   m_CullingMode: 0
