@@ -15,6 +15,8 @@ public class Weapon : ScriptableObject
     public float reloadTime;
     public Camera mainCamera;
     public GameObject BulletHolePrefab;
+    public string shootWithAmmo;
+    public string shootWithinAmmo;
 
     public static Action ResetUIAmmo;
     public static Action<float> OnAmmoChange;
@@ -64,7 +66,6 @@ public class Weapon : ScriptableObject
                 return false;
         }
     }
-
     public void ResetAmmo()
     {
         ResetUIAmmo?.Invoke();

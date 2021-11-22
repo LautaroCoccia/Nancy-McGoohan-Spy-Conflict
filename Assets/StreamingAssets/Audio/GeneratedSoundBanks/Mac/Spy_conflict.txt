@@ -1,0 +1,43 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1050776119	Enemy_Shoot			\Default Work Unit\Enemy_Shoot	
+	1114964412	Start_Game			\Default Work Unit\Start_Game	
+	1201214677	Barrel_Exp			\Default Work Unit\Barrel_Exp	
+	1205999388	Enemy_Death			\Default Work Unit\Enemy_Death	
+	1256202815	Play			\Default Work Unit\Play	
+	1426687288	Reset_Points			\Default Work Unit\Reset_Points	
+	1699476403	Medkit_Spawn			\Default Work Unit\Medkit_Spawn	
+	1919779230	Shieldhit_Shotgun			\Default Work Unit\Shieldhit_Shotgun	
+	2135010670	Enemy3_Spawn			\Default Work Unit\Enemy3_Spawn	
+	2252910182	Multiplicate_Points			\Default Work Unit\Multiplicate_Points	
+	2698747613	Button_Press			\Default Work Unit\Button_Press	
+	3092587493	Pause			\Default Work Unit\Pause	
+	3507851084	Medkit_Heal			\Default Work Unit\Medkit_Heal	
+	3659999256	Nancy			\Default Work Unit\Nancy	
+	4055567060	Menu_music			\Default Work Unit\Menu_music	
+	4098783408	Wall_io			\Default Work Unit\Wall_io	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1588715066	Echoes_Linear	Wwise Delay			
+	2098638826	Underground_Parking1	Wwise Matrix Reverb			
+	4239446561	Dual_Filters_Narrow_Bandwidth	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	26424556	Medkit_Heal	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\ImpactHumanSmack_S08IM.336_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Medkit_Heal\Medkit_Heal		11530
+	84487921	Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_02	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_0BF33D97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_02		4574676
+	122099064	Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_01	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_1461ED6D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_01		4743064
+	122447314	Button_press	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\BulletFlyBy_S08WA.22_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button_Press\button_pass\Button_press		17704
+	132950992	GunshotPistol_BW_56911	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\GunshotPistol_BW.56911_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_One\Enemy_Shoot\GunshotPistol_BW_56911		436596
+	229699725	Fight, Impact, Punch, Body SND14128	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Fight, Impact, Punch, Body SND14128_D7DA6FBC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shieldhit_Shotgun\Fight, Impact, Punch, Body SND14128		49176
+	262381408	Fight, Impact, Punch, Low End SND0301_01	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Fight, Impact, Punch, Low End SND0301_EA5D1009.wem		\Actor-Mixer Hierarchy\Default Work Unit\Medkit_Spawn\Fight, Impact, Punch, Low End SND0301_01		57162
+	321377426	Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_D33494E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shieldhit_Shotgun\ShieldHit\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400		92560
+	484800104	Enemy_Hurt	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\HumanGrunt_S08HU.286_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shieldhit_Shotgun\Enemy_Hurt		35932
+	564759141	Enemy_Death	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\HumanGrunt_S08HU.271_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_One\Enemy_Death		91498
+	595036703	Ambience, Forest, Birds, Crow, Insects, Leaves SND1340	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_4C73A7E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340		3395940
+	635767430	GunshotPistol_BW_57207	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\GunshotPistol_BW.57207_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_One\Enemy_Shoot\GunshotPistol_BW_57207		341576
+	753406879	ExplosionBlast_S08WA_128	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\ExplosionBlast_S08WA.128_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Barrel_Exp\ExplosionBlast_S08WA_128		183962
+	795006853	ExplosionBlast_S08WA_107	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\ExplosionBlast_S08WA.107_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Barrel_Exp\ExplosionBlast_S08WA_107		296710
+	858434386	GunshotPistol_BW_57155	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\GunshotPistol_BW.57155_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_One\Enemy_Shoot\GunshotPistol_BW_57155		413076
+	865004759	Fight, Impact, Punch, Low End SND0301	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Fight, Impact, Punch, Low End SND0301_8BCA5614.wem		\Actor-Mixer Hierarchy\Default Work Unit\Medkit_Spawn\Fight, Impact, Punch, Low End SND0301		53408
+	1007403971	Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_01	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_8A605152.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shieldhit_Shotgun\ShieldHit\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_01		108976
+	1065864496	Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_02	D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\SFX\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_F5E1C553.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shieldhit_Shotgun\ShieldHit\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_02		114340
+

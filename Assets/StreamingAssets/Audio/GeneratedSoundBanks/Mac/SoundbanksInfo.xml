@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Users\matia\OneDrive\Escritorio\Nancy\Proyecto_vacio_Wwise\Proyecto_vacio_Wwise\TSDV-Practicas-Profesionales-III-Ruffo-Coccia_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="1814074688">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="3289967433">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="85412153" Name="ambience" ObjectPath="\Events\Default Work Unit\ambience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="84487921" Language="SFX">
+							<ShortName>Ambience, Forest, Birds, Crow, Insects, Leaves SND1340.wav</ShortName>
+							<Path>SFX\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_70C6DFB3.wem</Path>
+						</File>
+						<File Id="122099064" Language="SFX">
+							<ShortName>Ambience, Forest, Birds, Crow, Insects, Leaves SND1340.wav</ShortName>
+							<Path>SFX\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_D3A2E202.wem</Path>
+						</File>
+						<File Id="595036703" Language="SFX">
+							<ShortName>Ambience, Forest, Birds, Crow, Insects, Leaves SND1340.wav</ShortName>
+							<Path>SFX\Ambience, Forest, Birds, Crow, Insects, Leaves SND1340_D5294070.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1201214677" Name="barrel_exp" ObjectPath="\Events\Default Work Unit\barrel_exp" DurationType="OneShot" DurationMin="1.990855" DurationMax="3.363333">
+					<IncludedMemoryFiles>
+						<File Id="753406879" Language="SFX">
+							<ShortName>ExplosionBlast_S08WA.128.wav</ShortName>
+							<Path>SFX\ExplosionBlast_S08WA.128_10C4C929.wem</Path>
+						</File>
+						<File Id="795006853" Language="SFX">
+							<ShortName>ExplosionBlast_S08WA.107.wav</ShortName>
+							<Path>SFX\ExplosionBlast_S08WA.107_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="977454165" Name="button" ObjectPath="\Events\Default Work Unit\button" DurationType="OneShot" DurationMin="0.228416" DurationMax="0.414106">
+					<IncludedMemoryFiles>
+						<File Id="122447314" Language="SFX">
+							<ShortName>BulletFlyBy_S08WA.22.wav</ShortName>
+							<Path>SFX\BulletFlyBy_S08WA.22_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{7D27F9F3-E171-43BE-808F-F79CADCCFE8B}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D2F44CD9-9456-4097-8EFC-70B8605153B5}">
+							<Media>
+								<File Id="122447314"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7D27F9F3-E171-43BE-808F-F79CADCCFE8B}">
+							<Media>
+								<File Id="122447314"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2788216994" Name="cover" ObjectPath="\Events\Default Work Unit\cover" DurationType="OneShot" DurationMin="0.912535" DurationMax="1.574228">
+					<IncludedMemoryFiles>
+						<File Id="45049979" Language="SFX">
+							<ShortName>concrete impact.wav</ShortName>
+							<Path>SFX\concrete impact_10C4C929.wem</Path>
+						</File>
+						<File Id="476184984" Language="SFX">
+							<ShortName>13080 stone crushing hit.wav</ShortName>
+							<Path>SFX\13080 stone crushing hit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{54E06DB1-1BD3-4817-B6F5-1CBE18BB46E6}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{9DD53CF4-FFB5-45A0-B514-5350A087432F}">
+							<Media>
+								<File Id="476184984"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{54E06DB1-1BD3-4817-B6F5-1CBE18BB46E6}">
+							<Media>
+								<File Id="45049979"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1205999388" Name="enemy_death" ObjectPath="\Events\Default Work Unit\enemy_death" DurationType="OneShot" DurationMin="0.978483" DurationMax="1.163619">
+					<IncludedMemoryFiles>
+						<File Id="564759141" Language="SFX">
+							<ShortName>HumanGrunt_S08HU.271.wav</ShortName>
+							<Path>SFX\HumanGrunt_S08HU.271_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1050776119" Name="enemy_shoot" ObjectPath="\Events\Default Work Unit\enemy_shoot" DurationType="OneShot" DurationMin="1.992738" DurationMax="3.209251">
+					<IncludedMemoryFiles>
+						<File Id="132950992" Language="SFX">
+							<ShortName>GunshotPistol_BW.56911.wav</ShortName>
+							<Path>SFX\GunshotPistol_BW.56911_10C4C929.wem</Path>
+						</File>
+						<File Id="635767430" Language="SFX">
+							<ShortName>GunshotPistol_BW.57207.wav</ShortName>
+							<Path>SFX\GunshotPistol_BW.57207_10C4C929.wem</Path>
+						</File>
+						<File Id="858434386" Language="SFX">
+							<ShortName>GunshotPistol_BW.57155.wav</ShortName>
+							<Path>SFX\GunshotPistol_BW.57155_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3507851084" Name="medkit_heal" ObjectPath="\Events\Default Work Unit\medkit_heal" DurationType="OneShot" DurationMin="0.086265" DurationMax="0.096829">
+					<IncludedMemoryFiles>
+						<File Id="26424556" Language="SFX">
+							<ShortName>ImpactHumanSmack_S08IM.336.wav</ShortName>
+							<Path>SFX\ImpactHumanSmack_S08IM.336_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1699476403" Name="medkit_spawn" ObjectPath="\Events\Default Work Unit\medkit_spawn" DurationType="OneShot" DurationMin="0.379040" DurationMax="0.425458">
+					<IncludedMemoryFiles>
+						<File Id="262381408" Language="SFX">
+							<ShortName>Fight, Impact, Punch, Low End SND0301.wav</ShortName>
+							<Path>SFX\Fight, Impact, Punch, Low End SND0301_87366955.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4055567060" Name="menu_music" ObjectPath="\Events\Default Work Unit\menu_music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1005594835" Language="SFX">
+							<ShortName>Nancy1.wav</ShortName>
+							<Path>SFX\Nancy1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2252910182" Name="multiplicate_points" ObjectPath="\Events\Default Work Unit\multiplicate_points" DurationType="OneShot" DurationMin="1.872698" DurationMax="1.872698">
+					<IncludedMemoryFiles>
+						<File Id="552150403" Language="SFX">
+							<ShortName>Puzzle_Game_PowerUp_Light_03.wav</ShortName>
+							<Path>SFX\Puzzle_Game_PowerUp_Light_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="620878633" Name="music_gameplay" ObjectPath="\Events\Default Work Unit\music_gameplay" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="6990505" Language="SFX">
+							<ShortName>Failure 1.wav</ShortName>
+							<Path>SFX\Failure 1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="721732219" Language="SFX">
+							<ShortName>Placeholder_Music.wav</ShortName>
+							<Path>SFX\Placeholder_Music_D79FB2B7.wem</Path>
+						</File>
+						<File Id="815043732" Language="SFX">
+							<ShortName>Game Win Horns .wav</ShortName>
+							<Path>SFX\Game Win Horns _D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{E0082150-EE83-4F9F-82D8-547B7CBD8D0F}">
+							<Media>
+								<File Id="721732219"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{24F396E2-9756-4172-BD81-41CF45870BBD}">
+							<Media>
+								<File Id="6990505"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{D2FF3F48-2625-4CAF-B933-F9E9E5D04309}">
+							<Media>
+								<File Id="815043732"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3659999256" Name="nancy" ObjectPath="\Events\Default Work Unit\nancy" DurationType="OneShot" DurationMin="0.299422" DurationMax="0.741551">
+					<IncludedMemoryFiles>
+						<File Id="484800104" Language="SFX">
+							<ShortName>HumanGrunt_S08HU.286.wav</ShortName>
+							<Path>SFX\HumanGrunt_S08HU.286_10C4C929.wem</Path>
+						</File>
+						<File Id="564759141" Language="SFX">
+							<ShortName>HumanGrunt_S08HU.271.wav</ShortName>
+							<Path>SFX\HumanGrunt_S08HU.271_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{2C84FFCE-F5E4-495E-9183-14E7B3B202C9}">
+							<Media>
+								<File Id="484800104"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C1F0C902-2E3C-495E-A285-65EDA9696D44}">
+							<Media>
+								<File Id="564759141"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="528278262" Name="pause_game" ObjectPath="\Events\Default Work Unit\pause_game" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="456382354" Name="reload" ObjectPath="\Events\Default Work Unit\reload" DurationType="OneShot" DurationMin="0.698614" DurationMax="0.919322">
+					<IncludedMemoryFiles>
+						<File Id="177442013" Language="SFX">
+							<ShortName>Thompson_Shots_ODC-0045-409-01.wav</ShortName>
+							<Path>SFX\Thompson_Shots_ODC-0045-409-01_ACFBE6CB.wem</Path>
+						</File>
+						<File Id="402094257" Language="SFX">
+							<ShortName>Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280.wav</ShortName>
+							<Path>SFX\Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280_FEC5983D.wem</Path>
+						</File>
+						<File Id="489086006" Language="SFX">
+							<ShortName>Thompson_Shots_ODC-0045-409-01.wav</ShortName>
+							<Path>SFX\Thompson_Shots_ODC-0045-409-01_28976508.wem</Path>
+						</File>
+						<File Id="558451484" Language="SFX">
+							<ShortName>Guns, Handle, Revolver, Load Bullet  SND5996.wav</ShortName>
+							<Path>SFX\Guns, Handle, Revolver, Load Bullet  SND5996_BFD50E6D.wem</Path>
+						</File>
+						<File Id="652054360" Language="SFX">
+							<ShortName>Guns, Handle, Revolver, Load Bullet  SND5996.wav</ShortName>
+							<Path>SFX\Guns, Handle, Revolver, Load Bullet  SND5996_F3307519.wem</Path>
+						</File>
+						<File Id="724736257" Language="SFX">
+							<ShortName>Guns, Handle, Revolver, Load Bullet  SND5996.wav</ShortName>
+							<Path>SFX\Guns, Handle, Revolver, Load Bullet  SND5996_7A82108A.wem</Path>
+						</File>
+						<File Id="974715545" Language="SFX">
+							<ShortName>Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280.wav</ShortName>
+							<Path>SFX\Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280_1C47213E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{E1F75ED9-295A-46D9-9484-46702010E4C6}">
+							<Media>
+								<File Id="558451484"/>
+								<File Id="652054360"/>
+								<File Id="724736257"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B77D9909-EB65-4271-9E79-7BE24798473A}">
+							<Media>
+								<File Id="402094257"/>
+								<File Id="974715545"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{11C2A3B1-ED3B-4B2A-BCE4-C1DC101B3F10}">
+							<Media>
+								<File Id="177442013"/>
+								<File Id="489086006"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1426687288" Name="reset_points" ObjectPath="\Events\Default Work Unit\reset_points" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1565052233" Name="resume_game" ObjectPath="\Events\Default Work Unit\resume_game" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1161967626" Name="shield" ObjectPath="\Events\Default Work Unit\shield" DurationType="OneShot" DurationMin="0.674580" DurationMax="1.037400">
+					<IncludedMemoryFiles>
+						<File Id="229699725" Language="SFX">
+							<ShortName>Fight, Impact, Punch, Body SND14128.wav</ShortName>
+							<Path>SFX\Fight, Impact, Punch, Body SND14128_78F5AC87.wem</Path>
+						</File>
+						<File Id="321377426" Language="SFX">
+							<ShortName>Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400.wav</ShortName>
+							<Path>SFX\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_B3B0B6CA.wem</Path>
+						</File>
+						<File Id="484800104" Language="SFX">
+							<ShortName>HumanGrunt_S08HU.286.wav</ShortName>
+							<Path>SFX\HumanGrunt_S08HU.286_10C4C929.wem</Path>
+						</File>
+						<File Id="630849015" Language="SFX">
+							<ShortName>Fight, Impact, Punch, Body SND14128.wav</ShortName>
+							<Path>SFX\Fight, Impact, Punch, Body SND14128_BF47EFC7.wem</Path>
+						</File>
+						<File Id="1007403971" Language="SFX">
+							<ShortName>Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400.wav</ShortName>
+							<Path>SFX\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_C983B00D.wem</Path>
+						</File>
+						<File Id="1065864496" Language="SFX">
+							<ShortName>Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400.wav</ShortName>
+							<Path>SFX\Bullets, Impact, Metal, Heavy, Powerful, Hard SND6400_0B8AE3C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{E30367E3-57E0-4319-B6CC-F9DA3CD21BC7}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{7479765B-36FB-4EEF-9467-BE34178F348D}">
+							<Media>
+								<File Id="229699725"/>
+								<File Id="321377426"/>
+								<File Id="484800104"/>
+								<File Id="1007403971"/>
+								<File Id="1065864496"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E30367E3-57E0-4319-B6CC-F9DA3CD21BC7}">
+							<Media>
+								<File Id="630849015"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3038207054" Name="shoot" ObjectPath="\Events\Default Work Unit\shoot" DurationType="OneShot" DurationMin="0.175289" DurationMax="2.007125">
+					<IncludedMemoryFiles>
+						<File Id="159627808" Language="SFX">
+							<ShortName>Guns, Pistol, Revolver, Shot x4 SND6028.wav</ShortName>
+							<Path>SFX\Guns, Pistol, Revolver, Shot x4 SND6028_0A4A7316.wem</Path>
+						</File>
+						<File Id="334992005" Language="SFX">
+							<ShortName>Thompson_Shots_ODC-0045-340.wav</ShortName>
+							<Path>SFX\Thompson_Shots_ODC-0045-340_40430D85.wem</Path>
+						</File>
+						<File Id="442438919" Language="SFX">
+							<ShortName>Thompson_Shots_ODC-0045-340.wav</ShortName>
+							<Path>SFX\Thompson_Shots_ODC-0045-340_07BA2F78.wem</Path>
+						</File>
+						<File Id="547588362" Language="SFX">
+							<ShortName>Guns, Pistol, Revolver, Shot x4 SND6028.wav</ShortName>
+							<Path>SFX\Guns, Pistol, Revolver, Shot x4 SND6028_B5535666.wem</Path>
+						</File>
+						<File Id="589548535" Language="SFX">
+							<ShortName>Pistol Out of Ammo (double click).wav</ShortName>
+							<Path>SFX\Pistol Out of Ammo (double click)_2920BF4B.wem</Path>
+						</File>
+						<File Id="688186514" Language="SFX">
+							<ShortName>Guns, Shotgun, Benelli M4, Various Shots 03 SND35510.wav</ShortName>
+							<Path>SFX\Guns, Shotgun, Benelli M4, Various Shots 03 SND35510_A77B2218.wem</Path>
+						</File>
+						<File Id="725020788" Language="SFX">
+							<ShortName>Guns, Pistol, Revolver, Shot x4 SND6028.wav</ShortName>
+							<Path>SFX\Guns, Pistol, Revolver, Shot x4 SND6028_B073F6C4.wem</Path>
+						</File>
+						<File Id="894489867" Language="SFX">
+							<ShortName>Guns, Pistol, Revolver, Shot x4 SND6028.wav</ShortName>
+							<Path>SFX\Guns, Pistol, Revolver, Shot x4 SND6028_73004949.wem</Path>
+						</File>
+						<File Id="1003192659" Language="SFX">
+							<ShortName>Thompson_Shots_ODC-0045-340.wav</ShortName>
+							<Path>SFX\Thompson_Shots_ODC-0045-340_9FDA8FA2.wem</Path>
+						</File>
+						<File Id="1062108741" Language="SFX">
+							<ShortName>Pistol Out of Ammo (single click).wav</ShortName>
+							<Path>SFX\Pistol Out of Ammo (single click)_10C4C929.wem</Path>
+						</File>
+						<File Id="1063628553" Language="SFX">
+							<ShortName>Guns, Shotgun, Benelli M4, Various Shots 03 SND35510.wav</ShortName>
+							<Path>SFX\Guns, Shotgun, Benelli M4, Various Shots 03 SND35510_B8A005D9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D0FE347D-6C13-4961-AC6C-A8F57557D08B}">
+							<Media>
+								<File Id="589548535"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{9D9C679B-9D17-45A1-9F63-0CEE9571BC91}">
+							<Media>
+								<File Id="1062108741"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6816181E-1D4D-4FBA-973E-58C8C0DB907A}">
+							<Media>
+								<File Id="159627808"/>
+								<File Id="547588362"/>
+								<File Id="725020788"/>
+								<File Id="894489867"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{012DABBD-00C3-4D1B-8A4A-2430A9C0560F}">
+							<Media>
+								<File Id="688186514"/>
+								<File Id="1063628553"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6CE6B388-763A-486A-96C1-9B14040A972A}">
+							<Media>
+								<File Id="1062108741"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CBD1FE30-27AA-4AD4-AE3B-349C0122541B}">
+							<Media>
+								<File Id="334992005"/>
+								<File Id="442438919"/>
+								<File Id="1003192659"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="452547817" Name="stop_all" ObjectPath="\Events\Default Work Unit\stop_all" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1139157970" Name="timer_end" ObjectPath="\Events\Default Work Unit\timer_end" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
+					<IncludedMemoryFiles>
+						<File Id="972261799" Language="SFX">
+							<ShortName>ExplosionBomb CRB01_66_1.wav</ShortName>
+							<Path>SFX\ExplosionBomb CRB01_66_1_8347025C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="2052505282" Name="timer_intensity" ObjectPath="\Game Parameters\Default Work Unit\timer_intensity"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="977454165" Name="button" ObjectPath="\Switches\Default Work Unit\button" GUID="{97098040-2930-4484-AB07-B91802098812}">
+					<Switches>
+						<Switch Id="2698747613" Name="button_press" ObjectPath="\Switches\Default Work Unit\button\button_press" GUID="{7D27F9F3-E171-43BE-808F-F79CADCCFE8B}"/>
+						<Switch Id="3228713348" Name="button_start" ObjectPath="\Switches\Default Work Unit\button\button_start" GUID="{D2F44CD9-9456-4097-8EFC-70B8605153B5}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1161967626" Name="shield" ObjectPath="\Switches\Default Work Unit\shield" GUID="{1609FD4A-2303-452D-8396-1AF71413C9C2}">
+					<Switches>
+						<Switch Id="1919779230" Name="shieldhit_shotgun" ObjectPath="\Switches\Default Work Unit\shield\shieldhit_shotgun" GUID="{7479765B-36FB-4EEF-9467-BE34178F348D}"/>
+						<Switch Id="754264695" Name="shieldhit_wrong" ObjectPath="\Switches\Default Work Unit\shield\shieldhit_wrong" GUID="{E30367E3-57E0-4319-B6CC-F9DA3CD21BC7}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1543455291" Name="gun_reload" ObjectPath="\Switches\Default Work Unit\gun_reload" GUID="{860D5883-3FC5-4846-8317-843733CBEFAC}">
+					<Switches>
+						<Switch Id="1068215004" Name="pistol_reload" ObjectPath="\Switches\Default Work Unit\gun_reload\pistol_reload" GUID="{E1F75ED9-295A-46D9-9484-46702010E4C6}"/>
+						<Switch Id="3479070331" Name="shotgun_reload" ObjectPath="\Switches\Default Work Unit\gun_reload\shotgun_reload" GUID="{B77D9909-EB65-4271-9E79-7BE24798473A}"/>
+						<Switch Id="2642532248" Name="smg_reload" ObjectPath="\Switches\Default Work Unit\gun_reload\smg_reload" GUID="{11C2A3B1-ED3B-4B2A-BCE4-C1DC101B3F10}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2788216994" Name="cover" ObjectPath="\Switches\Default Work Unit\cover" GUID="{38B1D81F-9C55-4A34-8A25-E861C57DB1DC}">
+					<Switches>
+						<Switch Id="65301329" Name="cover_destroy" ObjectPath="\Switches\Default Work Unit\cover\cover_destroy" GUID="{9DD53CF4-FFB5-45A0-B514-5350A087432F}"/>
+						<Switch Id="3852950618" Name="cover_break" ObjectPath="\Switches\Default Work Unit\cover\cover_break" GUID="{54E06DB1-1BD3-4817-B6F5-1CBE18BB46E6}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3498111913" Name="gun_shoot" ObjectPath="\Switches\Default Work Unit\gun_shoot" GUID="{56C0E223-C1C3-4EE5-A349-47F5DC73D1F8}">
+					<Switches>
+						<Switch Id="2124970216" Name="pistol_shoot" ObjectPath="\Switches\Default Work Unit\gun_shoot\pistol_shoot" GUID="{6816181E-1D4D-4FBA-973E-58C8C0DB907A}"/>
+						<Switch Id="3481974498" Name="pistol_empty" ObjectPath="\Switches\Default Work Unit\gun_shoot\pistol_empty" GUID="{9D9C679B-9D17-45A1-9F63-0CEE9571BC91}"/>
+						<Switch Id="2040071657" Name="shotgun_shoot" ObjectPath="\Switches\Default Work Unit\gun_shoot\shotgun_shoot" GUID="{012DABBD-00C3-4D1B-8A4A-2430A9C0560F}"/>
+						<Switch Id="2627359935" Name="shotgun_empty" ObjectPath="\Switches\Default Work Unit\gun_shoot\shotgun_empty" GUID="{6CE6B388-763A-486A-96C1-9B14040A972A}"/>
+						<Switch Id="1025907732" Name="smg_shoot" ObjectPath="\Switches\Default Work Unit\gun_shoot\smg_shoot" GUID="{CBD1FE30-27AA-4AD4-AE3B-349C0122541B}"/>
+						<Switch Id="287225646" Name="smg_empty" ObjectPath="\Switches\Default Work Unit\gun_shoot\smg_empty" GUID="{D0FE347D-6C13-4961-AC6C-A8F57557D08B}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3659999256" Name="nancy" ObjectPath="\Switches\Default Work Unit\nancy" GUID="{39EF737C-C6EA-496A-BD80-7BFCCAE432C7}">
+					<Switches>
+						<Switch Id="1784361048" Name="nancy_hurt" ObjectPath="\Switches\Default Work Unit\nancy\nancy_hurt" GUID="{2C84FFCE-F5E4-495E-9183-14E7B3B202C9}"/>
+						<Switch Id="1421328175" Name="nancy_death" ObjectPath="\Switches\Default Work Unit\nancy\nancy_death" GUID="{C1F0C902-2E3C-495E-A285-65EDA9696D44}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3991942870" Name="music" ObjectPath="\Switches\Default Work Unit\music" GUID="{BBD31F58-9E0C-4709-AABA-217C36065555}">
+					<Switches>
+						<Switch Id="691006007" Name="loop" ObjectPath="\Switches\Default Work Unit\music\loop" GUID="{E0082150-EE83-4F9F-82D8-547B7CBD8D0F}"/>
+						<Switch Id="3475929897" Name="win_music" ObjectPath="\Switches\Default Work Unit\music\win_music" GUID="{D2FF3F48-2625-4CAF-B933-F9E9E5D04309}"/>
+						<Switch Id="818282622" Name="lose_music" ObjectPath="\Switches\Default Work Unit\music\lose_music" GUID="{24F396E2-9756-4172-BD81-41CF45870BBD}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

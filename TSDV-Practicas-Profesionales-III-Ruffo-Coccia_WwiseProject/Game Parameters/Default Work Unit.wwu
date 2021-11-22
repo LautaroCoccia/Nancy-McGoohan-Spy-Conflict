@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A961DB07-EDF6-4D49-894D-C9BAB806FF44}" SchemaVersion="103">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{A961DB07-EDF6-4D49-894D-C9BAB806FF44}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A961DB07-EDF6-4D49-894D-C9BAB806FF44}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="timer_intensity" ID="{883A3E40-7344-4266-98B8-604AEC63ADFE}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="15"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

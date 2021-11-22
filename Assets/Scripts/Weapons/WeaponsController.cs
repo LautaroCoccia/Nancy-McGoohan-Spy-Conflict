@@ -74,6 +74,8 @@ public class WeaponsController : MonoBehaviour
     {
         if (weapon[actualWeapon].ammo > 0)
         {
+            AkSoundEngine.SetSwitch("gun_shoot", weapon[actualWeapon].shootWithAmmo, gameObject);
+            AkSoundEngine.PostEvent("shoot", gameObject);
             OnStartAnim?.Invoke();
             Vector3 mousePosition = weapon[actualWeapon].mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
@@ -87,6 +89,7 @@ public class WeaponsController : MonoBehaviour
             }
             else
             {
+                
                 int newSortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
                 newSortingOrder++;
 
@@ -107,6 +110,12 @@ public class WeaponsController : MonoBehaviour
                 //OutOfAmmoCrosshair?.Invoke();
                 weapon[actualWeapon].SetOutOfAmmoCrosshair();
             }
+        }
+
+        else
+        {
+            AkSoundEngine.SetSwitch("gun_shoot", weapon[actualWeapon].shootWithinAmmo, gameObject);
+            AkSoundEngine.PostEvent("shoot", gameObject);
         }
     }
     public void TryReload()

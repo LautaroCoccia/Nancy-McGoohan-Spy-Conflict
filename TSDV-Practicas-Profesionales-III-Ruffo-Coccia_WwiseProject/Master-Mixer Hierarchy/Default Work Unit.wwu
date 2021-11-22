@@ -11,6 +11,40 @@
 					</ReferenceList>
 					<ObjectLists/>
 				</Bus>
+				<Bus Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{D1DAE470-6544-410A-B276-7B5B6667B8E4}" ShortID="897977090">
+									<ReferenceList/>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{8F71EF02-9645-43B5-981A-187FDAC8C0EA}" WorkUnitID="{D771552A-6323-423A-877F-EFADECA997D0}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
+				<Bus Name="Music" ID="{A80B657B-6593-4B80-B80D-734A2D425E72}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{6FF366AA-C18E-4C73-A8B2-5D8AE7D02C9E}" ShortID="652572224">
+									<ReferenceList/>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{8F71EF02-9645-43B5-981A-187FDAC8C0EA}" WorkUnitID="{D771552A-6323-423A-877F-EFADECA997D0}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

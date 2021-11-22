@@ -22,7 +22,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   BulletHolePrefab: {fileID: 9050445857129939108, guid: 94672b56e30616940b38e434d44cfb6e,
     type: 3}
-  BulletHoleParent: {fileID: 0}
+  shootWithAmmo: pistol_shoot
+  shootWithinAmmo: pistol_empty
   damageInfo: 0
   shootingMode: 0
   isReloading: 0

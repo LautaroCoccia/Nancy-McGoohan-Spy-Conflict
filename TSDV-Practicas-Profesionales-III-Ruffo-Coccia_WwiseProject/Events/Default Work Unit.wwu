@@ -1,6 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="button" ID="{104BDA47-0FD8-4B4E-AC2D-7907E9DCE9BA}">
+					<ChildrenList>
+						<Action Name="" ID="{0D707C91-8B93-4D1C-BFAE-0B41AAE48681}" ShortID="59976736">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Button_Press" ID="{6B0DEB32-BDB8-4EE3-AFE9-FBF7E1E08062}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pause_game" ID="{BC29EF57-90A1-4B76-81B8-6BEF8E3B5E72}">
+					<ChildrenList>
+						<Action Name="" ID="{6F6452E2-A363-4206-876F-C092C61DDBFD}" ShortID="730581038">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="barrel_exp" ID="{B0CA82F6-2F5F-4AEF-AECE-394E98D45AA8}">
+					<ChildrenList>
+						<Action Name="" ID="{F7F972C5-CA31-4D8B-BB36-5A1560653FAF}" ShortID="413299900">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Barrel_Exp" ID="{C140E100-F615-419D-84C7-59675026D95C}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="enemy_death" ID="{D4817209-290D-49D8-885B-E89297C1D613}">
+					<ChildrenList>
+						<Action Name="" ID="{6CE94DBC-598D-4A01-9F99-2599C6A5D5D3}" ShortID="669832285">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Enemy_Death" ID="{1689F9E4-FEDA-4195-B177-ACBB64C00BAD}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_music" ID="{3440C432-2E34-4BD2-8B8A-9133A608C561}">
+					<ChildrenList>
+						<Action Name="" ID="{0A5D6DC2-19A1-4F6C-9E6E-2786019C6A0A}" ShortID="48507023">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_music" ID="{B18DF300-2929-4A61-B19F-A31022A8F95A}" WorkUnitID="{575577FF-53DE-453F-A5CB-ECC0F373440E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="medkit_spawn" ID="{8CAC06E4-C77D-47E3-946F-B661070042EE}">
+					<ChildrenList>
+						<Action Name="" ID="{0009B973-928E-429E-8E84-D473AD9000AE}" ShortID="232285323">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Medkit_Spawn" ID="{938EF3C1-C68A-4562-9361-B5D51DF772BC}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="medkit_heal" ID="{C055D0C1-3BBF-46DA-A6D4-22825C131A28}">
+					<ChildrenList>
+						<Action Name="" ID="{4C751D72-D215-4129-A874-A0E1CF5B4E5E}" ShortID="804096962">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Medkit_Heal" ID="{2EC30434-473E-4E64-BDA4-159AD81BBCDC}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="cover" ID="{FFDAEA8C-436B-4BF1-91F9-710CE9A7AD8F}">
+					<ChildrenList>
+						<Action Name="" ID="{75559A3A-65E2-401D-AA0E-98F58C56474A}" ShortID="888840188">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cover" ID="{747688D0-FEE6-429D-B417-154E79A22DAE}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="enemy_shoot" ID="{DFC3CF0A-FDCB-47D7-8C57-012CCEC102D4}">
+					<ChildrenList>
+						<Action Name="" ID="{051EE629-208B-4C0D-B119-6C782DA4A768}" ShortID="120956349">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Enemy_Shoot" ID="{84153BD3-6246-4E9C-8C6F-F54DDE8498F8}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="nancy" ID="{1E06F74D-5324-4C05-B770-48007315C143}">
+					<ChildrenList>
+						<Action Name="" ID="{01E03FA0-3D53-4AE2-B341-611910ED0E38}" ShortID="319838098">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Nancy" ID="{95A22BBB-887F-49A3-9B9D-A3157887976D}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="music_gameplay" ID="{6CDF105D-F4D0-4F63-9288-1DD3491205C6}">
+					<ChildrenList>
+						<Action Name="" ID="{50D03234-CD9D-460C-8ECC-A56930489EED}" ShortID="632151627">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay_Music" ID="{96A8713E-DF96-4611-B8AC-6696EEB526FE}" WorkUnitID="{575577FF-53DE-453F-A5CB-ECC0F373440E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="multiplicate_points" ID="{AD6E8D07-0A63-45AD-B0BE-8DF8298D0E3B}">
+					<ChildrenList>
+						<Action Name="" ID="{F186D71F-86C4-41AA-9997-C9E72A03CD03}" ShortID="95388905">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle_Game_PowerUp_Light_03" ID="{BBF9619F-6629-4F36-8E33-F84B6EA9AB5D}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="shield" ID="{AF97EBC0-BB67-4780-AAFE-26B25F73752D}">
+					<ChildrenList>
+						<Action Name="" ID="{335FAA49-1039-429B-9816-B323D49A7EB1}" ShortID="747209833">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shield" ID="{855E21E5-6BB8-40C8-86E9-A042EAA5FA0D}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="resume_game" ID="{689F8D23-7912-4FF8-AFB9-738A4B9231DE}">
+					<ChildrenList>
+						<Action Name="" ID="{84BBFCF0-81A5-410B-8CFE-E14B9BA4C127}" ShortID="678822425">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="shoot" ID="{948676B2-251C-4C7E-8475-BB581E3C470C}">
+					<ChildrenList>
+						<Action Name="" ID="{293EC682-FC81-4100-8318-A1C3F5A5AAE4}" ShortID="1017068306">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shoot" ID="{934B7E68-D8B0-447E-963C-6F11F651236A}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="reload" ID="{9D328D48-5DD7-4024-AEC2-BC50AFE96977}">
+					<ChildrenList>
+						<Action Name="" ID="{3521B7C7-EF77-444C-996C-B5C81D5818C8}" ShortID="225152244">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reload" ID="{FA6A5843-0068-4BCE-BDAF-A276AA11AF4E}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="timer_end" ID="{68BCD983-2730-49B7-91A9-B97D5ED31268}">
+					<ChildrenList>
+						<Action Name="" ID="{7933AB39-A654-492D-91FD-1B0AEF6D4DC8}" ShortID="78816348">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Timer_End" ID="{5A224BE3-D75B-41A5-A2F1-1920FC3F272C}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_all" ID="{F41BC090-B49A-461E-9C16-C6DF4A87726F}">
+					<ChildrenList>
+						<Action Name="" ID="{6D4665EF-5E2F-41DC-AF17-0F4AC983D5D0}" ShortID="286678227">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ambience" ID="{61EE1A0F-C946-47B1-942E-6A8F6FBB9A95}">
+					<ChildrenList>
+						<Action Name="" ID="{A1FA21A8-EDC0-4CEF-80ED-4DB6F555FF3E}" ShortID="539607577">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience" ID="{DA91ED17-1D2D-48BD-8E7F-4F905C1BEE50}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="reset_points" ID="{3B4315A6-7AD0-4D09-8D69-3AEF3DAF0650}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

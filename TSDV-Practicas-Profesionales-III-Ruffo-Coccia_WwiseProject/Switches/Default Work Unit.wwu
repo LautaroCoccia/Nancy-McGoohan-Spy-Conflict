@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AB40C0EB-3CA2-463A-971D-B3D50A63C4B5}" SchemaVersion="103">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{AB40C0EB-3CA2-463A-971D-B3D50A63C4B5}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AB40C0EB-3CA2-463A-971D-B3D50A63C4B5}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="cover" ID="{38B1D81F-9C55-4A34-8A25-E861C57DB1DC}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="cover_destroy" ID="{9DD53CF4-FFB5-45A0-B514-5350A087432F}"/>
+						<Switch Name="cover_break" ID="{54E06DB1-1BD3-4817-B6F5-1CBE18BB46E6}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="nancy" ID="{39EF737C-C6EA-496A-BD80-7BFCCAE432C7}">
+					<ChildrenList>
+						<Switch Name="nancy_hurt" ID="{2C84FFCE-F5E4-495E-9183-14E7B3B202C9}"/>
+						<Switch Name="nancy_death" ID="{C1F0C902-2E3C-495E-A285-65EDA9696D44}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Music_Stinger" ID="{8C021E93-F8CF-498C-AF70-63D8B96BD5F2}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="victory" ID="{DD1280E3-F2B3-4D43-947B-D2D44C31B6F8}"/>
+						<Switch Name="death" ID="{C826D226-C257-4E83-B73D-239A8B689D31}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="button" ID="{97098040-2930-4484-AB07-B91802098812}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="button_press" ID="{7D27F9F3-E171-43BE-808F-F79CADCCFE8B}"/>
+						<Switch Name="button_start" ID="{D2F44CD9-9456-4097-8EFC-70B8605153B5}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="shield" ID="{1609FD4A-2303-452D-8396-1AF71413C9C2}">
+					<ChildrenList>
+						<Switch Name="shieldhit_shotgun" ID="{7479765B-36FB-4EEF-9467-BE34178F348D}"/>
+						<Switch Name="shieldhit_wrong" ID="{E30367E3-57E0-4319-B6CC-F9DA3CD21BC7}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="gun_shoot" ID="{56C0E223-C1C3-4EE5-A349-47F5DC73D1F8}">
+					<ChildrenList>
+						<Switch Name="pistol_shoot" ID="{6816181E-1D4D-4FBA-973E-58C8C0DB907A}"/>
+						<Switch Name="pistol_empty" ID="{9D9C679B-9D17-45A1-9F63-0CEE9571BC91}"/>
+						<Switch Name="shotgun_shoot" ID="{012DABBD-00C3-4D1B-8A4A-2430A9C0560F}"/>
+						<Switch Name="shotgun_empty" ID="{6CE6B388-763A-486A-96C1-9B14040A972A}"/>
+						<Switch Name="smg_shoot" ID="{CBD1FE30-27AA-4AD4-AE3B-349C0122541B}"/>
+						<Switch Name="smg_empty" ID="{D0FE347D-6C13-4961-AC6C-A8F57557D08B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="gun_reload" ID="{860D5883-3FC5-4846-8317-843733CBEFAC}">
+					<ChildrenList>
+						<Switch Name="pistol_reload" ID="{E1F75ED9-295A-46D9-9484-46702010E4C6}"/>
+						<Switch Name="shotgun_reload" ID="{B77D9909-EB65-4271-9E79-7BE24798473A}"/>
+						<Switch Name="smg_reload" ID="{11C2A3B1-ED3B-4B2A-BCE4-C1DC101B3F10}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="music" ID="{BBD31F58-9E0C-4709-AABA-217C36065555}">
+					<ChildrenList>
+						<Switch Name="loop" ID="{E0082150-EE83-4F9F-82D8-547B7CBD8D0F}"/>
+						<Switch Name="win_music" ID="{D2FF3F48-2625-4CAF-B933-F9E9E5D04309}"/>
+						<Switch Name="lose_music" ID="{24F396E2-9756-4172-BD81-41CF45870BBD}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
