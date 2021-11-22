@@ -19,6 +19,8 @@ public class DestroyableWallStatesController : MonoBehaviour
         
         if (index < wallStates.Count -1)
         {
+            AkSoundEngine.SetSwitch("cover", "cover_break", gameObject);
+            AkSoundEngine.PostEvent("cover", gameObject);
             index++;
             if(wallStates[index] != null)
             {
@@ -27,6 +29,9 @@ public class DestroyableWallStatesController : MonoBehaviour
         }
         else
         {
+            AkSoundEngine.SetSwitch("cover", "cover_destroy", gameObject);
+            AkSoundEngine.PostEvent("cover", gameObject);
+
             DeleteFromObjectList?.Invoke(transform);
             Destroy(gameObject);
         }
