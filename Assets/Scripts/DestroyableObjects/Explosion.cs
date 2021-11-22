@@ -7,6 +7,10 @@ public class Explosion : MonoBehaviour
     [SerializeField] bool destroy;
     [SerializeField] float explosionTime = 0.25f;
 
+    private void OnEnable()
+    {
+        AkSoundEngine.PostEvent("barrel_exp", gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
