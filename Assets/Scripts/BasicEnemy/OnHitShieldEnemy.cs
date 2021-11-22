@@ -25,9 +25,16 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
     {
         if(damageInfo == Weapon.DamageInfo.strong && !enemyState)
         {
+            AkSoundEngine.SetSwitch("shield", "shieldhit_shotgun", gameObject);
+            AkSoundEngine.PostEvent("shield", gameObject);
             sr.color = Color.red;
             OnTakeDamage?.Invoke(25);
             enemyState = true;
+        }
+        else if(damageInfo != Weapon.DamageInfo.strong && !enemyState)
+        {
+            AkSoundEngine.SetSwitch("shield", "shieldhit_wrong", gameObject);
+            AkSoundEngine.PostEvent("shield", gameObject);
         }
         else if(enemyState)
         {
