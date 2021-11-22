@@ -23,9 +23,11 @@ public class Pause : MonoBehaviour
             pauseLayer.SetActive(true);
             Time.timeScale = 0.0f;
             isPaused = true;
+            AkSoundEngine.PostEvent("pause_game", gameObject);
         }
         else
         {
+            AkSoundEngine.PostEvent("pause_resume", gameObject);
             pauseLayer.SetActive(false);
             Time.timeScale = 1.0f;
             isPaused = false;
