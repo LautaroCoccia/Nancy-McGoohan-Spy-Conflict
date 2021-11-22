@@ -35,6 +35,7 @@ public class LevelManager :  MonoBehaviour
 
     private void Start()
     {
+        
         shaker = Camera.main.GetComponent<ScreenShake>();
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateUIHealth?.Invoke(health,maxHealth);
@@ -83,6 +84,7 @@ public class LevelManager :  MonoBehaviour
     }
     void Update()
     {
+        
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -172,10 +174,12 @@ public class LevelManager :  MonoBehaviour
     {
         if(hit & killCounter % 2 == 0 && multiplier <= maxMultiplier)
         {
+            AkSoundEngine.PostEvent("multiplicate_points", gameObject);
             multiplier++;
         }
         else if(!hit)
         {
+            AkSoundEngine.PostEvent("reset_points", gameObject);
             multiplier = 1;
         }
         UpdateUICombo?.Invoke(multiplier);
