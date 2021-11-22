@@ -23,7 +23,6 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
     }
     public void OnHit(Weapon.DamageInfo damageInfo)
     {
-        Debug.Log(damageInfo);
         if(damageInfo == Weapon.DamageInfo.strong && !enemyState)
         {
             sr.color = Color.red;
@@ -32,6 +31,7 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
         }
         else if(enemyState)
         {
+            baseEnemy.DeathScream();
             baseEnemy.InstanciateBlood();
             OnTakeDamage?.Invoke(score);
             OnKill();

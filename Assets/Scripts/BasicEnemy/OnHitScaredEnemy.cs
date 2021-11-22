@@ -16,6 +16,7 @@ public class OnHitScaredEnemy : MonoBehaviour , IHitable
     }
     public void OnHit(Weapon.DamageInfo damageInfo)
     {
+        baseEnemy.DeathScream();
         baseEnemy.InstanciateBlood();
         itemDrop.Drop();
         OnTakeDamage?.Invoke(score);

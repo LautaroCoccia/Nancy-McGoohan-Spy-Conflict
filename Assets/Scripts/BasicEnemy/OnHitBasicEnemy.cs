@@ -10,6 +10,7 @@ public class OnHitBasicEnemy : MonoBehaviour, IHitable
     public static Action OnKill;
     public void OnHit(Weapon.DamageInfo damageInfo)
     {
+        baseEnemy.DeathScream();
         baseEnemy.InstanciateBlood();
         OnTakeDamage?.Invoke(score);
         OnKill();

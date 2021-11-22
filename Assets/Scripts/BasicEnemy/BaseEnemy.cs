@@ -158,7 +158,7 @@ public class BaseEnemy : StateEnemy
         yield return new WaitForSeconds(timeToWaitAndShoot);
         flashInWeapon.enabled = true;
         yield return new WaitForSeconds(timeWaitEndShoot);
-        
+        ShootSound();
         if (UnityEngine.Random.Range(0, 101) < probToHit)
         {
                 OnHitPlayer?.Invoke(damage);
@@ -237,7 +237,14 @@ public class BaseEnemy : StateEnemy
     {
         nextPos = actualCover;
     }
-
+    void ShootSound()
+    {
+        AkSoundEngine.PostEvent("enemy_shoot", gameObject);
+    }
+    public void DeathScream()
+    {
+       AkSoundEngine.PostEvent("enemy_death", gameObject);
+    }
     public void InstanciateBlood()
     {
         Instantiate(bloodParticleSystem, transform.position, Quaternion.identity);
