@@ -114,8 +114,8 @@ public class WeaponsController : MonoBehaviour
 
         else
         {
-            AkSoundEngine.SetSwitch("gun_shoot", weapon[actualWeapon].shootWithinAmmo, gameObject);
-            AkSoundEngine.PostEvent("shoot", gameObject);
+            AkSoundEngine.SetSwitch("gun_reload", weapon[actualWeapon].reloadingSound, gameObject);
+            AkSoundEngine.PostEvent("reload", gameObject);
         }
     }
     public void TryReload()
@@ -132,6 +132,8 @@ public class WeaponsController : MonoBehaviour
         weapon[actualWeapon].isReloading = true;
         OnSetReloadMode?.Invoke(true);
         OnStartAnim?.Invoke();
+        AkSoundEngine.SetSwitch("gun_shoot", weapon[actualWeapon].shootWithinAmmo, gameObject);
+        AkSoundEngine.PostEvent("shoot", gameObject);
         yield return new WaitForSeconds(weapon[actualWeapon].reloadTime);
         weapon[actualWeapon].ammo = weapon[actualWeapon].maxAmmo;
         //ResetUIAmmo?.Invoke();

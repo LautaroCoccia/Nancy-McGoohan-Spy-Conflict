@@ -24,6 +24,7 @@ MonoBehaviour:
     type: 3}
   shootWithAmmo: shotgun_shoot
   shootWithinAmmo: shotgun_empty
+  reloadingSound: shotgun_reload
   damageInfo: 1
   shootingMode: 0
   isReloading: 0

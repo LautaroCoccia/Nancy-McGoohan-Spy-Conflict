@@ -17,6 +17,7 @@ public class Weapon : ScriptableObject
     public GameObject BulletHolePrefab;
     public string shootWithAmmo;
     public string shootWithinAmmo;
+    public string reloadingSound;
 
     public static Action ResetUIAmmo;
     public static Action<float> OnAmmoChange;
