@@ -116,6 +116,17 @@ public class LevelManager :  MonoBehaviour
     public void OnHitPlayer(int damage)
     {
         health -= damage;
+
+        if (health > 0)
+        {
+            AkSoundEngine.SetSwitch("nancy", "nancy_hurt", gameObject);
+            AkSoundEngine.PostEvent("nancy", gameObject);
+        }
+        else if (health <= 0)
+        {
+            AkSoundEngine.SetSwitch("nancy", "nancy_death", gameObject);
+            AkSoundEngine.PostEvent("nancy", gameObject);
+        }
         UpdateUIHealth?.Invoke(health,maxHealth);
         StartCoroutine(WaitForShakeToLoss());
 
