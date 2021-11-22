@@ -5,7 +5,6 @@ using System;
 public class BaseEnemy : StateEnemy
 {
     [SerializeField] GameObject bloodParticleSystem;
-    [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer flashInWeapon;
     [SerializeField] float timeToWaitAndShoot;
     [SerializeField] float timeWaitEndShoot;
@@ -25,13 +24,16 @@ public class BaseEnemy : StateEnemy
     public float speed = 4.7f;
     public static Action<int> OnHitPlayer;
 
+    public static Action OnIdle;
+    public static Action OnShoot;
+
     [Space(15)]
     [SerializeField] BasicSpecial specialSkill;
 
     // Start is called before the first frame update
     protected override void Start()
     {
-        animator.SetBool("IsMoving", true);
+        //animator.SetBool("IsMoving", true);
         base.Start();
         intermediateMove = false;
     }
@@ -43,7 +45,7 @@ public class BaseEnemy : StateEnemy
     }
     protected override IEnumerator Choice()
     {
-        animator.SetBool("IsMoving", false);
+        //animator.SetBool("IsMoving", false);
         choising = true;
         yield return new WaitForSeconds(choisingTime);
         if(switchTimerVsProbSpecial)
@@ -61,13 +63,13 @@ public class BaseEnemy : StateEnemy
                 {
                     state = State.uncover;
                     SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
-                    animator.SetBool("IsMoving", true);
+                    //animator.SetBool("IsMoving", true);
                 }
                 break;
             case int n when n < (probToShoot + probToSpecial) && n> probToShoot
             && !switchTimerVsProbSpecial && probToSpecial!=0:
                 state = State.specialAction;
-                animator.SetBool("IsMoving", true);
+                //animator.SetBool("IsMoving", true);
                 break;
         }
         choising = false;
@@ -76,7 +78,7 @@ public class BaseEnemy : StateEnemy
     {
         state = State.move;
         SelectCoverPosition(barrelPositions);
-        animator.SetBool("IsMoving", true);
+        //animator.SetBool("IsMoving", true);
     }
     void LostCover()
     {
@@ -151,7 +153,8 @@ public class BaseEnemy : StateEnemy
     }
     protected override IEnumerator Shoot()
     {
-        animator.SetBool("IsMoving", false);
+        //animator.SetBool("IsMoving", false);
+        OnShoot?.Invoke();
         yield return new WaitForSeconds(timeToWaitAndShoot);
         flashInWeapon.enabled = true;
         yield return new WaitForSeconds(timeWaitEndShoot);
@@ -164,7 +167,8 @@ public class BaseEnemy : StateEnemy
         yield return new WaitForSeconds(timeWaitAndCover);
         shooting = false;
         state = State.Cover;
-        animator.SetBool("IsMoving", true);
+        OnIdle();
+        //animator.SetBool("IsMoving", true);
 
 
     }

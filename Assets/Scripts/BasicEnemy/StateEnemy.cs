@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public abstract class StateEnemy : MonoBehaviour
 {
     protected enum State
@@ -24,6 +23,8 @@ public abstract class StateEnemy : MonoBehaviour
     [SerializeField] protected bool switchTimerVsProbSpecial;
     protected float timerToSpecial = 0.0f;
     [SerializeField]protected float timerToWaitSpecial = 3.0f;
+
+    
     protected virtual void Start()
     {
         state = State.move;
