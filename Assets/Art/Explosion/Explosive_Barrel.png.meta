@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: b4cbbbdb55bcf1f45a982e1ac1987e84
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6695230736944817701
+    second: Explosive_Barrel_0
+  - first:
+      213: -2683314601113056376
+    second: Explosive_Barrel_1
+  - first:
+      213: 1253353521914803595
+    second: Explosive_Barrel_2
+  - first:
+      213: 6675251131268584336
+    second: Explosive_Barrel_3
+  - first:
+      213: -4839675613522349941
+    second: Explosive_Barrel_4
+  - first:
+      213: -5184059671451254855
+    second: Explosive_Barrel_5
+  - first:
+      213: -6548882865724972771
+    second: Explosive_Barrel_6
+  - first:
+      213: 4251647488154020343
+    second: Explosive_Barrel_7
+  - first:
+      213: -1523337807356605004
+    second: Explosive_Barrel_8
+  - first:
+      213: 6889472064182057490
+    second: Explosive_Barrel_9
+  - first:
+      213: 6765192961130038494
+    second: Explosive_Barrel_10
+  - first:
+      213: 7399586629685488978
+    second: Explosive_Barrel_11
+  - first:
+      213: -1495447443397515009
+    second: Explosive_Barrel_12
+  - first:
+      213: -3127728037816739779
+    second: Explosive_Barrel_13
+  - first:
+      213: -1524258748556024514
+    second: Explosive_Barrel_14
+  - first:
+      213: -5667239474491286271
+    second: Explosive_Barrel_15
+  - first:
+      213: 4722755601363746211
+    second: Explosive_Barrel_16
+  - first:
+      213: -444444971058643394
+    second: Explosive_Barrel_17
+  - first:
+      213: 390600592439648057
+    second: Explosive_Barrel_18
+  - first:
+      213: 5116487808224208954
+    second: Explosive_Barrel_19
+  - first:
+      213: 8777696397671767376
+    second: Explosive_Barrel_20
+  - first:
+      213: -1937848064714195639
+    second: Explosive_Barrel_21
+  - first:
+      213: 1873242855177975999
+    second: Explosive_Barrel_22
+  - first:
+      213: -6921590098677831149
+    second: Explosive_Barrel_23
+  - first:
+      213: -7187580931581844946
+    second: Explosive_Barrel_24
+  - first:
+      213: 1008047377684039691
+    second: Explosive_Barrel_25
+  - first:
+      213: -8333266260239907944
+    second: Explosive_Barrel_26
+  - first:
+      213: 5032582664823338062
+    second: Explosive_Barrel_27
+  - first:
+      213: -293311997916060044
+    second: Explosive_Barrel_28
+  - first:
+      213: 5384468787138469718
+    second: Explosive_Barrel_29
+  - first:
+      213: 7950900373116277760
+    second: Explosive_Barrel_30
+  - first:
+      213: -8546938489034744138
+    second: Explosive_Barrel_31
+  - first:
+      213: -2516855346774790867
+    second: Explosive_Barrel_32
+  - first:
+      213: 8256659615107365301
+    second: Explosive_Barrel_33
+  - first:
+      213: -5226385098051036139
+    second: Explosive_Barrel_34
+  - first:
+      213: 7741482806248318965
+    second: Explosive_Barrel_35
+  - first:
+      213: -1325367186504781391
+    second: Explosive_Barrel_36
+  - first:
+      213: 5175143225469251931
+    second: Explosive_Barrel_37
+  - first:
+      213: 4263530815783793279
+    second: Explosive_Barrel_38
+  - first:
+      213: -6311215648576751908
+    second: Explosive_Barrel_39
+  - first:
+      213: -4392451718375776864
+    second: Explosive_Barrel_40
+  - first:
+      213: -5071148736567201623
+    second: Explosive_Barrel_41
+  - first:
+      213: 3331582235439944095
+    second: Explosive_Barrel_42
+  - first:
+      213: 662898612577260922
+    second: Explosive_Barrel_43
+  - first:
+      213: -4012993522366334133
+    second: Explosive_Barrel_44
+  - first:
+      213: 9012677796623308911
+    second: Explosive_Barrel_45
+  - first:
+      213: 143293785840746254
+    second: Explosive_Barrel_46
+  - first:
+      213: 1688868743737831039
+    second: Explosive_Barrel_47
+  - first:
+      213: 8174937713682182235
+    second: Explosive_Barrel_48
+  - first:
+      213: -5865933506496265716
+    second: Explosive_Barrel_49
+  - first:
+      213: -1759583677347528694
+    second: Explosive_Barrel_50
+  - first:
+      213: 8429369403624079407
+    second: Explosive_Barrel_51
+  - first:
+      213: 3218080260008761364
+    second: Explosive_Barrel_52
+  - first:
+      213: 1658495521723761338
+    second: Explosive_Barrel_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Explosive_Barrel_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 311
+        width: 76
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b890c4693f2cad0800000000000000
+      internalID: -2683314601113056376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Barrel_2
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 280
+        width: 205
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8577bb336ec46110800000000000000
+      internalID: 1253353521914803595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Barrel_3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 270
+        width: 200
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093d9c1798143ac50800000000000000
+      internalID: 6675251131268584336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Barrel_4
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 293
+        width: 185
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8031e3dba406dcb0800000000000000
+      internalID: -4839675613522349941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Barrel_5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 21
+        width: 210
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf38b4f1358e08b0800000000000000
+      internalID: -5184059671451254855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Barrel_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 307
+        width: 63
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5266fd4e1ec3aec50800000000000000
+      internalID: 6695230736944817701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Barrel_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 24
+        width: 210
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1122d82bb1bd15a0800000000000000
+      internalID: -6548882865724972771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
