@@ -25,6 +25,8 @@ This is a game (still in development) developed by students from <a href="https:
 - **Matías Diehl** - *Music Composer*
 - **Matías Rodriguez** - *Testing*
 - **Lucas Liendro** - *Testing*
+- **anonymous** - *Testing*
+- **anonymous** - *Testing*
 
 ## Tools
 - **Unity**
@@ -32,7 +34,8 @@ This is a game (still in development) developed by students from <a href="https:
 - **Adobe Photoshop**
 - **Visual Studio**
 - **Wwise**
-- **Reaper**
+- **Studio One**
+- **Cubase Pro**
 
 This game was also possible thanks to the support of these professors:
 
