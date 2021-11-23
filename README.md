@@ -1,5 +1,5 @@
 <p align="center">
-<img src="logo.jpg" alt="Nancy McGoohan: Spy Conflict"/>
+<img src="Logo.png" alt="Nancy McGoohan: Spy Conflict"/>
 </p>
 
 # Nancy McGoohan: Spy Conflict
@@ -39,6 +39,7 @@ This game was also possible thanks to the support of these professors:
 - **Sergio Baretto**
 - **Federico Barra**
 - **Ramiro Cabrera**
+- **Nazareno Rivero**
 - **Eugenio Taboada**
 
 
