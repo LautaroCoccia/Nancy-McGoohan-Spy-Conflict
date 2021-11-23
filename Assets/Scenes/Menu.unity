@@ -6892,7 +6892,7 @@ GameObject:
   - component: {fileID: 2075728914}
   - component: {fileID: 2075728913}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CreditsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6936,10 +6936,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ruffo Maximiliano  -       Programming\r\nCoccia Lautaro -            
-    Programming\nMar del Valle -                 Art\r\nSantiago Andr\xE9s Ruiz -
-    Art\r\nChristian B. Quiroga    - Sound Designer\r\nMat\xEDas Diehl                 
-    - Music Composer\r\nMat\xEDas Rodriguez   -      Testing\r\nLucas Liendro -             
+  m_text: "Ruffo Maximiliano  -         Programming\r\nCoccia Lautaro -             
+    Programming\nMar del Valle -                  Art\r\nSantiago Andr\xE9s Ruiz
+    -    Art\r\nChristian B. Quiroga    -   Sound Designer\r\nMat\xEDas Diehl                 
+    - Music Composer\r\nMat\xEDas Rodriguez   -        Testing\r\nLucas Liendro -              
     Testing"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
