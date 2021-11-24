@@ -11066,6 +11066,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIQuitMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2856863573049131503, guid: 220d0dcaf528804429d77f2e397041dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2856863573065133993, guid: 220d0dcaf528804429d77f2e397041dc,
         type: 3}
       propertyPath: NextLayer
