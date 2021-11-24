@@ -100,13 +100,8 @@ public class BaseEnemy : StateEnemy
         actualCover = nextPos;
         actualCoverTransform = barrelPositions[transformIndex].transform;
     }
-
-
-    
     protected override void Move()
     {
-       
-
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
         if (transform.position == nextPos && !intermediateMove)
         {
@@ -116,7 +111,6 @@ public class BaseEnemy : StateEnemy
         {
             SelectIntermediate();
         }
-
     }
     void SelectIntermediate()
     {
@@ -243,7 +237,7 @@ public class BaseEnemy : StateEnemy
     }
     public void DeathScream()
     {
-       AkSoundEngine.PostEvent("enemy_death", gameObject);
+        AkSoundEngine.PostEvent("enemy_death", gameObject);
     }
     public void InstanciateBlood()
     {

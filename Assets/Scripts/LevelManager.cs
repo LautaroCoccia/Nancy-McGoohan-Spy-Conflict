@@ -35,7 +35,8 @@ public class LevelManager :  MonoBehaviour
 
     private void Start()
     {
-        
+        AkSoundEngine.PostEvent("ambience", gameObject);
+        //AkSoundEngine.PostEvent("music_gameplay", gameObject);
         shaker = Camera.main.GetComponent<ScreenShake>();
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateUIHealth?.Invoke(health,maxHealth);
