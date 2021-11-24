@@ -40,7 +40,7 @@
 						<Action Name="" ID="{6CE94DBC-598D-4A01-9F99-2599C6A5D5D3}" ShortID="669832285">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Enemy_Death" ID="{1689F9E4-FEDA-4195-B177-ACBB64C00BAD}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
+									<ObjectRef Name="Enemy_Death" ID="{D321B3E5-7B5A-4EFA-85F2-C1DB11792909}" WorkUnitID="{A086F051-DB91-41E1-9546-F1F4B80F1B25}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -18,15 +18,6 @@
 						<Switch Name="nancy_death" ID="{C1F0C902-2E3C-495E-A285-65EDA9696D44}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="Music_Stinger" ID="{8C021E93-F8CF-498C-AF70-63D8B96BD5F2}">
-					<PropertyList>
-						<Property Name="UseGameParameter" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Switch Name="victory" ID="{DD1280E3-F2B3-4D43-947B-D2D44C31B6F8}"/>
-						<Switch Name="death" ID="{C826D226-C257-4E83-B73D-239A8B689D31}"/>
-					</ChildrenList>
-				</SwitchGroup>
 				<SwitchGroup Name="button" ID="{97098040-2930-4484-AB07-B91802098812}">
 					<PropertyList>
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>

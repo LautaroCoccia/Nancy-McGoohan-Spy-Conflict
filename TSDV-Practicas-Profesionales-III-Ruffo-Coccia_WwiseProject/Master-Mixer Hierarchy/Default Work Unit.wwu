@@ -14,9 +14,33 @@
 				<Bus Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}">
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{D1DAE470-6544-410A-B276-7B5B6667B8E4}" ShortID="897977090">
-									<ReferenceList/>
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="sfx_volume" ID="{F8455CB2-D7D1-4C7E-BF45-DF875717690C}" WorkUnitID="{A961DB07-EDF6-4D49-894D-C9BAB806FF44}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{E2A58D30-EEC7-4BD1-92F8-163125163F84}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
 								</RTPC>
 							</RTPCList>
 						</Property>
@@ -26,14 +50,48 @@
 							<ObjectRef Name="System" ID="{8F71EF02-9645-43B5-981A-187FDAC8C0EA}" WorkUnitID="{D771552A-6323-423A-877F-EFADECA997D0}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="Reverb" ID="{2C0AFB94-5DA1-4FC3-A0FC-8F7B153FE667}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists/>
+						</AuxBus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 				<Bus Name="Music" ID="{A80B657B-6593-4B80-B80D-734A2D425E72}">
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{6FF366AA-C18E-4C73-A8B2-5D8AE7D02C9E}" ShortID="652572224">
-									<ReferenceList/>
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="music_volume" ID="{38CE501E-8CE4-4410-BA11-5D4C285A0801}" WorkUnitID="{A961DB07-EDF6-4D49-894D-C9BAB806FF44}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{2F2B9AE5-ABCC-4208-BA68-9D25712C40FB}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
 								</RTPC>
 							</RTPCList>
 						</Property>

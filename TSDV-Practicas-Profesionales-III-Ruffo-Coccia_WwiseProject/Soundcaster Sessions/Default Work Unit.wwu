@@ -4,9 +4,112 @@
 		<WorkUnit Name="Default Work Unit" ID="{51A4D78B-F2CE-4D04-9549-9A2B9DCCBD18}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{875BA853-9530-43FC-9A97-5EDE7B799111}">
-					<RTPCValueList ShowAll="true"/>
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="ambience" ID="{61EE1A0F-C946-47B1-942E-6A8F6FBB9A95}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="enemy_shoot" ID="{DFC3CF0A-FDCB-47D7-8C57-012CCEC102D4}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="music_gameplay" ID="{6CDF105D-F4D0-4F63-9288-1DD3491205C6}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="resume_game" ID="{689F8D23-7912-4FF8-AFB9-738A4B9231DE}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="barrel_exp" ID="{B0CA82F6-2F5F-4AEF-AECE-394E98D45AA8}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="medkit_heal" ID="{C055D0C1-3BBF-46DA-A6D4-22825C131A28}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="nancy" ID="{1E06F74D-5324-4C05-B770-48007315C143}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="shield" ID="{AF97EBC0-BB67-4780-AAFE-26B25F73752D}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="button" ID="{104BDA47-0FD8-4B4E-AC2D-7907E9DCE9BA}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="medkit_spawn" ID="{8CAC06E4-C77D-47E3-946F-B661070042EE}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pause_game" ID="{BC29EF57-90A1-4B76-81B8-6BEF8E3B5E72}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="shoot" ID="{948676B2-251C-4C7E-8475-BB581E3C470C}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="cover" ID="{FFDAEA8C-436B-4BF1-91F9-710CE9A7AD8F}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="menu_music" ID="{3440C432-2E34-4BD2-8B8A-9133A608C561}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="reload" ID="{9D328D48-5DD7-4024-AEC2-BC50AFE96977}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="stop_all" ID="{F41BC090-B49A-461E-9C16-C6DF4A87726F}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="enemy_death" ID="{D4817209-290D-49D8-885B-E89297C1D613}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="multiplicate_points" ID="{AD6E8D07-0A63-45AD-B0BE-8DF8298D0E3B}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="reset_points" ID="{3B4315A6-7AD0-4D09-8D69-3AEF3DAF0650}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="timer_end" ID="{68BCD983-2730-49B7-91A9-B97D5ED31268}" WorkUnitID="{6B49D9F4-1122-45C0-A011-12D3F75A3F59}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="timer_intensity" ID="{883A3E40-7344-4266-98B8-604AEC63ADFE}"/>
+							<Value>15</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_volume" ID="{38CE501E-8CE4-4410-BA11-5D4C285A0801}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="sfx_volume" ID="{F8455CB2-D7D1-4C7E-BF45-DF875717690C}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="button_press" ID="{7D27F9F3-E171-43BE-808F-F79CADCCFE8B}"/>
+						<CurrentSwitchRef Name="shieldhit_shotgun" ID="{7479765B-36FB-4EEF-9467-BE34178F348D}"/>
+						<CurrentSwitchRef Name="loop" ID="{E0082150-EE83-4F9F-82D8-547B7CBD8D0F}"/>
+						<CurrentSwitchRef Name="pistol_reload" ID="{E1F75ED9-295A-46D9-9484-46702010E4C6}"/>
+						<CurrentSwitchRef Name="nancy_death" ID="{C1F0C902-2E3C-495E-A285-65EDA9696D44}"/>
+						<CurrentSwitchRef Name="cover_break" ID="{54E06DB1-1BD3-4817-B6F5-1CBE18BB46E6}"/>
+						<CurrentSwitchRef Name="pistol_empty" ID="{9D9C679B-9D17-45A1-9F63-0CEE9571BC91}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
