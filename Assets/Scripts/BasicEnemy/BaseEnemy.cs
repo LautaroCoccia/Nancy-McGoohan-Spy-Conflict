@@ -5,6 +5,7 @@ using System;
 public class BaseEnemy : StateEnemy
 {
     [SerializeField] GameObject bloodParticleSystem;
+    [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer flashInWeapon;
     [SerializeField] float timeToWaitAndShoot;
     [SerializeField] float timeWaitEndShoot;
@@ -23,9 +24,6 @@ public class BaseEnemy : StateEnemy
     int transformIndex;
     public float speed = 4.7f;
     public static Action<int> OnHitPlayer;
-
-    public static Action OnIdle;
-    public static Action OnShoot;
 
     [Space(15)]
     [SerializeField] BasicSpecial specialSkill;
@@ -100,13 +98,8 @@ public class BaseEnemy : StateEnemy
         actualCover = nextPos;
         actualCoverTransform = barrelPositions[transformIndex].transform;
     }
-
-
-    
     protected override void Move()
     {
-       
-
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
         if (transform.position == nextPos && !intermediateMove)
         {
@@ -116,7 +109,6 @@ public class BaseEnemy : StateEnemy
         {
             SelectIntermediate();
         }
-
     }
     void SelectIntermediate()
     {
@@ -154,23 +146,21 @@ public class BaseEnemy : StateEnemy
     protected override IEnumerator Shoot()
     {
         //animator.SetBool("IsMoving", false);
-        OnShoot?.Invoke();
+        //OnShoot?.Invoke();
         yield return new WaitForSeconds(timeToWaitAndShoot);
         flashInWeapon.enabled = true;
         yield return new WaitForSeconds(timeWaitEndShoot);
         ShootSound();
         if (UnityEngine.Random.Range(0, 101) < probToHit)
         {
-                OnHitPlayer?.Invoke(damage);
+            OnHitPlayer?.Invoke(damage);
         }
         flashInWeapon.enabled = false;
         yield return new WaitForSeconds(timeWaitAndCover);
         shooting = false;
         state = State.Cover;
-        OnIdle();
+        //OnIdle?.Invoke();
         //animator.SetBool("IsMoving", true);
-
-
     }
     protected override void Cover()
     {
@@ -243,7 +233,7 @@ public class BaseEnemy : StateEnemy
     }
     public void DeathScream()
     {
-       AkSoundEngine.PostEvent("enemy_death", gameObject);
+        AkSoundEngine.PostEvent("enemy_death", gameObject);
     }
     public void InstanciateBlood()
     {

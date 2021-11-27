@@ -17,6 +17,7 @@ public class LevelManager :  MonoBehaviour
     [SerializeField] int targetToKill = 10;
 
     [SerializeField] List<ObstacleInfo> barrelPositions;
+    [SerializeField] MusicController musicController;
     
     ScreenShake shaker;
 
@@ -35,7 +36,6 @@ public class LevelManager :  MonoBehaviour
 
     private void Start()
     {
-        
         shaker = Camera.main.GetComponent<ScreenShake>();
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateUIHealth?.Invoke(health,maxHealth);
@@ -61,6 +61,7 @@ public class LevelManager :  MonoBehaviour
 
         DestroyableWall.OnTakeDamage += AddScore;
         ExplosiveBarrel.OnTakeDamage += AddScore;
+
     }
     private void OnDisable()
     {
@@ -93,8 +94,11 @@ public class LevelManager :  MonoBehaviour
         else
         {
             LoseCondition?.Invoke();
+            musicController.StopAllSounds();
+            AkSoundEngine.PostEvent("shoot", gameObject);
+
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(testLoadLevel);
         }
@@ -113,6 +117,7 @@ public class LevelManager :  MonoBehaviour
         if(killCounter == targetToKill)
         {
             OnWinCondition?.Invoke();
+            musicController.StopAllSounds();
         }
     }
     public void OnHitPlayer(int damage)
@@ -128,6 +133,7 @@ public class LevelManager :  MonoBehaviour
         {
             AkSoundEngine.SetSwitch("nancy", "nancy_death", gameObject);
             AkSoundEngine.PostEvent("nancy", gameObject);
+            musicController.StopAllSounds();
         }
         UpdateUIHealth?.Invoke(health,maxHealth);
         StartCoroutine(WaitForShakeToLoss());
