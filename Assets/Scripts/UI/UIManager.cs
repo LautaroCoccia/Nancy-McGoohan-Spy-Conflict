@@ -25,9 +25,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI UICounterNum;
     [SerializeField] TextMeshProUGUI UITimer;
     [SerializeField] TextMeshProUGUI UICombo;
+    [SerializeField] TextMeshProUGUI UIFinalScore;
     [SerializeField] Image UIHealth;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
+    [SerializeField] GameObject finalScore;
     [SerializeField] List<Image> UIAmmo;
     [SerializeField] List<GameObject> goAmmo;
     [SerializeField] List<Image> UICrosshair;
@@ -76,6 +78,7 @@ public class UIManager : MonoBehaviour
     void UpdateScore(int score)
     {
         UIScoreNum.text = score.ToString();
+        UIFinalScore.text = score.ToString();
     }
     void ResetAmmo()
     {
@@ -87,7 +90,6 @@ public class UIManager : MonoBehaviour
         {
             if (newValue == crossHairs[i].weaponType)
                 currentCrosshair = crossHairs[i];
-                
         }
 
         crosshairImage.sprite = currentCrosshair.normal;
@@ -138,13 +140,17 @@ public class UIManager : MonoBehaviour
     }
     void Lose()
     {
+        //Time.timeScale = 0;
         loseScreen.SetActive(true);
-        StartCoroutine(ChangeToMenu());
+        finalScore.SetActive(true);
+        //StartCoroutine(ChangeToMenu());
     }
     void Win()
     {
         winScreen.SetActive(true);
-        StartCoroutine(ChangeToMenu());
+        finalScore.SetActive(true);
+        //Time.timeScale = 0;
+        //StartCoroutine(ChangeToMenu());
     }
     IEnumerator ChangeToMenu()
     {

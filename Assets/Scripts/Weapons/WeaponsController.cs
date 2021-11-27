@@ -38,9 +38,8 @@ public class WeaponsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Pause.GetPause())
+        if (Time.timeScale > 0)
         {
-
             if (weapon[actualWeapon].fireTime < weapon[actualWeapon].fireRate)
             {
                 weapon[actualWeapon].fireTime += Time.deltaTime;
