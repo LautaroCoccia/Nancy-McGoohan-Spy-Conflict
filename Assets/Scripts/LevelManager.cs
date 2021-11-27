@@ -17,10 +17,10 @@ public class LevelManager :  MonoBehaviour
     [SerializeField] int targetToKill = 10;
 
     [SerializeField] List<ObstacleInfo> barrelPositions;
+    [SerializeField] MusicController musicController;
     
     ScreenShake shaker;
 
-    
     public static Action<int,int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
     public static Action<int> UpdateUICombo;
@@ -35,7 +35,6 @@ public class LevelManager :  MonoBehaviour
 
     private void Start()
     {
-        
         shaker = Camera.main.GetComponent<ScreenShake>();
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateUIHealth?.Invoke(health,maxHealth);
@@ -61,6 +60,7 @@ public class LevelManager :  MonoBehaviour
 
         DestroyableWall.OnTakeDamage += AddScore;
         ExplosiveBarrel.OnTakeDamage += AddScore;
+
     }
     private void OnDisable()
     {
@@ -93,15 +93,18 @@ public class LevelManager :  MonoBehaviour
         else
         {
             LoseCondition?.Invoke();
+            Time.timeScale = 0;
+            //musicController.StopAllSounds();
+           // AkSoundEngine.PostEvent("shoot", gameObject);
+
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(testLoadLevel);
         }
     }
     public void AddScore(int addScore)
     {
-
         //score += addScore * multiplier;
         OnAddScore?.Invoke(addScore * multiplier);
     }
@@ -110,9 +113,11 @@ public class LevelManager :  MonoBehaviour
         killCounter++;
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateMultiplier(true);
-        if(killCounter == targetToKill)
+        if(killCounter >= targetToKill)
         {
             OnWinCondition?.Invoke();
+            musicController.StopAllSounds();
+            Time.timeScale = 0;
         }
     }
     public void OnHitPlayer(int damage)
@@ -128,6 +133,7 @@ public class LevelManager :  MonoBehaviour
         {
             AkSoundEngine.SetSwitch("nancy", "nancy_death", gameObject);
             AkSoundEngine.PostEvent("nancy", gameObject);
+            musicController.StopAllSounds();
         }
         UpdateUIHealth?.Invoke(health,maxHealth);
         StartCoroutine(WaitForShakeToLoss());
@@ -140,6 +146,7 @@ public class LevelManager :  MonoBehaviour
         if (health <= 0)
         {
             LoseCondition?.Invoke();
+            //Time.timeScale = 0;
         }
     }
     public void HealPlayer(int heal)
@@ -183,5 +190,9 @@ public class LevelManager :  MonoBehaviour
             multiplier = 1;
         }
         UpdateUICombo?.Invoke(multiplier);
+    }
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene(testLoadLevel);
     }
 }

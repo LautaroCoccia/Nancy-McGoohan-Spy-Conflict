@@ -1,0 +1,1988 @@
+fileFormatVersion: 2
+guid: fc456d825ec7100488af5227953a84e7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3753499342648301212
+    second: FontTileSet_White_3_0
+  - first:
+      213: -3571264697102553683
+    second: FontTileSet_White_3_1
+  - first:
+      213: -1641582854829328501
+    second: FontTileSet_White_3_2
+  - first:
+      213: -1589911016264523662
+    second: FontTileSet_White_3_3
+  - first:
+      213: -414790247200342482
+    second: FontTileSet_White_3_4
+  - first:
+      213: -8865444918938071548
+    second: FontTileSet_White_3_5
+  - first:
+      213: -8758680111845041839
+    second: FontTileSet_White_3_6
+  - first:
+      213: 7291200510894778299
+    second: FontTileSet_White_3_7
+  - first:
+      213: -6453246075314180673
+    second: FontTileSet_White_3_8
+  - first:
+      213: -3407353557820472344
+    second: FontTileSet_White_3_9
+  - first:
+      213: -8328509493467955343
+    second: FontTileSet_White_3_10
+  - first:
+      213: 1164559672799291506
+    second: FontTileSet_White_3_11
+  - first:
+      213: 3854670435267008745
+    second: FontTileSet_White_3_12
+  - first:
+      213: 3923407416001515129
+    second: FontTileSet_White_3_13
+  - first:
+      213: -8365255097660560696
+    second: FontTileSet_White_3_14
+  - first:
+      213: -1920713316266930855
+    second: FontTileSet_White_3_15
+  - first:
+      213: 6676708354495659351
+    second: FontTileSet_White_3_16
+  - first:
+      213: 7732994723786679794
+    second: FontTileSet_White_3_17
+  - first:
+      213: -427821673686215473
+    second: FontTileSet_White_3_18
+  - first:
+      213: 375818157302506897
+    second: FontTileSet_White_3_19
+  - first:
+      213: -2992645406513823034
+    second: FontTileSet_White_3_20
+  - first:
+      213: 4216725958048573567
+    second: FontTileSet_White_3_21
+  - first:
+      213: 72679444479659260
+    second: FontTileSet_White_3_22
+  - first:
+      213: -4638894103108186005
+    second: FontTileSet_White_3_23
+  - first:
+      213: 3201116870213725888
+    second: FontTileSet_White_3_24
+  - first:
+      213: -7259712690517063817
+    second: FontTileSet_White_3_25
+  - first:
+      213: 4555508804640917199
+    second: FontTileSet_White_3_26
+  - first:
+      213: 8035788589715833221
+    second: FontTileSet_White_3_27
+  - first:
+      213: -7126737272581422540
+    second: FontTileSet_White_3_28
+  - first:
+      213: -5223259829961800569
+    second: FontTileSet_White_3_29
+  - first:
+      213: 3305596634750019118
+    second: FontTileSet_White_3_30
+  - first:
+      213: 1134856364729957649
+    second: FontTileSet_White_3_31
+  - first:
+      213: -590783601669921599
+    second: FontTileSet_White_3_32
+  - first:
+      213: -6389391999419082230
+    second: FontTileSet_White_3_33
+  - first:
+      213: 8299684329029114503
+    second: FontTileSet_White_3_34
+  - first:
+      213: -1685577545408696744
+    second: FontTileSet_White_3_35
+  - first:
+      213: -6462622721683793210
+    second: FontTileSet_White_3_36
+  - first:
+      213: 6829368061378413383
+    second: FontTileSet_White_3_37
+  - first:
+      213: -3253756034793077522
+    second: FontTileSet_White_3_38
+  - first:
+      213: 6403155509763523823
+    second: FontTileSet_White_3_39
+  - first:
+      213: -7595072695954370532
+    second: FontTileSet_White_3_40
+  - first:
+      213: -962826001845275413
+    second: FontTileSet_White_3_41
+  - first:
+      213: -5194743931023014502
+    second: FontTileSet_White_3_42
+  - first:
+      213: -7001967478906864359
+    second: FontTileSet_White_3_43
+  - first:
+      213: 5174237398184813007
+    second: FontTileSet_White_3_44
+  - first:
+      213: 8365417911933522438
+    second: FontTileSet_White_3_45
+  - first:
+      213: -9012745183292454309
+    second: FontTileSet_White_3_46
+  - first:
+      213: -2860057335897381254
+    second: FontTileSet_White_3_47
+  - first:
+      213: 218194214493126041
+    second: FontTileSet_White_3_48
+  - first:
+      213: -2247235040094960776
+    second: FontTileSet_White_3_49
+  - first:
+      213: -2567868196699760717
+    second: FontTileSet_White_3_50
+  - first:
+      213: -35797262328676233
+    second: FontTileSet_White_3_51
+  - first:
+      213: 2241274272200403929
+    second: FontTileSet_White_3_52
+  - first:
+      213: -5389054478888435671
+    second: FontTileSet_White_3_53
+  - first:
+      213: -4034279220297729266
+    second: FontTileSet_White_3_54
+  - first:
+      213: 9157365348240266822
+    second: FontTileSet_White_3_55
+  - first:
+      213: 1161707710273121652
+    second: FontTileSet_White_3_56
+  - first:
+      213: 2265310479502706950
+    second: FontTileSet_White_3_57
+  - first:
+      213: -8635315178967834220
+    second: FontTileSet_White_3_58
+  - first:
+      213: 769392221546342512
+    second: FontTileSet_White_3_59
+  - first:
+      213: 1475822748603345760
+    second: FontTileSet_White_3_60
+  - first:
+      213: 7017099100387964339
+    second: FontTileSet_White_3_61
+  - first:
+      213: -7804892848864847742
+    second: FontTileSet_White_3_62
+  - first:
+      213: 7049127542818709673
+    second: FontTileSet_White_3_63
+  - first:
+      213: -7746687431534343711
+    second: FontTileSet_White_3_64
+  - first:
+      213: 195011820136105878
+    second: FontTileSet_White_3_65
+  - first:
+      213: -5771570827104710117
+    second: FontTileSet_White_3_66
+  - first:
+      213: 7672422825681448564
+    second: FontTileSet_White_3_67
+  - first:
+      213: 8060432182468682768
+    second: FontTileSet_White_3_68
+  - first:
+      213: -8826088982681806860
+    second: FontTileSet_White_3_69
+  - first:
+      213: 1685581233063804487
+    second: FontTileSet_White_3_70
+  - first:
+      213: -5939684613518989166
+    second: FontTileSet_White_3_71
+  - first:
+      213: -3867763112964578202
+    second: FontTileSet_White_3_72
+  - first:
+      213: 3036413233919196614
+    second: FontTileSet_White_3_73
+  - first:
+      213: 8257827537600844004
+    second: FontTileSet_White_3_74
+  - first:
+      213: 6391414946803677877
+    second: FontTileSet_White_3_75
+  - first:
+      213: -2909538846395046132
+    second: FontTileSet_White_3_76
+  - first:
+      213: -1085633199993256799
+    second: FontTileSet_White_3_77
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FontTileSet_White_3_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 301
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46929c81c34e8ebc0800000000000000
+      internalID: -3753499342648301212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 301
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad2f4aeda1507ec0800000000000000
+      internalID: -3571264697102553683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 301
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87b68c471de739e0800000000000000
+      internalID: -1641582854829328501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 301
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270a21bba508fe9e0800000000000000
+      internalID: -1589911016264523662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 301
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2eb353c77e5e3af0800000000000000
+      internalID: -414790247200342482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 301
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e87ee31dc97f480800000000000000
+      internalID: -8865444918938071548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_6
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 301
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159923008dae27680800000000000000
+      internalID: -8758680111845041839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_7
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 301
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7a706fb3c8f2560800000000000000
+      internalID: 7291200510894778299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_8
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 301
+        width: 18
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbde6b0a2e67176a0800000000000000
+      internalID: -6453246075314180673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_9
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 301
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e382f9fdf5a6b0d0800000000000000
+      internalID: -3407353557820472344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_10
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 301
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fbf55fdb03b6c80800000000000000
+      internalID: -8328509493467955343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_11
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 301
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27862f03ad8592010800000000000000
+      internalID: 1164559672799291506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_12
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 301
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e85a44865a8e7530800000000000000
+      internalID: 3854670435267008745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_13
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 301
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e47ebf14eb27630800000000000000
+      internalID: 3923407416001515129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 229
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8caaa684fc4a8eb80800000000000000
+      internalID: -8365255097660560696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 229
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d0c8c4a614855e0800000000000000
+      internalID: -1920713316266930855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 222
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75db89aafde68ac50800000000000000
+      internalID: 6676708354495659351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_17
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 229
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f56649eabd115b60800000000000000
+      internalID: 7732994723786679794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_18
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 229
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc458b85472101af0800000000000000
+      internalID: -427821673686215473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_19
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 229
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19568267f9c273500800000000000000
+      internalID: 375818157302506897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_20
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 229
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c20a06cbdcf776d0800000000000000
+      internalID: -2992645406513823034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_21
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 229
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7867aceae1d48a30800000000000000
+      internalID: 4216725958048573567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_22
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 229
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfccea6d195320100800000000000000
+      internalID: 72679444479659260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_23
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 229
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60159124665f9fb0800000000000000
+      internalID: -4638894103108186005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_24
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 229
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce699d45d6ac6c20800000000000000
+      internalID: 3201116870213725888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_25
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 229
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777c55685c1504b90800000000000000
+      internalID: -7259712690517063817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_26
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 229
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc649c72f1b683f30800000000000000
+      internalID: 4555508804640917199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_27
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 229
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581462c952bd48f60800000000000000
+      internalID: 8035788589715833221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_28
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 229
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4328f3ca53eb81d90800000000000000
+      internalID: -7126737272581422540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_29
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 157
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7844f81dbd04387b0800000000000000
+      internalID: -5223259829961800569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_30
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 156
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26600120a6dfdd20800000000000000
+      internalID: 3305596634750019118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_31
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 157
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11df1dad9d1dfbf00800000000000000
+      internalID: 1134856364729957649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_32
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 149
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4a653c17d1dc7f0800000000000000
+      internalID: -590783601669921599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_33
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 157
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a17e734d15457a0800000000000000
+      internalID: -6389391999419082230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_34
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 157
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a18a37ce66e2370800000000000000
+      internalID: 8299684329029114503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_35
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 149
+        width: 16
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e2a8c2720ab98e0800000000000000
+      internalID: -1685577545408696744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_36
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 157
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca5ba400e62056a0800000000000000
+      internalID: -6462622721683793210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_37
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 157
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743cbda711ac6ce50800000000000000
+      internalID: 6829368061378413383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_38
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 157
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee40060202658d2d0800000000000000
+      internalID: -3253756034793077522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_39
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 157
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe44a01c2049cd850800000000000000
+      internalID: 6403155509763523823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_40
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 156
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c101f5a9f91e89690800000000000000
+      internalID: -7595072695954370532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_41
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 149
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4b0834ada53a2f0800000000000000
+      internalID: -962826001845275413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_42
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 149
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95c14ceaef88e7b0800000000000000
+      internalID: -5194743931023014502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_43
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 157
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d3bea0da304de90800000000000000
+      internalID: -7001967478906864359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_44
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 156
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1e856df759ec740800000000000000
+      internalID: 5174237398184813007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_45
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 157
+        width: 18
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602dc7ed44fe71470800000000000000
+      internalID: 8365417911933522438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_46
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 85
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a8db2e10c4ce280800000000000000
+      internalID: -9012745183292454309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_47
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 85
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76269891090f48d0800000000000000
+      internalID: -2860057335897381254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_48
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 85
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d78e66b7e270300800000000000000
+      internalID: 218194214493126041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_49
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 85
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873445c23a730d0e0800000000000000
+      internalID: -2247235040094960776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_50
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 77
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b710b1fa791d5cd0800000000000000
+      internalID: -2567868196699760717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_51
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 85
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770c7fe5492d08ff0800000000000000
+      internalID: -35797262328676233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_52
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 85
+        width: 19
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db2ab6631b9a1f10800000000000000
+      internalID: 2241274272200403929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_53
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 85
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92080aef08b3635b0800000000000000
+      internalID: -5389054478888435671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_54
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 85
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bf9657c6c5308c0800000000000000
+      internalID: -4034279220297729266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_55
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 85
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6461554344f751f70800000000000000
+      internalID: 9157365348240266822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_56
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 85
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d69abe1073f1010800000000000000
+      internalID: 1161707710273121652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_57
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 85
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6098ab401efff6f10800000000000000
+      internalID: 2265310479502706950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_58
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 85
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491651ab892392880800000000000000
+      internalID: -8635315178967834220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_59
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 85
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078e73a262e6daa00800000000000000
+      internalID: 769392221546342512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_60
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 85
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b61f978fc2b7410800000000000000
+      internalID: 1475822748603345760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_61
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 13
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b57650247eb16160800000000000000
+      internalID: 7017099100387964339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_62
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 13
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2889c695e437fa390800000000000000
+      internalID: -7804892848864847742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_63
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 54
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0a12ef62883d160800000000000000
+      internalID: 7049127542818709673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_64
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 37
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9896123dc3e7490800000000000000
+      internalID: -7746687431534343711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_65
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 13
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697073a9732d4b200800000000000000
+      internalID: 195011820136105878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_66
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 43
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b129a6e69e247efa0800000000000000
+      internalID: -5771570827104710117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_67
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 9
+        width: 86
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e6753e8ebe97a60800000000000000
+      internalID: 7672422825681448564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_68
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 9
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0142c2c2d586cdf60800000000000000
+      internalID: 8060432182468682768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_69
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 9
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7134735de638580800000000000000
+      internalID: -8826088982681806860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_70
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 54
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e35dc6333646710800000000000000
+      internalID: 1685581233063804487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_71
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 53
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298e8555050029da0800000000000000
+      internalID: -5939684613518989166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_72
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 53
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6642368e0f1f25ac0800000000000000
+      internalID: -3867763112964578202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_73
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 10
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd7c07afb1832a20800000000000000
+      internalID: 3036413233919196614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_74
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 39
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e01323c462b99270800000000000000
+      internalID: 8257827537600844004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_75
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 29
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bafa5ce70ed2b850800000000000000
+      internalID: 6391414946803677877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_76
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 4
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c076c68a5dd3f97d0800000000000000
+      internalID: -2909538846395046132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontTileSet_White_3_77
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 4
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a408064b5e0fe0f0800000000000000
+      internalID: -1085633199993256799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
