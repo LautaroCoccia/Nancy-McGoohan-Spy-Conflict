@@ -191,4 +191,8 @@ public class LevelManager :  MonoBehaviour
         }
         UpdateUICombo?.Invoke(multiplier);
     }
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene(testLoadLevel);
+    }
 }
