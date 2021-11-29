@@ -42,6 +42,7 @@ This game was also possible thanks to the support of these professors:
 - **Sergio Baretto**
 - **Federico Barra**
 - **Ramiro Cabrera**
+- **Lucía Inés Patetta**
 - **Nazareno Rivero**
 - **Eugenio Taboada**
 
