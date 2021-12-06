@@ -10,6 +10,7 @@ public abstract class StateEnemy : MonoBehaviour
         uncover,
         move,
         shoot,
+        death,
         specialAction
     }
     protected State state;
@@ -48,6 +49,9 @@ public abstract class StateEnemy : MonoBehaviour
             case State.shoot:
                 if (!shooting) { StartCoroutine(Shoot()); shooting = true; }
                 break;
+            case State.death:
+                Death();
+                break;
             case State.specialAction:
                 SpecialAction();
                 break;
@@ -58,5 +62,6 @@ public abstract class StateEnemy : MonoBehaviour
     protected abstract void Uncover();
     protected abstract void Move();
     protected abstract IEnumerator Shoot();
+    protected abstract void Death();
     protected abstract void SpecialAction();
 }

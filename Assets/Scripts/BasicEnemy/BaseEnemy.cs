@@ -183,6 +183,12 @@ public class BaseEnemy : StateEnemy
         SelectActualCoverPosition();
         Move();
     }
+    protected override void Death()
+    {
+        animator.SetTrigger("Idle");
+        animator.SetTrigger("Death");
+        StartCoroutine(DyingEnemy());
+    }
     protected override void SpecialAction()
     {
         if (!specialSkill)
@@ -255,8 +261,6 @@ public class BaseEnemy : StateEnemy
     {
         Instantiate(bloodParticleSystem, transform.position, Quaternion.identity);
     }
-    
-    
     void setMoveAnimationDirection(Transform pos, Vector3 nextPos)
     {
         if(pos.position.x - nextPos.x > 0)
@@ -267,5 +271,17 @@ public class BaseEnemy : StateEnemy
         {
             animator.SetTrigger("MoveRight");
         }
+    }
+    public void OnEnemyDeath()
+    {
+        state = State.death;
+    }
+    IEnumerator DyingEnemy()
+    {
+        Collider2D coll = gameObject.GetComponent<Collider2D>();
+        coll.enabled = false;
+        
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }

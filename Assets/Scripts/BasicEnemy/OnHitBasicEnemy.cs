@@ -14,7 +14,6 @@ public class OnHitBasicEnemy : MonoBehaviour, IHitable
         baseEnemy.InstanciateBlood();
         OnTakeDamage?.Invoke(score);
         OnKill();
-        Destroy(gameObject);
+        baseEnemy.OnEnemyDeath();
     }
-
 }

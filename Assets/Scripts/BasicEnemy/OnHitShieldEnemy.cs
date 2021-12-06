@@ -42,7 +42,7 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
             baseEnemy.InstanciateBlood();
             OnTakeDamage?.Invoke(score);
             OnKill();
-            Destroy(gameObject);
+            baseEnemy.OnEnemyDeath();
         }
     }
 }
