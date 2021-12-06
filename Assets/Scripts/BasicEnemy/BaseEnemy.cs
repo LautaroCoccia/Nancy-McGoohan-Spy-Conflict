@@ -64,15 +64,14 @@ public class BaseEnemy : StateEnemy
                 {
                     state = State.uncover;
                     SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
-                    animator.SetTrigger("MoveRight");
+                    setMoveAnimationDirection(transform,nextPos);
                     //animator.SetBool("IsMoving", true);
                 }
                 break;
             case int n when n < (probToShoot + probToSpecial) && n> probToShoot
             && !switchTimerVsProbSpecial && probToSpecial!=0:
                 state = State.specialAction;
-                animator.SetTrigger("MoveRight");
-
+                setMoveAnimationDirection(transform,nextPos);
                 //animator.SetBool("IsMoving", true);
                 break;
         }
@@ -107,7 +106,7 @@ public class BaseEnemy : StateEnemy
     }
     protected override void Move()
     {
-        animator.SetTrigger("MoveRight");
+        setMoveAnimationDirection(transform,nextPos);
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
         if (transform.position == nextPos && !intermediateMove)
         {
@@ -255,5 +254,18 @@ public class BaseEnemy : StateEnemy
     public void InstanciateBlood()
     {
         Instantiate(bloodParticleSystem, transform.position, Quaternion.identity);
+    }
+    
+    
+    void setMoveAnimationDirection(Transform pos, Vector3 nextPos)
+    {
+        if(pos.position.x - nextPos.x > 0)
+        {
+            animator.SetTrigger("MoveLeft");
+        }
+        else
+        {
+            animator.SetTrigger("MoveRight");
+        }
     }
 }
