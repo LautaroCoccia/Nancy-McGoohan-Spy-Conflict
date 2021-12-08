@@ -113,8 +113,12 @@ public class WeaponsController : MonoBehaviour
 
         else
         {
-            AkSoundEngine.SetSwitch("gun_reload", weapon[actualWeapon].reloadingSound, gameObject);
-            AkSoundEngine.PostEvent("reload", gameObject);
+            if (!IsEventPlayingOnGameObject("reload", gameObject))
+            {
+                AkSoundEngine.SetSwitch("gun_reload", weapon[actualWeapon].reloadingSound, gameObject);
+                AkSoundEngine.PostEvent("reload", gameObject);
+            }
+            
         }
     }
     public void TryReload()
@@ -168,5 +172,25 @@ public class WeaponsController : MonoBehaviour
     public WeaponType GetActualWeapon()
     {
         return (WeaponType)actualWeapon;
+    }
+    public static bool IsEventPlayingOnGameObject(string eventName, GameObject go)
+    {
+
+        uint[] playingIds = new uint[50];
+        uint testEventId = AkSoundEngine.GetIDFromString(eventName);
+
+        uint count = (uint)playingIds.Length;
+        AKRESULT result = AkSoundEngine.GetPlayingIDsFromGameObject(go, ref count, playingIds);
+
+        for (int i = 0; i < count; i++)
+        {
+            uint playingId = playingIds[i];
+            uint eventId = AkSoundEngine.GetEventIDFromPlayingID(playingId);
+
+            if (eventId == testEventId)
+                return true;
+        }
+
+        return false;
     }
 }
