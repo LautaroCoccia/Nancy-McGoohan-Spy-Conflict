@@ -19,14 +19,16 @@ public class UIManager : MonoBehaviour
 
     public CrosshairByWeapon currentCrosshair;
 
+
     [SerializeField] Image crosshairImage;
+
+    [SerializeField] Animator UIHealthAnim;
 
     [SerializeField] TextMeshProUGUI UIScoreNum;
     [SerializeField] TextMeshProUGUI UICounterNum;
     [SerializeField] TextMeshProUGUI UITimer;
     [SerializeField] TextMeshProUGUI UICombo;
     [SerializeField] TextMeshProUGUI UIFinalScore;
-    [SerializeField] Image UIHealth;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
     [SerializeField] GameObject finalScore;
@@ -134,9 +136,9 @@ public class UIManager : MonoBehaviour
     {
         UICombo.text = combo.ToString();
     }
-    void UpdateHealth(int health,int maxHealth)
+    void UpdateHealth(int health)
     {
-        UIHealth.fillAmount =  ((float)health) / (float)maxHealth;
+        UIHealthAnim.SetInteger("LivesCount",health);
     }
     void Lose()
     {

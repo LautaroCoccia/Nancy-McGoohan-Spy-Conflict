@@ -24,7 +24,7 @@ public class LevelManager :  MonoBehaviour
     public static Action<int,int> UpdateUIKillCounter;
     public static Action<float> UpdateUITimer;
     public static Action<int> UpdateUICombo;
-    public static Action<int,int> UpdateUIHealth;
+    public static Action<int> UpdateUIHealth;
     public static Action LoseCondition;
     public static Action OnWinCondition;
 
@@ -37,7 +37,7 @@ public class LevelManager :  MonoBehaviour
     {
         shaker = Camera.main.GetComponent<ScreenShake>();
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
-        UpdateUIHealth?.Invoke(health,maxHealth);
+        UpdateUIHealth?.Invoke(health);
         OnResetScore?.Invoke(0);
     }
     // Update is called once per frame
@@ -92,8 +92,8 @@ public class LevelManager :  MonoBehaviour
         }
         else
         {
-            LoseCondition?.Invoke();
             Time.timeScale = 0;
+            LoseCondition?.Invoke();
             //musicController.StopAllSounds();
            // AkSoundEngine.PostEvent("shoot", gameObject);
 
@@ -131,11 +131,12 @@ public class LevelManager :  MonoBehaviour
         }
         else if (health <= 0)
         {
+            //Time.timeScale = 0;
             AkSoundEngine.SetSwitch("nancy", "nancy_death", gameObject);
             AkSoundEngine.PostEvent("nancy", gameObject);
             musicController.StopAllSounds();
         }
-        UpdateUIHealth?.Invoke(health,maxHealth);
+        UpdateUIHealth?.Invoke(health);
         StartCoroutine(WaitForShakeToLoss());
 
     }
@@ -146,14 +147,14 @@ public class LevelManager :  MonoBehaviour
         if (health <= 0)
         {
             LoseCondition?.Invoke();
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
         }
     }
     public void HealPlayer(int heal)
     {
         health += heal;
         if (maxHealth < health) health = maxHealth;
-        UpdateUIHealth?.Invoke(health,maxHealth);
+        UpdateUIHealth?.Invoke(health);
     }
     void DeleteObjectFromList(Transform transform)
     {
