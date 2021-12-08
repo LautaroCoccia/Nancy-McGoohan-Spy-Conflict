@@ -31,6 +31,7 @@ public class BaseEnemy : StateEnemy
     // Start is called before the first frame update
     protected override void Start()
     {
+        //animator = gameObject.GetComponent<Animator>();
         //animator.SetBool("IsMoving", true);
         base.Start();
         intermediateMove = false;
@@ -43,6 +44,8 @@ public class BaseEnemy : StateEnemy
     }
     protected override IEnumerator Choice()
     {
+        animator.SetTrigger("Idle");
+
         //animator.SetBool("IsMoving", false);
         choising = true;
         yield return new WaitForSeconds(choisingTime);
@@ -61,12 +64,14 @@ public class BaseEnemy : StateEnemy
                 {
                     state = State.uncover;
                     SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
+                    setMoveAnimationDirection(transform,nextPos);
                     //animator.SetBool("IsMoving", true);
                 }
                 break;
             case int n when n < (probToShoot + probToSpecial) && n> probToShoot
             && !switchTimerVsProbSpecial && probToSpecial!=0:
                 state = State.specialAction;
+                setMoveAnimationDirection(transform,nextPos);
                 //animator.SetBool("IsMoving", true);
                 break;
         }
@@ -75,8 +80,9 @@ public class BaseEnemy : StateEnemy
     void SelectCoverAndMove()
     {
         state = State.move;
+        
         SelectCoverPosition(barrelPositions);
-        //animator.SetBool("IsMoving", true);
+
     }
     void LostCover()
     {
@@ -100,14 +106,17 @@ public class BaseEnemy : StateEnemy
     }
     protected override void Move()
     {
+        setMoveAnimationDirection(transform,nextPos);
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
         if (transform.position == nextPos && !intermediateMove)
         {
             state = State.choice;
+            animator.SetTrigger("Idle");
         }
         else if(transform.position == nextPos && intermediateMove)
         {
             SelectIntermediate();
+            
         }
     }
     void SelectIntermediate()
@@ -141,10 +150,15 @@ public class BaseEnemy : StateEnemy
     protected override void Uncover()
     {
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-        if (transform.position == nextPos) state = State.shoot;
+        if (transform.position == nextPos)
+        {
+            animator.SetTrigger("Idle");
+            state = State.shoot;
+        }
     }
     protected override IEnumerator Shoot()
     {
+        animator.SetTrigger("Shoot");
         //animator.SetBool("IsMoving", false);
         //OnShoot?.Invoke();
         yield return new WaitForSeconds(timeToWaitAndShoot);
@@ -157,15 +171,23 @@ public class BaseEnemy : StateEnemy
         }
         flashInWeapon.enabled = false;
         yield return new WaitForSeconds(timeWaitAndCover);
+        
         shooting = false;
+        animator.SetTrigger("Idle");
         state = State.Cover;
-        //OnIdle?.Invoke();
         //animator.SetBool("IsMoving", true);
     }
     protected override void Cover()
     {
+        //animator.SetTrigger("Idle");
         SelectActualCoverPosition();
         Move();
+    }
+    protected override void Death()
+    {
+        animator.SetTrigger("Idle");
+        animator.SetTrigger("Death");
+        StartCoroutine(DyingEnemy());
     }
     protected override void SpecialAction()
     {
@@ -238,5 +260,28 @@ public class BaseEnemy : StateEnemy
     public void InstanciateBlood()
     {
         Instantiate(bloodParticleSystem, transform.position, Quaternion.identity);
+    }
+    void setMoveAnimationDirection(Transform pos, Vector3 nextPos)
+    {
+        if(pos.position.x - nextPos.x > 0)
+        {
+            animator.SetTrigger("MoveLeft");
+        }
+        else
+        {
+            animator.SetTrigger("MoveRight");
+        }
+    }
+    public void OnEnemyDeath()
+    {
+        state = State.death;
+    }
+    IEnumerator DyingEnemy()
+    {
+        Collider2D coll = gameObject.GetComponent<Collider2D>();
+        coll.enabled = false;
+        
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }

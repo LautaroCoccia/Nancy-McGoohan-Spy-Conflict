@@ -21,7 +21,7 @@ public class OnHitScaredEnemy : MonoBehaviour , IHitable
         itemDrop.Drop();
         OnTakeDamage?.Invoke(score);
         OnKill();
-        Destroy(gameObject);
+        baseEnemy.OnEnemyDeath();
     }
     
 }
