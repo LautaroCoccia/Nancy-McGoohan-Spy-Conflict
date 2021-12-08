@@ -179,14 +179,12 @@ public class BaseEnemy : StateEnemy
     {
         if (actualCover.shootPosition.Count > 0)
         {
-            Debug.Log("uncover");
             List<int> auxlist = new List<int>();
             for(int i = 0; i < actualCover.slotOccuped.Count;i++)
             {
-                Debug.Log("for");
+                
                 if (!actualCover.slotOccuped[i])
                 {
-                    Debug.Log("slotNotOcupped");
                     auxlist.Add(i);
                 }
             }
