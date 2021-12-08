@@ -8,12 +8,10 @@ public class ScaredSpecial : BasicSpecial
     bool inProgress = false;
     public delegate List<Transform> GetScapePoints();
     public static GetScapePoints scapePointsGetter;
-    BaseEnemy myBase;
     bool activeAfterSkillNow;
     private void Awake()
     {
         SetScapePoints(scapePointsGetter?.Invoke());
-        myBase = GetComponent<BaseEnemy>();
         activeAfterSkillNow = false;
     }
     public override bool Skill()
@@ -31,9 +29,7 @@ public class ScaredSpecial : BasicSpecial
                     aux = scapePoint[i].position;
                 }
             }
-            myBase.SetDestination(aux);
-            myBase.stateToAfterMove = StateEnemy.State.specialAction;
-            myBase.state = StateEnemy.State.move;
+            OnSkillEnd?.Invoke(aux,State.specialAction);
             activeAfterSkillNow = true;
             inProgress = true;
         }

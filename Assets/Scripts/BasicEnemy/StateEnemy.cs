@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum State
+{
+    choice,
+    uncover,
+    move,
+    shoot,
+    death,
+    specialAction,
+    startMove
+}
 public abstract class StateEnemy : MonoBehaviour
 {
-    public enum State
-    {
-        choice,
-        uncover,
-        move,
-        shoot,
-        death,
-        specialAction,
-        startMove
-    }
     public State state;
     protected bool choising = false;
     protected bool shooting = false;

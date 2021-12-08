@@ -27,7 +27,18 @@ public class BaseEnemy : StateEnemy
     public float coverPositionZoffset = 0.9f;
     int uncoverPosIndex = 0;
     bool selectShortDistanceCover = false;
-    
+    private void OnEnable()
+    {
+        if(specialSkill)
+        specialSkill.OnSkillEnd += SetDestinationAndNextState;
+
+    }
+    private void OnDisable()
+    {
+
+        if (specialSkill)
+            specialSkill.OnSkillEnd -= SetDestinationAndNextState;
+    }
     protected override void Start()
     {
         actualCover = coverPosition[UnityEngine.Random.Range(0,coverPosition.Count)];
@@ -241,5 +252,10 @@ public class BaseEnemy : StateEnemy
     public void SetDestination(Vector3 des)
     {
         agent.SetDestination(des  + Vector3.forward * coverPositionZoffset);
+    }
+    public void SetDestinationAndNextState(Vector3 des,State next)
+    {
+        SetDestination(des);
+        stateToAfterMove = next;
     }
 }
