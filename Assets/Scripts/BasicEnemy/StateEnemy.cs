@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 public abstract class StateEnemy : MonoBehaviour
 {
-    protected enum State
+    public enum State
     {
         choice,
-        Cover,
         uncover,
         move,
         shoot,
         death,
-        specialAction
+        specialAction,
+        startMove
     }
-    protected State state;
+    public State state;
     protected bool choising = false;
     protected bool shooting = false;
     protected bool endAction = false;
@@ -24,11 +24,11 @@ public abstract class StateEnemy : MonoBehaviour
     [SerializeField] protected bool switchTimerVsProbSpecial;
     protected float timerToSpecial = 0.0f;
     [SerializeField]protected float timerToWaitSpecial = 3.0f;
-
+    public State stateToAfterMove = State.choice;
     
     protected virtual void Start()
     {
-        state = State.move;
+        state = State.startMove;
     }
     protected virtual void Update()
     {
@@ -37,14 +37,11 @@ public abstract class StateEnemy : MonoBehaviour
             case State.choice:
                 if(!choising)StartCoroutine(Choice());
                 break;
-            case State.Cover:
-                Cover();
-                break;
             case State.uncover:
                 Uncover();
                 break;
             case State.move:
-                Move();
+                WaitToStopMove();
                 break;
             case State.shoot:
                 if (!shooting) { StartCoroutine(Shoot()); shooting = true; }
@@ -55,12 +52,15 @@ public abstract class StateEnemy : MonoBehaviour
             case State.specialAction:
                 SpecialAction();
                 break;
+            case State.startMove:
+                GoToNextCoverPosition();
+                break;
         }
     }
     protected abstract IEnumerator Choice();
-    protected abstract void Cover();
     protected abstract void Uncover();
-    protected abstract void Move();
+    protected abstract void GoToNextCoverPosition();
+    protected abstract void WaitToStopMove();
     protected abstract IEnumerator Shoot();
     protected abstract void Death();
     protected abstract void SpecialAction();

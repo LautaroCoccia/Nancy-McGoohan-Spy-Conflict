@@ -19,8 +19,6 @@ public class EnemySpawner : MonoBehaviour
 
     public delegate List<ObstacleInfo> GetOsbstaclesInfoAction();
     public static GetOsbstaclesInfoAction getOsbstaclesInfoAction;
-    public delegate List<Transform> GetIntermediatePointAction();
-    public static GetIntermediatePointAction getIntermediatePointAction;
 
     const int normalEnemy = 0;
     const int shieldEnemy = 1;
@@ -64,8 +62,8 @@ public class EnemySpawner : MonoBehaviour
         }
 
         GameObject newEnemy = Instantiate(enemyPrefab[aux]);
-        newEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, newEnemy.transform.position.z);
-        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles(),GetIntermediatePoints());
+        newEnemy.transform.position = transform.position;
+        newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles());
         
         enemiesAlive++;
 
@@ -74,10 +72,6 @@ public class EnemySpawner : MonoBehaviour
     List<ObstacleInfo> GetObstacles()
     {
         return getOsbstaclesInfoAction?.Invoke();
-    }
-    List<Transform> GetIntermediatePoints()
-    {
-        return getIntermediatePointAction?.Invoke();
     }
     
 }

@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class BasicSpecial : MonoBehaviour
 {
     public abstract bool Skill();
+    public abstract bool AfterSkill();
 }

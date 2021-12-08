@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2836398668476613177}
   - component: {fileID: 1680928960468761819}
   - component: {fileID: 6752595413804420260}
+  - component: {fileID: 2170248088772856114}
   m_Layer: 8
   m_Name: ScaredEnemy
   m_TagString: Untagged
@@ -76,11 +77,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffd6ca210aa0494d84f402c9ec76a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   choisingTime: 3
   probToShoot: 0
   probToSpecial: 24
   switchTimerVsProbSpecial: 0
   timerToWaitSpecial: 30
+  stateToAfterMove: 0
   bloodParticleSystem: {fileID: 4852197840641742319, guid: e0b4d6227e46a3548a1e560ea270f687,
     type: 3}
   animator: {fileID: 4501079326137381653}
@@ -91,15 +94,12 @@ MonoBehaviour:
   timeMaxTime: 1
   damage: 0
   probToHit: 0
-  barrelPositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  intermediateSpots: []
+  coverPosition: []
   speed: 4.7
   specialSkill: {fileID: 1680928960468761819}
+  agent: {fileID: 2170248088772856114}
+  maxDistanceToSelectNewCover: 12
+  coverPositionZoffset: 0.2
 --- !u!114 &3518662543235037800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +160,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!195 &2170248088772856114
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344803187573882444}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.28
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 16.81
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.63
+  m_BaseOffset: 1.24
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0
 --- !u!1 &7840294399970098416
 GameObject:
   m_ObjectHideFlags: 0
