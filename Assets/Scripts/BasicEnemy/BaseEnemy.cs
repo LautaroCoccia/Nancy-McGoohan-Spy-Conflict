@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AI;
 public class BaseEnemy : StateEnemy
 {
     [SerializeField] GameObject bloodParticleSystem;
@@ -13,40 +14,46 @@ public class BaseEnemy : StateEnemy
     [SerializeField] float timeMaxTime;
     [SerializeField] int damage;
     [SerializeField] [Range(0, 100)] protected int probToHit = 0;
-    [SerializeField] List<ObstacleInfo> barrelPositions;
-    [SerializeField] List<Transform> intermediateSpots;
-    const float positionCorrectionForSorting = 0.7f;
-    Transform actualCoverTransform;
-    Vector3 intermediatePosition;
-    bool intermediateMove;
-    Vector3 nextPos;
-    Vector3 actualCover;
-    int transformIndex;
+    [SerializeField] List<ObstacleInfo> coverPosition;
+    ObstacleInfo actualCover;
     public float speed = 4.7f;
     public static Action<int> OnHitPlayer;
 
     [Space(15)]
     [SerializeField] BasicSpecial specialSkill;
 
-    // Start is called before the first frame update
+    public NavMeshAgent agent;
+    public float maxDistanceToSelectNewCover = 12.0f;
+    public float coverPositionZoffset = 0.9f;
+    int uncoverPosIndex = 0;
+    bool selectShortDistanceCover = false;
+    private void OnEnable()
+    {
+        if(specialSkill)
+        specialSkill.OnSkillEnd += SetDestinationAndNextState;
+
+    }
+    private void OnDisable()
+    {
+
+        if (specialSkill)
+            specialSkill.OnSkillEnd -= SetDestinationAndNextState;
+    }
     protected override void Start()
     {
-        //animator = gameObject.GetComponent<Animator>();
-        //animator.SetBool("IsMoving", true);
+        actualCover = coverPosition[UnityEngine.Random.Range(0,coverPosition.Count)];
+        agent.updateRotation = false;
         base.Start();
-        intermediateMove = false;
     }
-    // Update is called once per frame
     protected override void Update()
     {
         base.Update();
-        LostCover();
+        //LostCover();
     }
     protected override IEnumerator Choice()
     {
         animator.SetTrigger("Idle");
 
-        //animator.SetBool("IsMoving", false);
         choising = true;
         yield return new WaitForSeconds(choisingTime);
         if(switchTimerVsProbSpecial)
@@ -54,113 +61,60 @@ public class BaseEnemy : StateEnemy
             timerToSpecial += Time.deltaTime;
             if (timerToSpecial >= timerToWaitSpecial) state = State.specialAction;
         }
-        switch(UnityEngine.Random.Range(0,101))
+        switch (UnityEngine.Random.Range(0, 101))
         {
             case int n when n >= (probToShoot + probToSpecial):
-                SelectCoverAndMove();
+                SelectNewCoverPosition();
                 break;
             case int n when n < probToShoot:
-                if (actualCoverTransform)
-                {
-                    state = State.uncover;
-                    SelectUncoverPosition(barrelPositions[transformIndex].shootPosition);
-                    setMoveAnimationDirection(transform,nextPos);
-                    //animator.SetBool("IsMoving", true);
-                }
+                state = State.uncover;
+                SelectUncoverPosition();
                 break;
             case int n when n < (probToShoot + probToSpecial) && n> probToShoot
             && !switchTimerVsProbSpecial && probToSpecial!=0:
                 state = State.specialAction;
-                setMoveAnimationDirection(transform,nextPos);
-                //animator.SetBool("IsMoving", true);
                 break;
         }
         choising = false;
     }
-    void SelectCoverAndMove()
-    {
-        state = State.move;
-        
-        SelectCoverPosition(barrelPositions);
-
-    }
     void LostCover()
     {
-        if (!actualCoverTransform)
-        {
-            StopCoroutine(Choice());
-            choising = false;
-            SelectCoverAndMove();
-        }
+        //if (!actualCoverTransform)
+        //{
+        //    StopCoroutine(Choice());
+        //    choising = false;
+        //    SelectCoverAndMove();
+        //}
     }
-    public void SetObstaclesList(List<ObstacleInfo> obstacles,List<Transform> intermediatesSpotL)
+    public void SetObstaclesList(List<ObstacleInfo> obstacles)
     {
-        intermediateSpots = intermediatesSpotL;
-        barrelPositions = obstacles;
-        transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
-        nextPos = new Vector3(barrelPositions[transformIndex].transform.position.x,
-                              barrelPositions[transformIndex].transform.position.y ,
-                              barrelPositions[transformIndex].transform.position.z + positionCorrectionForSorting);
-        actualCover = nextPos;
-        actualCoverTransform = barrelPositions[transformIndex].transform;
+        coverPosition = obstacles;
     }
-    protected override void Move()
+    protected override void GoToNextCoverPosition()
     {
-        setMoveAnimationDirection(transform,nextPos);
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-        if (transform.position == nextPos && !intermediateMove)
-        {
-            state = State.choice;
-            animator.SetTrigger("Idle");
-        }
-        else if(transform.position == nextPos && intermediateMove)
-        {
-            SelectIntermediate();
-            
-        }
+        agent.SetDestination(actualCover.transform.position + Vector3.forward * coverPositionZoffset);
+        stateToAfterMove = State.choice;
+        state = State.move;
     }
-    void SelectIntermediate()
+    protected override void WaitToStopMove()
     {
-        Vector3 aux;
-        if (intermediateMove)
+        setMoveAnimationDirection();
+        if (agent.remainingDistance == 0)
         {
-            aux = intermediatePosition;
-            intermediatePosition = nextPos;
-            nextPos = aux;
-            intermediateMove = false;
+            state = stateToAfterMove;  
         }
-
-        foreach (Transform a in intermediateSpots)
-        {
-            if (Vector3.Distance(intermediatePosition, transform.position) >= Vector3.Distance(a.position, transform.position) &&
-                Vector3.Distance(nextPos,transform.position) >= Vector3.Distance(a.position,nextPos) && intermediatePosition != transform.position)
-            {
-                intermediatePosition = a.position;
-                intermediateMove = true;
-            }
-        }
-        if (intermediateMove)
-        {
-            aux = intermediatePosition;
-            intermediatePosition = nextPos;
-            nextPos = aux;
-        }
-
     }
     protected override void Uncover()
     {
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-        if (transform.position == nextPos)
-        {
-            animator.SetTrigger("Idle");
-            state = State.shoot;
-        }
+        agent.SetDestination(actualCover.shootPosition[uncoverPosIndex].position);
+        setMoveAnimationDirection();
+        stateToAfterMove = State.shoot;
+        state = State.move;
     }
     protected override IEnumerator Shoot()
     {
+        animator.SetTrigger("Idle");
         animator.SetTrigger("Shoot");
-        //animator.SetBool("IsMoving", false);
-        //OnShoot?.Invoke();
         yield return new WaitForSeconds(timeToWaitAndShoot);
         flashInWeapon.enabled = true;
         yield return new WaitForSeconds(timeWaitEndShoot);
@@ -174,26 +128,22 @@ public class BaseEnemy : StateEnemy
         
         shooting = false;
         animator.SetTrigger("Idle");
-        state = State.Cover;
-        //animator.SetBool("IsMoving", true);
-    }
-    protected override void Cover()
-    {
-        //animator.SetTrigger("Idle");
-        SelectActualCoverPosition();
-        Move();
+        actualCover.slotOccuped[uncoverPosIndex] = false;
+        state = State.startMove;
     }
     protected override void Death()
     {
+        agent.isStopped = true;
         animator.SetTrigger("Idle");
         animator.SetTrigger("Death");
         StartCoroutine(DyingEnemy());
     }
     protected override void SpecialAction()
     {
-        if (!specialSkill)
+        if (specialSkill)
         {
-            if(specialSkill.Skill())
+            specialSkill.Skill();
+            if(state == State.specialAction)
             {
                 state = State.choice;
             }
@@ -203,51 +153,56 @@ public class BaseEnemy : StateEnemy
             state = State.choice;
         }
     }
-    protected void SelectCoverPosition(List<ObstacleInfo> positions)
+    protected void SelectNewCoverPosition()
     {
-        Vector3 aux;
-        do
+        if (selectShortDistanceCover)
         {
-            transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
-            if(barrelPositions[transformIndex] == null)
+            List<ObstacleInfo> auxList = new List<ObstacleInfo>();
+            foreach (ObstacleInfo obj in coverPosition)
             {
-                barrelPositions.RemoveAt(transformIndex);
-                transformIndex = UnityEngine.Random.Range(0, barrelPositions.Count);
+                if (selectShortDistanceCover && maxDistanceToSelectNewCover > Mathf.Abs(transform.position.x - obj.transform.position.x) && obj != actualCover)
+                {
+                    auxList.Add(obj);
+                }
             }
-            aux = new Vector3(barrelPositions[transformIndex].transform.position.x,
-                              barrelPositions[transformIndex].transform.position.y ,
-                          barrelPositions[transformIndex].transform.position.z + positionCorrectionForSorting);
-        } while (aux == nextPos);
-        nextPos = aux;
-        actualCover = aux;
-        SelectIntermediate();
-        actualCoverTransform = barrelPositions[transformIndex].transform;
-    }
-    protected void SelectUncoverPosition(List<Transform> position)
-    {
-        Vector3 aux;
-        int index = 0;
-        do
+            if (auxList.Count != 0)
+                actualCover = auxList[UnityEngine.Random.Range(0, auxList.Count)];
+        }
+        else
         {
-            index = UnityEngine.Random.Range(0, position.Count);
-            if(position[index] == null)
+            actualCover = coverPosition[UnityEngine.Random.Range(0,coverPosition.Count)];
+        }
+        state = State.startMove;
+
+    }
+    protected void SelectUncoverPosition()
+    {
+        if (actualCover.shootPosition.Count > 0)
+        {
+            List<int> auxlist = new List<int>();
+            for(int i = 0; i < actualCover.slotOccuped.Count;i++)
             {
-                aux = Vector3.zero;
-                state = State.move;
+                
+                if (!actualCover.slotOccuped[i])
+                {
+                    auxlist.Add(i);
+                }
+            }
+            if (auxlist.Count > 0)
+            {
+                uncoverPosIndex = auxlist[UnityEngine.Random.Range(0, auxlist.Count)];
+                actualCover.slotOccuped[uncoverPosIndex] = true;
+                state = State.uncover;
             }
             else
             {
-                aux = new Vector3(position[index].position.x,
-                              position[index].position.y + positionCorrectionForSorting,
-                          transform.position.z);
+                state = State.choice;
             }
-            
-        } while (aux == nextPos);
-        nextPos = aux;
-    }
-    protected void SelectActualCoverPosition()
-    {
-        nextPos = actualCover;
+        }
+        else
+        {
+            state = State.choice;
+        }
     }
     void ShootSound()
     {
@@ -261,15 +216,23 @@ public class BaseEnemy : StateEnemy
     {
         Instantiate(bloodParticleSystem, transform.position, Quaternion.identity);
     }
-    void setMoveAnimationDirection(Transform pos, Vector3 nextPos)
+    void setMoveAnimationDirection()
     {
-        if(pos.position.x - nextPos.x > 0)
+        if(agent.velocity.x < 0.0f)
         {
-            animator.SetTrigger("MoveLeft");
+            animator.SetBool("RightMove", false);
+            animator.SetBool("LeftMove",true);
         }
-        else
+        else if (agent.velocity.x > 0.0f)
         {
-            animator.SetTrigger("MoveRight");
+            animator.SetBool("LeftMove", false);
+            animator.SetBool("RightMove",true);
+        }
+        else if(agent.remainingDistance == 0)
+        {
+
+            animator.SetBool("LeftMove", false);
+            animator.SetBool("RightMove", false);
         }
     }
     public void OnEnemyDeath()
@@ -283,5 +246,14 @@ public class BaseEnemy : StateEnemy
         
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
+    }
+    public void SetDestination(Vector3 des)
+    {
+        agent.SetDestination(des  + Vector3.forward * coverPositionZoffset);
+    }
+    public void SetDestinationAndNextState(Vector3 des,State next)
+    {
+        SetDestination(des);
+        stateToAfterMove = next;
     }
 }

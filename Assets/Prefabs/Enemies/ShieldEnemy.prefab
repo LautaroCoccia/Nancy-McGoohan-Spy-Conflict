@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 2149584061558018804}
   - component: {fileID: 1748382237787767059}
   - component: {fileID: 1726273791387771802}
+  - component: {fileID: 3957865791406158402}
   m_Layer: 8
   m_Name: ShieldEnemy
   m_TagString: EnemyShield
@@ -257,11 +258,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffd6ca210aa0494d84f402c9ec76a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   choisingTime: 3
   probToShoot: 25
   probToSpecial: 0
   switchTimerVsProbSpecial: 0
   timerToWaitSpecial: 3
+  stateToAfterMove: 0
   bloodParticleSystem: {fileID: 4852197840641742319, guid: e0b4d6227e46a3548a1e560ea270f687,
     type: 3}
   animator: {fileID: 409537970059967260}
@@ -272,15 +275,12 @@ MonoBehaviour:
   timeMaxTime: 1
   damage: 1
   probToHit: 50
-  barrelPositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  intermediateSpots: []
+  coverPosition: []
   speed: 4.7
   specialSkill: {fileID: 0}
+  agent: {fileID: 3957865791406158402}
+  maxDistanceToSelectNewCover: 12
+  coverPositionZoffset: 0.2
 --- !u!114 &1748382237787767059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,3 +317,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!195 &3957865791406158402
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500391456599187859}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.83
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 16.81
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.63
+  m_BaseOffset: 1.24
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0

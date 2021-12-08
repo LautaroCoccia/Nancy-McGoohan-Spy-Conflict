@@ -12,7 +12,7 @@ public class ObstacleInfo : MonoBehaviour
         {
             slotOccuped[i] = false;
         }
-        
+         
     
     }
 }

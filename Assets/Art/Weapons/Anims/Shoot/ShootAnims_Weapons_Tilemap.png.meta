@@ -168,12 +168,12 @@ TextureImporter:
       name: ShootAnims_Weapons_Tilemap_0
       rect:
         serializedVersion: 2
-        x: 55
+        x: 52
         y: 832
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,10 +191,10 @@ TextureImporter:
         serializedVersion: 2
         x: 545
         y: 832
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,10 +212,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1035
         y: 832
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,10 +233,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1525
         y: 832
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,10 +254,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2015
         y: 832
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: ShootAnims_Weapons_Tilemap_5
       rect:
         serializedVersion: 2
-        x: 2505
+        x: 2508
         y: 832
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,10 +296,10 @@ TextureImporter:
         serializedVersion: 2
         x: 55
         y: 472
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,10 +317,10 @@ TextureImporter:
         serializedVersion: 2
         x: 545
         y: 472
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,10 +338,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1035
         y: 472
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,10 +359,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1525
         y: 472
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,10 +380,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2015
         y: 472
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,12 +399,12 @@ TextureImporter:
       name: ShootAnims_Weapons_Tilemap_11
       rect:
         serializedVersion: 2
-        x: 2505
+        x: 2502
         y: 472
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -422,10 +422,10 @@ TextureImporter:
         serializedVersion: 2
         x: 55
         y: 112
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -443,10 +443,10 @@ TextureImporter:
         serializedVersion: 2
         x: 545
         y: 112
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,10 +464,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1035
         y: 112
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,12 +483,12 @@ TextureImporter:
       name: ShootAnims_Weapons_Tilemap_15
       rect:
         serializedVersion: 2
-        x: 1525
+        x: 1522
         y: 112
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -506,10 +506,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2015
         y: 112
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -527,10 +527,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2505
         y: 112
-        width: 460
+        width: 445
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
