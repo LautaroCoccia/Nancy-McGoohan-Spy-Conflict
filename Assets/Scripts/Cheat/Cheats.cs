@@ -41,9 +41,9 @@ public class Cheats : MonoBehaviour
         {
             foreach(GameObject g in e.enemiesSpawned)
             {
+                if(g)
                 g.GetComponent<IHitable>().InstantDead();
             }
-            e.enemiesSpawned.Clear();
         }
     }
 }
