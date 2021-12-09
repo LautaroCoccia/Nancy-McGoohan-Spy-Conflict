@@ -86,7 +86,7 @@ public class WeaponsController : MonoBehaviour
                 weapon[actualWeapon].SetHitCrosshair();
                 StartCoroutine(HitShoot());
             }
-            else
+            else if (hit.collider != null)
             {
                 
                 int newSortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
@@ -118,7 +118,6 @@ public class WeaponsController : MonoBehaviour
                 AkSoundEngine.SetSwitch("gun_reload", weapon[actualWeapon].reloadingSound, gameObject);
                 AkSoundEngine.PostEvent("reload", gameObject);
             }
-            
         }
     }
     public void TryReload()
@@ -173,12 +172,11 @@ public class WeaponsController : MonoBehaviour
     {
         return (WeaponType)actualWeapon;
     }
+
     public static bool IsEventPlayingOnGameObject(string eventName, GameObject go)
     {
-
         uint[] playingIds = new uint[50];
         uint testEventId = AkSoundEngine.GetIDFromString(eventName);
-
         uint count = (uint)playingIds.Length;
         AKRESULT result = AkSoundEngine.GetPlayingIDsFromGameObject(go, ref count, playingIds);
 

@@ -24,5 +24,9 @@ public abstract class BasicItem : MonoBehaviour,IHitable
     {
         yield return new WaitForSeconds(duration);
     }
-    
+
+    public void InstantDead()
+    {
+        OnHit(Weapon.DamageInfo.strong);
+    }
 }

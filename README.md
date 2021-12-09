@@ -19,14 +19,21 @@ This is a game (still in development) developed by students from <a href="https:
 
 - **Ruffo Maximiliano** - *Programming*
 - **Coccia Lautaro** - *Programming*
+
 - **Mar del Valle** - *Art*
 - **Santiago Andrés Ruiz** - *Art*
+
 - **Christian B. Quiroga** - *Sound Designer*
 - **Matías Diehl** - *Music Composer*
+
 - **Matías Rodriguez** - *Testing*
 - **Lucas Liendro** - *Testing*
-- **anonymous** - *Testing*
-- **anonymous** - *Testing*
+- **Joaquin Pacheco Solari** - *Testing*
+
+- **Mariano Mallea** - *Testing*
+- **Javier Santagiuliana** - *Testing*
+- **Juan Alvarez Montaldo** - *Testing*
+- **Juan Bautista Huppi Siciliano** - *Testing*
 
 ## Tools
 - **Unity**

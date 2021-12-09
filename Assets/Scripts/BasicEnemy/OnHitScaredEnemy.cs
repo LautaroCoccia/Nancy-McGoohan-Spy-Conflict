@@ -23,5 +23,9 @@ public class OnHitScaredEnemy : MonoBehaviour , IHitable
         OnKill();
         baseEnemy.OnEnemyDeath();
     }
-    
+
+    public void InstantDead()
+    {
+        OnHit(Weapon.DamageInfo.strong);
+    }
 }

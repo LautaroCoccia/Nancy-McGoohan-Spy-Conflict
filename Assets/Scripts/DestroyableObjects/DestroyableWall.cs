@@ -19,4 +19,8 @@ public class DestroyableWall : BaseDestroyableObject, IHitable
             //Destroy(gameObject);
         }
     }
+    public void InstantDead()
+    {
+        OnHit(Weapon.DamageInfo.strong);
+    }
 }

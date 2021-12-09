@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IHitable 
 {
     void OnHit(Weapon.DamageInfo damageInfo);
+    void InstantDead();
 }
