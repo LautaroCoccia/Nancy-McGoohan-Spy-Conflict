@@ -18,4 +18,9 @@ public class ExplosiveBarrel : BaseDestroyableObject, IHitable
             Destroy(gameObject);
         }
     }
+    public void InstantDead()
+    {
+        lives = 1;
+        OnHit(Weapon.DamageInfo.strong);
+    }
 }

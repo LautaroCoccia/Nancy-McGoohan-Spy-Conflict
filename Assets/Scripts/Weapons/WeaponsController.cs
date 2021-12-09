@@ -86,7 +86,7 @@ public class WeaponsController : MonoBehaviour
                 weapon[actualWeapon].SetHitCrosshair();
                 StartCoroutine(HitShoot());
             }
-            else
+            else if (hit.collider != null)
             {
                 
                 int newSortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;

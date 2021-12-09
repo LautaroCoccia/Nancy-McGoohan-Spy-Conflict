@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
     const int shieldEnemy = 1;
     const int scaredEnemy = 2;
     public static Action specialSet;
-
+    public List<GameObject> enemiesSpawned;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject newEnemy = Instantiate(enemyPrefab[aux]);
         newEnemy.transform.position = transform.position;
         newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles());
-        
+        enemiesSpawned.Add(newEnemy);
         enemiesAlive++;
 
     }

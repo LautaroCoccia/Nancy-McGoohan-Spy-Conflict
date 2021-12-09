@@ -45,4 +45,10 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
             baseEnemy.OnEnemyDeath();
         }
     }
+
+    public void InstantDead()
+    {
+        enemyState = true;
+        OnHit(Weapon.DamageInfo.strong);
+    }
 }
