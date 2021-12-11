@@ -25,10 +25,12 @@ public abstract class StateEnemy : MonoBehaviour
     protected float timerToSpecial = 0.0f;
     [SerializeField]protected float timerToWaitSpecial = 3.0f;
     public State stateToAfterMove = State.choice;
+    bool dead = false;
     
     protected virtual void Start()
     {
         state = State.startMove;
+        dead = false;
     }
     protected virtual void Update()
     {
@@ -47,7 +49,7 @@ public abstract class StateEnemy : MonoBehaviour
                 if (!shooting) { StartCoroutine(Shoot()); shooting = true; }
                 break;
             case State.death:
-                Death();
+                if (!dead) { Death(); dead = true; }
                 break;
             case State.specialAction:
                 SpecialAction();
