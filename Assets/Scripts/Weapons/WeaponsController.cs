@@ -110,13 +110,12 @@ public class WeaponsController : MonoBehaviour
                 weapon[actualWeapon].SetOutOfAmmoCrosshair();
             }
         }
-
         else
         {
-            if (!IsEventPlayingOnGameObject("reload", gameObject))
+            if (!IsEventPlayingOnGameObject("shoot", gameObject))
             {
-                AkSoundEngine.SetSwitch("gun_reload", weapon[actualWeapon].reloadingSound, gameObject);
-                AkSoundEngine.PostEvent("reload", gameObject);
+                AkSoundEngine.SetSwitch("gun_shoot", weapon[actualWeapon].shootWithinAmmo, gameObject);
+                AkSoundEngine.PostEvent("shoot", gameObject);
             }
         }
     }
@@ -134,8 +133,8 @@ public class WeaponsController : MonoBehaviour
         weapon[actualWeapon].isReloading = true;
         OnSetReloadMode?.Invoke(true);
         OnStartAnim?.Invoke();
-        AkSoundEngine.SetSwitch("gun_shoot", weapon[actualWeapon].shootWithinAmmo, gameObject);
-        AkSoundEngine.PostEvent("shoot", gameObject);
+        AkSoundEngine.SetSwitch("gun_reload", weapon[actualWeapon].reloadingSound, gameObject);
+        AkSoundEngine.PostEvent("reload", gameObject);
         yield return new WaitForSeconds(weapon[actualWeapon].reloadTime);
         weapon[actualWeapon].ammo = weapon[actualWeapon].maxAmmo;
         //ResetUIAmmo?.Invoke();
