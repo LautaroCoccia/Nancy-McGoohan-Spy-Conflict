@@ -105,10 +105,10 @@
 						<CurrentSwitchRef Name="button_press" ID="{7D27F9F3-E171-43BE-808F-F79CADCCFE8B}"/>
 						<CurrentSwitchRef Name="shieldhit_shotgun" ID="{7479765B-36FB-4EEF-9467-BE34178F348D}"/>
 						<CurrentSwitchRef Name="loop" ID="{E0082150-EE83-4F9F-82D8-547B7CBD8D0F}"/>
-						<CurrentSwitchRef Name="pistol_reload" ID="{E1F75ED9-295A-46D9-9484-46702010E4C6}"/>
+						<CurrentSwitchRef Name="smg_reload" ID="{11C2A3B1-ED3B-4B2A-BCE4-C1DC101B3F10}"/>
 						<CurrentSwitchRef Name="nancy_death" ID="{C1F0C902-2E3C-495E-A285-65EDA9696D44}"/>
 						<CurrentSwitchRef Name="cover_break" ID="{54E06DB1-1BD3-4817-B6F5-1CBE18BB46E6}"/>
-						<CurrentSwitchRef Name="pistol_empty" ID="{9D9C679B-9D17-45A1-9F63-0CEE9571BC91}"/>
+						<CurrentSwitchRef Name="smg_shoot" ID="{CBD1FE30-27AA-4AD4-AE3B-349C0122541B}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
