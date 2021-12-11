@@ -168,27 +168,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Cover_Destroy" ID="{05846E07-DDB2-4C3B-AA2C-B6BF5C9D4FC1}" ShortID="1045406240">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{D81487E8-C724-4299-87B5-E5D5FA601413}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="200"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<BlendContainer Name="Cover_Break" ID="{0E9EB431-DC55-42D9-BBB2-BAD61E60AA2F}" ShortID="794613916">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
@@ -198,14 +178,25 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="13080 stone crushing hit" ID="{ACD31480-65F2-4BE0-8305-6B057D55396F}" ShortID="219361599">
+										<RandomSequenceContainer Name="Cover_Break" ID="{3BADB9B4-DAB8-4743-BD00-B3CC4AC6A62B}" ShortID="649918314">
 											<PropertyList>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
-															<Modifier Name="" ID="{48C98004-BCCA-4DDB-9C00-F68A770173D5}"/>
+															<Modifier Name="" ID="{072882F1-0AB1-4AF1-A971-E5C15DAECCE9}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -213,50 +204,148 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+													<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="13080 stone crushing hit" ID="{B2C3D0D2-E2A6-47D7-92C8-5B6B223F9EBA}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>13080 stone crushing hit.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="476184984"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="concrete impact" ID="{DFDBD343-203B-4638-849F-5245BA53DA33}" ShortID="721289976">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="concrete impact" ID="{A51E0C99-0F7B-4B3E-ABF7-A0CFADF42253}">
+															<Language>SFX</Language>
+															<AudioFile>concrete impact.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="45049979"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="concrete impact" ID="{A51E0C99-0F7B-4B3E-ABF7-A0CFADF42253}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="13080 stone crushing hit" ID="{B2C3D0D2-E2A6-47D7-92C8-5B6B223F9EBA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Leaves" ID="{A823C3AE-0558-4FE0-998A-33E5AF4A4193}" ShortID="692659903">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="23571 dry bush bashing-full" ID="{AB467993-995E-4790-831D-5BE916E3BC35}" ShortID="987820704">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="23571 dry bush bashing-full" ID="{73127DB9-9E2D-47D8-A7EE-240D0CE074D4}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0586429947701624"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.164200385356455"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.944152215799615"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>23571 dry bush bashing-full.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="610090906"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="23571 dry bush bashing-full" ID="{73127DB9-9E2D-47D8-A7EE-240D0CE074D4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="23571 dry bush bashing-full_01" ID="{0A78DB7F-30C3-4285-BC5E-14BAAB15EE01}" ShortID="810513850">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="23571 dry bush bashing-full" ID="{0065CF53-6B19-4C73-B076-042118137AC7}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.252164877511698"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.40156757500688"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.3457197908065"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>23571 dry bush bashing-full.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="204696233"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="23571 dry bush bashing-full" ID="{0065CF53-6B19-4C73-B076-042118137AC7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="23571 dry bush bashing-full_02" ID="{E990A744-1AEE-4901-9F78-93C4FAFDB072}" ShortID="803587925">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="23571 dry bush bashing-full" ID="{E0F2C8E6-4469-4682-AF84-7C724061688E}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0469143958161298"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.111421690063309"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.4923272777319"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.44234379300853"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>23571 dry bush bashing-full.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="392277435"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="23571 dry bush bashing-full" ID="{E0F2C8E6-4469-4682-AF84-7C724061688E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists/>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Cover_Break" ID="{3BADB9B4-DAB8-4743-BD00-B3CC4AC6A62B}" ShortID="649918314">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{072882F1-0AB1-4AF1-A971-E5C15DAECCE9}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="200"/>
-															<Property Name="Min" Type="Real64" Value="-300"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								</BlendContainer>
+								<BlendContainer Name="Cover_Destroy" ID="{8235B575-8F39-45D8-9CE0-89D4D53ACFB9}" ShortID="137141544">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
@@ -266,54 +355,207 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="concrete impact" ID="{DFDBD343-203B-4638-849F-5245BA53DA33}" ShortID="721289976">
+										<RandomSequenceContainer Name="Cover_Destroy" ID="{05846E07-DDB2-4C3B-AA2C-B6BF5C9D4FC1}" ShortID="1045406240">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D81487E8-C724-4299-87B5-E5D5FA601413}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+													<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="concrete impact" ID="{A51E0C99-0F7B-4B3E-ABF7-A0CFADF42253}">
-													<Language>SFX</Language>
-													<AudioFile>concrete impact.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="45049979"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="13080 stone crushing hit" ID="{ACD31480-65F2-4BE0-8305-6B057D55396F}" ShortID="219361599">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{48C98004-BCCA-4DDB-9C00-F68A770173D5}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="13080 stone crushing hit" ID="{B2C3D0D2-E2A6-47D7-92C8-5B6B223F9EBA}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>13080 stone crushing hit.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="476184984"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="13080 stone crushing hit" ID="{B2C3D0D2-E2A6-47D7-92C8-5B6B223F9EBA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="concrete impact" ID="{A51E0C99-0F7B-4B3E-ABF7-A0CFADF42253}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Leaves" ID="{5FE15D62-BD64-4670-9AFB-FBB517E404BC}" ShortID="27306778">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="23571 dry bush bashing-full" ID="{A87D23C1-17BA-4C8D-B7CD-B2AF5CF0ADA8}" ShortID="218936301">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="23571 dry bush bashing-full" ID="{828A4041-2829-4675-8AAE-A57EAF41C72F}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0586429947701624"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.164200385356455"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.944152215799615"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>23571 dry bush bashing-full.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="610090906"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="23571 dry bush bashing-full" ID="{828A4041-2829-4675-8AAE-A57EAF41C72F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="23571 dry bush bashing-full_01" ID="{3BFD594C-DA77-41B4-9701-C8B0005B0EEA}" ShortID="321787762">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="23571 dry bush bashing-full" ID="{A2BE51FB-A34E-42B9-8D70-2CEBAF36FF23}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.252164877511698"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.40156757500688"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.3457197908065"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>23571 dry bush bashing-full.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="204696233"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="23571 dry bush bashing-full" ID="{A2BE51FB-A34E-42B9-8D70-2CEBAF36FF23}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="23571 dry bush bashing-full_02" ID="{362EBEFA-0D1B-4B40-8025-3A78248FD41C}" ShortID="701522112">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="23571 dry bush bashing-full" ID="{BB5658EF-0607-4E9E-95A5-AD1C61CFE28F}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0469143958161298"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.111421690063309"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.4923272777319"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.44234379300853"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>23571 dry bush bashing-full.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="392277435"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="23571 dry bush bashing-full" ID="{BB5658EF-0607-4E9E-95A5-AD1C61CFE28F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists/>
-								</RandomSequenceContainer>
+								</BlendContainer>
 							</ChildrenList>
 							<ObjectLists/>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="Cover_Destroy" ID="{05846E07-DDB2-4C3B-AA2C-B6BF5C9D4FC1}"/>
+										<ItemRef Name="Cover_Break" ID="{0E9EB431-DC55-42D9-BBB2-BAD61E60AA2F}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="Cover_Break" ID="{3BADB9B4-DAB8-4743-BD00-B3CC4AC6A62B}"/>
+										<ItemRef Name="Cover_Destroy" ID="{8235B575-8F39-45D8-9CE0-89D4D53ACFB9}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
 										<SwitchRef Name="cover_break" ID="{54E06DB1-1BD3-4817-B6F5-1CBE18BB46E6}"/>
 										<ItemList>
-											<ItemRef Name="Cover_Break" ID="{3BADB9B4-DAB8-4743-BD00-B3CC4AC6A62B}"/>
+											<ItemRef Name="Cover_Break" ID="{0E9EB431-DC55-42D9-BBB2-BAD61E60AA2F}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="cover_destroy" ID="{9DD53CF4-FFB5-45A0-B514-5350A087432F}"/>
 										<ItemList>
-											<ItemRef Name="Cover_Destroy" ID="{05846E07-DDB2-4C3B-AA2C-B6BF5C9D4FC1}"/>
+											<ItemRef Name="Cover_Destroy" ID="{8235B575-8F39-45D8-9CE0-89D4D53ACFB9}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
@@ -1073,6 +1315,266 @@
 										<ItemRef Name="Thompson_Shots_ODC-0045-340_02" ID="{07B35C9C-8F61-40AA-AAB8-FD8A77FE433B}"/>
 									</Playlist>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Pistol_empty" ID="{756208D4-60FF-492F-B132-0897DE0AD0D0}" ShortID="898662140">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8BB0BC24-1F0F-4A1C-BE44-FCEB09787D04}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Pistol Out of Ammo (single click)" ID="{3F71FBDF-EDE3-4CB0-BB39-027127F6C37C}" ShortID="82445111">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pistol Out of Ammo (single click)" ID="{B601211A-AAD1-4B87-999B-661DACFC2284}">
+													<Language>SFX</Language>
+													<AudioFile>Pistol Out of Ammo (single click).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1062108741"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Pistol Out of Ammo (single click)" ID="{B601211A-AAD1-4B87-999B-661DACFC2284}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Shotgun_empty" ID="{998480CA-C4E6-4281-9044-1F04A283C1EF}" ShortID="189069535">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DABF5051-3EC7-4B80-AD28-4284FDEBF5A7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Pistol Out of Ammo (single click)" ID="{AF8F3720-1614-4D44-B764-A4CCD227325C}" ShortID="849044340">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-710</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pistol Out of Ammo (single click)" ID="{D49EA6EB-75FC-49C5-8F14-7ADD8848F0E9}">
+													<Language>SFX</Language>
+													<AudioFile>Pistol Out of Ammo (single click).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1062108741"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Pistol Out of Ammo (single click)" ID="{D49EA6EB-75FC-49C5-8F14-7ADD8848F0E9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Smg_empty" ID="{5138FB66-0419-4378-9B2C-60747155A055}" ShortID="828354443">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-100</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{44CFBC46-D450-465A-B6C8-076655B7660E}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Pistol Out of Ammo (double click)" ID="{41877BE4-E567-4ADC-BC72-B44894C8B047}" ShortID="709427944">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C1A223E0-289F-4EE3-902F-5164465619CB}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pistol Out of Ammo (double click)" ID="{E6213959-9A7C-48EC-B813-0DE7DD975F1A}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0315047907409592"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0248722032165468"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.26613257441705"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.485007962722661"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Pistol Out of Ammo (double click).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="589548535"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Pistol Out of Ammo (double click)" ID="{E6213959-9A7C-48EC-B813-0DE7DD975F1A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Smg_empty" ID="{5138FB66-0419-4378-9B2C-60747155A055}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Smg_shoot" ID="{52510ACA-DEBE-46E9-B1B8-9BD9852A8D41}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Shotgun_empty" ID="{998480CA-C4E6-4281-9044-1F04A283C1EF}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Shotgun_shoot" ID="{4A0AD1CA-28F8-42D3-8DEF-88F3750E2080}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Pistol_empty" ID="{756208D4-60FF-492F-B132-0897DE0AD0D0}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Pistol_shoot" ID="{BD3727D6-23E9-4FCB-80B0-DD0A6DF56707}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="pistol_shoot" ID="{6816181E-1D4D-4FBA-973E-58C8C0DB907A}"/>
+										<ItemList>
+											<ItemRef Name="Pistol_shoot" ID="{BD3727D6-23E9-4FCB-80B0-DD0A6DF56707}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="smg_shoot" ID="{CBD1FE30-27AA-4AD4-AE3B-349C0122541B}"/>
+										<ItemList>
+											<ItemRef Name="Smg_shoot" ID="{52510ACA-DEBE-46E9-B1B8-9BD9852A8D41}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="smg_empty" ID="{D0FE347D-6C13-4961-AC6C-A8F57557D08B}"/>
+										<ItemList>
+											<ItemRef Name="Smg_empty" ID="{5138FB66-0419-4378-9B2C-60747155A055}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="shotgun_empty" ID="{6CE6B388-763A-486A-96C1-9B14040A972A}"/>
+										<ItemList>
+											<ItemRef Name="Shotgun_empty" ID="{998480CA-C4E6-4281-9044-1F04A283C1EF}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="pistol_empty" ID="{9D9C679B-9D17-45A1-9F63-0CEE9571BC91}"/>
+										<ItemList>
+											<ItemRef Name="Pistol_empty" ID="{756208D4-60FF-492F-B132-0897DE0AD0D0}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="shotgun_shoot" ID="{012DABBD-00C3-4D1B-8A4A-2430A9C0560F}"/>
+										<ItemList>
+											<ItemRef Name="Shotgun_shoot" ID="{4A0AD1CA-28F8-42D3-8DEF-88F3750E2080}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Reload" ID="{FA6A5843-0068-4BCE-BDAF-A276AA11AF4E}" ShortID="235246902">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="gun_reload" ID="{860D5883-3FC5-4846-8317-843733CBEFAC}" WorkUnitID="{AB40C0EB-3CA2-463A-971D-B3D50A63C4B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
 								<RandomSequenceContainer Name="Pistol_reload" ID="{749DA180-0498-47D9-A65A-307DBE158E18}" ShortID="297088982">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -1102,7 +1604,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+											<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1213,7 +1715,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+											<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1300,7 +1802,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+											<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1389,284 +1891,24 @@
 									<GroupingBehavior>
 										<ItemRef Name="Shotgun_reload" ID="{D6C05CAF-0F55-43FA-9D60-7A3AD0C267CA}"/>
 									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Smg_shoot" ID="{52510ACA-DEBE-46E9-B1B8-9BD9852A8D41}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Shotgun_shoot" ID="{4A0AD1CA-28F8-42D3-8DEF-88F3750E2080}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Pistol_shoot" ID="{BD3727D6-23E9-4FCB-80B0-DD0A6DF56707}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="pistol_shoot" ID="{6816181E-1D4D-4FBA-973E-58C8C0DB907A}"/>
-										<ItemList>
-											<ItemRef Name="Pistol_shoot" ID="{BD3727D6-23E9-4FCB-80B0-DD0A6DF56707}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="smg_shoot" ID="{CBD1FE30-27AA-4AD4-AE3B-349C0122541B}"/>
-										<ItemList>
-											<ItemRef Name="Smg_shoot" ID="{52510ACA-DEBE-46E9-B1B8-9BD9852A8D41}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="smg_empty" ID="{D0FE347D-6C13-4961-AC6C-A8F57557D08B}"/>
-										<ItemList>
-											<ItemRef Name="Smg_reload" ID="{A73807A6-19E9-4585-BC9F-962BF59F80FE}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="shotgun_empty" ID="{6CE6B388-763A-486A-96C1-9B14040A972A}"/>
-										<ItemList>
-											<ItemRef Name="Shotgun_reload" ID="{D6C05CAF-0F55-43FA-9D60-7A3AD0C267CA}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="pistol_empty" ID="{9D9C679B-9D17-45A1-9F63-0CEE9571BC91}"/>
-										<ItemList>
-											<ItemRef Name="Pistol_reload" ID="{749DA180-0498-47D9-A65A-307DBE158E18}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="shotgun_shoot" ID="{012DABBD-00C3-4D1B-8A4A-2430A9C0560F}"/>
-										<ItemList>
-											<ItemRef Name="Shotgun_shoot" ID="{4A0AD1CA-28F8-42D3-8DEF-88F3750E2080}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<SwitchContainer Name="Reload" ID="{FA6A5843-0068-4BCE-BDAF-A276AA11AF4E}" ShortID="235246902">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="gun_reload" ID="{860D5883-3FC5-4846-8317-843733CBEFAC}" WorkUnitID="{AB40C0EB-3CA2-463A-971D-B3D50A63C4B5}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<RandomSequenceContainer Name="Pistol_empty" ID="{756208D4-60FF-492F-B132-0897DE0AD0D0}" ShortID="898662140">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{8BB0BC24-1F0F-4A1C-BE44-FCEB09787D04}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Pistol Out of Ammo (single click)" ID="{3F71FBDF-EDE3-4CB0-BB39-027127F6C37C}" ShortID="82445111">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Pistol Out of Ammo (single click)" ID="{B601211A-AAD1-4B87-999B-661DACFC2284}">
-													<Language>SFX</Language>
-													<AudioFile>Pistol Out of Ammo (single click).wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1062108741"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Pistol Out of Ammo (single click)" ID="{B601211A-AAD1-4B87-999B-661DACFC2284}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists/>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Shotgun_empty" ID="{998480CA-C4E6-4281-9044-1F04A283C1EF}" ShortID="189069535">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{DABF5051-3EC7-4B80-AD28-4284FDEBF5A7}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-50"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Pistol Out of Ammo (single click)" ID="{AF8F3720-1614-4D44-B764-A4CCD227325C}" ShortID="849044340">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-710</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Pistol Out of Ammo (single click)" ID="{D49EA6EB-75FC-49C5-8F14-7ADD8848F0E9}">
-													<Language>SFX</Language>
-													<AudioFile>Pistol Out of Ammo (single click).wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1062108741"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Pistol Out of Ammo (single click)" ID="{D49EA6EB-75FC-49C5-8F14-7ADD8848F0E9}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists/>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Smg_empty" ID="{5138FB66-0419-4378-9B2C-60747155A055}" ShortID="828354443">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-100</Value>
-											</ValueList>
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{44CFBC46-D450-465A-B6C8-076655B7660E}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Pistol Out of Ammo (double click)" ID="{41877BE4-E567-4ADC-BC72-B44894C8B047}" ShortID="709427944">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{C1A223E0-289F-4EE3-902F-5164465619CB}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="100"/>
-																	<Property Name="Min" Type="Real64" Value="-100"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Pistol Out of Ammo (double click)" ID="{E6213959-9A7C-48EC-B813-0DE7DD975F1A}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0315047907409592"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0248722032165468"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.26613257441705"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.485007962722661"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Pistol Out of Ammo (double click).wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="589548535"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Pistol Out of Ammo (double click)" ID="{E6213959-9A7C-48EC-B813-0DE7DD975F1A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists/>
-								</RandomSequenceContainer>
-							</ChildrenList>
-							<ObjectLists/>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="Smg_empty" ID="{5138FB66-0419-4378-9B2C-60747155A055}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Shotgun_empty" ID="{998480CA-C4E6-4281-9044-1F04A283C1EF}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Pistol_empty" ID="{756208D4-60FF-492F-B132-0897DE0AD0D0}"/>
-									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
 										<SwitchRef Name="shotgun_reload" ID="{B77D9909-EB65-4271-9E79-7BE24798473A}"/>
 										<ItemList>
-											<ItemRef Name="Shotgun_empty" ID="{998480CA-C4E6-4281-9044-1F04A283C1EF}"/>
+											<ItemRef Name="Shotgun_reload" ID="{D6C05CAF-0F55-43FA-9D60-7A3AD0C267CA}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="smg_reload" ID="{11C2A3B1-ED3B-4B2A-BCE4-C1DC101B3F10}"/>
 										<ItemList>
-											<ItemRef Name="Smg_empty" ID="{5138FB66-0419-4378-9B2C-60747155A055}"/>
+											<ItemRef Name="Smg_reload" ID="{A73807A6-19E9-4585-BC9F-962BF59F80FE}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="pistol_reload" ID="{E1F75ED9-295A-46D9-9484-46702010E4C6}"/>
 										<ItemList>
-											<ItemRef Name="Pistol_empty" ID="{756208D4-60FF-492F-B132-0897DE0AD0D0}"/>
+											<ItemRef Name="Pistol_reload" ID="{749DA180-0498-47D9-A65A-307DBE158E18}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
