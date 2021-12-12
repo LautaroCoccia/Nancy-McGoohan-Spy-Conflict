@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 public class MusicController : MonoBehaviour
 {
     [SerializeField] List<string> listOfEvents;
