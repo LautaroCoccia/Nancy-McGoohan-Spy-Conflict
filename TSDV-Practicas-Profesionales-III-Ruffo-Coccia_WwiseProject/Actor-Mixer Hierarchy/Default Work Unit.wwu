@@ -1700,87 +1700,6 @@
 										<ItemRef Name="Guns, Handle, Revolver, Load Bullet  SND5996_02" ID="{0D22E92B-D5A0-4BBF-9BBA-410BB38CF026}"/>
 									</Playlist>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Shotgun_reload" ID="{D6C05CAF-0F55-43FA-9D60-7A3AD0C267CA}" ShortID="1064812634">
-									<PropertyList>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-2</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{FE0A2477-9960-4E85-96EB-37AB061A28A9}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280" ID="{EFF03D25-6664-4A93-BC30-21CD717778F9}" ShortID="1030473320">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280" ID="{A99D13E5-42F7-441F-A8F2-24D069740A8B}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.430568340558768"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="974715545"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280" ID="{A99D13E5-42F7-441F-A8F2-24D069740A8B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280_01" ID="{A2ABECA3-D787-4CBF-ACD0-1AB0B287DB29}" ShortID="998333504">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280" ID="{02A56878-2E49-40B8-9A29-6C9E0A0201A7}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="1.01241744942196"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.50117070086705"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="402094257"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280" ID="{02A56878-2E49-40B8-9A29-6C9E0A0201A7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists/>
-									<Playlist>
-										<ItemRef Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280" ID="{EFF03D25-6664-4A93-BC30-21CD717778F9}"/>
-										<ItemRef Name="Guns, Mechanism, Shotgun, Load Bullet, Reload SND6280_01" ID="{A2ABECA3-D787-4CBF-ACD0-1AB0B287DB29}"/>
-									</Playlist>
-								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Smg_reload" ID="{A73807A6-19E9-4585-BC9F-962BF59F80FE}" ShortID="450375852">
 									<PropertyList>
 										<Property Name="Highpass" Type="int16">
@@ -1878,6 +1797,56 @@
 										<ItemRef Name="Thompson_Shots_ODC-0045-409-01_01" ID="{D08807DD-66B9-4CF6-881F-4B5D021A7F62}"/>
 									</Playlist>
 								</RandomSequenceContainer>
+								<BlendContainer Name="Shotgun_Reload" ID="{C9C391B0-09BA-45C2-B7E1-74F345D6C2C0}" ShortID="793016539">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{599594DB-8906-4996-9FDA-86E5C38254FB}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Shotgun_Reload_Synced" ID="{1ED467F3-1DF4-481F-89BD-9A53C3124FB3}" ShortID="488394116">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FEBD083-EEE3-4C09-B009-8793B2F57558}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4274EAB1-BF4A-47D4-B516-0864544F103D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Shotgun_Reload_Synced" ID="{A28F0A6D-3E2C-4BB3-BD00-A568D6696923}">
+													<Language>SFX</Language>
+													<AudioFile>Shotgun_Reload_Synced.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1043145661"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Shotgun_Reload_Synced" ID="{A28F0A6D-3E2C-4BB3-BD00-A568D6696923}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</BlendContainer>
 							</ChildrenList>
 							<ObjectLists/>
 							<GroupingInfo>
@@ -1889,14 +1858,14 @@
 										<ItemRef Name="Smg_reload" ID="{A73807A6-19E9-4585-BC9F-962BF59F80FE}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="Shotgun_reload" ID="{D6C05CAF-0F55-43FA-9D60-7A3AD0C267CA}"/>
+										<ItemRef Name="Shotgun_Reload" ID="{C9C391B0-09BA-45C2-B7E1-74F345D6C2C0}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
 										<SwitchRef Name="shotgun_reload" ID="{B77D9909-EB65-4271-9E79-7BE24798473A}"/>
 										<ItemList>
-											<ItemRef Name="Shotgun_reload" ID="{D6C05CAF-0F55-43FA-9D60-7A3AD0C267CA}"/>
+											<ItemRef Name="Shotgun_Reload" ID="{C9C391B0-09BA-45C2-B7E1-74F345D6C2C0}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
