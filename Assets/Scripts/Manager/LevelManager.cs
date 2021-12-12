@@ -32,7 +32,7 @@ public class LevelManager :  MonoBehaviour
     public static Action<int> OnAddScore;
     public static Action<int> OnResetScore;
     [SerializeField] List<Transform> scapePoints;
-
+    public Transform distancesMarkToResize;
     private void Start()
     {
         shaker = Camera.main.GetComponent<ScreenShake>();

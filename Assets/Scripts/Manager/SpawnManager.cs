@@ -30,6 +30,9 @@ public class SpawnManager : MonoBehaviour
     float probabilityChoosed = 0.0f;
     float cumulativeProbability = 0.0f;
     float maxProb = 0;
+    public Transform mark;
+    public float resizeEnemiesValue = 0.9f;
+
     void Start()
     {
         enemiesAlive = 0;
@@ -71,6 +74,8 @@ public class SpawnManager : MonoBehaviour
         GameObject newEnemy = Instantiate(enemyPrefab[index]);
         newEnemy.transform.position = spawner[UnityEngine.Random.Range(0, spawner.Length)].position;
         newEnemy.gameObject.GetComponent<BaseEnemy>().SetObstaclesList(GetObstacles());
+        newEnemy.GetComponent<ResizeBasedInZ>().SetDistanceMark(mark.position.z, resizeEnemiesValue);
+
         enemiesSpawned.Add(newEnemy);
         enemiesAlive++;
     }
