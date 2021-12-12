@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 2149584061558018804}
   - component: {fileID: -6423393353931640929}
   - component: {fileID: 3790528284968251243}
+  - component: {fileID: 2071498409802575436}
   - component: {fileID: 638585219078506097}
   m_Layer: 8
   m_Name: NormalEnemy
@@ -316,6 +317,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &2071498409802575436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500391456599187859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7375a115ca2b7ca4b82b9f8a05c8c2ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &638585219078506097
 NavMeshAgent:
   m_ObjectHideFlags: 0
