@@ -5,9 +5,33 @@ using UnityEngine.UI;
 public class UIUpdateSlider : MonoBehaviour
 {
     [SerializeField] Slider slider;
-    // Start is called before the first frame update
-    public void SetNewValue(string eventName)
+    [SerializeField] string soundKey;
+    [SerializeField] string rtpcName;
+
+    private void Start() 
     {
-        AkSoundEngine.SetRTPCValue(eventName,slider.value);
+        if(PlayerPrefs.HasKey(soundKey))
+        {
+            slider.value  = PlayerPrefs.GetFloat(soundKey);
+            SetRtpcValue(slider.value);
+        }
+        else
+        {
+            SaveVolumeValue();
+        }
+    }
+    public void SetNewValue()
+    {
+        SetRtpcValue(slider.value);
+    }
+
+    void SetRtpcValue(float value)
+    {
+        AkSoundEngine.SetRTPCValue(rtpcName,value);
+        SaveVolumeValue();
+    }
+    void SaveVolumeValue() 
+    {
+        PlayerPrefs.SetFloat(soundKey,slider.value);
     }
 }
