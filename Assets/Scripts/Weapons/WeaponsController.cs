@@ -23,7 +23,6 @@ public class WeaponsController : MonoBehaviour
     public static Action OnStartAnim;
 
     int actualWeapon = 0;
-    int objectLayer = 10;
     // Start is called before the first frame update
     void Start()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 public class Cheats : MonoBehaviour
 {
-    public EnemySpawner[] spawns;
+    public SpawnManager[] spawns;
     //public int bufferLength = 10;
     //List<char> command;
     //public string killAllEnemies;
@@ -37,7 +37,7 @@ public class Cheats : MonoBehaviour
     public void KillEnemies()
     {
         Debug.Log("cheat");
-        foreach (EnemySpawner e in spawns)
+        foreach (SpawnManager e in spawns)
         {
             foreach(GameObject g in e.enemiesSpawned)
             {

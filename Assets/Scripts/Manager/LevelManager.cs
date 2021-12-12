@@ -45,7 +45,7 @@ public class LevelManager :  MonoBehaviour
     {
         ItemHeal.OnHealPlayer+= HealPlayer;
         BaseEnemy.OnHitPlayer += OnHitPlayer;
-        EnemySpawner.getOsbstaclesInfoAction += GetObstacles;
+        SpawnManager.getOsbstaclesInfoAction += GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter += GetScapePoints;
         Weapon.ResetMultiplier += UpdateMultiplier;
@@ -76,7 +76,7 @@ public class LevelManager :  MonoBehaviour
         Weapon.ResetMultiplier -= UpdateMultiplier;
         ScaredSpecial.scapePointsGetter -= GetScapePoints;
         DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
-        EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
+        SpawnManager.getOsbstaclesInfoAction -= GetObstacles;
         BaseEnemy.OnHitPlayer -= OnHitPlayer;
         ItemHeal.OnHealPlayer -= HealPlayer;
     }
