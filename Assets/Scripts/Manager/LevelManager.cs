@@ -40,6 +40,9 @@ public class LevelManager :  MonoBehaviour
         UpdateUIHealth?.Invoke(health);
         OnResetScore?.Invoke(0);
         Cursor.visible = false;
+        
+        AkSoundEngine.SetSwitch("music", "loop", gameObject);
+        AkSoundEngine.PostEvent("music_gameplay", gameObject);
     }
     // Update is called once per frame
     private void OnEnable()
@@ -89,11 +92,13 @@ public class LevelManager :  MonoBehaviour
             timer -= Time.deltaTime;
             UpdateUITimer?.Invoke(timer);
         }
-        else
+        else if(Time.timeScale != 0)
         {
             Time.timeScale = 0;
             LoseCondition?.Invoke();
-            //musicController.StopAllSounds();
+            musicController.StopAllSounds();
+            AkSoundEngine.SetSwitch("music", "lose_music", gameObject);
+            AkSoundEngine.PostEvent("music_gameplay", gameObject);
            // AkSoundEngine.PostEvent("shoot", gameObject);
 
         }
@@ -114,6 +119,8 @@ public class LevelManager :  MonoBehaviour
             musicController.StopAllSounds();
             Time.timeScale = 0;
             Cursor.visible = true;
+            AkSoundEngine.SetSwitch("music", "win_music", gameObject);
+            AkSoundEngine.PostEvent("music_gameplay", gameObject);
         }
     }
     public void OnHitPlayer(int damage)
@@ -132,6 +139,8 @@ public class LevelManager :  MonoBehaviour
             AkSoundEngine.SetSwitch("nancy", "nancy_death", gameObject);
             AkSoundEngine.PostEvent("nancy", gameObject);
             musicController.StopAllSounds();
+            AkSoundEngine.SetSwitch("music", "lose_music", gameObject);
+            AkSoundEngine.PostEvent("music_gameplay", gameObject);
         }
         UpdateUIHealth?.Invoke(health);
         StartCoroutine(WaitForShakeToLoss());

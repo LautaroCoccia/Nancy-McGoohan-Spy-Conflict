@@ -5948,7 +5948,12 @@ PrefabInstance:
     - target: {fileID: 8895061547872028944, guid: 2f0d5967f3d85fa4b93c4182da71688b,
         type: 3}
       propertyPath: listOfEvents.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8895061547872028944, guid: 2f0d5967f3d85fa4b93c4182da71688b,
+        type: 3}
+      propertyPath: listOfEvents.Array.data[0]
+      value: ambience
       objectReference: {fileID: 0}
     - target: {fileID: 8895061547872028945, guid: 2f0d5967f3d85fa4b93c4182da71688b,
         type: 3}
