@@ -8,7 +8,7 @@ public class PlayerPause : MonoBehaviour
     public static Action onPauseCall;
     private void Update()
     {
-        if (Input.GetKeyDown(pause))
+        if (Time.timeScale > 0 && Input.GetKeyDown(pause))
         {
             onPauseCall?.Invoke();
         }

@@ -20,6 +20,7 @@ public class Pause : MonoBehaviour
     {
         if (!isPaused)
         {
+            Cursor.visible = true;
             pauseLayer.SetActive(true);
             Time.timeScale = 0.0f;
             isPaused = true;
@@ -27,6 +28,7 @@ public class Pause : MonoBehaviour
         }
         else
         {
+            Cursor.visible = false;
             AkSoundEngine.PostEvent("resume_game", gameObject);
             pauseLayer.SetActive(false);
             Time.timeScale = 1.0f;
