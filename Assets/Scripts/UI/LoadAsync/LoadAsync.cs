@@ -14,6 +14,7 @@ public class LoadAsync : MonoBehaviour
     bool buttonInput;
     public GameObject button;
     const float barProgressFix = 0.9f;
+    public static bool needCheckStart = true;
     public void StartNextScene()
     {
         buttonInput = true;
@@ -38,7 +39,10 @@ public class LoadAsync : MonoBehaviour
         bar.SetActive(false);
         button.SetActive(true);
         yield return null;
-        yield return new WaitUntil(() =>buttonInput);
+        if (needCheckStart)
+        {
+            yield return new WaitUntil(() => buttonInput);
+        }
         asyncLoad.allowSceneActivation = true;
     }
 }
