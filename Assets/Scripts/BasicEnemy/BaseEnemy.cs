@@ -233,6 +233,7 @@ public class BaseEnemy : StateEnemy
 
             animator.SetBool("LeftMove", false);
             animator.SetBool("RightMove", false);
+            agent.velocity = Vector3.zero;
         }
     }
     public void OnEnemyDeath()

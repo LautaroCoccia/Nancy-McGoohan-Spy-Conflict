@@ -6,7 +6,7 @@ public abstract class BasicItem : MonoBehaviour,IHitable
 {
     [Tooltip("0 = infinity duration")]
     [SerializeField] float duration;
-    float posZ = -1;
+    public float posZ = -1;
     void Start()
     {
         if (duration != 0)

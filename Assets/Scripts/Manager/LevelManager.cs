@@ -39,13 +39,14 @@ public class LevelManager :  MonoBehaviour
         UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
         UpdateUIHealth?.Invoke(health);
         OnResetScore?.Invoke(0);
+        Cursor.visible = false;
     }
     // Update is called once per frame
     private void OnEnable()
     {
         ItemHeal.OnHealPlayer+= HealPlayer;
         BaseEnemy.OnHitPlayer += OnHitPlayer;
-        EnemySpawner.getOsbstaclesInfoAction += GetObstacles;
+        SpawnManager.getOsbstaclesInfoAction += GetObstacles;
         DestroyableWallStatesController.DeleteFromObjectList += DeleteObjectFromList;
         ScaredSpecial.scapePointsGetter += GetScapePoints;
         Weapon.ResetMultiplier += UpdateMultiplier;
@@ -76,7 +77,7 @@ public class LevelManager :  MonoBehaviour
         Weapon.ResetMultiplier -= UpdateMultiplier;
         ScaredSpecial.scapePointsGetter -= GetScapePoints;
         DestroyableWallStatesController.DeleteFromObjectList -= DeleteObjectFromList;
-        EnemySpawner.getOsbstaclesInfoAction -= GetObstacles;
+        SpawnManager.getOsbstaclesInfoAction -= GetObstacles;
         BaseEnemy.OnHitPlayer -= OnHitPlayer;
         ItemHeal.OnHealPlayer -= HealPlayer;
     }
@@ -96,10 +97,6 @@ public class LevelManager :  MonoBehaviour
            // AkSoundEngine.PostEvent("shoot", gameObject);
 
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene(testLoadLevel);
-        }
     }
     public void AddScore(int addScore)
     {
@@ -116,6 +113,7 @@ public class LevelManager :  MonoBehaviour
             OnWinCondition?.Invoke();
             musicController.StopAllSounds();
             Time.timeScale = 0;
+            Cursor.visible = true;
         }
     }
     public void OnHitPlayer(int damage)
@@ -126,6 +124,7 @@ public class LevelManager :  MonoBehaviour
         {
             AkSoundEngine.SetSwitch("nancy", "nancy_hurt", gameObject);
             AkSoundEngine.PostEvent("nancy", gameObject);
+            Cursor.visible = true;
         }
         else if (health <= 0)
         {
@@ -185,9 +184,5 @@ public class LevelManager :  MonoBehaviour
             multiplier = 1;
         }
         UpdateUICombo?.Invoke(multiplier);
-    }
-    public void PlayAgain()
-    {
-        SceneManager.LoadScene(testLoadLevel);
     }
 }

@@ -23,7 +23,6 @@ public class WeaponsController : MonoBehaviour
     public static Action OnStartAnim;
 
     int actualWeapon = 0;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -79,7 +78,6 @@ public class WeaponsController : MonoBehaviour
             Vector3 mousePosition = weapon[actualWeapon].mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-
             if (hit.collider != null && hit.transform.gameObject.layer == weapon[actualWeapon].targetLayer)
             {
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit(damageInfo);
