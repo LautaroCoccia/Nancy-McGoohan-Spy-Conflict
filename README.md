@@ -24,7 +24,7 @@ This is a game (still in development) developed by students from <a href="https:
 - **Santiago Andrés Ruiz** - *Art*
 
 - **Christian B. Quiroga** - *Sound Designer*
-- **Matías Diehl** - *Music Composer*
+- **Matías Diehl** - *Music Composer and Sound Designer*
 
 - **Matías Rodriguez** - *Testing*
 - **Lucas Liendro** - *Testing*
