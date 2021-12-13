@@ -642,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Level1
+  showStart: 1
 --- !u!1 &268695976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2237419244679585203, guid: dae9a2b84b11e924796476baa30a551e,
@@ -1406,7 +1407,7 @@ GameObject:
   - component: {fileID: 627323934}
   - component: {fileID: 627323933}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: UIBlackLines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5953,6 +5954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Menu
+  showStart: 1
 --- !u!224 &8711195487625964035
 RectTransform:
   m_ObjectHideFlags: 0
