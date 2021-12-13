@@ -35,13 +35,13 @@ public class UICredits : MonoBehaviour
     }
     public void Next()
     {
-        if(index<layers.Length)
+        if(index<layers.Length-1)
         {
             layers[index].SetActive(false);
             index++;
             layers[index].SetActive(true);
             previousButton.interactable = true;
-            if (index >= layers.Length)
+            if (index >= layers.Length-1)
             {
                 nextButton.interactable = false;
             }
