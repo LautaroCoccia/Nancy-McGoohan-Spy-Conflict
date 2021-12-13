@@ -5,6 +5,7 @@ using System;
 public class OnHitShieldEnemy : MonoBehaviour, IHitable
 {
     [SerializeField] BaseEnemy baseEnemy;
+    [SerializeField] GameObject shield;
     [SerializeField] int score;
     [SerializeField] int lives;
     public static Action CanDamage;
@@ -19,7 +20,6 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
     {
         sr = gameObject.GetComponentInChildren<SpriteRenderer>();
         col = sr.color;
-        sr.color = Color.blue; 
     }
     public void OnHit(Weapon.DamageInfo damageInfo)
     {
@@ -28,6 +28,7 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
             AkSoundEngine.SetSwitch("shield", "shieldhit_shotgun", gameObject);
             AkSoundEngine.PostEvent("shield", gameObject);
             sr.color = Color.red;
+            shield.SetActive(false);
             OnTakeDamage?.Invoke(25);
             enemyState = true;
         }
