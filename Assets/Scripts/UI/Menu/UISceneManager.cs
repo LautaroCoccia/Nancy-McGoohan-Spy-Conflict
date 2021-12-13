@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class UISceneManager : MonoBehaviour
 {
     [SerializeField] string nextScene;
+    public bool showStart = true;
     public void ChangeScene()
     {
         SceneManager.LoadScene(nextScene);
@@ -13,6 +14,7 @@ public class UISceneManager : MonoBehaviour
     {
         LoadAsync.nextScene = nextScene;
         LoadAsync.fromScene = SceneManager.GetActiveScene().name;
+        LoadAsync.needCheckStart = showStart;
         SceneManager.LoadScene("Load",LoadSceneMode.Additive);
     }
     public void Quit()
