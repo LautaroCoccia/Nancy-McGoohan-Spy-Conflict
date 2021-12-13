@@ -10,16 +10,19 @@ public class VolumeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         for (int i = 0; i < soundKeys.Count ; i++)
         {
-            if(PlayerPrefs.HasKey(soundKeys[i]))
+            DataSave aux = SaveSystem.LoadArchive(soundKeys[i]);
+            if (aux)
             {
-                AkSoundEngine.SetRTPCValue(rtpcName[i],PlayerPrefs.GetFloat(soundKeys[i]));
-                slider[i].value = PlayerPrefs.GetFloat(soundKeys[i]);
+                AkSoundEngine.SetRTPCValue(rtpcName[i], aux.saveFloat);
+                slider[i].value = aux.saveFloat;
             }
             else 
             {
-                PlayerPrefs.SetFloat(soundKeys[i],slider[i].value);
+                DataSave aux2 = new DataSave(slider[i].value, soundKeys[i]);
+                SaveSystem.SaveArchive(aux2,aux2.saveString);
             }
         }
         
