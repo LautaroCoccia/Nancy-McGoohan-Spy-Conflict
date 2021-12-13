@@ -27,7 +27,6 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
         {
             AkSoundEngine.SetSwitch("shield", "shieldhit_shotgun", gameObject);
             AkSoundEngine.PostEvent("shield", gameObject);
-            sr.color = Color.red;
             shield.SetActive(false);
             OnTakeDamage?.Invoke(25);
             enemyState = true;
