@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShieldCrouchAnim
+  m_Name: ThiefIdleAnim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -4557370323772018350, guid: 0065bface7532164aac9c2bfea539c1a,
+      value: {fileID: -3074221327333026523, guid: df95692459c6fcb4e96584966362ddce,
         type: 3}
-    - time: 0.25
-      value: {fileID: 9086382043786444153, guid: 0065bface7532164aac9c2bfea539c1a,
+    - time: 0.3
+      value: {fileID: -3484004948789933427, guid: df95692459c6fcb4e96584966362ddce,
+        type: 3}
+    - time: 0.5833333
+      value: {fileID: 8496955220225664785, guid: df95692459c6fcb4e96584966362ddce,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -44,14 +47,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -4557370323772018350, guid: 0065bface7532164aac9c2bfea539c1a, type: 3}
-    - {fileID: 9086382043786444153, guid: 0065bface7532164aac9c2bfea539c1a, type: 3}
+    - {fileID: -3074221327333026523, guid: df95692459c6fcb4e96584966362ddce, type: 3}
+    - {fileID: -3484004948789933427, guid: df95692459c6fcb4e96584966362ddce, type: 3}
+    - {fileID: 8496955220225664785, guid: df95692459c6fcb4e96584966362ddce, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.26666668
+    m_StopTime: 0.59999996
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

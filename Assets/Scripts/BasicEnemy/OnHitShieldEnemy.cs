@@ -19,7 +19,6 @@ public class OnHitShieldEnemy : MonoBehaviour, IHitable
     {
         sr = gameObject.GetComponentInChildren<SpriteRenderer>();
         col = sr.color;
-        sr.color = Color.blue; 
     }
     public void OnHit(Weapon.DamageInfo damageInfo)
     {
