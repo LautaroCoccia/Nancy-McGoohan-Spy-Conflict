@@ -1,33 +1,49 @@
-﻿using UnityEngine;
-using System.IO;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
-public static class SaveSystem
+
+[System.Serializable]
+public struct DataSave
 {
-    public static void SaveArchive(DataSave data,string archiveName)
+    public float saveFloat;
+    public string saveString;
+}
+public class SaveSystem : MonoBehaviour
+{
+    public static void SaveArchive(float i, string str)
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/" + archiveName + ".dat";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        formatter.Serialize(stream, data);
-        stream.Close();
+        DataSave data;
+        data.saveFloat = i;
+        data.saveString = str;
+        BinaryFormatter fm = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/" + str + ".dat";
+        FileStream s = new FileStream(path, FileMode.Create);
+        s.SetLength(0);
+        fm.Serialize(s, data);
+        s.Close();
     }
-
-    public static DataSave LoadArchive(string archiveName)
+    public static DataSave LoadArchive(string str)
     {
-        string path = Application.persistentDataPath + "/"+archiveName+".dat";
+        string path = Application.persistentDataPath + "/" + str + ".dat";
         if (File.Exists(path))
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-            DataSave data = (DataSave)formatter.Deserialize(stream);
-            stream.Close();
-            return data;
+            BinaryFormatter fm = new BinaryFormatter();
+            FileStream s = new FileStream(path, FileMode.Open);
+            if (s.Length != 0)
+            {
+
+                DataSave data = (DataSave)fm.Deserialize(s);
+                s.Close();
+                return data;
+            }
+            s.Close();
         }
-        else
-        {
-            return null;
-        }
+        DataSave aux;
+        aux.saveString = "NULL";
+        aux.saveFloat = 0;
+        return aux;
     }
 }

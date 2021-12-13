@@ -13,16 +13,21 @@ public class VolumeController : MonoBehaviour
 
         for (int i = 0; i < soundKeys.Count ; i++)
         {
-            DataSave aux = SaveSystem.LoadArchive(soundKeys[i]);
-            if (aux)
+            DataSave aux;
+            aux.saveString = "";
+            aux= SaveSystem.LoadArchive(soundKeys[i]);
+            if (aux.saveString != "" && aux.saveString != "NULL")
             {
                 AkSoundEngine.SetRTPCValue(rtpcName[i], aux.saveFloat);
                 slider[i].value = aux.saveFloat;
             }
             else 
             {
-                DataSave aux2 = new DataSave(slider[i].value, soundKeys[i]);
-                SaveSystem.SaveArchive(aux2,aux2.saveString);
+                DataSave aux2;
+
+                aux2.saveFloat = slider[i].value;
+                aux2.saveString = soundKeys[i];
+                SaveSystem.SaveArchive(aux2.saveFloat,aux2.saveString);
             }
         }
         
