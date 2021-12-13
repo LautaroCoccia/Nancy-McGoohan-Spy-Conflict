@@ -17,7 +17,11 @@ public class ScreenModeController : MonoBehaviour
 
     public void SwitchScreenMode() 
     {
-        if(!PlayerPrefs.HasKey(screenModeKey))
+
+        DataSave aux;
+        aux.saveString = "";
+        aux = SaveSystem.LoadArchive(screenModeKey);
+        if (!(aux.saveString != "" && aux.saveString != "NULL"))
         {
             Debug.Log("no hay");
             Screen.fullScreen = false;
@@ -25,16 +29,19 @@ public class ScreenModeController : MonoBehaviour
         }
         else
         {
-           
-            if(PlayerPrefs.GetInt(screenModeKey) == 1)
+
+            DataSave aux2;
+            aux2.saveString = "";
+            aux2 = SaveSystem.LoadArchive(screenModeKey);
+            if (aux2.saveFloat == 1)
             {
                 Screen.fullScreen = false;
-                PlayerPrefs.SetInt(screenModeKey,0);
+                SaveSystem.SaveArchive(0, screenModeKey);
             }
             else
             {
                 Screen.fullScreen = true;
-                PlayerPrefs.SetInt(screenModeKey,1);
+                SaveSystem.SaveArchive(1, screenModeKey);
             }
         }
         
