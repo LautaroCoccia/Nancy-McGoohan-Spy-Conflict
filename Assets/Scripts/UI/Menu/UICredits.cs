@@ -31,7 +31,6 @@ public class UICredits : MonoBehaviour
                 previousButton.interactable = false;
             }
         }
-
     }
     public void Next()
     {
