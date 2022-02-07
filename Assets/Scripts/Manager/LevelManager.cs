@@ -152,7 +152,7 @@ public class LevelManager :  MonoBehaviour
         if (health <= 0)
         {
             LoseCondition?.Invoke();
-            Time.timeScale = 0;
+            Time.timeScale = 0; 
         }
     }
     public void HealPlayer(int heal)
