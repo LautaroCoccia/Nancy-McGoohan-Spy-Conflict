@@ -15,6 +15,8 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] int enemiesAlive;
     [SerializeField] int maxEnemiesAlive;
+    [SerializeField] int maxEnemiesInScene;
+    public int enemiesAliveInScene;
     [SerializeField] float minTimeToSpawn;
     [SerializeField] float maxTimeToSpawn;
     [SerializeField] float actualTime;
@@ -36,6 +38,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         enemiesAlive = 0;
+        enemiesAliveInScene = 0;
         maxProb = 0;
         for (int i = 0; i < probToSpawn.Length; i++)
         {
@@ -44,10 +47,13 @@ public class SpawnManager : MonoBehaviour
     }
     void Update()
     {
-        if (enemiesAlive < maxEnemiesAlive)
+
+        if (enemiesAlive < maxEnemiesAlive && actualTime < timeToSpawn)
         {
             actualTime += Time.deltaTime;
         }
+        if (enemiesAliveInScene >= maxEnemiesInScene)
+            return;
         if (actualTime >= timeToSpawn && enemiesAlive < maxEnemiesAlive)
         {
             actualTime = 0; 
@@ -78,6 +84,7 @@ public class SpawnManager : MonoBehaviour
 
         enemiesSpawned.Add(newEnemy);
         enemiesAlive++;
+        enemiesAliveInScene++;
     }
     List<ObstacleInfo> GetObstacles()
     {

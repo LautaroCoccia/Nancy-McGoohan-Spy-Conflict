@@ -32,6 +32,7 @@ public class LevelManager :  MonoBehaviour
     public static Action<int> OnAddScore;
     public static Action<int> OnResetScore;
     [SerializeField] List<Transform> scapePoints;
+    [SerializeField] SpawnManager spawner;
     private void Start()
     {
         shaker = Camera.main.GetComponent<ScreenShake>();
@@ -110,9 +111,13 @@ public class LevelManager :  MonoBehaviour
     public void OnEnemyKill()
     {
         killCounter++;
-        UpdateUIKillCounter?.Invoke(killCounter , targetToKill);
+        UpdateUIKillCounter?.Invoke(killCounter, targetToKill);
         UpdateMultiplier(true);
-        if(killCounter >= targetToKill)
+        if (spawner.enemiesAliveInScene > 0)
+        {
+            spawner.enemiesAliveInScene--;
+        }
+        if (killCounter >= targetToKill)
         {
             OnWinCondition?.Invoke();
             musicController.StopAllSounds();
