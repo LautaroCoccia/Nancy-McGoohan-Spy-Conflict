@@ -21,7 +21,9 @@ public class WeaponsController : MonoBehaviour
     public static Action<WeaponType> OnWeaponChanged;
     public static Action<bool> OnSetReloadMode;
     public static Action OnStartAnim;
-
+    public float scaleBulletHole = 0.3f;
+    public float sumDifBulletHole = 1.0f;
+    public float bulletZDistance = 1.0f;
     int actualWeapon = 0;
     // Start is called before the first frame update
     void Start()
@@ -78,6 +80,7 @@ public class WeaponsController : MonoBehaviour
             Vector3 mousePosition = weapon[actualWeapon].mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
+            Debug.Log(hit.transform.name);
             if (hit.collider != null && hit.transform.gameObject.layer == weapon[actualWeapon].targetLayer)
             {
                 hit.transform.gameObject.GetComponent<IHitable>().OnHit(damageInfo);
@@ -89,9 +92,16 @@ public class WeaponsController : MonoBehaviour
                 
                 int newSortingOrder = hit.transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
                 newSortingOrder++;
-
                 GameObject bulletObj =  Instantiate(weapon[actualWeapon].BulletHolePrefab,transform);
                 bulletObj.transform.position = mousePosition2D;
+                //hit.transform.position.z
+                bulletObj.transform.position = new Vector3(bulletObj.transform.position.x, bulletObj.transform.position.y,
+                    hit.transform.position.z);
+                
+                ResizeBasedInZ aux = bulletObj.GetComponent<ResizeBasedInZ>();
+                aux.diffToSum = sumDifBulletHole;
+                aux.SetDistanceMark(bulletZDistance, scaleBulletHole);
+                aux.AutoScaleNow();
                 bulletObj.GetComponentInChildren<SpriteRenderer>().sortingOrder = newSortingOrder;
                 
                 //ResetMultiplier?.Invoke(false);
