@@ -198,4 +198,13 @@ public class LevelManager :  MonoBehaviour
         }
         UpdateUICombo?.Invoke(multiplier);
     }
+
+    public void ReloadLevel()
+    {
+        LoadAsync.fromScene = SceneManager.GetActiveScene().name;
+        LoadAsync.nextScene = LoadAsync.fromScene;
+        SceneManager.LoadScene("Load", LoadSceneMode.Additive);
+        LoadAsync.needCheckStart = true;
+    }
+
 }

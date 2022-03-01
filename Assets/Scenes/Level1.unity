@@ -3475,6 +3475,7 @@ MonoBehaviour:
   scapePoints:
   - {fileID: 190914283}
   - {fileID: 238431064}
+  spawner: {fileID: 694394556}
 --- !u!4 &694394552
 Transform:
   m_ObjectHideFlags: 0
@@ -3552,6 +3553,8 @@ MonoBehaviour:
     prob: 7
   enemiesAlive: 0
   maxEnemiesAlive: 17
+  maxEnemiesInScene: 9
+  enemiesAliveInScene: 0
   minTimeToSpawn: 1
   maxTimeToSpawn: 3
   actualTime: 3
@@ -7787,7 +7790,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 694394551}
-        m_MethodName: PlayAgain
+        m_MethodName: ReloadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
