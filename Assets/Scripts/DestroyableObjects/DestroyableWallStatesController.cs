@@ -13,8 +13,17 @@ public class DestroyableWallStatesController : MonoBehaviour
     {
         DestroyableWall.setNewWallState += SetActiveWallState;
     }
-    void SetActiveWallState()
+    void SetActiveWallState(GameObject childWallState)
     {
+        bool isMyWallState = false;
+        for(int i = 0; i < wallStates.Count;i++)
+        {
+            if(wallStates[i].gameObject == childWallState)
+            {
+                isMyWallState = true;
+            }
+        }
+        if (isMyWallState == false) return;
         wallStates[index].SetActive(false);
         
         if (index < wallStates.Count -1)

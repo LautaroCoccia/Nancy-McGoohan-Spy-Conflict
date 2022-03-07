@@ -2119,7 +2119,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8309133, y: 0}
+  m_Offset: {x: 0.8309133, y: -0.3503976}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2130,7 +2130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.794019, y: 3}
+  m_Size: {x: 7.794019, y: 2.2992048}
   m_EdgeRadius: 0
 --- !u!114 &438023275
 MonoBehaviour:
@@ -7005,7 +7005,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8309133, y: 0}
+  m_Offset: {x: 0.8309133, y: -0.2614169}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7016,7 +7016,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.794019, y: 3}
+  m_Size: {x: 7.794019, y: 2.4771662}
   m_EdgeRadius: 0
 --- !u!114 &1430605683
 MonoBehaviour:
@@ -9166,7 +9166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Level2
-  showStart: 0
+  showStart: 1
 --- !u!1 &1880314137
 GameObject:
   m_ObjectHideFlags: 0
@@ -12099,6 +12099,21 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: fec0dda2486370a4eb2f9cd1b4668ef1, type: 2}
+    - target: {fileID: 3432707938162598941, guid: a8282fd1ab37446498c8e716bce477d6,
+        type: 3}
+      propertyPath: bulletZDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432707938162598941, guid: a8282fd1ab37446498c8e716bce477d6,
+        type: 3}
+      propertyPath: scaleBulletHole
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432707938162598941, guid: a8282fd1ab37446498c8e716bce477d6,
+        type: 3}
+      propertyPath: sumDifBulletHole
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3432707937940078495, guid: a8282fd1ab37446498c8e716bce477d6, type: 3}
     - {fileID: 3432707937940078494, guid: a8282fd1ab37446498c8e716bce477d6, type: 3}

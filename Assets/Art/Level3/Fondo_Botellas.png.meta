@@ -1,0 +1,464 @@
+fileFormatVersion: 2
+guid: c956f8bb8886bb84e86b2df7b6916389
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3416446549273725625
+    second: Fondo_Botellas_0
+  - first:
+      213: -8631559477635668542
+    second: Fondo_Botellas_1
+  - first:
+      213: 6447835007901322235
+    second: Fondo_Botellas_2
+  - first:
+      213: 4034626418270476708
+    second: Fondo_Botellas_3
+  - first:
+      213: -4449374515767773534
+    second: Fondo_Botellas_4
+  - first:
+      213: 4059839434253131246
+    second: Fondo_Botellas_5
+  - first:
+      213: -8176449398175759981
+    second: Fondo_Botellas_6
+  - first:
+      213: -2123509070445478289
+    second: Fondo_Botellas_7
+  - first:
+      213: -2157317100559646713
+    second: Fondo_Botellas_8
+  - first:
+      213: 1652575472363152376
+    second: Fondo_Botellas_9
+  - first:
+      213: -2839971975533198701
+    second: Fondo_Botellas_10
+  - first:
+      213: 283401839002071112
+    second: Fondo_Botellas_11
+  - first:
+      213: -2356612972130173260
+    second: Fondo_Botellas_12
+  - first:
+      213: 3194123243172833878
+    second: Fondo_Botellas_13
+  - first:
+      213: -9125060985938670397
+    second: Fondo_Botellas_14
+  - first:
+      213: -8228625876467818031
+    second: Fondo_Botellas_15
+  - first:
+      213: -4860433436432787058
+    second: Fondo_Botellas_16
+  - first:
+      213: 6793843355070352497
+    second: Fondo_Botellas_17
+  - first:
+      213: 9024375719869715560
+    second: Fondo_Botellas_18
+  - first:
+      213: 5811837499171074064
+    second: Fondo_Botellas_19
+  - first:
+      213: 3916962358900218708
+    second: Fondo_Botellas_20
+  - first:
+      213: 3904882665813958686
+    second: Fondo_Botellas_21
+  - first:
+      213: 7485832489885869082
+    second: Fondo_Botellas_22
+  - first:
+      213: 5255016878611831445
+    second: Fondo_Botellas_23
+  - first:
+      213: 4925776437591076769
+    second: Fondo_Botellas_24
+  - first:
+      213: -614834003842123764
+    second: Fondo_Botellas_25
+  - first:
+      213: 6226039933348297869
+    second: Fondo_Botellas_26
+  - first:
+      213: -6648667874749182093
+    second: Fondo_Botellas_27
+  - first:
+      213: 4666887892706191376
+    second: Fondo_Botellas_28
+  - first:
+      213: -2213357384782420505
+    second: Fondo_Botellas_29
+  - first:
+      213: -3041218611651683604
+    second: Fondo_Botellas_30
+  - first:
+      213: 7722226802466597150
+    second: Fondo_Botellas_31
+  - first:
+      213: -373423189525242585
+    second: Fondo_Botellas_32
+  - first:
+      213: 9179900398669934565
+    second: Fondo_Botellas_33
+  - first:
+      213: -2373259885774213863
+    second: Fondo_Botellas_34
+  - first:
+      213: 2014578711690781739
+    second: Fondo_Botellas_35
+  - first:
+      213: -6443663656563986865
+    second: Fondo_Botellas_36
+  - first:
+      213: 5560878768736918024
+    second: Fondo_Botellas_37
+  - first:
+      213: 9209993443361308133
+    second: Fondo_Botellas_38
+  - first:
+      213: -8136500389959773678
+    second: Fondo_Botellas_39
+  - first:
+      213: -6332675153048743367
+    second: Fondo_Botellas_40
+  - first:
+      213: 4604933679006103903
+    second: Fondo_Botellas_41
+  - first:
+      213: 569770345544577466
+    second: Fondo_Botellas_42
+  - first:
+      213: 2145009980714123659
+    second: Fondo_Botellas_43
+  - first:
+      213: -6302374414824790488
+    second: Fondo_Botellas_44
+  - first:
+      213: -8738500187814040533
+    second: Fondo_Botellas_45
+  - first:
+      213: 8497478713529201444
+    second: Fondo_Botellas_46
+  - first:
+      213: -8362495776465120664
+    second: Fondo_Botellas_47
+  - first:
+      213: -6875769996278450296
+    second: Fondo_Botellas_48
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fondo_Botellas_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 24
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7453e6ce6f75690d0800000000000000
+      internalID: -3416446549273725625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 24
+        width: 24
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5aed5136a863880800000000000000
+      internalID: -8631559477635668542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 23
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb494017cf4b7950800000000000000
+      internalID: 6447835007901322235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_3
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 22
+        width: 22
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a91b6ed95fddf730800000000000000
+      internalID: 4034626418270476708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 24
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a67cf2a375a042c0800000000000000
+      internalID: -4449374515767773534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_6
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 22
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39107c1d79a678e80800000000000000
+      internalID: -8176449398175759981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_7
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 24
+        width: 38
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ef6c250c7c782e0800000000000000
+      internalID: -2123509070445478289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_8
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 24
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7004449e68baf02e0800000000000000
+      internalID: -2157317100559646713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo_Botellas_44
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 24
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826abd27cd77988a0800000000000000
+      internalID: -6302374414824790488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

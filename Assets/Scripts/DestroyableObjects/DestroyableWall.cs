@@ -6,7 +6,7 @@ using System;
 public class DestroyableWall : BaseDestroyableObject, IHitable
 {
     [SerializeField] GameObject nextState;
-    public static Action setNewWallState;
+    public static Action<GameObject> setNewWallState;
     public static Action<int> OnTakeDamage;
     public void OnHit(Weapon.DamageInfo damageInfo)
     {
@@ -15,7 +15,7 @@ public class DestroyableWall : BaseDestroyableObject, IHitable
 
         if (lives == 0)
         {
-            setNewWallState?.Invoke();
+            setNewWallState?.Invoke(gameObject);
             //Destroy(gameObject);
         }
     }
